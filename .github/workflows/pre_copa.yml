@@ -1,0 +1,38 @@
+name: Copa 2026 - Pre-Copa com Web Search
+
+on:
+  schedule:
+    # 10/jun as 12:00 UTC = 09:00 Brasilia (dia antes da Copa comecar)
+    - cron: '0 12 10 6 *'
+
+  # Permite rodar manualmente pelo painel do GitHub (Actions > Run workflow)
+  workflow_dispatch:
+
+jobs:
+  gerar-palpites:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do codigo
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Gerar palpites com web search e submeter
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          BOLAO_USER_ID: ${{ secrets.BOLAO_USER_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py all
+
+      - name: Registrar execucao
+        if: always()
+        run: echo "Pre-Copa concluido em $(date -u '+%Y-%m-%d %H:%M:%S UTC')"

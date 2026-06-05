@@ -225,11 +225,14 @@ def main():
     elif command == "all":
         predictions = run_analysis()
         cmd_review()
-        confirm = input("\nDeseja submeter ao banco? (s/N): ").strip().lower()
-        if confirm == "s":
-            submit_all(predictions, dry_run=False)
+        if sys.stdin.isatty():
+            confirm = input("\nDeseja submeter ao banco? (s/N): ").strip().lower()
+            if confirm != "s":
+                print("Submissao cancelada.")
+                sys.exit(0)
         else:
-            print("Submissão cancelada.")
+            print("\nModo automatico (GitHub Actions) — submetendo ao banco...")
+        submit_all(predictions, dry_run=False)
 
     else:
         print(f"Comando desconhecido: {command}")

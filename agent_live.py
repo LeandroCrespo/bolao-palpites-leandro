@@ -10,6 +10,7 @@ Uso:
 import json
 import os
 import sys
+import urllib.request
 from datetime import datetime
 
 import anthropic
@@ -20,6 +21,23 @@ from fixtures import TEAMS
 
 PREDICTIONS_FILE = "predictions.json"
 MODEL = "claude-sonnet-4-6"
+
+
+# ---------------------------------------------------------------------------
+# Notificação Telegram
+# ---------------------------------------------------------------------------
+
+def send_telegram(token: str, chat_id: str, text: str):
+    """Envia mensagem via Telegram Bot API."""
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    data = json.dumps({"chat_id": chat_id, "text": text}).encode("utf-8")
+    req = urllib.request.Request(
+        url, data=data, headers={"Content-Type": "application/json"}
+    )
+    try:
+        urllib.request.urlopen(req, timeout=10)
+    except Exception as e:
+        print(f"  Telegram: falha ao enviar ({e})")
 
 
 # ---------------------------------------------------------------------------
@@ -230,6 +248,11 @@ def execute_tool(name: str, tool_input: dict, dry_run: bool) -> str:
 
 TOOLS_SCHEMA = [
     {
+        "type": "web_search_20250305",
+        "name": "web_search",
+        "max_uses": 10,
+    },
+    {
         "name": "get_tournament_status",
         "description": (
             "Lê do banco os resultados reais de todos os jogos já disputados "
@@ -289,26 +312,29 @@ TOOLS_SCHEMA = [
 
 SYSTEM_PROMPT = """Você é um agente especialista em previsões de futebol para o bolão da Copa do Mundo 2026.
 
-Seu objetivo: rever os palpites dos jogos ainda não iniciados com base nos resultados reais do torneio.
+Seu objetivo: rever os palpites dos jogos ainda não iniciados com base nos resultados reais e em informações atuais.
 
 PROCESSO:
 1. Chame get_tournament_status para ver resultados reais e jogos futuros
-2. Chame get_current_predictions para ver os palpites atuais
-3. Analise: quais times mostraram forma acima/abaixo do esperado?
-4. Decida quais palpites merecem revisão (não precisa mudar tudo — só o que faz sentido)
-5. Chame update_predictions com as atualizações
+2. Para cada jogo nas próximas 48h, use web_search para pesquisar:
+   - "[Time A] [Time B] Copa do Mundo 2026 lesoes suspensoes"
+   - "[Time] Copa 2026 forma momento"
+   Foque em lesões/suspensões de titulares e momento atual no torneio.
+3. Chame get_current_predictions para ver os palpites atuais
+4. Analise: resultados reais + buscas → o que mudou em relação ao palpite inicial?
+5. Chame update_predictions com as atualizações justificadas
 
 REGRAS:
 - Priorize jogos das próximas 48h
-- Só atualize palpites que genuinamente mudaram com base nos resultados reais
+- Só atualize palpites com base em evidências reais (resultados ou notícias encontradas)
 - Se o palpite inicial ainda faz sentido, mantenha-o
 - Para mata-mata: sempre inclua "winner" com o código da seleção vencedora
-- Seja específico no reasoning: "Brasil marcou 8 gols em 2 jogos — aumentei a margem"
+- Seja específico no reasoning: "Mbappé lesionado confirmado — reduzi expectativa da Franca"
 
-PONTUAÇÃO (calibre os placares):
-- Placar exato: 20 pts — use placares realistas (1-0, 2-0, 2-1, 3-1)
+PONTUACAO (calibre os placares):
+- Placar exato: 20 pts — use placares realistas (1-0, 2-0, 2-1, 1-1)
 - Resultado certo: 10 pts
-- Vale mais um placar específico do que um genérico"""
+- Maximo 2 gols por time"""
 
 
 def run_agent(dry_run: bool = False):
@@ -332,13 +358,16 @@ def run_agent(dry_run: bool = False):
         }
     ]
 
+    all_updates = []  # coleta todas as atualizações para o Telegram
+
     for iteration in range(15):  # limite de segurança
-        response = client.messages.create(
+        response = client.beta.messages.create(
             model=MODEL,
             max_tokens=4000,
             system=SYSTEM_PROMPT,
             tools=TOOLS_SCHEMA,
             messages=messages,
+            betas=["web-search-2025-03-05"],
         )
 
         # Mostra texto intermediário do agente
@@ -372,6 +401,7 @@ def run_agent(dry_run: bool = False):
                         print(f"OK ({n} palpites atualizados{dr})")
                         for u in result_data.get("updates", []):
                             print(f"    Jogo #{u['match_number']}: {u['old']} -> {u['new']}  |  {u['reasoning']}")
+                            all_updates.append(u)
                     else:
                         print("OK")
 
@@ -387,6 +417,21 @@ def run_agent(dry_run: bool = False):
             break
 
     print(f"\nAgente concluido: {datetime.now().strftime('%H:%M:%S')}")
+
+    # Notificacao Telegram (somente se houve atualizacoes e nao for dry-run)
+    if all_updates and not dry_run:
+        token = os.getenv("TELEGRAM_BOT_TOKEN")
+        chat_id = os.getenv("TELEGRAM_CHAT_ID")
+        if token and chat_id:
+            hoje = datetime.now().strftime("%d/%m/%Y")
+            linhas = [f"Copa 2026 - Palpites atualizados em {hoje}\n"]
+            for u in all_updates:
+                linhas.append(f"Jogo #{u['match_number']}: {u['old']} -> {u['new']}")
+                if u.get("reasoning"):
+                    linhas.append(f"  {u['reasoning']}")
+            linhas.append(f"\nTotal: {len(all_updates)} palpite(s) alterado(s)")
+            send_telegram(token, chat_id, "\n".join(linhas))
+            print(f"  Notificacao Telegram enviada ({len(all_updates)} atualizacoes)")
 
 
 if __name__ == "__main__":

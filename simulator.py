@@ -45,14 +45,27 @@ def extract_json(text: str) -> dict:
     raise ValueError(f"JSON não encontrado na resposta:\n{text[:300]}")
 
 
-def call_claude(client: anthropic.Anthropic, prompt: str, max_tokens: int = 3000) -> str:
-    """Faz uma chamada simples ao Claude e retorna o texto."""
-    response = client.messages.create(
+def call_claude(client: anthropic.Anthropic, prompt: str, max_tokens: int = 3000,
+                use_web_search: bool = False) -> str:
+    """Faz uma chamada ao Claude e retorna o texto. Suporta web search server-side."""
+    base_kwargs = dict(
         model=MODEL,
         max_tokens=max_tokens,
         messages=[{"role": "user", "content": prompt}],
     )
-    return response.content[0].text
+    if use_web_search:
+        response = client.beta.messages.create(
+            **base_kwargs,
+            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 5}],
+            betas=["web-search-2025-03-05"],
+        )
+    else:
+        response = client.messages.create(**base_kwargs)
+    last_text = ""
+    for block in response.content:
+        if hasattr(block, "text"):
+            last_text = block.text
+    return last_text
 
 
 # ---------------------------------------------------------------------------
@@ -145,6 +158,12 @@ def predict_group(group: str, client: anthropic.Anthropic, retries: int = 3) -> 
 
     prompt = f"""Você é um analista expert em futebol internacional, fazendo previsões para a Copa do Mundo 2026 (sede: EUA, Canadá, México).
 
+IMPORTANTE: Antes de prever os placares, pesquise na web informações atuais sobre as seleções deste grupo:
+- Lesões e suspensões de titulares confirmadas
+- Forma recente (últimos 2-3 jogos antes da Copa)
+- Qualquer notícia relevante pré-Copa 2026 (convocações de última hora, problemas físicos)
+Use essas informações para calibrar seus palpites com dados reais de junho de 2026.
+
 GRUPO {group}:
 {teams_block}
 
@@ -181,7 +200,7 @@ Retorne SOMENTE o JSON abaixo preenchido (sem texto extra, sem markdown):
     last_error = None
     for attempt in range(retries):
         try:
-            text = call_claude(client, prompt, max_tokens=2500)
+            text = call_claude(client, prompt, max_tokens=2500, use_web_search=True)
             result = extract_json(text)
 
             # Valida estrutura
@@ -212,11 +231,13 @@ Retorne SOMENTE o JSON abaixo preenchido (sem texto extra, sem markdown):
             last_error = e
             print(f"    Tentativa {attempt + 1}/{retries} falhou: {e}")
             if attempt < retries - 1:
-                time.sleep(3)
+                wait = 65 if ("429" in str(e) or "rate_limit" in str(e)) else 5
+                print(f"    Aguardando {wait}s antes de tentar novamente...")
+                time.sleep(wait)
 
     raise RuntimeError(
-        f"Não foi possível prever o Grupo {group} após {retries} tentativas. "
-        f"Último erro: {last_error}"
+        f"Nao foi possivel prever o Grupo {group} apos {retries} tentativas. "
+        f"Ultimo erro: {last_error}"
     )
 
 
@@ -453,8 +474,8 @@ def simulate_full_tournament(client: anthropic.Anthropic) -> dict:
 
         first = TEAMS.get(result["first"], {}).get("name", result["first"])
         second = TEAMS.get(result["second"], {}).get("name", result["second"])
-        print(f"✓  (1º {first}, 2º {second})")
-        time.sleep(1)  # Respeita rate limit
+        print(f"OK  (1o {first}, 2o {second})")
+        time.sleep(15)  # Respeita rate limit (web search usa mais tokens)
 
     print("\n=== QUALIFICAÇÃO DOS 3ºs LUGARES ===")
     third_qualifiers = get_third_place_qualifiers(group_results)
@@ -487,8 +508,8 @@ def simulate_full_tournament(client: anthropic.Anthropic) -> dict:
         for r in results:
             all_match_predictions[r["match_number"]] = r
 
-        print(f"✓")
-        time.sleep(1)
+        print("OK")
+        time.sleep(10)
 
     # 3º lugar e Final
     for phase in ["3RD", "FINAL"]:
@@ -502,8 +523,8 @@ def simulate_full_tournament(client: anthropic.Anthropic) -> dict:
         knockout_results[phase] = results
         for r in results:
             all_match_predictions[r["match_number"]] = r
-        print(f"✓")
-        time.sleep(1)
+        print("OK")
+        time.sleep(10)
 
     # Extrai pódio
     final_result = knockout_results["FINAL"][0]
@@ -518,9 +539,9 @@ def simulate_full_tournament(client: anthropic.Anthropic) -> dict:
     third_name = TEAMS.get(third, {}).get("name", third)
 
     print(f"\n=== PÓDIO PREVISTO ===")
-    print(f"  🥇 Campeão:       {champion_name} ({champion})")
-    print(f"  🥈 Vice-Campeão:  {runner_up_name} ({runner_up})")
-    print(f"  🥉 3º Lugar:      {third_name} ({third})")
+    print(f"  [1] Campeao:       {champion_name} ({champion})")
+    print(f"  [2] Vice-Campeao:  {runner_up_name} ({runner_up})")
+    print(f"  [3] 3o Lugar:      {third_name} ({third})")
 
     return {
         "group_results": group_results,

@@ -29,8 +29,8 @@ TEAMS = {
     },
 
     # ---------- Grupo C ----------
-    "BRA": {"name": "Brasil",          "flag": "🇧🇷", "fifa_rank": 5,  "tier": 1},
-    "MAR": {"name": "Marrocos",        "flag": "🇲🇦", "fifa_rank": 11, "tier": 3},
+    "BRA": {"name": "Brasil",          "flag": "🇧🇷", "fifa_rank": 6,  "tier": 2},
+    "MAR": {"name": "Marrocos",        "flag": "🇲🇦", "fifa_rank": 7,  "tier": 2},
     "HAI": {"name": "Haiti",           "flag": "🇭🇹", "fifa_rank": 84, "tier": 5},
     "SCO": {"name": "Escócia",         "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿", "fifa_rank": 36, "tier": 4},
 
@@ -44,13 +44,13 @@ TEAMS = {
     },
 
     # ---------- Grupo E ----------
-    "GER": {"name": "Alemanha",        "flag": "🇩🇪", "fifa_rank": 9,  "tier": 2},
+    "GER": {"name": "Alemanha",        "flag": "🇩🇪", "fifa_rank": 10, "tier": 2},
     "CIV": {"name": "Costa do Marfim", "flag": "🇨🇮", "fifa_rank": 42, "tier": 4},
     "ECU": {"name": "Equador",         "flag": "🇪🇨", "fifa_rank": 23, "tier": 3},
     "CUR": {"name": "Curaçao",         "flag": "🇨🇼", "fifa_rank": 82, "tier": 5},
 
     # ---------- Grupo F ----------
-    "NED": {"name": "Holanda",         "flag": "🇳🇱", "fifa_rank": 7,  "tier": 2},
+    "NED": {"name": "Holanda",         "flag": "🇳🇱", "fifa_rank": 8,  "tier": 2},
     "JPN": {"name": "Japão",           "flag": "🇯🇵", "fifa_rank": 18, "tier": 3},
     "TUN": {"name": "Tunísia",         "flag": "🇹🇳", "fifa_rank": 41, "tier": 4},
     "EUR_B": {
@@ -59,19 +59,19 @@ TEAMS = {
     },
 
     # ---------- Grupo G ----------
-    "BEL": {"name": "Bélgica",         "flag": "🇧🇪", "fifa_rank": 8,  "tier": 2},
+    "BEL": {"name": "Bélgica",         "flag": "🇧🇪", "fifa_rank": 9,  "tier": 2},
     "EGY": {"name": "Egito",           "flag": "🇪🇬", "fifa_rank": 35, "tier": 4},
     "IRN": {"name": "Irã",             "flag": "🇮🇷", "fifa_rank": 20, "tier": 3},
     "NZL": {"name": "Nova Zelândia",   "flag": "🇳🇿", "fifa_rank": 87, "tier": 5},
 
     # ---------- Grupo H ----------
-    "ESP": {"name": "Espanha",         "flag": "🇪🇸", "fifa_rank": 1,  "tier": 1},
+    "ESP": {"name": "Espanha",         "flag": "🇪🇸", "fifa_rank": 2,  "tier": 1},
     "URU": {"name": "Uruguai",         "flag": "🇺🇾", "fifa_rank": 16, "tier": 3},
     "KSA": {"name": "Arábia Saudita",  "flag": "🇸🇦", "fifa_rank": 60, "tier": 5},
     "CPV": {"name": "Cabo Verde",      "flag": "🇨🇻", "fifa_rank": 67, "tier": 5},
 
     # ---------- Grupo I ----------
-    "FRA": {"name": "França",          "flag": "🇫🇷", "fifa_rank": 3,  "tier": 1},
+    "FRA": {"name": "França",          "flag": "🇫🇷", "fifa_rank": 1,  "tier": 1},
     "SEN": {"name": "Senegal",         "flag": "🇸🇳", "fifa_rank": 19, "tier": 3},
     "NOR": {"name": "Noruega",         "flag": "🇳🇴", "fifa_rank": 29, "tier": 4},
     "INT_2": {
@@ -80,13 +80,13 @@ TEAMS = {
     },
 
     # ---------- Grupo J ----------
-    "ARG": {"name": "Argentina",       "flag": "🇦🇷", "fifa_rank": 2,  "tier": 1},
+    "ARG": {"name": "Argentina",       "flag": "🇦🇷", "fifa_rank": 3,  "tier": 1},
     "ALG": {"name": "Argélia",         "flag": "🇩🇿", "fifa_rank": 34, "tier": 4},
     "AUT": {"name": "Áustria",         "flag": "🇦🇹", "fifa_rank": 24, "tier": 3},
     "JOR": {"name": "Jordânia",        "flag": "🇯🇴", "fifa_rank": 64, "tier": 5},
 
     # ---------- Grupo K ----------
-    "POR": {"name": "Portugal",        "flag": "🇵🇹", "fifa_rank": 6,  "tier": 2},
+    "POR": {"name": "Portugal",        "flag": "🇵🇹", "fifa_rank": 5,  "tier": 1},
     "COL": {"name": "Colômbia",        "flag": "🇨🇴", "fifa_rank": 13, "tier": 3},
     "UZB": {"name": "Uzbequistão",     "flag": "🇺🇿", "fifa_rank": 50, "tier": 4},
     "INT_1": {
@@ -96,7 +96,7 @@ TEAMS = {
 
     # ---------- Grupo L ----------
     "ENG": {"name": "Inglaterra",      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "fifa_rank": 4,  "tier": 1},
-    "CRO": {"name": "Croácia",         "flag": "🇭🇷", "fifa_rank": 10, "tier": 2},
+    "CRO": {"name": "Croácia",         "flag": "🇭🇷", "fifa_rank": 13, "tier": 3},
     "GHA": {"name": "Gana",            "flag": "🇬🇭", "fifa_rank": 72, "tier": 5},
     "PAN": {"name": "Panamá",          "flag": "🇵🇦", "fifa_rank": 30, "tier": 4},
 }
