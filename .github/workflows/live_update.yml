@@ -1,0 +1,37 @@
+name: Copa 2026 - Atualização Automática de Palpites
+
+on:
+  schedule:
+    # Roda todos os dias às 03:00 UTC = 00:00 Brasília
+    # Após cada rodada de jogos, captura os resultados e atualiza palpites
+    - cron: '0 3 * * *'
+
+  # Permite rodar manualmente pelo painel do GitHub (Actions > Run workflow)
+  workflow_dispatch:
+
+jobs:
+  atualizar-palpites:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Executar agente de atualização
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          BOLAO_USER_ID: ${{ secrets.BOLAO_USER_ID }}
+        run: python main.py live
+
+      - name: Registrar execução
+        if: always()
+        run: echo "Execucao concluida em $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
