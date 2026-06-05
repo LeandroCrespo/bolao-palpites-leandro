@@ -25,7 +25,25 @@ jobs:
       - name: Instalar dependências
         run: pip install -r requirements.txt
 
+      - name: Verificar se a Copa ja começou
+        id: check_date
+        run: |
+          HOJE=$(date -u +%Y-%m-%d)
+          INICIO_COPA="2026-06-11"
+          FIM_COPA="2026-07-20"
+          if [[ "$HOJE" < "$INICIO_COPA" ]]; then
+            echo "Copa ainda nao comecou ($HOJE < $INICIO_COPA). Pulando."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          elif [[ "$HOJE" > "$FIM_COPA" ]]; then
+            echo "Copa ja encerrou ($HOJE > $FIM_COPA). Pulando."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "Copa em andamento ($HOJE). Rodando agente."
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Executar agente de atualização
+        if: steps.check_date.outputs.skip == 'false'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
