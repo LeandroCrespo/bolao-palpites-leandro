@@ -63,6 +63,7 @@ jobs:
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           DID_API_KEY: ${{ secrets.DID_API_KEY }}
           DID_EMAIL: ${{ secrets.DID_EMAIL }}
+          DID_SOURCE_URL: ${{ secrets.DID_SOURCE_URL }}
         run: |
           if [[ "${{ inputs.launch }}" == "true" ]]; then
             python main.py bulletin --launch

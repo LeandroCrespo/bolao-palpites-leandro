@@ -219,26 +219,32 @@ def _poll_and_download(status_url: str, job_id: str,
 # ---------------------------------------------------------------------------
 
 def create_bulletin_video(script: str, api_key: str, output_path: str = "bulletin.mp4",
-                          email: str = "") -> str:
+                          email: str = "", source_url: str = "") -> str:
     """
     Gera o vídeo do Mestre Leme via D-ID.
-    Tenta V4 Expressives primeiro; se não disponível, usa V1/V2 Talks.
+    Se source_url for fornecida, usa /talks diretamente (ignora lookup de avatar).
+    Caso contrário tenta V4 Expressives, depois /talks com lookup automático.
     """
+    # Caminho rápido: URL da imagem fornecida diretamente
+    if source_url:
+        print(f"  Usando source_url fornecida: {source_url[:60]}...")
+        return _create_talks_video(script, source_url, api_key, email, output_path)
+
     # Tenta V4 Expressives
     expressive = _get_expressive_avatar(api_key, email)
     if expressive:
         avatar_id, sentiment_id = expressive
         return _create_expressive_video(script, avatar_id, sentiment_id, api_key, email, output_path)
 
-    # Fallback: V1/V2 Talks
+    # Fallback: V1/V2 Talks com lookup automático
     print("  Tentando API /talks como fallback...")
     image_url = _get_talks_avatar(api_key, email)
     if image_url:
         return _create_talks_video(script, image_url, api_key, email, output_path)
 
     raise RuntimeError(
-        f"Nenhum avatar encontrado no D-ID (nem V4 em /expressives/avatars nem legado em /avatars). "
-        f"Crie um avatar com o nome '{AVATAR_NAME}' no D-ID Studio."
+        f"Avatar não encontrado. Defina DID_SOURCE_URL com a URL da imagem do avatar "
+        f"(clique direito na foto no D-ID Studio → Copiar endereço da imagem)."
     )
 
 

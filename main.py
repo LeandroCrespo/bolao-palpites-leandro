@@ -214,7 +214,8 @@ def cmd_bulletin(script_only: bool = False, launch: bool = False):
 
     # Limpa BOM e aspas dos secrets (problema comum em GitHub Actions)
     for _var in ("ANTHROPIC_API_KEY", "DATABASE_URL", "NEON_CONNECTION_STRING",
-                 "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "DID_API_KEY", "DID_EMAIL"):
+                 "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "DID_API_KEY", "DID_EMAIL",
+                 "DID_SOURCE_URL"):
         _val = os.environ.get(_var, "")
         if _val:
             os.environ[_var] = _val.encode().decode("utf-8-sig").strip().strip("'\"")
@@ -259,6 +260,7 @@ def cmd_bulletin(script_only: bool = False, launch: bool = False):
 
     api_key = os.getenv("DID_API_KEY")
     did_email = os.getenv("DID_EMAIL", "")
+    did_source_url = os.getenv("DID_SOURCE_URL", "")
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id = os.getenv("TELEGRAM_CHAT_ID")
 
@@ -275,7 +277,8 @@ def cmd_bulletin(script_only: bool = False, launch: bool = False):
     video_path = "bulletin.mp4"
     try:
         print("Gerando vídeo no D-ID...")
-        create_bulletin_video(script, api_key, video_path, email=did_email)
+        create_bulletin_video(script, api_key, video_path, email=did_email,
+                              source_url=did_source_url)
     except Exception as e:
         print(f"Erro ao gerar vídeo: {e}")
         print("Enviando roteiro em texto como fallback...")
