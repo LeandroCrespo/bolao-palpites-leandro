@@ -49,13 +49,16 @@ def _request(method: str, url: str, api_key: str, body: dict | None = None) -> d
 # ---------------------------------------------------------------------------
 
 def _pick_sentiment(sentiments: list[dict]) -> str | None:
+    # A API D-ID usa o campo "sentiment" (não "name")
     for pref in PREFERRED_SENTIMENTS:
         for snt in sentiments:
-            if pref in snt.get("name", "").lower():
-                print(f"  Sentiment: {snt.get('name')} ({snt.get('id')})")
+            label = snt.get("sentiment", snt.get("name", "")).lower()
+            if pref in label:
+                print(f"  Sentiment: {snt.get('sentiment')} ({snt.get('id')})")
                 return snt.get("id")
     if sentiments:
-        print(f"  Sentiment (1º): {sentiments[0].get('name')} ({sentiments[0].get('id')})")
+        label = sentiments[0].get("sentiment", sentiments[0].get("name", "?"))
+        print(f"  Sentiment (1º): {label} ({sentiments[0].get('id')})")
         return sentiments[0].get("id")
     return None
 
@@ -88,11 +91,18 @@ def _get_expressive_avatar(api_key: str) -> tuple[str, str | None] | None:
 
 def _create_expressive_video(script: str, avatar_id: str, sentiment_id: str | None,
                               api_key: str, output_path: str) -> str:
-    """Cria vídeo via /expressives (plano Pro+)."""
+    """Cria vídeo via /expressives (plano Pro+) com voz pt-BR."""
     print("  Criando vídeo via /expressives...")
     body: dict = {
         "avatar_id": avatar_id,
-        "script": {"type": "text", "input": script},
+        "script": {
+            "type": "text",
+            "input": script,
+            "provider": {
+                "type": "microsoft",
+                "voice_id": VOICE_ID,
+            },
+        },
     }
     if sentiment_id:
         body["sentiment_id"] = sentiment_id
