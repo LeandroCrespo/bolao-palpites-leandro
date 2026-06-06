@@ -28,18 +28,15 @@ def _real_code(code: str) -> str:
 
 def get_db_engine(db_url: str | None = None):
     load_dotenv()
-    conn_str = (db_url or os.getenv("DATABASE_URL") or os.getenv("NEON_CONNECTION_STRING") or "").strip()
+    raw = db_url or os.getenv("DATABASE_URL") or os.getenv("NEON_CONNECTION_STRING") or ""
+    # Remove BOM, espaços e aspas que podem vir do secret
+    conn_str = raw.encode().decode("utf-8-sig").strip().strip("'\"").strip()
     if not conn_str:
         raise EnvironmentError("DATABASE_URL ou NEON_CONNECTION_STRING não encontrada")
     # SQLAlchemy 2.0 exige postgresql://, não postgres://
     if conn_str.startswith("postgres://"):
         conn_str = "postgresql://" + conn_str[len("postgres://"):]
-    # Se parece com URL, usa diretamente; caso contrário (DSN psycopg2), usa creator
-    if conn_str.startswith("postgresql://"):
-        return create_engine(conn_str)
-    import psycopg2
-    _cs = conn_str  # captura para o closure
-    return create_engine("postgresql+psycopg2://", creator=lambda: psycopg2.connect(_cs))
+    return create_engine(conn_str)
 
 
 def get_team_id(conn, code: str) -> int | None:
