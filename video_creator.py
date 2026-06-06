@@ -42,6 +42,8 @@ def _headers(api_key: str, email: str = "") -> dict:
 
 
 def _request(method: str, url: str, api_key: str, email: str = "", body: dict | None = None) -> dict:
+    auth = _build_auth(api_key, email)
+    print(f"  D-ID auth format: {auth[:30]}... (len={len(auth)})")
     data = json.dumps(body).encode("utf-8") if body else None
     req = urllib.request.Request(
         url,
