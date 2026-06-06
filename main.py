@@ -8,6 +8,8 @@ Uso:
   python main.py submit --dry-run     # Simula o envio sem gravar
   python main.py live                 # Atualiza palpites de jogos futuros com resultados reais
   python main.py all                  # analyze + review + submit em sequência
+  python main.py bulletin             # Gera e envia o Boletim do Mestre Leme via Telegram
+  python main.py bulletin --script    # Só imprime o roteiro, sem gerar vídeo
 """
 
 import sys
@@ -196,6 +198,94 @@ def cmd_live():
 
 
 # ---------------------------------------------------------------------------
+# Bulletin: Boletim do Mestre Leme
+# ---------------------------------------------------------------------------
+
+def cmd_bulletin(script_only: bool = False, launch: bool = False):
+    """Gera o roteiro, cria o vídeo e envia pelo Telegram."""
+    import os
+    from datetime import datetime
+    from dotenv import load_dotenv
+    from submitter import get_db_engine
+    from bulletin_db import get_bulletin_data, get_missing_predictions_data, get_copa_start
+    from bulletin_generator import generate_bulletin_script, generate_launch_script
+
+    load_dotenv()
+
+    engine = get_db_engine()
+
+    if launch:
+        print("\n=== VÍDEO DE LANÇAMENTO DO MESTRE LEME ===")
+        with engine.begin() as conn:
+            data = get_bulletin_data(conn)
+            missing = get_missing_predictions_data(conn)
+            copa_start = get_copa_start(conn)
+
+        now = datetime.now()
+        dias = max(0, (copa_start - now).days)
+        copa_start_str = copa_start.strftime("%d/%m/%Y às %H:%M")
+        print(f"Copa começa em: {copa_start_str} ({dias} dias)")
+        print(f"Sem pódio: {len(missing['sem_podio'])}/{missing['total_users']}")
+        print(f"Grupos incompletos: {len(missing['grupos_incompletos'])}/{missing['total_users']}")
+        print("\nGerando roteiro de lançamento com Claude...")
+
+        script = generate_launch_script(data, missing, copa_start_str, dias)
+        caption = f"🎙️ <b>Boletim do Mestre Leme — Lançamento do Bolão Copa 2026!</b>"
+    else:
+        print("\n=== BOLETIM DO MESTRE LEME ===")
+        with engine.begin() as conn:
+            data = get_bulletin_data(conn)
+
+        print(f"Data: {data['date']}")
+        print(f"Jogos encerrados hoje: {len(data['results'])}")
+        print(f"Participantes no ranking: {data['total_participants']}")
+        print("\nGerando roteiro com Claude...")
+
+        script = generate_bulletin_script(data)
+        caption = f"🎙️ <b>Boletim do Mestre Leme</b> — {data['date']}"
+
+    print(f"\n--- ROTEIRO ({len(script.split())} palavras) ---\n{script}\n---\n")
+
+    if script_only:
+        print("Modo --script: roteiro impresso, vídeo não gerado.")
+        return
+
+    api_key = os.getenv("DID_API_KEY")
+    token = os.getenv("TELEGRAM_BOT_TOKEN")
+    chat_id = os.getenv("TELEGRAM_CHAT_ID")
+
+    if not api_key:
+        print("DID_API_KEY não encontrada — enviando roteiro em texto pelo Telegram.")
+        if token and chat_id:
+            from bulletin_sender import send_text_fallback
+            send_text_fallback(script, token, chat_id)
+        return
+
+    from video_creator import create_bulletin_video
+    from bulletin_sender import send_bulletin_video, send_text_fallback
+
+    video_path = "bulletin.mp4"
+    try:
+        print("Gerando vídeo no D-ID...")
+        create_bulletin_video(script, api_key, video_path)
+    except Exception as e:
+        print(f"Erro ao gerar vídeo: {e}")
+        print("Enviando roteiro em texto como fallback...")
+        if token and chat_id:
+            send_text_fallback(script, token, chat_id)
+        return
+
+    if token and chat_id:
+        send_bulletin_video(video_path, caption, token, chat_id)
+    else:
+        print("TELEGRAM_BOT_TOKEN ou TELEGRAM_CHAT_ID não encontrados — vídeo salvo localmente.")
+
+    import os as _os
+    if _os.path.exists(video_path):
+        _os.remove(video_path)
+
+
+# ---------------------------------------------------------------------------
 # Entry point
 # ---------------------------------------------------------------------------
 
@@ -233,6 +323,9 @@ def main():
         else:
             print("\nModo automatico (GitHub Actions) — submetendo ao banco...")
         submit_all(predictions, dry_run=False)
+
+    elif command == "bulletin":
+        cmd_bulletin(script_only="--script" in args, launch="--launch" in args)
 
     else:
         print(f"Comando desconhecido: {command}")

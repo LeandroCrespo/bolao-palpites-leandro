@@ -1,0 +1,57 @@
+name: Boletim do Mestre Leme
+
+on:
+  schedule:
+    # 20h Brasília = 23h UTC (BRT = UTC-3, sem horário de verão em jun/jul)
+    - cron: '0 23 * * *'
+
+  # Permite rodar manualmente pelo painel do GitHub
+  workflow_dispatch:
+
+jobs:
+  boletim:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Verificar se a Copa está em andamento
+        id: check_date
+        run: |
+          HOJE=$(date -u +%Y-%m-%d)
+          INICIO_COPA="2026-06-11"
+          FIM_COPA="2026-07-20"
+          if [[ "$HOJE" < "$INICIO_COPA" ]]; then
+            echo "Copa ainda não começou ($HOJE < $INICIO_COPA). Pulando."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          elif [[ "$HOJE" > "$FIM_COPA" ]]; then
+            echo "Copa já encerrou ($HOJE > $FIM_COPA). Pulando."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "Copa em andamento ($HOJE). Gerando boletim."
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Gerar e enviar Boletim do Mestre Leme
+        if: steps.check_date.outputs.skip == 'false'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          BOLAO_USER_ID: ${{ secrets.BOLAO_USER_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DID_API_KEY: ${{ secrets.DID_API_KEY }}
+        run: python main.py bulletin
+
+      - name: Registrar execução
+        if: always()
+        run: echo "Boletim executado em $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
