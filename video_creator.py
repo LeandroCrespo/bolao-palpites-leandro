@@ -69,7 +69,9 @@ def get_avatar_and_sentiment(api_key: str, email: str = "") -> tuple[str, str]:
     Lista avatares em /expressives/avatars, encontra o Mestre_Leme
     e retorna (avatar_id, sentiment_id).
     """
+    print("  Listando avatares em /expressives/avatars...")
     result = _request("GET", f"{DID_API}/expressives/avatars", api_key, email)
+    print(f"  Resposta avatares: {str(result)[:200]}")
     avatars = result if isinstance(result, list) else result.get("avatars", [])
 
     for av in avatars:
