@@ -43,7 +43,7 @@ def send_bulletin_video(video_path: str, caption: str, token: str, chat_id: str)
         + _field("parse_mode", "HTML")
         + (
             f"--{boundary}\r\n"
-            f'Content-Disposition: form-data; name="video"; filename="boletim_crespao.mp4"\r\n'
+            f'Content-Disposition: form-data; name="video"; filename="boletim_mestre_leme.mp4"\r\n'
             f"Content-Type: video/mp4\r\n\r\n"
         ).encode("utf-8")
         + video_data
@@ -71,12 +71,12 @@ def send_bulletin_video(video_path: str, caption: str, token: str, chat_id: str)
         raise RuntimeError(f"Telegram HTTP {e.code}: {error_body}") from e
 
 
-def send_text_fallback(text: str, token: str, chat_id: str):
+def send_text_fallback(text: str, token: str, chat_id: str, caption: str = "🎙️ <b>Boletim do Mestre Leme</b>"):
     """Envia roteiro em texto caso a geração de vídeo falhe."""
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     data = json.dumps({
         "chat_id": chat_id,
-        "text": f"🎙️ <b>Boletim do Mestre Leme</b> (modo texto)\n\n{text}",
+        "text": f"{caption}\n\n{text}",
         "parse_mode": "HTML",
     }).encode("utf-8")
     req = urllib.request.Request(

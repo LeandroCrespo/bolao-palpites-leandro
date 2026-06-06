@@ -258,7 +258,7 @@ def cmd_bulletin(script_only: bool = False, launch: bool = False):
         print("DID_API_KEY não encontrada — enviando roteiro em texto pelo Telegram.")
         if token and chat_id:
             from bulletin_sender import send_text_fallback
-            send_text_fallback(script, token, chat_id)
+            send_text_fallback(script, token, chat_id, caption=caption)
         return
 
     from video_creator import create_bulletin_video
@@ -272,7 +272,7 @@ def cmd_bulletin(script_only: bool = False, launch: bool = False):
         print(f"Erro ao gerar vídeo: {e}")
         print("Enviando roteiro em texto como fallback...")
         if token and chat_id:
-            send_text_fallback(script, token, chat_id)
+            send_text_fallback(script, token, chat_id, caption=caption)
         return
 
     if token and chat_id:

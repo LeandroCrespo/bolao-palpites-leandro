@@ -5,8 +5,13 @@ on:
     # 20h Brasília = 23h UTC (BRT = UTC-3, sem horário de verão em jun/jul)
     - cron: '0 23 * * *'
 
-  # Permite rodar manualmente pelo painel do GitHub
   workflow_dispatch:
+    inputs:
+      launch:
+        description: 'Gerar vídeo de lançamento (--launch)?'
+        required: false
+        default: 'false'
+        type: boolean
 
 jobs:
   boletim:
@@ -27,6 +32,12 @@ jobs:
       - name: Verificar se a Copa está em andamento
         id: check_date
         run: |
+          # Modo launch sempre roda, independente da data
+          if [[ "${{ inputs.launch }}" == "true" ]]; then
+            echo "Modo lançamento — ignorando verificação de data."
+            echo "skip=false" >> $GITHUB_OUTPUT
+            exit 0
+          fi
           HOJE=$(date -u +%Y-%m-%d)
           INICIO_COPA="2026-06-11"
           FIM_COPA="2026-07-20"
@@ -50,7 +61,12 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           DID_API_KEY: ${{ secrets.DID_API_KEY }}
-        run: python main.py bulletin
+        run: |
+          if [[ "${{ inputs.launch }}" == "true" ]]; then
+            python main.py bulletin --launch
+          else
+            python main.py bulletin
+          fi
 
       - name: Registrar execução
         if: always()
