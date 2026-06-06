@@ -248,10 +248,10 @@ def create_bulletin_video(script: str, api_key: str, output_path: str = "bulleti
     if image_url:
         return _create_talks_video(script, image_url, api_key, email, output_path)
 
-    raise RuntimeError(
-        f"Avatar não encontrado. Defina DID_SOURCE_URL com a URL da imagem do avatar "
-        f"(clique direito na foto no D-ID Studio → Copiar endereço da imagem)."
-    )
+    # Último recurso: avatar padrão D-ID para validar o pipeline
+    print("  Usando avatar padrão D-ID (alice) para validar pipeline...")
+    default_url = "https://d-id-public-bucket.s3.us-west-2.amazonaws.com/alice.jpg"
+    return _create_talks_video(script, default_url, api_key, email, output_path)
 
 
 if __name__ == "__main__":
