@@ -56,8 +56,22 @@ show("GET /user", *_fetch(f"{BASE}/user"))
 # 2. Créditos
 show("GET /credits", *_fetch(f"{BASE}/credits"))
 
-# 3. Avatares V4 Expressives
-show("GET /expressives/avatars", *_fetch(f"{BASE}/expressives/avatars"))
+# 3. Avatares V4 Expressives — lista completa
+print(f"\n{'='*50}")
+print("GET /expressives/avatars — lista completa")
+code, result = _fetch(f"{BASE}/expressives/avatars")
+print(f"HTTP {code}")
+if isinstance(result, dict):
+    avatars = result.get("avatars", [])
+    print(f"Total: {len(avatars)} avatares\n")
+    for av in avatars:
+        sentiments = [s.get("sentiment", "?") for s in av.get("sentiments", [])]
+        print(f"  ID:         {av.get('id')}")
+        print(f"  Nome:       {av.get('name')}  [{av.get('gender','?')}]")
+        print(f"  Sentiments: {', '.join(sentiments)}")
+        print()
+else:
+    print(result)
 
 # 4. Clips criados (vídeos já gerados)
 show("GET /clips", *_fetch(f"{BASE}/clips"))
