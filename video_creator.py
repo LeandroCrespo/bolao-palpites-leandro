@@ -18,8 +18,9 @@ POLL_TIMEOUT = 300
 
 
 def _headers(api_key: str) -> dict:
+    auth = api_key if api_key.lower().startswith(("basic ", "bearer ")) else f"Basic {api_key}"
     return {
-        "Authorization": api_key,
+        "Authorization": auth,
         "Content-Type": "application/json",
         "Accept": "application/json",
     }
