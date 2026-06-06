@@ -277,7 +277,8 @@ def cmd_bulletin(script_only: bool = False, launch: bool = False):
     video_path = "bulletin.mp4"
     try:
         print("Gerando vídeo no D-ID...")
-        create_bulletin_video(script, api_key, video_path, source_url=did_source_url)
+        create_bulletin_video(script, api_key, video_path,
+                              source_url=did_source_url)
     except Exception as e:
         print(f"Erro ao gerar vídeo: {e}")
         print("Enviando roteiro em texto como fallback...")
