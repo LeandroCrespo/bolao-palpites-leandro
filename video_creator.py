@@ -132,35 +132,41 @@ def _create_expressive_video(script: str, avatar_id: str, sentiment_id: str,
 # ---------------------------------------------------------------------------
 
 def _get_talks_avatar(api_key: str, email: str) -> str | None:
-    """Tenta encontrar image_url do avatar em /avatars. Retorna URL ou None."""
+    """Tenta encontrar image_url do avatar em /scenes/avatars. Retorna URL ou None."""
     try:
-        result = _request("GET", f"{DID_API}/avatars", api_key, email)
+        result = _request("GET", f"{DID_API}/scenes/avatars", api_key, email)
     except RuntimeError as e:
-        print(f"  /avatars não disponível: {e}")
+        print(f"  /scenes/avatars não disponível: {e}")
         return None
 
     avatars = result if isinstance(result, list) else result.get("avatars", [])
-    print(f"  Avatares legados encontrados: {len(avatars)}")
+    print(f"  Avatares em /scenes/avatars: {len(avatars)}")
+    for av in avatars:
+        print(f"    - {av.get('name','?')} (id={av.get('id','?')})")
 
     for av in avatars:
         name = av.get("name", "")
         if AVATAR_NAME.lower() in name.lower():
             url = av.get("image_url") or av.get("thumbnail_url") or av.get("url")
             if url:
-                print(f"  Avatar legado '{name}' encontrado.")
+                print(f"  Avatar '{name}' encontrado: {url[:60]}...")
                 return url
             av_id = av.get("id")
             if av_id:
                 try:
-                    detail = _request("GET", f"{DID_API}/avatars/{av_id}", api_key, email)
+                    detail = _request("GET", f"{DID_API}/scenes/avatars/{av_id}", api_key, email)
                     url = detail.get("image_url") or detail.get("thumbnail_url")
                     if url:
+                        print(f"  Avatar '{name}' detalhe encontrado.")
                         return url
                 except RuntimeError:
                     pass
 
-    names = [av.get("name", "?") for av in avatars]
-    print(f"  Avatar '{AVATAR_NAME}' não encontrado em /avatars. Disponíveis: {names}")
+    if not avatars:
+        print(f"  Nenhum avatar em /scenes/avatars.")
+    else:
+        names = [av.get("name", "?") for av in avatars]
+        print(f"  '{AVATAR_NAME}' não encontrado. Disponíveis: {names}")
     return None
 
 

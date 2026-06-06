@@ -44,12 +44,12 @@ if data is not None:
             print(f"  Sentiments: {', '.join(sentiments) or '(nenhum)'}")
             print()
 
-print("\n=== Avatars legados (/avatars) ===")
-data = _fetch("https://api.d-id.com/avatars")
+print("\n=== Avatars (/scenes/avatars) ===")
+data = _fetch("https://api.d-id.com/scenes/avatars")
 if data is not None:
     avatars = data if isinstance(data, list) else data.get("avatars", [])
     if not avatars:
-        print("Nenhum avatar legado encontrado.")
+        print("Nenhum avatar encontrado.")
     else:
         print(f"\n{len(avatars)} avatar(es):\n")
         for av in avatars:
