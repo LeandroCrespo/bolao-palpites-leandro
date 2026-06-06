@@ -212,6 +212,13 @@ def cmd_bulletin(script_only: bool = False, launch: bool = False):
 
     load_dotenv()
 
+    # Limpa BOM e aspas dos secrets (problema comum em GitHub Actions)
+    for _var in ("ANTHROPIC_API_KEY", "DATABASE_URL", "NEON_CONNECTION_STRING",
+                 "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "DID_API_KEY"):
+        _val = os.environ.get(_var, "")
+        if _val:
+            os.environ[_var] = _val.encode().decode("utf-8-sig").strip().strip("'\"")
+
     engine = get_db_engine()
 
     if launch:
