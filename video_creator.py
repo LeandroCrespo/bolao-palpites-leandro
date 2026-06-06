@@ -1,6 +1,6 @@
 """
-Integração com D-ID para geração do vídeo do Mestre Leme.
-Busca o avatar pelo nome no D-ID, cria o vídeo e baixa o arquivo final.
+Integração com D-ID Expressives API (V4) para geração do vídeo do Mestre Leme.
+Usa /expressives endpoint com avatar_id e sentiment_id.
 """
 
 import base64
@@ -13,20 +13,27 @@ from pathlib import Path
 
 DID_API = "https://api.d-id.com"
 AVATAR_NAME = "Mestre_Leme"
-VOICE_ID = "pt-BR-AntonioNeural"
 POLL_INTERVAL = 5
 POLL_TIMEOUT = 300
+
+# Sentimentos preferidos para o Mestre Leme (animado, botequeiro)
+PREFERRED_SENTIMENTS = ["excited", "friendly", "professional", "empathetic"]
 
 
 def _build_auth(api_key: str, email: str = "") -> str:
     """
-    D-ID usa HTTP Basic Auth: Basic base64(email:api_key).
-    Se DID_EMAIL estiver definido, constrói o header completo.
-    Caso contrário, tenta usar api_key diretamente (para quem já armazenou
-    o valor pré-codificado).
+    D-ID API key do dashboard já vem como base64(email:raw_key).
+    Basta adicionar o prefixo 'Basic '.
+    Se a chave for crua (sem colon no decoded), constrói com email.
     """
     if api_key.lower().startswith(("basic ", "bearer ")):
         return api_key
+    try:
+        decoded = base64.b64decode(api_key + "==").decode("utf-8", errors="replace")
+        if ":" in decoded:
+            return f"Basic {api_key}"
+    except Exception:
+        pass
     if email:
         encoded = base64.b64encode(f"{email}:{api_key}".encode()).decode()
         return f"Basic {encoded}"
@@ -42,8 +49,6 @@ def _headers(api_key: str, email: str = "") -> dict:
 
 
 def _request(method: str, url: str, api_key: str, email: str = "", body: dict | None = None) -> dict:
-    auth = _build_auth(api_key, email)
-    print(f"  D-ID auth format: {auth[:30]}... (len={len(auth)})")
     data = json.dumps(body).encode("utf-8") if body else None
     req = urllib.request.Request(
         url,
@@ -59,73 +64,73 @@ def _request(method: str, url: str, api_key: str, email: str = "", body: dict | 
         raise RuntimeError(f"D-ID API erro {e.code}: {error_body}") from e
 
 
-def get_avatar_image_url(api_key: str, email: str = "") -> str:
+def get_avatar_and_sentiment(api_key: str, email: str = "") -> tuple[str, str]:
     """
-    Busca o avatar do Mestre Leme no D-ID pelo nome e retorna sua image_url.
-    Dispensa upload manual da imagem.
+    Lista avatares em /expressives/avatars, encontra o Mestre_Leme
+    e retorna (avatar_id, sentiment_id).
     """
-    result = _request("GET", f"{DID_API}/avatars", api_key, email)
+    result = _request("GET", f"{DID_API}/expressives/avatars", api_key, email)
     avatars = result if isinstance(result, list) else result.get("avatars", [])
 
     for av in avatars:
         name = av.get("name", "")
         if AVATAR_NAME.lower() in name.lower():
-            url = av.get("image_url") or av.get("thumbnail_url") or av.get("url")
-            if url:
-                print(f"  Avatar '{name}' encontrado: {url[:60]}...")
-                return url
-            av_id = av.get("id")
-            if av_id:
-                detail = _request("GET", f"{DID_API}/avatars/{av_id}", api_key, email)
-                url = detail.get("image_url") or detail.get("thumbnail_url")
-                if url:
-                    print(f"  Avatar '{name}' (id={av_id}) encontrado.")
-                    return url
+            avatar_id = av.get("id")
+            sentiments = av.get("sentiments", [])
+            print(f"  Avatar '{name}' (id={avatar_id}) encontrado.")
+
+            sentiment_id = None
+            for pref in PREFERRED_SENTIMENTS:
+                for snt in sentiments:
+                    if pref in snt.get("name", "").lower():
+                        sentiment_id = snt.get("id")
+                        print(f"  Sentiment: {snt.get('name')} (id={sentiment_id})")
+                        break
+                if sentiment_id:
+                    break
+            if not sentiment_id and sentiments:
+                sentiment_id = sentiments[0].get("id")
+                print(f"  Sentiment (1º disponível): {sentiments[0].get('name')} (id={sentiment_id})")
+
+            if avatar_id and sentiment_id:
+                return avatar_id, sentiment_id
 
     names = [av.get("name", "?") for av in avatars]
     raise RuntimeError(
         f"Avatar '{AVATAR_NAME}' não encontrado no D-ID. "
         f"Avatares disponíveis: {names}. "
-        f"Verifique o nome no Studio e ajuste AVATAR_NAME em video_creator.py."
+        f"Crie um avatar com esse nome no D-ID Studio ou ajuste AVATAR_NAME em video_creator.py."
     )
 
 
 def create_bulletin_video(script: str, api_key: str, output_path: str = "bulletin.mp4",
                           email: str = "") -> str:
     """
-    Gera o vídeo do Mestre Leme com o roteiro fornecido via D-ID.
+    Gera o vídeo do Mestre Leme via D-ID Expressives API.
     Retorna o caminho do arquivo de vídeo baixado.
     """
-    image_url = get_avatar_image_url(api_key, email)
+    avatar_id, sentiment_id = get_avatar_and_sentiment(api_key, email)
 
-    print("  Criando vídeo no D-ID...")
-    talk = _request("POST", f"{DID_API}/talks", api_key, email, {
-        "source_url": image_url,
+    print("  Criando vídeo no D-ID (expressives)...")
+    expressive = _request("POST", f"{DID_API}/expressives", api_key, email, {
+        "avatar_id": avatar_id,
+        "sentiment_id": sentiment_id,
         "script": {
             "type": "text",
             "input": script,
-            "provider": {
-                "type": "microsoft",
-                "voice_id": VOICE_ID,
-            },
-        },
-        "config": {
-            "fluent": True,
-            "pad_audio": 0.5,
-            "stitch": True,
         },
     })
 
-    talk_id = talk.get("id")
-    if not talk_id:
-        raise RuntimeError(f"D-ID não retornou ID do vídeo: {talk}")
-    print(f"  Vídeo criado (id={talk_id}), aguardando processamento...")
+    exp_id = expressive.get("id")
+    if not exp_id:
+        raise RuntimeError(f"D-ID não retornou ID do vídeo: {expressive}")
+    print(f"  Vídeo criado (id={exp_id}), aguardando processamento...")
 
     elapsed = 0
     while elapsed < POLL_TIMEOUT:
         time.sleep(POLL_INTERVAL)
         elapsed += POLL_INTERVAL
-        status = _request("GET", f"{DID_API}/talks/{talk_id}", api_key, email)
+        status = _request("GET", f"{DID_API}/expressives/{exp_id}", api_key, email)
         state = status.get("status")
         print(f"  Status: {state} ({elapsed}s)")
         if state == "done":
@@ -138,7 +143,7 @@ def create_bulletin_video(script: str, api_key: str, output_path: str = "bulleti
     else:
         raise TimeoutError(f"D-ID não terminou o vídeo em {POLL_TIMEOUT}s")
 
-    print(f"  Baixando vídeo...")
+    print("  Baixando vídeo...")
     urllib.request.urlretrieve(video_url, output_path)
     size_kb = Path(output_path).stat().st_size // 1024
     print(f"  Vídeo salvo: {output_path} ({size_kb} KB)")
