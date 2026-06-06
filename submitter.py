@@ -28,9 +28,9 @@ def _real_code(code: str) -> str:
 
 def get_db_engine(db_url: str | None = None):
     load_dotenv()
-    url = (db_url or os.getenv("DATABASE_URL") or "").strip()
+    url = (db_url or os.getenv("DATABASE_URL") or os.getenv("NEON_CONNECTION_STRING") or "").strip()
     if not url:
-        raise EnvironmentError("DATABASE_URL não encontrada no .env")
+        raise EnvironmentError("DATABASE_URL ou NEON_CONNECTION_STRING não encontrada")
     # SQLAlchemy 2.0 exige postgresql://, não postgres://
     if url.startswith("postgres://"):
         url = "postgresql://" + url[len("postgres://"):]
