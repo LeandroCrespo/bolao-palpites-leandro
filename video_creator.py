@@ -20,6 +20,9 @@ POLL_TIMEOUT = 300
 
 PREFERRED_SENTIMENTS = ["excited", "friendly", "professional", "empathetic"]
 
+# Avatar público D-ID usado como fallback enquanto avatar personalizado não existe
+PUBLIC_AVATAR_ID = "public_amber_casual@avt_PfMblk"
+
 
 def _build_auth(api_key: str, email: str = "") -> str:
     """
@@ -69,57 +72,79 @@ def _request(method: str, url: str, api_key: str, email: str = "", body: dict | 
 # V4 Expressives API
 # ---------------------------------------------------------------------------
 
-def _get_expressive_avatar(api_key: str, email: str) -> tuple[str, str] | None:
-    """Tenta encontrar avatar V4 em /expressives/avatars. Retorna (avatar_id, sentiment_id) ou None."""
-    try:
-        result = _request("GET", f"{DID_API}/expressives/avatars", api_key, email)
-    except RuntimeError as e:
-        print(f"  V4 expressives não disponível: {e}")
-        return None
-
-    avatars = result if isinstance(result, list) else result.get("avatars", [])
-    print(f"  V4 avatares encontrados: {len(avatars)}")
-
-    for av in avatars:
-        name = av.get("name", "")
-        if AVATAR_NAME.lower() in name.lower():
-            avatar_id = av.get("id")
-            sentiments = av.get("sentiments", [])
-            print(f"  Avatar '{name}' (id={avatar_id}) — {len(sentiments)} sentiment(s)")
-
-            sentiment_id = None
-            for pref in PREFERRED_SENTIMENTS:
-                for snt in sentiments:
-                    if pref in snt.get("name", "").lower():
-                        sentiment_id = snt.get("id")
-                        print(f"  Sentiment escolhido: {snt.get('name')} ({sentiment_id})")
-                        break
-                if sentiment_id:
-                    break
-            if not sentiment_id and sentiments:
-                sentiment_id = sentiments[0].get("id")
-                print(f"  Sentiment (1º): {sentiments[0].get('name')} ({sentiment_id})")
-
-            if avatar_id and sentiment_id:
-                return avatar_id, sentiment_id
-
-    if avatars:
-        names = [av.get("name", "?") for av in avatars]
-        print(f"  Avatar '{AVATAR_NAME}' não encontrado. Disponíveis: {names}")
-    else:
-        print(f"  Nenhum avatar V4 disponível. Crie um no D-ID Studio com nome '{AVATAR_NAME}'.")
+def _pick_sentiment(sentiments: list[dict]) -> str | None:
+    """Escolhe o sentiment_id mais adequado para o Mestre Leme."""
+    for pref in PREFERRED_SENTIMENTS:
+        for snt in sentiments:
+            if pref in snt.get("name", "").lower():
+                print(f"  Sentiment escolhido: {snt.get('name')} ({snt.get('id')})")
+                return snt.get("id")
+    if sentiments:
+        print(f"  Sentiment (1º disponível): {sentiments[0].get('name')} ({sentiments[0].get('id')})")
+        return sentiments[0].get("id")
     return None
 
 
-def _create_expressive_video(script: str, avatar_id: str, sentiment_id: str,
+def _get_avatar_sentiments(avatar_id: str, api_key: str, email: str) -> tuple[str, str | None] | None:
+    """Busca detalhes de um avatar específico por ID. Retorna (avatar_id, sentiment_id) ou None.
+    sentiment_id pode ser None se o avatar não tiver sentiments listados — ainda tentamos criar o vídeo."""
+    encoded_id = avatar_id.replace("@", "%40")
+    try:
+        result = _request("GET", f"{DID_API}/expressives/avatars/{encoded_id}", api_key, email)
+        sentiments = result.get("sentiments", [])
+        print(f"  Avatar {avatar_id}: {len(sentiments)} sentiment(s) encontrado(s)")
+        sentiment_id = _pick_sentiment(sentiments)
+        return avatar_id, sentiment_id  # sentiment_id pode ser None — tentamos assim mesmo
+    except RuntimeError as e:
+        print(f"  Erro ao buscar avatar {avatar_id}: {e}")
+    return None
+
+
+def _get_expressive_avatar(api_key: str, email: str) -> tuple[str, str] | None:
+    """
+    Tenta encontrar avatar V4.
+    1. Lista /expressives/avatars e procura pelo nome AVATAR_NAME
+    2. Se falhar, tenta buscar o avatar público do D-ID como fallback
+    """
+    # Tenta listar todos os avatares
+    try:
+        result = _request("GET", f"{DID_API}/expressives/avatars", api_key, email)
+        avatars = result if isinstance(result, list) else result.get("avatars", [])
+        print(f"  V4 avatares encontrados: {len(avatars)}")
+
+        for av in avatars:
+            name = av.get("name", "")
+            if AVATAR_NAME.lower() in name.lower():
+                avatar_id = av.get("id")
+                sentiments = av.get("sentiments", [])
+                print(f"  Avatar '{name}' (id={avatar_id}) — {len(sentiments)} sentiment(s)")
+                sentiment_id = _pick_sentiment(sentiments)
+                if avatar_id and sentiment_id:
+                    return avatar_id, sentiment_id
+
+        if avatars:
+            names = [av.get("name", "?") for av in avatars]
+            print(f"  '{AVATAR_NAME}' não encontrado. Disponíveis: {names}")
+
+    except RuntimeError as e:
+        print(f"  Listagem /expressives/avatars falhou: {e}")
+
+    # Fallback: tenta buscar avatar público diretamente pelo ID
+    print(f"  Tentando avatar público: {PUBLIC_AVATAR_ID}...")
+    return _get_avatar_sentiments(PUBLIC_AVATAR_ID, api_key, email)
+
+
+def _create_expressive_video(script: str, avatar_id: str, sentiment_id: str | None,
                               api_key: str, email: str, output_path: str) -> str:
     """Cria vídeo via /expressives e aguarda conclusão."""
     print("  Criando vídeo via /expressives...")
-    exp = _request("POST", f"{DID_API}/expressives", api_key, email, {
+    body: dict = {
         "avatar_id": avatar_id,
-        "sentiment_id": sentiment_id,
         "script": {"type": "text", "input": script},
-    })
+    }
+    if sentiment_id:
+        body["sentiment_id"] = sentiment_id
+    exp = _request("POST", f"{DID_API}/expressives", api_key, email, body)
     exp_id = exp.get("id")
     if not exp_id:
         raise RuntimeError(f"D-ID não retornou ID: {exp}")
