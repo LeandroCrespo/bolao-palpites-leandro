@@ -13,7 +13,7 @@ import json
 from pathlib import Path
 
 DID_API = "https://api.d-id.com"
-AVATAR_NAME = "Mestre_Leme"
+AVATAR_NAME = "Crespao"
 VOICE_ID = "pt-BR-AntonioNeural"
 POLL_INTERVAL = 5
 POLL_TIMEOUT = 300
@@ -41,14 +41,9 @@ def _build_auth(api_key: str, email: str = "") -> str:
     return f"Basic {api_key}"
 
 
-def _headers(api_key: str, email: str = "", url: str = "") -> dict:
-    # /expressives usa Basic <key>; endpoints legados (/avatars, /talks) usam chave crua
-    if "/expressives" in url:
-        auth = _build_auth(api_key, email)
-    else:
-        auth = api_key  # formato legado: chave direta
+def _headers(api_key: str, email: str = "") -> dict:
     return {
-        "Authorization": auth,
+        "Authorization": _build_auth(api_key, email),
         "Content-Type": "application/json",
         "Accept": "application/json",
     }
@@ -59,7 +54,7 @@ def _request(method: str, url: str, api_key: str, email: str = "", body: dict | 
     req = urllib.request.Request(
         url,
         data=data,
-        headers=_headers(api_key, email, url),
+        headers=_headers(api_key, email),
         method=method,
     )
     try:
