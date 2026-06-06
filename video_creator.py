@@ -41,9 +41,14 @@ def _build_auth(api_key: str, email: str = "") -> str:
     return f"Basic {api_key}"
 
 
-def _headers(api_key: str, email: str = "") -> dict:
+def _headers(api_key: str, email: str = "", url: str = "") -> dict:
+    # /expressives usa Basic <key>; endpoints legados (/avatars, /talks) usam chave crua
+    if "/expressives" in url:
+        auth = _build_auth(api_key, email)
+    else:
+        auth = api_key  # formato legado: chave direta
     return {
-        "Authorization": _build_auth(api_key, email),
+        "Authorization": auth,
         "Content-Type": "application/json",
         "Accept": "application/json",
     }
@@ -54,7 +59,7 @@ def _request(method: str, url: str, api_key: str, email: str = "", body: dict | 
     req = urllib.request.Request(
         url,
         data=data,
-        headers=_headers(api_key, email),
+        headers=_headers(api_key, email, url),
         method=method,
     )
     try:
