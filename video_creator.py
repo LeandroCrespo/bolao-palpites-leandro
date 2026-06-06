@@ -261,11 +261,19 @@ def create_bulletin_video(script: str, api_key: str, output_path: str = "bulleti
         print(f"  Usando source_url fornecida: {source_url[:60]}...")
         return _create_talks_video(script, source_url, api_key, email, output_path)
 
-    # Tenta V4 Expressives
+    # Tenta V4 Expressives com avatar personalizado (Crespao) ou público
     expressive = _get_expressive_avatar(api_key, email)
     if expressive:
         avatar_id, sentiment_id = expressive
         return _create_expressive_video(script, avatar_id, sentiment_id, api_key, email, output_path)
+
+    # Fallback direto: tenta POST /expressives com avatar público sem lookup de sentiments
+    # (os docs D-ID mostram public_amber_casual@avt_PfMblk como exemplo funcional)
+    print(f"  Tentando POST /expressives direto com avatar público (sem lookup)...")
+    try:
+        return _create_expressive_video(script, PUBLIC_AVATAR_ID, None, api_key, email, output_path)
+    except RuntimeError as e:
+        print(f"  Avatar público também falhou: {e}")
 
     # Fallback: V1/V2 Talks com lookup automático
     print("  Tentando API /talks como fallback...")
@@ -273,10 +281,7 @@ def create_bulletin_video(script: str, api_key: str, output_path: str = "bulleti
     if image_url:
         return _create_talks_video(script, image_url, api_key, email, output_path)
 
-    # Último recurso: avatar padrão D-ID para validar o pipeline
-    print("  Usando avatar padrão D-ID (alice) para validar pipeline...")
-    default_url = "https://d-id-public-bucket.s3.us-west-2.amazonaws.com/alice.jpg"
-    return _create_talks_video(script, default_url, api_key, email, output_path)
+    raise RuntimeError("Nenhuma forma de gerar vídeo D-ID funcionou com esse plano/chave.")
 
 
 if __name__ == "__main__":
