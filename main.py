@@ -237,7 +237,7 @@ def cmd_bulletin(script_only: bool = False, launch: bool = False):
         print("\nGerando roteiro de lançamento com Claude...")
 
         script = generate_launch_script(data, missing, copa_start_str, dias)
-        caption = f"🎙️ <b>Boletim do Mestre Leme — Lançamento do Bolão Copa 2026!</b>"
+        caption = f"🎙️ <b>Boletim do Mestre Leme — Lançamento do Bolão dos Lemes Copa 2026!</b>"
     else:
         print("\n=== BOLETIM DO MESTRE LEME ===")
         with engine.begin() as conn:

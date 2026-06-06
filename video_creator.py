@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 
 DID_API = "https://api.d-id.com"
-AVATAR_NAME = "Seu_Leme"
+AVATAR_NAME = "Mestre_Leme"
 VOICE_ID = "pt-BR-AntonioNeural"
 POLL_INTERVAL = 5
 POLL_TIMEOUT = 300
@@ -41,7 +41,7 @@ def _request(method: str, url: str, api_key: str, body: dict | None = None) -> d
         raise RuntimeError(f"D-ID API erro {e.code}: {error_body}") from e
 
 
-def get_crespao_image_url(api_key: str) -> str:
+def get_avatar_image_url(api_key: str) -> str:
     """
     Busca o avatar do Mestre Leme no D-ID pelo nome e retorna sua image_url.
     Dispensa upload manual da imagem.
@@ -78,7 +78,7 @@ def create_bulletin_video(script: str, api_key: str, output_path: str = "bulleti
     Gera o vídeo do Mestre Leme com o roteiro fornecido via D-ID.
     Retorna o caminho do arquivo de vídeo baixado.
     """
-    image_url = get_crespao_image_url(api_key)
+    image_url = get_avatar_image_url(api_key)
 
     print("  Criando vídeo no D-ID...")
     talk = _request("POST", f"{DID_API}/talks", api_key, {
@@ -137,7 +137,7 @@ if __name__ == "__main__":
         sys.exit(1)
     script_test = (
         "E aí, meu povo! Sou o Mestre Leme, direto do boteco mais honesto do Brasil! "
-        "Isso aqui é só um teste do Boletim do Bolão da Copa. "
+        "Isso aqui é só um teste do Boletim do Bolão dos Lemes. "
         "Se esse vídeo chegou até você, o sistema tá funcionando! Saúde!"
     )
     path = create_bulletin_video(script_test, api_key, "test_bulletin.mp4")
