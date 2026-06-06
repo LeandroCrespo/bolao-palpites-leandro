@@ -1,10 +1,8 @@
 """
 Integração com D-ID para geração do vídeo do Mestre Leme.
-Tenta V4 Expressives API (/expressives) primeiro; se não disponível,
-usa V1/V2 Talks API (/talks) com voz Microsoft pt-BR.
+Usa a API /talks (plano Lite), com voz Microsoft pt-BR.
 """
 
-import base64
 import os
 import time
 import urllib.request
@@ -18,48 +16,23 @@ VOICE_ID = "pt-BR-AntonioNeural"
 POLL_INTERVAL = 5
 POLL_TIMEOUT = 300
 
-PREFERRED_SENTIMENTS = ["excited", "friendly", "professional", "empathetic"]
-
-# Avatar público D-ID usado como fallback enquanto avatar personalizado não existe
-PUBLIC_AVATAR_ID = "public_amber_casual@avt_PfMblk"
+# Imagem padrão usada quando nenhuma foto personalizada for fornecida
+DEFAULT_SOURCE_URL = "https://d-id-public-bucket.s3.us-west-2.amazonaws.com/alice.jpg"
 
 
-def _build_auth(api_key: str, email: str = "") -> str:
-    """
-    D-ID API key do dashboard já vem como base64(email:raw_key).
-    Detecta se já está nesse formato (contém colon decodificado) e
-    adiciona apenas o prefixo 'Basic '.
-    """
-    if api_key.lower().startswith(("basic ", "bearer ")):
-        return api_key
-    try:
-        decoded = base64.b64decode(api_key + "==").decode("utf-8", errors="replace")
-        if ":" in decoded:
-            return f"Basic {api_key}"
-    except Exception:
-        pass
-    if email:
-        encoded = base64.b64encode(f"{email}:{api_key}".encode()).decode()
-        return f"Basic {encoded}"
-    return f"Basic {api_key}"
-
-
-def _headers(api_key: str, email: str = "") -> dict:
+def _headers(api_key: str) -> dict:
+    """D-ID aceita a chave bruta no formato 'Basic {key}'."""
+    token = api_key if api_key.lower().startswith(("basic ", "bearer ")) else f"Basic {api_key}"
     return {
-        "Authorization": _build_auth(api_key, email),
+        "Authorization": token,
         "Content-Type": "application/json",
         "Accept": "application/json",
     }
 
 
-def _request(method: str, url: str, api_key: str, email: str = "", body: dict | None = None) -> dict:
+def _request(method: str, url: str, api_key: str, body: dict | None = None) -> dict:
     data = json.dumps(body).encode("utf-8") if body else None
-    req = urllib.request.Request(
-        url,
-        data=data,
-        headers=_headers(api_key, email),
-        method=method,
-    )
+    req = urllib.request.Request(url, data=data, headers=_headers(api_key), method=method)
     try:
         with urllib.request.urlopen(req, timeout=30) as resp:
             return json.loads(resp.read())
@@ -68,139 +41,31 @@ def _request(method: str, url: str, api_key: str, email: str = "", body: dict | 
         raise RuntimeError(f"D-ID API erro {e.code}: {error_body}") from e
 
 
-# ---------------------------------------------------------------------------
-# V4 Expressives API
-# ---------------------------------------------------------------------------
-
-def _pick_sentiment(sentiments: list[dict]) -> str | None:
-    """Escolhe o sentiment_id mais adequado para o Mestre Leme."""
-    for pref in PREFERRED_SENTIMENTS:
-        for snt in sentiments:
-            if pref in snt.get("name", "").lower():
-                print(f"  Sentiment escolhido: {snt.get('name')} ({snt.get('id')})")
-                return snt.get("id")
-    if sentiments:
-        print(f"  Sentiment (1º disponível): {sentiments[0].get('name')} ({sentiments[0].get('id')})")
-        return sentiments[0].get("id")
-    return None
-
-
-def _get_avatar_sentiments(avatar_id: str, api_key: str, email: str) -> tuple[str, str | None] | None:
-    """Busca detalhes de um avatar específico por ID. Retorna (avatar_id, sentiment_id) ou None.
-    sentiment_id pode ser None se o avatar não tiver sentiments listados — ainda tentamos criar o vídeo."""
-    encoded_id = avatar_id.replace("@", "%40")
+def _get_presenter_url(api_key: str) -> str | None:
+    """Tenta encontrar a imagem do Crespao em /scenes/avatars."""
     try:
-        result = _request("GET", f"{DID_API}/expressives/avatars/{encoded_id}", api_key, email)
-        sentiments = result.get("sentiments", [])
-        print(f"  Avatar {avatar_id}: {len(sentiments)} sentiment(s) encontrado(s)")
-        sentiment_id = _pick_sentiment(sentiments)
-        return avatar_id, sentiment_id  # sentiment_id pode ser None — tentamos assim mesmo
-    except RuntimeError as e:
-        print(f"  Erro ao buscar avatar {avatar_id}: {e}")
-    return None
-
-
-def _get_expressive_avatar(api_key: str, email: str) -> tuple[str, str] | None:
-    """
-    Tenta encontrar avatar V4.
-    1. Lista /expressives/avatars e procura pelo nome AVATAR_NAME
-    2. Se falhar, tenta buscar o avatar público do D-ID como fallback
-    """
-    # Tenta listar todos os avatares
-    try:
-        result = _request("GET", f"{DID_API}/expressives/avatars", api_key, email)
+        result = _request("GET", f"{DID_API}/scenes/avatars", api_key)
         avatars = result if isinstance(result, list) else result.get("avatars", [])
-        print(f"  V4 avatares encontrados: {len(avatars)}")
-
+        print(f"  Avatares em /scenes/avatars: {len(avatars)}")
         for av in avatars:
-            name = av.get("name", "")
-            if AVATAR_NAME.lower() in name.lower():
-                avatar_id = av.get("id")
-                sentiments = av.get("sentiments", [])
-                print(f"  Avatar '{name}' (id={avatar_id}) — {len(sentiments)} sentiment(s)")
-                sentiment_id = _pick_sentiment(sentiments)
-                if avatar_id and sentiment_id:
-                    return avatar_id, sentiment_id
-
+            if AVATAR_NAME.lower() in av.get("name", "").lower():
+                url = av.get("image_url") or av.get("thumbnail_url") or av.get("url")
+                if url:
+                    print(f"  Encontrou '{av.get('name')}': {url[:60]}...")
+                    return url
         if avatars:
             names = [av.get("name", "?") for av in avatars]
             print(f"  '{AVATAR_NAME}' não encontrado. Disponíveis: {names}")
-
     except RuntimeError as e:
-        print(f"  Listagem /expressives/avatars falhou: {e}")
-
-    # Fallback: tenta buscar avatar público diretamente pelo ID
-    print(f"  Tentando avatar público: {PUBLIC_AVATAR_ID}...")
-    return _get_avatar_sentiments(PUBLIC_AVATAR_ID, api_key, email)
-
-
-def _create_expressive_video(script: str, avatar_id: str, sentiment_id: str | None,
-                              api_key: str, email: str, output_path: str) -> str:
-    """Cria vídeo via /expressives e aguarda conclusão."""
-    print("  Criando vídeo via /expressives...")
-    body: dict = {
-        "avatar_id": avatar_id,
-        "script": {"type": "text", "input": script},
-    }
-    if sentiment_id:
-        body["sentiment_id"] = sentiment_id
-    exp = _request("POST", f"{DID_API}/expressives", api_key, email, body)
-    exp_id = exp.get("id")
-    if not exp_id:
-        raise RuntimeError(f"D-ID não retornou ID: {exp}")
-    print(f"  ID: {exp_id}, aguardando...")
-    return _poll_and_download(f"{DID_API}/expressives/{exp_id}", exp_id, api_key, email, output_path)
-
-
-# ---------------------------------------------------------------------------
-# V1/V2 Talks API (fallback)
-# ---------------------------------------------------------------------------
-
-def _get_talks_avatar(api_key: str, email: str) -> str | None:
-    """Tenta encontrar image_url do avatar em /scenes/avatars. Retorna URL ou None."""
-    try:
-        result = _request("GET", f"{DID_API}/scenes/avatars", api_key, email)
-    except RuntimeError as e:
-        print(f"  /scenes/avatars não disponível: {e}")
-        return None
-
-    avatars = result if isinstance(result, list) else result.get("avatars", [])
-    print(f"  Avatares em /scenes/avatars: {len(avatars)}")
-    for av in avatars:
-        print(f"    - {av.get('name','?')} (id={av.get('id','?')})")
-
-    for av in avatars:
-        name = av.get("name", "")
-        if AVATAR_NAME.lower() in name.lower():
-            url = av.get("image_url") or av.get("thumbnail_url") or av.get("url")
-            if url:
-                print(f"  Avatar '{name}' encontrado: {url[:60]}...")
-                return url
-            av_id = av.get("id")
-            if av_id:
-                try:
-                    detail = _request("GET", f"{DID_API}/scenes/avatars/{av_id}", api_key, email)
-                    url = detail.get("image_url") or detail.get("thumbnail_url")
-                    if url:
-                        print(f"  Avatar '{name}' detalhe encontrado.")
-                        return url
-                except RuntimeError:
-                    pass
-
-    if not avatars:
-        print(f"  Nenhum avatar em /scenes/avatars.")
-    else:
-        names = [av.get("name", "?") for av in avatars]
-        print(f"  '{AVATAR_NAME}' não encontrado. Disponíveis: {names}")
+        print(f"  /scenes/avatars erro: {e}")
     return None
 
 
-def _create_talks_video(script: str, image_url: str,
-                         api_key: str, email: str, output_path: str) -> str:
-    """Cria vídeo via /talks com voz Microsoft pt-BR."""
-    print("  Criando vídeo via /talks (pt-BR-AntonioNeural)...")
-    talk = _request("POST", f"{DID_API}/talks", api_key, email, {
-        "source_url": image_url,
+def _create_talks_video(script: str, source_url: str, api_key: str, output_path: str) -> str:
+    """Cria vídeo via /talks com voz Microsoft pt-BR e aguarda conclusão."""
+    print(f"  Criando vídeo via /talks (voz: {VOICE_ID})...")
+    talk = _request("POST", f"{DID_API}/talks", api_key, {
+        "source_url": source_url,
         "script": {
             "type": "text",
             "input": script,
@@ -214,21 +79,16 @@ def _create_talks_video(script: str, image_url: str,
     talk_id = talk.get("id")
     if not talk_id:
         raise RuntimeError(f"D-ID não retornou ID: {talk}")
-    print(f"  ID: {talk_id}, aguardando...")
-    return _poll_and_download(f"{DID_API}/talks/{talk_id}", talk_id, api_key, email, output_path)
+    print(f"  ID: {talk_id}, aguardando processamento...")
+    return _poll_and_download(f"{DID_API}/talks/{talk_id}", talk_id, api_key, output_path)
 
 
-# ---------------------------------------------------------------------------
-# Polling + download
-# ---------------------------------------------------------------------------
-
-def _poll_and_download(status_url: str, job_id: str,
-                        api_key: str, email: str, output_path: str) -> str:
+def _poll_and_download(status_url: str, job_id: str, api_key: str, output_path: str) -> str:
     elapsed = 0
     while elapsed < POLL_TIMEOUT:
         time.sleep(POLL_INTERVAL)
         elapsed += POLL_INTERVAL
-        status = _request("GET", status_url, api_key, email)
+        status = _request("GET", status_url, api_key)
         state = status.get("status")
         print(f"  Status: {state} ({elapsed}s)")
         if state == "done":
@@ -245,43 +105,27 @@ def _poll_and_download(status_url: str, job_id: str,
     raise TimeoutError(f"D-ID não terminou em {POLL_TIMEOUT}s")
 
 
-# ---------------------------------------------------------------------------
-# Entry point
-# ---------------------------------------------------------------------------
-
 def create_bulletin_video(script: str, api_key: str, output_path: str = "bulletin.mp4",
                           email: str = "", source_url: str = "") -> str:
     """
-    Gera o vídeo do Mestre Leme via D-ID.
-    Se source_url for fornecida, usa /talks diretamente (ignora lookup de avatar).
-    Caso contrário tenta V4 Expressives, depois /talks com lookup automático.
+    Gera o vídeo do Mestre Leme via D-ID /talks API (plano Lite).
+    1. Se source_url fornecida (DID_SOURCE_URL secret), usa direto.
+    2. Tenta encontrar imagem do Crespao em /scenes/avatars.
+    3. Fallback: usa alice.jpg padrão do D-ID.
     """
-    # Caminho rápido: URL da imagem fornecida diretamente
+    # 1. URL de imagem fornecida diretamente via secret
     if source_url:
-        print(f"  Usando source_url fornecida: {source_url[:60]}...")
-        return _create_talks_video(script, source_url, api_key, email, output_path)
+        print(f"  Usando imagem personalizada: {source_url[:60]}...")
+        return _create_talks_video(script, source_url, api_key, output_path)
 
-    # Tenta V4 Expressives com avatar personalizado (Crespao) ou público
-    expressive = _get_expressive_avatar(api_key, email)
-    if expressive:
-        avatar_id, sentiment_id = expressive
-        return _create_expressive_video(script, avatar_id, sentiment_id, api_key, email, output_path)
+    # 2. Busca avatar Crespao na conta
+    presenter_url = _get_presenter_url(api_key)
+    if presenter_url:
+        return _create_talks_video(script, presenter_url, api_key, output_path)
 
-    # Fallback direto: tenta POST /expressives com avatar público sem lookup de sentiments
-    # (os docs D-ID mostram public_amber_casual@avt_PfMblk como exemplo funcional)
-    print(f"  Tentando POST /expressives direto com avatar público (sem lookup)...")
-    try:
-        return _create_expressive_video(script, PUBLIC_AVATAR_ID, None, api_key, email, output_path)
-    except RuntimeError as e:
-        print(f"  Avatar público também falhou: {e}")
-
-    # Fallback: V1/V2 Talks com lookup automático
-    print("  Tentando API /talks como fallback...")
-    image_url = _get_talks_avatar(api_key, email)
-    if image_url:
-        return _create_talks_video(script, image_url, api_key, email, output_path)
-
-    raise RuntimeError("Nenhuma forma de gerar vídeo D-ID funcionou com esse plano/chave.")
+    # 3. Fallback: imagem padrão D-ID
+    print(f"  Usando imagem padrão D-ID (alice.jpg)...")
+    return _create_talks_video(script, DEFAULT_SOURCE_URL, api_key, output_path)
 
 
 if __name__ == "__main__":
@@ -289,7 +133,6 @@ if __name__ == "__main__":
     from dotenv import load_dotenv
     load_dotenv()
     api_key = os.getenv("DID_API_KEY")
-    email = os.getenv("DID_EMAIL", "")
     if not api_key:
         print("DID_API_KEY não encontrada no .env")
         sys.exit(1)
@@ -298,5 +141,5 @@ if __name__ == "__main__":
         "Isso aqui é só um teste do Boletim do Bolão dos Lemes. "
         "Se esse vídeo chegou até você, o sistema tá funcionando! Saúde!"
     )
-    path = create_bulletin_video(script_test, api_key, "test_bulletin.mp4", email)
+    path = create_bulletin_video(script_test, api_key, "test_bulletin.mp4")
     print(f"\nTeste concluído: {path}")
