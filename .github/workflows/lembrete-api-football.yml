@@ -1,0 +1,25 @@
+name: "⏰ Lembrete: renovar API-Football"
+# Lembrete unico: a assinatura Pro da API-Football expira em 21/06/2026.
+# Dispara duas vezes no dia 20/06 (9h07 e 13h07 de Brasilia) por redundancia,
+# ja que o cron do GitHub pode falhar. Pode apagar este arquivo apos 20/06/2026.
+on:
+  schedule:
+    - cron: '7 12 20 6 *'
+    - cron: '7 16 20 6 *'
+  workflow_dispatch:
+jobs:
+  lembrete:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Enviar lembrete via Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          if [ "$(date -u +%Y)" != "2026" ]; then
+            echo "Fora de 2026, lembrete obsoleto. Apague este workflow."
+            exit 0
+          fi
+          curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d chat_id="${TELEGRAM_CHAT_ID}" \
+            -d text="⚠️ LEMBRETE: a assinatura Pro da API-Football expira AMANHÃ (21/06/2026). Renove hoje para que a atualização automática de placares do Bolão Copa 2026 continue funcionando até o fim da Copa (19/07)."
