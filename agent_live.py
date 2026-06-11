@@ -341,7 +341,7 @@ def run_agent(dry_run: bool = False):
     load_dotenv()
 
     # Limpa BOM e aspas dos secrets (problema comum em GitHub Actions)
-    for _var in ("ANTHROPIC_API_KEY", "DATABASE_URL", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"):
+    for _var in ("ANTHROPIC_API_KEY", "DATABASE_URL", "BOLAO_USER_ID", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"):
         _val = os.environ.get(_var, "")
         if _val:
             os.environ[_var] = _val.encode().decode("utf-8-sig").strip().strip("'\"")
