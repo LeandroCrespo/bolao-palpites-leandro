@@ -61,15 +61,23 @@ jobs:
           BOLAO_USER_ID: ${{ secrets.BOLAO_USER_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          DID_API_KEY: ${{ secrets.DID_API_KEY }}
-          DID_EMAIL: ${{ secrets.DID_EMAIL }}
-          DID_SOURCE_URL: ${{ secrets.DID_SOURCE_URL }}
         run: |
           if [[ "${{ inputs.launch }}" == "true" ]]; then
             python main.py bulletin --launch
           else
             python main.py bulletin
           fi
+
+      - name: Gerar e enviar Prompts de Video via Telegram
+        if: steps.check_date.outputs.skip == 'false' && inputs.launch != 'true'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          NEON_CONNECTION_STRING: ${{ secrets.NEON_CONNECTION_STRING }}
+          BOLAO_USER_ID: ${{ secrets.BOLAO_USER_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py video --telegram
 
       - name: Registrar execução
         if: always()

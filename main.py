@@ -10,6 +10,9 @@ Uso:
   python main.py all                  # analyze + review + submit em sequência
   python main.py bulletin             # Gera e envia o Boletim do Mestre Leme via Telegram
   python main.py bulletin --script    # Só imprime o roteiro, sem gerar vídeo
+  python main.py video                # Gera 6 prompts Gemini Pro e salva em arquivo
+  python main.py video --print        # Imprime os 6 prompts no console para copiar
+  python main.py video --telegram     # Gera e envia os 6 prompts via Telegram
 """
 
 import sys
@@ -214,8 +217,7 @@ def cmd_bulletin(script_only: bool = False, launch: bool = False):
 
     # Limpa BOM e aspas dos secrets (problema comum em GitHub Actions)
     for _var in ("ANTHROPIC_API_KEY", "DATABASE_URL", "NEON_CONNECTION_STRING",
-                 "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID", "DID_API_KEY", "DID_EMAIL",
-                 "DID_SOURCE_URL"):
+                 "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"):
         _val = os.environ.get(_var, "")
         if _val:
             os.environ[_var] = _val.encode().decode("utf-8-sig").strip().strip("'\"")
@@ -255,45 +257,71 @@ def cmd_bulletin(script_only: bool = False, launch: bool = False):
     print(f"\n--- ROTEIRO ({len(script.split())} palavras) ---\n{script}\n---\n")
 
     if script_only:
-        print("Modo --script: roteiro impresso, vídeo não gerado.")
+        print("Modo --script: roteiro impresso, nada enviado.")
         return
 
-    api_key = os.getenv("DID_API_KEY")
-    did_email = os.getenv("DID_EMAIL", "")
-    did_source_url = os.getenv("DID_SOURCE_URL", "")
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id = os.getenv("TELEGRAM_CHAT_ID")
 
-    if not api_key:
-        print("DID_API_KEY não encontrada — enviando roteiro em texto pelo Telegram.")
-        if token and chat_id:
-            from bulletin_sender import send_text_fallback
-            send_text_fallback(script, token, chat_id, caption=caption)
-        return
-
-    from video_creator import create_bulletin_video
-    from bulletin_sender import send_bulletin_video, send_text_fallback
-
-    video_path = "bulletin.mp4"
-    try:
-        print("Gerando vídeo no D-ID...")
-        create_bulletin_video(script, api_key, video_path,
-                              source_url=did_source_url)
-    except Exception as e:
-        print(f"Erro ao gerar vídeo: {e}")
-        print("Enviando roteiro em texto como fallback...")
-        if token and chat_id:
-            send_text_fallback(script, token, chat_id, caption=caption)
-        return
-
     if token and chat_id:
-        send_bulletin_video(video_path, caption, token, chat_id)
+        from bulletin_sender import send_text_fallback
+        send_text_fallback(script, token, chat_id, caption=caption)
     else:
-        print("TELEGRAM_BOT_TOKEN ou TELEGRAM_CHAT_ID não encontrados — vídeo salvo localmente.")
+        print("TELEGRAM_BOT_TOKEN ou TELEGRAM_CHAT_ID não encontrados — roteiro não enviado.")
 
-    import os as _os
-    if _os.path.exists(video_path):
-        _os.remove(video_path)
+
+# ---------------------------------------------------------------------------
+# Video: gera os 6 prompts Gemini Pro do boletim diário
+# ---------------------------------------------------------------------------
+
+def cmd_video(print_only: bool = False, via_telegram: bool = False):
+    """Gera 6 prompts Gemini Pro (Veo 3) com os dados do boletim do dia."""
+    from datetime import datetime
+    from submitter import get_db_engine
+    from bulletin_db import get_bulletin_data, get_missing_predictions_data
+    from bulletin_generator import generate_video_prompt
+
+    load_dotenv()
+    for _var in ("ANTHROPIC_API_KEY", "DATABASE_URL", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"):
+        _val = os.environ.get(_var, "")
+        if _val:
+            os.environ[_var] = _val.encode().decode("utf-8-sig").strip().strip("'\"")
+
+    engine = get_db_engine()
+    print("\n=== PROMPTS DE VIDEO — MESTRE LEME ===")
+
+    with engine.begin() as conn:
+        data = get_bulletin_data(conn)
+        missing = get_missing_predictions_data(conn)
+
+    print(f"Data: {data['date']}")
+    print(f"Jogos hoje: {len(data['results'])}")
+    print(f"Sem podio: {len(missing['sem_podio'])} | Grupos incompletos: {len(missing['grupos_incompletos'])}")
+    print("\nGerando 6 prompts com Claude...")
+
+    prompts = generate_video_prompt(data, missing)
+
+    if print_only:
+        print("\n" + "=" * 70 + "\n")
+        print(prompts)
+        print("\n" + "=" * 70)
+        print("\nCopie cada bloco (separado por ---) e cole no Gemini Pro na ordem 1 a 6.")
+        return
+
+    if via_telegram:
+        token = os.getenv("TELEGRAM_BOT_TOKEN")
+        chat_id = os.getenv("TELEGRAM_CHAT_ID")
+        if token and chat_id:
+            from bulletin_sender import send_video_prompts
+            send_video_prompts(prompts, token, chat_id, date_str=data["date"])
+            return
+        print("TELEGRAM_BOT_TOKEN ou TELEGRAM_CHAT_ID nao encontrados — salvando em arquivo.")
+
+    filename = f"video_prompt_{datetime.now().strftime('%Y%m%d')}.txt"
+    with open(filename, "w", encoding="utf-8") as f:
+        f.write(prompts)
+    print(f"\nPrompts salvos em: {filename}")
+    print("Abra o arquivo, copie cada bloco (separado por ---) e cole no Gemini Pro na ordem 1 a 6.")
 
 
 # ---------------------------------------------------------------------------
@@ -337,6 +365,9 @@ def main():
 
     elif command == "bulletin":
         cmd_bulletin(script_only="--script" in args, launch="--launch" in args)
+
+    elif command == "video":
+        cmd_video(print_only="--print" in args, via_telegram="--telegram" in args)
 
     else:
         print(f"Comando desconhecido: {command}")

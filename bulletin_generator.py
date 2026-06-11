@@ -8,6 +8,87 @@ import anthropic
 MODEL = "claude-sonnet-4-6"
 MAX_SCRIPT_WORDS = 220  # ~1m30s de vídeo no D-ID
 
+# ---------------------------------------------------------------------------
+# Contexto fixo do personagem — prefixado em todos os prompts de vídeo
+# ---------------------------------------------------------------------------
+
+# Guarda-roupa do Mestre Leme — varia a cada boletim, mantendo rosto/corpo/cenário/personalidade fixos
+_OUTFITS = [
+    "open unbuttoned blue-and-white plaid flannel shirt over a plain white undershirt, dark jeans",
+    "bright green and yellow Brazil football team (Seleção) jersey with sleeves slightly rolled up, dark jeans",
+    "white short-sleeve guayabera-style shirt unbuttoned at the collar, dark jeans",
+    "red and black checkered flannel shirt over a plain white undershirt, dark jeans",
+    "yellow polo shirt with a small embroidered boteco logo on the chest, dark jeans",
+    "open unbuttoned orange-and-brown plaid flannel shirt over a plain white undershirt, dark jeans",
+    "navy blue zip-up jacket worn open over a plain white t-shirt, dark jeans",
+]
+
+
+def _build_fixed_context(date_str: str, location: dict | None = None) -> str:
+    """
+    Monta o bloco FIXED CHARACTER do Mestre Leme, variando a roupa a cada boletim
+    (com base na data) e o cenário (com base na cidade onde ele está, acompanhando
+    a Copa), mantendo rosto, corpo, bigode e personalidade fixos.
+    """
+    idx = sum(int(c) for c in date_str if c.isdigit()) % len(_OUTFITS)
+    outfit = _OUTFITS[idx]
+
+    if location:
+        setting = (
+            f"a lively spot in {location['city']}, {location['country']} — {location['vibe']}, "
+            f"warm inviting lighting, constant ambient sounds of a cheering World Cup crowd mixed "
+            f"with low conversation murmur and clinking glasses"
+        )
+    else:
+        setting = (
+            "interior of an authentic São Paulo neighborhood boteco — long dark wooden bar counter "
+            "with worn varnish and glass ring stains, mismatched high bar stools, Brazilian green-and-yellow "
+            "flag pinned on the brick wall behind him, old CRT television mounted in the upper corner showing "
+            "football highlights, shelves lined with cachaça and beer bottles, warm incandescent yellow lighting "
+            "casting amber tones, constant boteco ambient sounds (low conversation murmur, clinking glasses, "
+            "faint samba radio)"
+        )
+
+    return f"""FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old.
+FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut very close to the head with gray dominating at the temples, thick prominent all-gray mustache in the classic Brazilian gaúcho style — dense and well-kept, covering the upper lip. Expressive heavy eyebrows, deep warm brown eyes with laugh lines at the corners, wide flat nose, a broad full smile showing upper and lower teeth — the kind of smile that makes every room feel welcoming.
+BODY: stocky build, broad shoulders, expressive Brazilian hand gestures while speaking.
+OUTFIT: {outfit}. Holds a thick glass of chope (Brazilian draft beer) with generous white foam at the rim.
+SETTING: {setting}.
+STYLE: photorealistic, cinematic, shallow depth of field with background softly blurred, warm saturated amber color grade. Duration: exactly 8 seconds."""
+
+_VIDEO_PROMPT_SYSTEM = """Você é roteirista e diretor de vídeo do Mestre Leme. Sua tarefa é criar 6 prompts
+para o Gemini Pro (Veo 3), cada um de EXATAMENTE 8 segundos, que juntos formam um boletim de ~48 segundos.
+
+PERSONAGEM: Mestre Leme — botequeiro brasileiro raiz, 55 anos, corpulento, bigode gaúcho cinza,
+chope na mão. Fala Português Brasileiro com sotaque paulistano (rápido, vogais fechadas).
+Expressões típicas: "meu povo", "meu consagrado", "minha gente", "meu benzinho", "tá louco", "vixe!".
+Apelidos para líderes: "mesa VIP" ou "donos do boteco". Para os últimos: "zona de rebaixamento" ou "devendo o chopão".
+
+VIAGEM PELA COPA: Mestre Leme está viajando atrás da Seleção Brasileira pela Copa do Mundo 2026.
+A cada boletim ele está em uma cidade-sede diferente (informada no contexto), com roupa e cenário
+que mudam a cada vídeo, mas seu rosto, corpo, bigode e jeito de falar são SEMPRE os mesmos.
+
+REGRAS OBRIGATÓRIAS:
+1. Cada clip = EXATAMENTE 8 segundos — máximo 18 palavras de diálogo por clip
+2. Os 6 clips formam uma CENA CONTÍNUA no local onde ele está — mesma posição, mesma luz, fluxo natural entre eles
+3. Cada clip TERMINA com gesto/ação que o próximo clip CONTINUA (ex: começa a levantar o copo, próximo clip termina o brinde)
+4. Escreva em INGLÊS (exceto as falas em português) para o Veo 3 entender melhor
+5. Marque ênfase nas falas com LETRAS MAIÚSCULAS
+6. Inclua sempre: CAMERA / DIALOGUE com cues de entonação / AUDIO / TRANSITION OUT
+
+ESTRUTURA DOS 6 CLIPS:
+- Clip 1: Abertura — diz onde está (cidade/local), comenta uma curiosidade local (bebida/comida/costume
+  típico do lugar, fornecida no contexto) e dá a saudação animada com a data de hoje, Copa em andamento
+- Clip 2: Resultados do dia — placares dos jogos (se não houver jogos, comentário de véspera)
+- Clip 3: Destaque do dia — quem fez mais pontos, quem acertou mais
+- Clip 4: Ranking — mesa VIP (top 3) e zona de rebaixamento com zueira carinhosa
+- Clip 5: Zueira/VAR — erro mais gritante do dia, situação engraçada, ou pendência de palpite
+- Clip 6: Encerramento — levanta o chope (ou bebida típica do local), brinde, SAÚDE!
+
+Separe os 6 clips com --- (três hifens sozinhos em uma linha).
+NÃO inclua o bloco FIXED CHARACTER — ele será adicionado automaticamente pelo código.
+Gere apenas a parte da cena: CLIP X OF 6 — TÍTULO, depois CAMERA / DIALOGUE / AUDIO / TRANSITION OUT."""
+
 MESTRE_LEME_SYSTEM = """Você é o Mestre Leme, um botequeiro brasileiro raiz que apresenta o Boletim do Bolão dos Lemes
 toda noite direto do seu boteco. Você é humilde, batalhador, apaixonado por futebol
 e adora uma boa zueira com os amigos. Fala em português brasileiro informal, com gírias, expressões
@@ -169,6 +250,74 @@ Máximo 250 palavras. Fala corrida, sem listas, como narração oral animada."""
         messages=[{"role": "user", "content": user_prompt}],
     )
     return message.content[0].text.strip()
+
+
+def generate_video_prompt(data: dict, missing: dict | None = None) -> str:
+    """
+    Gera 6 prompts completos para o Gemini Pro (Veo 3), prontos para copiar e colar.
+    Retorna os 6 prompts separados por --- , cada um já com o _FIXED_CONTEXT prefixado.
+    """
+    n = data["total_participants"]
+    ranking = data["ranking"]
+    top3 = ranking[:3]
+    bottom4 = ranking[max(0, n - 4):]
+
+    var_str = ""
+    if missing:
+        if missing["sem_podio"]:
+            nomes = ", ".join(missing["sem_podio"])
+            var_str += f"Sem pódio: {nomes}\n"
+        if missing["grupos_incompletos"]:
+            inc = [p["name"] for p in missing["grupos_incompletos"]]
+            var_str += f"Grupos incompletos: {', '.join(inc)}\n"
+
+    location = data.get("location")
+    local_str = ""
+    if location:
+        local_str = f"""ONDE O MESTRE LEME ESTÁ HOJE:
+Cidade: {location['city']}, {location['country']} ({location.get('note', '')})
+Curiosidade local para comentar: {location['curiosity']}
+Bebida/comida típica do local: {location['drink']}
+"""
+
+    user_prompt = f"""Data do boletim: {data['date']}
+
+{local_str}
+RESULTADOS DE HOJE (jogos encerrados até 20h):
+{_format_results(data['results'])}
+
+QUEM FEZ MAIS PONTOS HOJE:
+{_format_top_scorers(data['top_scorers'])}
+
+RANKING ATUAL:
+{_format_ranking(ranking)}
+
+MESA VIP (top 3):
+{chr(10).join(f"  {p['position']}º {p['name']} — {p['total']} pts" for p in top3)}
+
+ZONA DE REBAIXAMENTO (últimos {len(bottom4)}):
+{chr(10).join(f"  {p['position']}º {p['name']} — {p['total']} pts" for p in bottom4)}
+{f"VAR — PENDÊNCIAS:{chr(10)}{var_str}" if var_str else ""}
+Gere os 6 prompts de clip para o Gemini Pro com base nesses dados."""
+
+    client = anthropic.Anthropic()
+    message = client.messages.create(
+        model=MODEL,
+        max_tokens=2500,
+        system=_VIDEO_PROMPT_SYSTEM,
+        messages=[{"role": "user", "content": user_prompt}],
+    )
+
+    raw = message.content[0].text.strip()
+
+    # Extrai apenas os chunks que contêm conteúdo real de clip (ignora cabeçalhos)
+    clips = [
+        c.strip() for c in raw.split("---")
+        if c.strip() and "clip" in c.lower()
+    ]
+    fixed_context = _build_fixed_context(data["date"], location)
+    full_prompts = [fixed_context + "\n\n" + clip for clip in clips]
+    return "\n\n---\n\n".join(full_prompts)
 
 
 if __name__ == "__main__":

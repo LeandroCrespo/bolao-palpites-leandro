@@ -71,6 +71,48 @@ def send_bulletin_video(video_path: str, caption: str, token: str, chat_id: str)
         raise RuntimeError(f"Telegram HTTP {e.code}: {error_body}") from e
 
 
+def send_video_prompts(prompts_text: str, token: str, chat_id: str, date_str: str = "") -> None:
+    """
+    Envia os 6 prompts de vídeo via Telegram — um por mensagem, prontos para copiar no Gemini Pro.
+    """
+    base_url = f"https://api.telegram.org/bot{token}/sendMessage"
+
+    def _send(text: str) -> None:
+        # Telegram limita mensagens a 4096 chars
+        chunk = text[:4096]
+        data = json.dumps({
+            "chat_id": chat_id,
+            "text": chunk,
+            "parse_mode": "HTML",
+        }).encode("utf-8")
+        req = urllib.request.Request(
+            base_url, data=data,
+            headers={"Content-Type": "application/json"},
+            method="POST",
+        )
+        try:
+            urllib.request.urlopen(req, timeout=15)
+        except Exception as e:
+            print(f"  Falha ao enviar mensagem Telegram: {e}")
+
+    # Mensagem de abertura
+    header = (
+        f"<b>🎬 Prompts de Vídeo — Mestre Leme</b>"
+        + (f" — {date_str}" if date_str else "")
+        + "\n6 clips × 8s = 48 segundos\n"
+        "Cole cada bloco no Gemini Pro na ordem 1 a 6:"
+    )
+    _send(header)
+
+    # Um clip por mensagem
+    clips = [c.strip() for c in prompts_text.split("---") if c.strip()]
+    for i, clip in enumerate(clips, 1):
+        msg = f"<b>📹 CLIP {i} DE {len(clips)}</b>\n\n{clip}"
+        _send(msg)
+
+    print(f"  {len(clips)} prompts de vídeo enviados ao Telegram.")
+
+
 def send_text_fallback(text: str, token: str, chat_id: str, caption: str = "🎙️ <b>Boletim do Mestre Leme</b>"):
     """Envia roteiro em texto caso a geração de vídeo falhe."""
     url = f"https://api.telegram.org/bot{token}/sendMessage"
