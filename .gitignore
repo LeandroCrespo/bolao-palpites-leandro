@@ -2,5 +2,4 @@
 __pycache__/
 *.pyc
 live_log.txt
-predictions.json
 palpites_revisao.txt
