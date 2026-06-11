@@ -21,7 +21,7 @@
       "date": "2026-06-11",
       "home_goals": 1,
       "away_goals": 1,
-      "reasoning": "Confronto equilibrado entre duas seleções de Tier 3. A Coreia do Sul chega invicta nas eliminatórias asiáticas e tem em Son Heung-min (LAFC) sua principal arma, além de Lee Kang-in (PSG) e Kim Min-jae (Bayern) na defesa. Porém, Hwang In-beom — meia vital — está com problema no tornozelo, e Cho Yu-min foi cortado por lesão. A Tchéquia chegou via play-offs dramáticos, batendo Irlanda e Dinamarca nos pênaltis; tem em Schick (Leverkusen, 16 gols na Bundesliga) e Soucek (West Ham) seus pilares, mas perdeu Chorý (expulso do grupo) e Hložek chega em ritmo de jogo limitado. Duelo de meio-campo equilibrado, com as defesas sólidas de ambos os lados. Empate plausível na estreia."
+      "reasoning": "Sem desfalques confirmados em ambos os lados. Coreia invicta nas eliminatórias asiáticas, Tchéquia volta à Copa após 20 anos via pênaltis. Son Heung-min sem gols na MLS em 2026, mas grupo completo. Empate equilibrado mantido."
     },
     {
       "match_number": 3,
@@ -75,8 +75,8 @@
       "away_team": "EUR_A",
       "date": "2026-06-12",
       "home_goals": 2,
-      "away_goals": 1,
-      "reasoning": "Canadá joga em casa em Toronto com enorme pressão e apoio da torcida. Davies estará ausente (lesão no isquiotibial confirmada para o jogo de abertura), e Jonathan David chega em má fase (apenas 1 gol desde fevereiro na Juventus). Porém, o fator casa é decisivo, Eustáquio lidera bem o meio-campo e Larin vem em boa fase (8 gols em 853 min). A Bósnia é perigosa — Džeko (40 anos) + Demirovic + Bajraktarević (jovem talento do PSV) — e qualificou-se de forma dramática eliminando a Itália. Equilíbrio esperado, mas o fator casa inclina para o Canadá vencer por margem mínima."
+      "away_goals": 0,
+      "reasoning": "Alphonso Davies desfalque confirmado por lesão muscular. Dzeko da Bósnia também incerto com problema no ombro. Dois desfalques ofensivos na Bósnia e vantagem do mando em Toronto favorecem o Canadá — reduzi um gol da Bósnia."
     },
     {
       "match_number": 8,
@@ -208,7 +208,7 @@
       "date": "2026-06-12",
       "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "EUA estreiam em casa (Los Angeles/SoFi Stadium) com enorme pressão e torcida, um fator decisivo. Pulisic, McKennie e Adams são titulares confirmados. A ausência do zagueiro Chris Richards (ligamentos no tornozelo) é preocupante, mas a profundidade do elenco americano cobre. O Paraguai retorna à Copa após 16 anos sem a presença e sem Villasanti (LCA), seu motor do meio-campo. Almirón e Enciso têm qualidade individual, mas o coletivo paraguaio ainda está em construção para uma Copa. O fator casa + pressão emocional dos EUA + desvantagem na classificação FIFA favorecem uma vitória americana confortável. Placar: 2-0."
+      "reasoning": "Julio Enciso, principal atacante do Paraguai, confirmado fora da estreia por lesão na coxa. EUA jogam em casa no SoFi Stadium. Reduzi expectativa ofensiva do Paraguai de 0 para 0 gols."
     },
     {
       "match_number": 20,
@@ -217,9 +217,9 @@
       "home_team": "AUS",
       "away_team": "EUR_C",
       "date": "2026-06-13",
-      "home_goals": 1,
+      "home_goals": 0,
       "away_goals": 2,
-      "reasoning": "Turquia chega ao torneio com uma das gerações mais empolgantes de sua história recente: Arda Güler (Real Madrid), Kenan Yıldız (Juventus) e o capitão Çalhanoğlu formam um trio de alto nível. A Austrália sofreu o duro golpe da perda de Riley McGree (isquiotibial), seu principal meio-campista, e Irvine e O'Neill chegam com preocupações físicas após o amistoso contra o México (derrota 1x0). A seleção australiana é jovem (17 debutantes) e promissora, mas ainda em desenvolvimento. Turquia tem qualidade técnica superior e deve vencer em Vancouver, embora a Austrália, bem treinada por Popovic, possa marcar. Placar: 1-2 para a Turquia."
+      "reasoning": "Turquia com 8 jogos de invencibilidade e Arda Güler/Çalhanoğlu em forma. Austrália sem vitórias nos amistosos pré-Copa. Turquia favorita clara — mudei de 1-2 para 0-2 para refletir melhor o equilíbrio defensivo australiano sem potência ofensiva."
     },
     {
       "match_number": 21,
@@ -602,9 +602,9 @@
       "home_team": "ARG",
       "away_team": "ALG",
       "date": "2026-06-16",
-      "home_goals": 3,
+      "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Argentina abre como campeã mundial contra uma Argélia que chega confiante após vencer a Holanda em amistoso pré-Copa. Messi treina separado por fadiga muscular no tendão, mas a AFA confirma otimismo para 16/06. Mesmo com Messi em ritmo de jogo abaixo do ideal, Lautaro e Julián Álvarez (recém recuperado) sustentam o ataque. A Argélia de Mahrez pode surpreender com um gol no contra-ataque, mas a diferença de classe é abissal. Placar de vitória argentina convincente, porém a Argélia marca em bola parada ou transição."
+      "reasoning": "Otamendi suspenso na estreia por vermelho direto nas eliminatórias — defesa argentina desfalcada. Argélia pode explorar. Reduzi vantagem argentina de 3-1 para 2-1 para refletir a ausência do titular da zaga."
     },
     {
       "match_number": 56,
@@ -1834,5 +1834,6 @@
       "gd": -2,
       "gf": 2
     }
-  ]
+  ],
+  "last_updated": "2026-06-11T17:02:27.631916"
 }
