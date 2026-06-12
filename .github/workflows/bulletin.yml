@@ -2,8 +2,10 @@ name: Boletim do Mestre Leme
 
 on:
   schedule:
-    # 20h Brasília = 23h UTC (BRT = UTC-3, sem horário de verão em jun/jul)
-    - cron: '0 23 * * *'
+    # Alvo: ~20h Brasília. O cron do GitHub dispara com ~70-80min de atraso
+    # consistente, então agendamos 22:20 UTC (19:20 BRT) para compensar:
+    # na prática chega entre ~19:20 (sem atraso) e ~20:40 (atraso típico).
+    - cron: '20 22 * * *'
 
   workflow_dispatch:
     inputs:
