@@ -31,8 +31,8 @@
       "away_team": "RSA",
       "date": "2026-06-18",
       "home_goals": 2,
-      "away_goals": 1,
-      "reasoning": "Tchéquia (EUR_D) tem superioridade técnica clara sobre a África do Sul. Schick com 25 gols pela seleção e Pavel Šulc (Lyon, 11 gols na Ligue 1) formam o ataque mais perigoso desta partida. A defesa tcheca tem Krejcí (capitão, Wolves) e Coufal como pilares. A África do Sul tende a jogar em bloco baixo e com transições rápidas — Foster pode criar perigo isolado. O técnico Koubek admite preocupação com o calor de Atlanta, o que pode ajudar os Bafana a manter a briga por mais tempo. Vitória tcheca com um gol sul-africano de honra num contragolpe de Foster."
+      "away_goals": 0,
+      "reasoning": "Tchéquia perdeu para Coreia do Sul 2-1 na estreia. África do Sul perdeu para México 2-0. Tchéquia precisa da vitória — reduzo de 2-1 para 2-0, África do Sul mostrou fragilidade"
     },
     {
       "match_number": 4,
@@ -43,7 +43,7 @@
       "date": "2026-06-18",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Jogo de alto nível em Guadalajara, com fator casa ainda a favor do México. México vem de vitória na estreia e já com confiança. Son Heung-min é uma ameaça constante e Lee Kang-in (PSG) é o principal criador coreano — a Coreia tem qualidade para marcar. Mas o México, com Álvarez controlando o meio e Jiménez (ou Giménez, se recuperado) como referência, deve ter mais volume ofensivo em casa. A ausência de Hwang In-beom (se não recuperado do tornozelo) enfraquece a Coreia no meio. México vence por margem mínima num jogo disputado."
+      "reasoning": "México venceu África do Sul 2-0 na estreia com boa performance. Coreia do Sul venceu Tchéquia 2-1, mostrando força ofensiva. Jogo mais equilibrado — mantenho 2-1 México por vantagem de jogar em Guadalajara (casa)"
     },
     {
       "match_number": 5,
@@ -75,8 +75,8 @@
       "away_team": "EUR_A",
       "date": "2026-06-12",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "Alphonso Davies desfalque confirmado por lesão muscular. Dzeko da Bósnia também incerto com problema no ombro. Dois desfalques ofensivos na Bósnia e vantagem do mando em Toronto favorecem o Canadá — reduzi um gol da Bósnia."
+      "away_goals": 1,
+      "reasoning": "Alphonso Davies confirmado fora por lesão muscular e Dzeko começa no banco — mas Canadá joga em casa em Toronto com Jonathan David como referência. Palpite mantido em 2-1 Canadá com redução da margem de confiança"
     },
     {
       "match_number": 8,
@@ -140,9 +140,9 @@
       "home_team": "BRA",
       "away_team": "MAR",
       "date": "2026-06-13",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Confronto de abertura entre dois gigantes do mesmo tier (FIFA #6 vs #7). O Brasil chega sem Rodrygo, Estêvão e Militão — baixas sensíveis no ataque e defesa. Marrocos tem Hakimi, Brahim Díaz e En-Nesyri, além de um novo técnico (Ouahbi, desde março) que mostrou equilíbrio em amistosos recentes (vitória sobre Paraguai 2-1, empate com Equador). A solidez defensiva marroquina historicamente complica qualquer adversário. Ancelotti estreia sem seus principais criadores, o que favorece um jogo truncado. Empate 1-1 é o resultado mais provável: Brasil marca com Vinicius Jr. e Marrocos responde em jogada trabalhada."
+      "reasoning": "Neymar fora na estreia (lesão na panturrilha) e Marrocos sem Aguerd e Ezzalzouli. Brasil favorito mas jogo mais disputado. Altero de 1-1 para 2-1 Brasil — ataque de Vinicius/Raphinha compensa ausência de Neymar"
     },
     {
       "match_number": 14,
@@ -208,7 +208,7 @@
       "date": "2026-06-12",
       "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "Julio Enciso, principal atacante do Paraguai, confirmado fora da estreia por lesão na coxa. EUA jogam em casa no SoFi Stadium. Reduzi expectativa ofensiva do Paraguai de 0 para 0 gols."
+      "reasoning": "Julio Enciso (estrela do Paraguai) confirmado fora por lesão na coxa — EUA joga em casa no SoFi Stadium com pressão máxima. Palpite 2-0 mantido, agora ainda mais embasado"
     },
     {
       "match_number": 20,
@@ -219,7 +219,7 @@
       "date": "2026-06-13",
       "home_goals": 0,
       "away_goals": 2,
-      "reasoning": "Turquia com 8 jogos de invencibilidade e Arda Güler/Çalhanoğlu em forma. Austrália sem vitórias nos amistosos pré-Copa. Turquia favorita clara — mudei de 1-2 para 0-2 para refletir melhor o equilíbrio defensivo australiano sem potência ofensiva."
+      "reasoning": "Sem desfalques relevantes para a Turquia. Turquia tem Guler, Yildiz e Calhanoglu em pleno vapor — mercados apontam Turquia como favorita clara. Palpite 0-2 mantido"
     },
     {
       "match_number": 21,
@@ -340,7 +340,7 @@
       "date": "2026-06-14",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Holanda é favorita (FIFA #8 vs #18), mas o Japão é um adversário perigoso e moderno: venceu a Inglaterra 1-0 em Wembley em março de 2026 e tem um elenco repleto de jogadores europeus de alto nível. A ausência de Xavi Simons (ACL) e Schouten enfraquece o meio-campo holandês criativamente. O Japão também chega debilitado sem Mitoma e Minamino (lesionados). A Holanda deve vencer num jogo disputado, com Gakpo e Depay (recém-recuperado) fazendo a diferença no ataque. O Japão, pragmático e organizado, consegue descontar com Kubo ou Kamada no contra-ataque."
+      "reasoning": "Xavi Simons (LCA) e Schouten (LCA) confirmados fora — dois titulares do meio-campo holandês ausentes. Japão (Mitoma também lesionado) equilibra. Reduzo para 2-1 ainda favorecendo Holanda mas reconhecendo fragilidade"
     },
     {
       "match_number": 32,
@@ -603,8 +603,8 @@
       "away_team": "ALG",
       "date": "2026-06-16",
       "home_goals": 2,
-      "away_goals": 1,
-      "reasoning": "Otamendi suspenso na estreia por vermelho direto nas eliminatórias — defesa argentina desfalcada. Argélia pode explorar. Reduzi vantagem argentina de 3-1 para 2-1 para refletir a ausência do titular da zaga."
+      "away_goals": 0,
+      "reasoning": "FIFA aprovou amnistia: Otamendi liberado para a estreia — Argentina com defesa completa. Scaloni tem elenco inteiro disponível. Ajusto de 2-1 para 2-0, Argentina domina com mais segurança defensiva"
     },
     {
       "match_number": 56,
@@ -1835,5 +1835,5 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-11T17:02:27.631916"
+  "last_updated": "2026-06-12T07:24:25.406056"
 }
