@@ -49,9 +49,9 @@ def _build_fixed_context(date_str: str, location: dict | None = None) -> str:
             "faint samba radio)"
         )
 
-    return f"""FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old.
-FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut very close to the head with gray dominating at the temples, thick prominent all-gray mustache in the classic Brazilian gaúcho style — dense and well-kept, covering the upper lip. Expressive heavy eyebrows, deep warm brown eyes with laugh lines at the corners, wide flat nose, a broad full smile showing upper and lower teeth — the kind of smile that makes every room feel welcoming.
-BODY: stocky build, broad shoulders, expressive Brazilian hand gestures while speaking.
+    return f"""FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old (match the provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark salt-and-pepper hair — medium-short, slightly messy, graying at the temples and sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few days' growth covering jaw and chin, blending into a fuller graying mustache. Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge open contagious smile showing the upper teeth — the kind of smile that makes every room feel welcoming.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders, expressive Brazilian hand gestures while speaking.
 OUTFIT: {outfit}. Holds a thick glass of chope (Brazilian draft beer) with generous white foam at the rim.
 SETTING: {setting}.
 STYLE: photorealistic, cinematic, shallow depth of field with background softly blurred, warm saturated amber color grade. Duration: exactly 8 seconds."""
@@ -59,8 +59,9 @@ STYLE: photorealistic, cinematic, shallow depth of field with background softly 
 _VIDEO_PROMPT_SYSTEM = """Você é roteirista e diretor de vídeo do Mestre Leme. Sua tarefa é criar 6 prompts
 para o Gemini Pro (Veo 3), cada um de EXATAMENTE 8 segundos, que juntos formam um boletim de ~48 segundos.
 
-PERSONAGEM: Mestre Leme — botequeiro brasileiro raiz, 55 anos, corpulento, bigode gaúcho cinza,
-chope na mão. Fala Português Brasileiro com sotaque paulistano (rápido, vogais fechadas).
+PERSONAGEM: Mestre Leme — botequeiro brasileiro raiz, 55 anos, corpulento, cabelo grisalho cheio
+e despenteado, barba por fazer grisalha com bigode, chope na mão. Fala Português Brasileiro com
+sotaque paulistano (rápido, vogais fechadas).
 Expressões típicas: "meu povo", "meu consagrado", "minha gente", "meu benzinho", "tá louco", "vixe!".
 Apelidos para líderes: "mesa VIP" ou "donos do boteco". Para os últimos: "zona de rebaixamento" ou "devendo o chopão".
 
