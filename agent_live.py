@@ -325,7 +325,12 @@ PROCESSO:
    - Confronto direto: "[Time A] x [Time B] historico confronto direto"
 3. Chame get_current_predictions para ver os palpites atuais
 4. Analise cruzando TODOS os fatores → o que mudou em relação ao palpite inicial?
-5. Chame update_predictions com as atualizações justificadas
+5. OBRIGATÓRIO: chame a ferramenta update_predictions com TODAS as mudanças que
+   você decidiu. Escrever a análise em texto NÃO altera nada — só a chamada da
+   ferramenta aplica. Se decidiu ajustar qualquer placar, sua ÚLTIMA ação antes
+   de encerrar TEM que ser a chamada update_predictions (não termine só com texto).
+   Se, após analisar, nenhum palpite precisa mudar, aí sim pode encerrar sem
+   chamar a ferramenta, dizendo explicitamente "nenhum ajuste necessário".
 
 PONDERAÇÃO (peso dos fatores, do maior para o menor):
 1) Resultados já ocorridos NESTA Copa 2026 — peso MAIOR (forma no próprio torneio)
@@ -343,6 +348,8 @@ REGRAS:
 - Reasoning COMPLETO citando os principais fatores, não apenas um. Ex.:
   "Marrocos com 2 desfalques na defesa, MAS vem de 4 vitorias e foi bem nos
   amistosos; Brasil em alta na Copa — mantenho favoritismo do Brasil, ajusto 2-1"
+- O reasoning vai DENTRO da chamada update_predictions (campo reasoning), não
+  como texto solto. Decidiu mudar → chame a ferramenta.
 
 PONTUACAO (calibre os placares):
 - Placar exato: 20 pts — use placares realistas (1-0, 2-0, 2-1, 1-1)
