@@ -32,7 +32,7 @@
       "date": "2026-06-18",
       "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "Tchéquia perdeu para Coreia do Sul 2-1 na estreia. África do Sul perdeu para México 2-0. Tchéquia precisa da vitória — reduzo de 2-1 para 2-0, África do Sul mostrou fragilidade"
+      "reasoning": "Tchéquia perdeu 2-1 para Coreia na R1. RSA perdeu 2-0 para México. Ambas precisam vencer — Tchéquia favorita pelo ranking (40 vs 61). Palpite 2-0 mantido."
     },
     {
       "match_number": 4,
@@ -41,9 +41,9 @@
       "home_team": "MEX",
       "away_team": "KOR",
       "date": "2026-06-18",
-      "home_goals": 2,
+      "home_goals": 1,
       "away_goals": 1,
-      "reasoning": "México venceu África do Sul 2-0 na estreia com boa performance. Coreia do Sul venceu Tchéquia 2-1, mostrando força ofensiva. Jogo mais equilibrado — mantenho 2-1 México por vantagem de jogar em Guadalajara (casa)"
+      "reasoning": "Coreia venceu a Tchéquia 2-1 na R1 mostrando força ofensiva. México venceu 2-0 a RSA. Duelo agora parece mais equilibrado — ajusto para 1-1."
     },
     {
       "match_number": 5,
@@ -65,7 +65,7 @@
       "date": "2026-06-24",
       "home_goals": 0,
       "away_goals": 2,
-      "reasoning": "Jogo simultâneo em Monterrey. A Coreia do Sul, precisando de ao menos um empate (provavelmente) para confirmar a classificação, tem motivação e qualidade superior. Son Heung-min em sua 4ª Copa busca deixar legado, e Lee Kang-in é o principal criador. A África do Sul, com grupo eliminado, perde parte do incentivo competitivo, e seu plantel doméstico-dependente encontra dificuldade contra a estrutura técnico-tática coreana. Vitória coreana com placar que reflete superioridade — garante a segunda vaga atrás do México."
+      "reasoning": "Coreia venceu Tchéquia 2-1 na R1, confirmando qualidade. RSA perdeu 2-0 para México. Palpite 0-2 para Coreia mantido e reforçado pelos resultados reais."
     },
     {
       "match_number": 7,
@@ -87,7 +87,7 @@
       "date": "2026-06-13",
       "home_goals": 0,
       "away_goals": 2,
-      "reasoning": "A Suíça (FIFA #17) é claramente superior ao Qatar (FIFA #54). Lopetegui assumiu o Qatar recentemente e os amistosos de março foram cancelados, deixando a equipe sem ritmo competitivo ideal. O Qatar qualificou-se por margem apertada via quarta fase da AFC, enquanto a Suíça é uma potência europeia consolidada com jogadores em top clubes. Xhaka e Shaqiri fornecem experiência; a Suíça costuma ser disciplinada taticamente e eficiente. Vitória confortável da Suíça esperada."
+      "reasoning": "Qatar tem apenas 1 vitória nos últimos 10 jogos e elenco baseado na liga local. Suíça invicta nas eliminatórias europeias, sem desfalques. Palpite 0-2 mantido."
     },
     {
       "match_number": 9,
@@ -141,8 +141,8 @@
       "away_team": "MAR",
       "date": "2026-06-13",
       "home_goals": 2,
-      "away_goals": 1,
-      "reasoning": "Neymar fora na estreia (lesão na panturrilha) e Marrocos sem Aguerd e Ezzalzouli. Brasil favorito mas jogo mais disputado. Altero de 1-1 para 2-1 Brasil — ataque de Vinicius/Raphinha compensa ausência de Neymar"
+      "away_goals": 0,
+      "reasoning": "Wesley cortado por lesão + Militão/Estêvão/Rodrygo desfalques, mas Marrocos também perdeu Aguerd e Ezzalzouli. Brasil em casa nas Américas, Ancelotti favorito. Subo para 2-0 dado enfraquecimento defensivo marroquino."
     },
     {
       "match_number": 14,
@@ -153,7 +153,7 @@
       "date": "2026-06-13",
       "home_goals": 0,
       "away_goals": 2,
-      "reasoning": "Escócia (Tier 4) é claramente superior ao Haiti (Tier 5). McTominay, Robertson e McGinn formam um meio-campo experiente e bem rodado nas principais ligas europeias. O Haiti, apesar da boa goleada de 4-0 sobre Nova Zelândia em amistoso preparatório, enfrenta estreia histórica com 52 anos de ausência e histórico Copa negativo (3 jogos, 3 derrotas, 14 gols sofridos em 1974). A preparação haitiana prioriza compactação defensiva, mas contra a pressão escocesa dificilmente sustenta o 0-0. Escócia vence com dois gols de diferença — placar 0-2 com McTominay e Dykes."
+      "reasoning": "Gilmour cortado por lesão da Escócia, mas Haiti sem lesões confirmadas. Escócia ainda é favorita clara (rank 36 vs 84). Palpite 0-2 mantido."
     },
     {
       "match_number": 15,
@@ -219,7 +219,7 @@
       "date": "2026-06-13",
       "home_goals": 0,
       "away_goals": 2,
-      "reasoning": "Sem desfalques relevantes para a Turquia. Turquia tem Guler, Yildiz e Calhanoglu em pleno vapor — mercados apontam Turquia como favorita clara. Palpite 0-2 mantido"
+      "reasoning": "Austrália e Turquia sem lesões confirmadas. Turquia favorita pelo ranking (28 vs 26), palpite 0-2 mantido."
     },
     {
       "match_number": 21,
@@ -229,8 +229,8 @@
       "away_team": "PAR",
       "date": "2026-06-19",
       "home_goals": 2,
-      "away_goals": 1,
-      "reasoning": "Turquia favorita clara contra um Paraguai ainda tentando encontrar seu ritmo na competição, após a derrota esperada para os EUA na rodada 1. Güler e Yıldız devem criar muitos problemas para a defesa envelhecida paraguaia (Gómez, Alonso, Balbuena, todos acima de 30 anos). O Paraguai tem alma lutadora e Almirón é capaz de marcar em qualquer dia, mas a qualidade técnica turca deve prevalecer. Em São Francisco, jogo disputado mas com vitória da Turquia. Placar: 2-1."
+      "away_goals": 0,
+      "reasoning": "Paraguai levou 4-1 dos EUA na estreia, mostrando fragilidade defensiva enorme. Turquia sem lesões confirmadas. Altero de 2-1 para 2-0 dada má forma do Paraguai."
     },
     {
       "match_number": 22,
@@ -240,8 +240,8 @@
       "away_team": "AUS",
       "date": "2026-06-19",
       "home_goals": 2,
-      "away_goals": 1,
-      "reasoning": "Duelo equilibrado entre dois times do Tier 3, mas os EUA jogam em casa (Seattle) com o fator Pochettino e a pressão do anfitrião. Os americanos já venceram um amistoso contra a Austrália (2-1 em outubro de 2025) e tendem a confirmar o favoritismo em casa. A Austrália, apesar do elenco jovem e da perda de McGree, tem capacidade ofensiva com Irankunda e Leckie para marcar ao menos um gol. Deve ser um jogo aberto, com os EUA vencendo de forma justa. Placar: 2-1."
+      "away_goals": 0,
+      "reasoning": "EUA goleou Paraguai 4-1 na estreia mostrando poderio ofensivo muito acima do esperado. Elevo placar de 2-1 para 2-0 refletindo domínio americano."
     },
     {
       "match_number": 23,
@@ -274,7 +274,7 @@
       "date": "2026-06-14",
       "home_goals": 4,
       "away_goals": 0,
-      "reasoning": "Alemanha (Tier 2) vs Curaçao (Tier 5) é o maior abismo de qualidade do grupo. Apesar da ausência de Gnabry (addutor), a Alemanha conta com Wirtz, Musiala e Havertz num esquema de Nagelsmann repleto de qualidade. Curaçao chega ao seu primeiro Mundial como a menor nação já classificada, com jogadores de segunda divisão inglesa e ligas menores. Após derrotas em amistosos contra Austrália e China, e uma crise técnica com troca de treinador, a Blue Wave entrará em modo de baixo bloco (4-4-2 de Advocaat) mas não resistirá ao poder ofensivo alemão. Placar alto esperado numa estreia em que a Alemanha precisa dar recado ao grupo."
+      "reasoning": "Alemanha com Neuer de volta (recuperado de lesão na panturrilha) e Wirtz/Musiala disponíveis. Lennart Karl cortado mas sem impacto nos titulares. Curaçao estreante na Copa. Palpite 4-0 mantido."
     },
     {
       "match_number": 26,
@@ -284,8 +284,8 @@
       "away_team": "ECU",
       "date": "2026-06-14",
       "home_goals": 1,
-      "away_goals": 2,
-      "reasoning": "Jogo mais equilibrado do grupo. A Costa do Marfim chega em boa forma — venceu a França 2-1 no amistoso pré-Copa e conta com Amad Diallo, Yan Diomande (Leipzig), Kessié e Sangare. Contudo, a ausência de Haller (excluído do elenco) enfraquece a referência ofensiva. O Equador é a surpresa da edição: concedeu apenas 5 gols em 18 jogos das eliminatórias (menor da CONMEBOL), com Moisés Caicedo, Pacho (PSG) e Hincapié (Arsenal) formando uma das melhores duplas de zagueiros da Copa. Apesar de jogar como 'visitante' em Filadélfia, o Equador tem qualidade individual e solidez defensiva para surpreender a CIV. Kendry Páez e Gonzalo Plata no ataque dão velocidade. Vitória equatoriana por 2-1."
+      "away_goals": 1,
+      "reasoning": "Equador tem defesa sólida (5 gols em 18 jogos nas eliminatórias). Costa do Marfim sem grandes desfalques mas jogo equilibrado. Altero de 1-2 para 1-1 refletindo equilíbrio."
     },
     {
       "match_number": 27,
@@ -339,8 +339,8 @@
       "away_team": "JPN",
       "date": "2026-06-14",
       "home_goals": 2,
-      "away_goals": 1,
-      "reasoning": "Xavi Simons (LCA) e Schouten (LCA) confirmados fora — dois titulares do meio-campo holandês ausentes. Japão (Mitoma também lesionado) equilibra. Reduzo para 2-1 ainda favorecendo Holanda mas reconhecendo fragilidade"
+      "away_goals": 0,
+      "reasoning": "Japão entra desfalcado com Mitoma, Minamino e Endo fora por lesão/aposentadoria. Holanda com elenco completo. Altero de 2-1 para 2-0 refletindo desfalques japoneses."
     },
     {
       "match_number": 32,
@@ -1835,5 +1835,5 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-12T07:24:25.406056"
+  "last_updated": "2026-06-13T07:00:21.524142"
 }
