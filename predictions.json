@@ -141,8 +141,8 @@
       "away_team": "MAR",
       "date": "2026-06-13",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "Wesley cortado por lesão + Militão/Estêvão/Rodrygo desfalques, mas Marrocos também perdeu Aguerd e Ezzalzouli. Brasil em casa nas Américas, Ancelotti favorito. Subo para 2-0 dado enfraquecimento defensivo marroquino."
+      "away_goals": 1,
+      "reasoning": "Brasil perde Militão, Rodrygo, Estêvão e Wesley; Marrocos perde Aguerd, Abde Ezzalzouli e tem Mazraoui duvidoso. Ambos chegam desfalcados. Marrocos é organizado defensivamente com Hakimi, Amrabat e Brahim Díaz. Brasil tem Vini Jr, Raphinha e Paquetá disponíveis, qualidade superior, mas jogo será disputado. Ajusto de 2-0 para 2-1 dado o equilíbrio real do confronto."
     },
     {
       "match_number": 14,
@@ -230,7 +230,7 @@
       "date": "2026-06-19",
       "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "Paraguai levou 4-1 dos EUA na estreia, mostrando fragilidade defensiva enorme. Turquia sem lesões confirmadas. Altero de 2-1 para 2-0 dada má forma do Paraguai."
+      "reasoning": "Paraguai foi destruído 4×1 pelos EUA na estreia desta Copa — péssima forma no torneio. Turquia marcou 8 gols e sofreu apenas 1 nos últimos 4 jogos pré-Copa, com Arda Güler e Kenan Yildiz em grande fase. Paraguai deve chegar abatido. Ajusto de 2-0 para 2-0 (mantém), mas com mais confiança no resultado pela desorganização paraguaia."
     },
     {
       "match_number": 22,
@@ -241,7 +241,7 @@
       "date": "2026-06-19",
       "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "EUA goleou Paraguai 4-1 na estreia mostrando poderio ofensivo muito acima do esperado. Elevo placar de 2-1 para 2-0 refletindo domínio americano."
+      "reasoning": "EUA vem de goleada 4×1 sobre o Paraguai na estreia desta Copa — forte sinal de forma no torneio. Austrália não possui desfalques mas enfrenta um adversário em alto nível, jogando em casa (Seattle). Mantenho 2-0 favorável aos EUA, anfitrião em alta."
     },
     {
       "match_number": 23,
@@ -1835,5 +1835,5 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-13T07:00:21.524142"
+  "last_updated": "2026-06-13T15:31:00.370602"
 }
