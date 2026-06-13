@@ -179,6 +179,7 @@ def tool_update_predictions(new_preds: list, dry_run: bool) -> dict:
 
         if mn in pred_map:
             old = f"{pred_map[mn].get('home_goals')}-{pred_map[mn].get('away_goals')}"
+            placar_mudou = old != f"{hg}-{ag}"
             pred_map[mn]["home_goals"] = hg
             pred_map[mn]["away_goals"] = ag
             if "winner" in np:
@@ -186,8 +187,11 @@ def tool_update_predictions(new_preds: list, dry_run: bool) -> dict:
             if "went_to_penalties" in np:
                 pred_map[mn]["went_to_penalties"] = np["went_to_penalties"]
             pred_map[mn]["reasoning"] = np.get("reasoning", "Atualizado pelo agente live")
-            updates.append({"match_number": mn, "old": old, "new": f"{hg}-{ag}",
-                            "reasoning": np.get("reasoning", "")})
+            # Só conta como atualização (log + Telegram) se o PLACAR mudou.
+            # Reconfirmar o mesmo placar (só reasoning) não polui a notificação.
+            if placar_mudou:
+                updates.append({"match_number": mn, "old": old, "new": f"{hg}-{ag}",
+                                "reasoning": np.get("reasoning", "")})
         else:
             # Novo jogo do mata-mata (bracket resolvido)
             entry = {
