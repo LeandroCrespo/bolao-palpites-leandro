@@ -250,7 +250,7 @@ TOOLS_SCHEMA = [
     {
         "type": "web_search_20250305",
         "name": "web_search",
-        "max_uses": 10,
+        "max_uses": 20,
     },
     {
         "name": "get_tournament_status",
@@ -316,20 +316,33 @@ Seu objetivo: rever os palpites dos jogos ainda não iniciados com base nos resu
 
 PROCESSO:
 1. Chame get_tournament_status para ver resultados reais e jogos futuros
-2. Para cada jogo nas próximas 48h, use web_search para pesquisar:
-   - "[Time A] [Time B] Copa do Mundo 2026 lesoes suspensoes"
-   - "[Time] Copa 2026 forma momento"
-   Foque em lesões/suspensões de titulares e momento atual no torneio.
+2. Para cada jogo nas próximas 48h, use web_search para montar uma visão AMPLA
+   de cada seleção (não se baseie em um único fator). Pesquise:
+   - Desfalques: "[Time A] [Time B] Copa do Mundo 2026 lesoes suspensoes"
+   - Forma recente / últimos resultados: "[Time] ultimos resultados 2025 2026"
+   - Amistosos e preparação: "[Time] amistosos preparacao Copa 2026"
+   - Desempenho recente em campeonatos/eliminatórias: "[Time] eliminatorias desempenho recente"
+   - Confronto direto: "[Time A] x [Time B] historico confronto direto"
 3. Chame get_current_predictions para ver os palpites atuais
-4. Analise: resultados reais + buscas → o que mudou em relação ao palpite inicial?
+4. Analise cruzando TODOS os fatores → o que mudou em relação ao palpite inicial?
 5. Chame update_predictions com as atualizações justificadas
+
+PONDERAÇÃO (peso dos fatores, do maior para o menor):
+1) Resultados já ocorridos NESTA Copa 2026 — peso MAIOR (forma no próprio torneio)
+2) Forma recente geral: últimos ~6 a 10 jogos, incluindo amistosos e eliminatórias
+3) Disponibilidade de elenco: desfalques de titulares (lesões/suspensões)
+4) Confronto direto / histórico recente — fator menor, para desempate
+IMPORTANTE: um desfalque isolado NÃO deve dominar a previsão. Sempre pondere o
+desfalque contra a forma recente e o retrospecto antes de mexer no placar.
 
 REGRAS:
 - Priorize jogos das próximas 48h
 - Só atualize palpites com base em evidências reais (resultados ou notícias encontradas)
-- Se o palpite inicial ainda faz sentido, mantenha-o
+- Se o palpite inicial ainda faz sentido depois de cruzar os fatores, mantenha-o
 - Para mata-mata: sempre inclua "winner" com o código da seleção vencedora
-- Seja específico no reasoning: "Mbappé lesionado confirmado — reduzi expectativa da Franca"
+- Reasoning COMPLETO citando os principais fatores, não apenas um. Ex.:
+  "Marrocos com 2 desfalques na defesa, MAS vem de 4 vitorias e foi bem nos
+  amistosos; Brasil em alta na Copa — mantenho favoritismo do Brasil, ajusto 2-1"
 
 PONTUACAO (calibre os placares):
 - Placar exato: 20 pts — use placares realistas (1-0, 2-0, 2-1, 1-1)
