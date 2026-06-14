@@ -184,8 +184,15 @@ CONTEXTO IMPORTANTE:
 ESTRATÉGIA DE PONTUAÇÃO DO BOLÃO (calibre seus placares):
 • Placar exato = 20 pts → use placares realistas como 1-0, 2-0, 2-1, 1-1, 3-1
 • Resultado + gols de 1 time = 15 pts
+• Acertar só o vencedor/empate (mesmo com gols errados) = 10 pts
+• Errar o vencedor/empate = 0 pts, mesmo que os gols fiquem próximos
 • Favorito claro (Tier 1-2 vs Tier 4-5): vença por 2-3 gols
 • Confronto equilibrado (mesmo tier): 1 gol de diferença ou empate
+• PRIORIDADE: em caso de dúvida, proteja a DIREÇÃO do resultado (vitória/
+  empate/derrota) antes de "arredondar" para um placar bonito — um placar
+  exato errado mas com a direção certa garante 10-15 pts; um empate "1-1"
+  escolhido só por parecer plausível, quando a evidência aponta levemente
+  para um dos lados, arrisca 0 pts se a direção estiver errada
 • Evite placares genéricos repetidos (todo jogo 1-0)
 
 Retorne SOMENTE o JSON abaixo preenchido (sem texto extra, sem markdown):
@@ -375,6 +382,11 @@ JOGOS:
 
 No mata-mata, os jogos tendem a ser mais fechados do que na fase de grupos.
 Times favoritos vencem por 1-2 gols. Confrontos equilibrados frequentemente vão a pênaltis.
+PRIORIDADE DE PONTUAÇÃO: entre dois placares igualmente plausíveis, escolha o
+que preserva a direção do resultado que você considera mais provável (vitória/
+empate/derrota) — isso garante pontuação parcial mesmo se o placar exato
+errar; não escolha um empate "para arredondar" se a evidência apontar
+levemente para um favorito.
 
 Para cada jogo:
 • Preveja o placar nos 90 minutos (ou após prorrogação se empate)

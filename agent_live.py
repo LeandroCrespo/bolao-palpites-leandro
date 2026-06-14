@@ -357,8 +357,13 @@ REGRAS:
 
 PONTUACAO (calibre os placares):
 - Placar exato: 20 pts — use placares realistas (1-0, 2-0, 2-1, 1-1)
-- Resultado certo: 10 pts
-- Maximo 2 gols por time"""
+- Resultado certo (vencedor/empate), mesmo com gols errados: 10 pts
+- Errar a direção do resultado: 0 pts, independente dos gols
+- Maximo 2 gols por time
+- Ao reavaliar, se as evidencias forem mistas/incertas, priorize manter ou
+  ajustar para a direcao de resultado mais sustentada pelos dados — nao troque
+  o placar so para "acertar mais em cheio" se isso arriscar virar a direcao do
+  resultado sem evidencia forte"""
 
 
 def run_agent(dry_run: bool = False):
