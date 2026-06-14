@@ -351,6 +351,10 @@ def main():
         from agent_live import run_agent
         run_agent(dry_run=dry_run)
 
+    elif command == "pregame":
+        from agent_live import run_pregame
+        run_pregame(dry_run=dry_run)
+
     elif command == "all":
         predictions = run_analysis()
         cmd_review()

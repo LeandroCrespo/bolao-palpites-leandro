@@ -1,0 +1,63 @@
+name: Copa 2026 - Reavaliação Pré-Jogo (30 min antes)
+
+on:
+  # A cada 10 min nas faixas de horário dos jogos (BRT = UTC-3):
+  # jogos ~13h-23h BRT -> ~16h-02h UTC (madrugada cobre o jogo de 23h BRT e o 01h BRT)
+  schedule:
+    - cron: '*/10 16-23 * * *'
+    - cron: '*/10 0-5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  reavaliar-pre-jogo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Verificar se a Copa está em andamento
+        id: check_date
+        run: |
+          HOJE=$(date -u +%Y-%m-%d)
+          if [[ "$HOJE" < "2026-06-11" || "$HOJE" > "2026-07-20" ]]; then
+            echo "Fora do período da Copa ($HOJE). Pulando."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Reavaliar palpites dos jogos prestes a começar
+        if: steps.check_date.outputs.skip == 'false'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          BOLAO_USER_ID: ${{ secrets.BOLAO_USER_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py pregame
+
+      - name: Salvar predictions.json (se mudou)
+        if: steps.check_date.outputs.skip == 'false'
+        run: |
+          if ! git diff --quiet -- predictions.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add predictions.json
+            git commit -m "Reavaliação pré-jogo (agente)"
+            git pull --rebase --autostash || true
+            git push
+          else
+            echo "predictions.json sem alteracoes"
+          fi

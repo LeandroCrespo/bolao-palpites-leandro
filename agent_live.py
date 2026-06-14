@@ -9,11 +9,13 @@ Uso:
 
 import json
 import os
+import re
 import sys
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timedelta
 
 import anthropic
+import pytz
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 
@@ -470,6 +472,169 @@ def run_agent(dry_run: bool = False):
             print(f"  Notificacao Telegram enviada ({len(all_updates)} atualizacoes)")
 
 
+# ---------------------------------------------------------------------------
+# Reavaliação pré-jogo (~30 min antes de cada jogo)
+# ---------------------------------------------------------------------------
+
+PREGAME_WINDOW_MIN = 40  # janela: jogos começando nos próximos ~30-40 min
+
+_PREGAME_SYSTEM = """Você é um agente especialista em previsões de futebol de seleções
+para o bolão da Copa 2026. Reavalie placares com base em: forma recente (últimos
+~6-10 jogos, incl. amistosos e eliminatórias), desfalques/escalação confirmada da
+véspera, e retrospecto. Placares realistas, máximo 3 gols por time."""
+
+_PREGAME_PROMPT = """REAVALIAÇÃO PRÉ-JOGO — faltam ~30 minutos para começar.
+
+Jogo: {home} (mandante) x {away} (visitante) — {date}
+Palpite atual: {ph}-{pa}
+
+Pesquise lesões/suspensões/escalação confirmada e o momento atual das duas
+seleções e reavalie se este palpite ainda é o ideal. NÃO use o resultado real
+(o jogo ainda não começou).
+
+Responda na ÚLTIMA linha EXATAMENTE assim:
+- "MANTER" se o palpite atual continua o melhor; ou
+- "PALPITE: X-Y" com o novo placar (X = gols do mandante {home}).
+Depois, em outra linha: "RAZAO: <1-2 frases citando os fatores>"."""
+
+
+def _focused_pregame_eval(client, home, away, date_str, ph, pa):
+    """Reavalia um jogo. Retorna (novo_h, novo_a, razao) ou None se MANTER/erro."""
+    prompt = _PREGAME_PROMPT.format(home=home, away=away, date=date_str, ph=ph, pa=pa)
+    try:
+        resp = client.beta.messages.create(
+            model=MODEL,
+            max_tokens=1200,
+            system=_PREGAME_SYSTEM,
+            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
+            betas=["web-search-2025-03-05"],
+            messages=[{"role": "user", "content": prompt}],
+        )
+        texto = "".join(b.text for b in resp.content if hasattr(b, "text"))
+    except Exception as e:
+        print(f"  [erro pregame {home} x {away}: {e}]")
+        return None
+    m = re.findall(r"PALPITE:\s*(\d+)\s*[-x]\s*(\d+)", texto, re.IGNORECASE)
+    if not m:
+        return None  # MANTER (ou sem palpite explícito)
+    nh, na = int(m[-1][0]), int(m[-1][1])
+    rz = re.findall(r"RAZAO:\s*(.+)", texto, re.IGNORECASE)
+    razao = rz[-1].strip() if rz else "Reavaliação pré-jogo"
+    return nh, na, razao
+
+
+def run_pregame(dry_run: bool = False):
+    """Reavalia, ~30 min antes do início, os palpites dos jogos prestes a começar.
+    Se o placar mudar, atualiza (apenas o jogo, apenas o próprio usuário, apenas
+    jogos ainda não iniciados) e avisa no Telegram. Idempotente: cada jogo é
+    reavaliado uma única vez (marca em predictions.json -> pregame_checked)."""
+    load_dotenv()
+    for _var in ("ANTHROPIC_API_KEY", "DATABASE_URL", "BOLAO_USER_ID", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"):
+        _val = os.environ.get(_var, "")
+        if _val:
+            os.environ[_var] = _val.encode().decode("utf-8-sig").strip().strip("'\"")
+
+    tz = pytz.timezone("America/Sao_Paulo")
+    now = datetime.now(tz).replace(tzinfo=None)
+    limite = now + timedelta(minutes=PREGAME_WINDOW_MIN)
+
+    engine = _engine()
+    with engine.connect() as conn:
+        rows = conn.execute(text("""
+            SELECT match_number, team1_code, team2_code, CAST(datetime AS VARCHAR)
+            FROM matches
+            WHERE status = 'scheduled'
+              AND team1_id IS NOT NULL AND team2_id IS NOT NULL
+              AND datetime > :agora AND datetime <= :lim
+            ORDER BY datetime
+        """), {"agora": now, "lim": limite}).fetchall()
+
+    if not rows:
+        print(f"[PRÉ-JOGO] Nenhum jogo começando nos próximos {PREGAME_WINDOW_MIN} min — nada a fazer.")
+        return
+
+    if not os.path.exists(PREDICTIONS_FILE):
+        print("predictions.json não encontrado — abortando.")
+        return
+    with open(PREDICTIONS_FILE, encoding="utf-8") as f:
+        predictions = json.load(f)
+    pred_map = {m["match_number"]: m for m in predictions["matches"]}
+    checked = set(predictions.get("pregame_checked", []))
+
+    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+
+    def tname(code):
+        return TEAMS.get(code, {}).get("name", code)
+
+    updates = []
+    processou = False
+    for mn, c1, c2, dt in rows:
+        if mn in checked:
+            continue
+        cur = pred_map.get(mn)
+        if not cur:
+            continue
+        processou = True
+        home, away = tname(c1), tname(c2)
+        ph, pa = cur.get("home_goals"), cur.get("away_goals")
+        print(f"[PRÉ-JOGO] Reavaliando #{mn}: {home} x {away} (atual {ph}-{pa})...", flush=True)
+        res = _focused_pregame_eval(client, home, away, str(dt)[:16], ph, pa)
+        checked.add(mn)
+        if res is None:
+            print(f"  -> MANTER {ph}-{pa}")
+            continue
+        nh, na, razao = res
+        if nh == ph and na == pa:
+            print(f"  -> MANTER {ph}-{pa} | {razao}")
+            continue
+        cur["home_goals"], cur["away_goals"] = nh, na
+        cur["reasoning"] = razao
+        updates.append({"match_number": mn, "home": home, "away": away,
+                        "old": f"{ph}-{pa}", "new": f"{nh}-{na}", "razao": razao})
+        print(f"  -> AJUSTAR {ph}-{pa} => {nh}-{na} | {razao}")
+
+    if not processou:
+        print("[PRÉ-JOGO] Jogos na janela já haviam sido reavaliados — nada a fazer.")
+        return
+
+    predictions["pregame_checked"] = sorted(checked)
+    if dry_run:
+        print(f"[PRÉ-JOGO][DRY-RUN] {len(updates)} ajuste(s) — nada gravado.")
+        return
+
+    with open(PREDICTIONS_FILE, "w", encoding="utf-8") as f:
+        json.dump(predictions, f, ensure_ascii=False, indent=2)
+
+    if not updates:
+        print("[PRÉ-JOGO] Reavaliação concluída — nenhum ajuste necessário.")
+        return
+
+    # Submete SÓ os jogos alterados — submit_match_prediction garante:
+    # apenas o próprio usuário (BOLAO_USER_ID) e apenas jogos não iniciados.
+    from submitter import get_db_engine, submit_match_prediction
+    uid = _user_id()
+    eng = get_db_engine()
+    with eng.begin() as conn:
+        for u in updates:
+            nh, na = map(int, u["new"].split("-"))
+            print(submit_match_prediction(conn, uid, u["match_number"], nh, na, dry_run=False))
+
+    token = os.getenv("TELEGRAM_BOT_TOKEN")
+    chat_id = os.getenv("TELEGRAM_CHAT_ID")
+    if token and chat_id:
+        linhas = ["⚽ VAR — Bolão Copa 2026", "Reavaliação pré-jogo (~30 min):", ""]
+        for u in updates:
+            linhas.append(f"Jogo #{u['match_number']}: {u['home']} x {u['away']}")
+            linhas.append(f"  {u['old']} -> {u['new']}")
+            if u["razao"]:
+                linhas.append(f"  {u['razao']}")
+        send_telegram(token, chat_id, "\n".join(linhas))
+        print(f"  Notificacao Telegram enviada ({len(updates)} ajuste(s) pré-jogo)")
+
+
 if __name__ == "__main__":
     dry_run = "--dry-run" in sys.argv
-    run_agent(dry_run=dry_run)
+    if "--pregame" in sys.argv:
+        run_pregame(dry_run=dry_run)
+    else:
+        run_agent(dry_run=dry_run)
