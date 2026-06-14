@@ -339,8 +339,8 @@
       "away_team": "JPN",
       "date": "2026-06-14",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "Japão entra desfalcado com Mitoma, Minamino e Endo fora por lesão/aposentadoria. Holanda com elenco completo. Altero de 2-1 para 2-0 refletindo desfalques japoneses."
+      "away_goals": 1,
+      "reasoning": "Holanda sem Timber (lesão) e Xavi Simons (ausência), além de dúvida de Memphis; amistosos fracos (derrota para Argélia, dificuldades vs Uzbequistão). Japão em forma espetacular: 6 vitórias seguidas, bateu Brasil e Inglaterra nos amistosos, mas perdeu Mitoma, Minamino e Endo por lesão. Holanda ainda favorita pela qualidade de Van Dijk/De Jong/Gakpo, mas jogo mais apertado que o previsto. Ajusto de 2-0 para 2-1."
     },
     {
       "match_number": 32,
@@ -350,8 +350,8 @@
       "away_team": "TUN",
       "date": "2026-06-14",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "Suécia (FIFA #25) enfrenta a Tunísia (FIFA #41) com enorme vantagem individual: Gyökeres (Arsenal) e Isak (Liverpool) formam dupla de ataque de elite da Premier League. A Tunísia tem solidez defensiva extraordinária — não sofreu gols na qualificação — mas ofensivamente depende muito de Skhiri e da organização de Lamouchi, um técnico que assumiu recentemente e ainda se adapta ao grupo. Suécia vence com conforto no calor de Monterrey, com Gyökeres marcando pelo menos um gol."
+      "away_goals": 1,
+      "reasoning": "Suécia com muitos problemas físicos: Kulusevski cortado (lesão na patela), Lindelöf, Gudmundsson, Elanga e Nygren como dúvidas. Porém Isak recuperado e confirmado ao lado de Gyökeres. Tunísia passou invicta e sem sofrer gols nas eliminatórias africanas, mas sofreu goleada de 5x0 para Bélgica e troca de treinador recente (Lamouchi com apenas 4 amistosos). Suécia favorita pela dupla de ataque, mas jogo mais travado. Ajusto de 2-0 para 2-1."
     },
     {
       "match_number": 33,
@@ -470,9 +470,9 @@
       "home_team": "ESP",
       "away_team": "CPV",
       "date": "2026-06-15",
-      "home_goals": 4,
+      "home_goals": 3,
       "away_goals": 0,
-      "reasoning": "Espanha campeã da Euro 2024 estreia contra Cabo Verde, que disputa sua primeira Copa do Mundo da história. Lamine Yamal confirmado apesar do desgaste físico da temporada; Nico Williams e Ferran Torres completam um ataque devastador. Cabo Verde tem elenco europeu de nível médio (ligas portuguesa, turca e grega), sem experiência em Mundiais. A diferença de qualidade técnica é abissal (Tier 1 vs Tier 5). Placar amplo esperado, com a Espanha mantendo posse e explorando os espaços. Ausência de Carvajal na lateral direita não compromete o domínio."
+      "reasoning": "Lamine Yamal confirmado fora por lesão, perdendo o melhor jogador espanhol para a estreia. Nico Williams também em baixa forma. Espanha ainda fortíssima com Rodri, Pedri, Fabián Ruiz, Oyarzabal, Baena e Ferrán Torres — venceu Peru 3x1 no último amistoso. Cabo Verde estreante sem desfalques. Vitória espanhola ampla mas reduzida de 4-0 para 3-0 dada ausência de Yamal."
     },
     {
       "match_number": 44,
@@ -1835,5 +1835,5 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-13T15:31:00.370602"
+  "last_updated": "2026-06-14T07:25:16.413227"
 }
