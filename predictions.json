@@ -96,9 +96,9 @@
       "home_team": "SUI",
       "away_team": "EUR_A",
       "date": "2026-06-18",
-      "home_goals": 2,
+      "home_goals": 1,
       "away_goals": 1,
-      "reasoning": "Confronto equilibrado entre duas seleções de Tier 3/4. A Suíça tem maior profundidade de elenco e jogadores em ligas de maior nível. A Bósnia é imprevisível e vem confiante após eliminar a Itália no playoff, com Demirovic (Stuttgart) fazendo a função de 'motor'. Džeko, mesmo aos 40, pode causar problemas em bolas aéreas. Espera-se uma partida disputada, com a Suíça vencendo de virada ou em jogo apertado, aproveitando seu melhor preparo físico e tático. Placar justo que reflete a diferença de ranking."
+      "reasoning": "Suíça empatou 1-1 com Qatar na estreia — resultado decepcionante para uma seleção rankeada 17ª contra um Qatar de ranking 54. BIH também empatou 1-1 com o Canadá. Ambas mostraram limitações ofensivas. Suíça é tecnicamente superior, mas o desempenho real na Copa sugere dificuldades. Ajusto de 2-1 para 1-1, mantendo resultado incerto mas mais alinhado ao que ambas mostraram na rodada 1."
     },
     {
       "match_number": 10,
@@ -173,9 +173,9 @@
       "home_team": "BRA",
       "away_team": "HAI",
       "date": "2026-06-19",
-      "home_goals": 3,
+      "home_goals": 1,
       "away_goals": 0,
-      "reasoning": "Brasil (Tier 2) vs Haiti (Tier 5) — diferença abismal de qualidade. Mesmo sem Rodrygo, Estêvão e Militão, o Brasil tem Vinicius Jr., Neymar, Endrick e Raphinha. Após empate frustrante com Marrocos, a pressão por gols será máxima. O Haiti depende de contra-ataques e compactação, mas contra o Brasil em campo aberto terá enorme dificuldade. A goleada 4-0 do Haiti contra a Nova Zelândia não muda a realidade da diferença de nível. Placar 3-0 — Brasil despacha o adversário com gols distribuídos entre Vinicius, Neymar e Endrick."
+      "reasoning": "Brasil empatou 1-1 com Marrocos na estreia — atuação abaixo, Ancelotti com 14 escalações diferentes em 14 jogos, desfalques de Rodrygo e Estêvão. Haiti perdeu 0-1 para a Escócia e é o time mais fraco do grupo. Brasil deve vencer, mas dado o padrão irregular na Copa, ajusto de 2-0 para 1-0: favoritismo mantido, mas placar mais conservador alinhado ao rendimento real."
     },
     {
       "match_number": 17,
@@ -340,7 +340,7 @@
       "date": "2026-06-14",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Holanda sem Timber (lesão) e Xavi Simons (ausência), além de dúvida de Memphis; amistosos fracos (derrota para Argélia, dificuldades vs Uzbequistão). Japão em forma espetacular: 6 vitórias seguidas, bateu Brasil e Inglaterra nos amistosos, mas perdeu Mitoma, Minamino e Endo por lesão. Holanda ainda favorita pela qualidade de Van Dijk/De Jong/Gakpo, mas jogo mais apertado que o previsto. Ajusto de 2-0 para 2-1."
+      "reasoning": "Palpite inicial era 2-0. Holanda invicta nas eliminatórias europeia, sólida (4 gols sofridos em 8 jogos), mas perde Timber (lesão). Japão sem Endo (capitão), Mitoma e Minamino — 3 desfalques. Porem Japão tem qualidade individual alta (Kubo, Doan, Ito) e histórico de vencer grandes em amistosos. Holanda favorita para vencer, mas Japão capaz de marcar. Ajuste de 2-0 para 2-1."
     },
     {
       "match_number": 32,
@@ -1835,5 +1835,5 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-14T07:25:16.413227"
+  "last_updated": "2026-06-14T16:22:15.789842"
 }
