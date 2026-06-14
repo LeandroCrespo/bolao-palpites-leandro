@@ -107,9 +107,9 @@
       "home_team": "CAN",
       "away_team": "QAT",
       "date": "2026-06-18",
-      "home_goals": 2,
+      "home_goals": 3,
       "away_goals": 1,
-      "reasoning": "Qatar surpreendeu ao empatar 1x1 com Suíça (rank 17) na rodada 1 — desempenho melhor que esperado. Canadá empatou 1x1 com Bósnia. Ambas em forma irregular. Palpite original 3-1 era otimista demais para o Canadá. Ajuste para 2-1: Canadá ainda favorito em casa (Vancouver) mas placar mais realista dado o nível do Qatar."
+      "reasoning": "Canadá joga em Vancouver — casa novamente — e Davies pode ter retornado parcialmente por este jogo (esperado para o grupo, segundo o staff). O Qatar é o adversário mais acessível do grupo (FIFA #54, elenco majoritariamente da Qatar Stars League). Almoez Ali é ameaça real e marcou 12 gols na qualificatória asiática, justificando o gol do Qatar. David buscará redenção após má fase e Larin novamente representa perigo. Vitória canadense mais ampla, capitalizada pelo fator casa e motivação de não sair do grupo pela primeira vez na história."
     },
     {
       "match_number": 11,
@@ -173,9 +173,9 @@
       "home_team": "BRA",
       "away_team": "HAI",
       "date": "2026-06-19",
-      "home_goals": 2,
+      "home_goals": 3,
       "away_goals": 0,
-      "reasoning": "Brasil decepcionou no 1x1 com Marrocos: Neymar provavelmente fora, desfalques de Rodrygo/Militão/Estêvão/Wesley confirmados, time nervoso e desorganizado no 1º tempo. Haiti perdeu 0x1 para Escócia mas foi competitivo. Brasil ainda larguíssimo favorito, mas o 3-0 parece otimista. Reduzido para 2-0: Brasil vence, mas com dificuldades reais."
+      "reasoning": "Brasil (Tier 2) vs Haiti (Tier 5) — diferença abismal de qualidade. Mesmo sem Rodrygo, Estêvão e Militão, o Brasil tem Vinicius Jr., Neymar, Endrick e Raphinha. Após empate frustrante com Marrocos, a pressão por gols será máxima. O Haiti depende de contra-ataques e compactação, mas contra o Brasil em campo aberto terá enorme dificuldade. A goleada 4-0 do Haiti contra a Nova Zelândia não muda a realidade da diferença de nível. Placar 3-0 — Brasil despacha o adversário com gols distribuídos entre Vinicius, Neymar e Endrick."
     },
     {
       "match_number": 17,
@@ -228,9 +228,9 @@
       "home_team": "EUR_C",
       "away_team": "PAR",
       "date": "2026-06-19",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "Turquia foi goleada 0x2 pela Austrália na estreia — desempenho muito abaixo do esperado. Paraguai também foi destruído 1x4 pelos EUA. Dois times em má forma; jogo entre duas seleções fracassadas na rodada 1. TUR joga em San Francisco com alguma vantagem moral de nunca ter perdido ainda nesta Copa. Reduzido de 2-0 para 1-0: vitória turca mais apertada, placar mais realista."
+      "reasoning": "Paraguai foi destruído 4×1 pelos EUA na estreia desta Copa — péssima forma no torneio. Turquia marcou 8 gols e sofreu apenas 1 nos últimos 4 jogos pré-Copa, com Arda Güler e Kenan Yildiz em grande fase. Paraguai deve chegar abatido. Ajusto de 2-0 para 2-0 (mantém), mas com mais confiança no resultado pela desorganização paraguaia."
     },
     {
       "match_number": 22,
@@ -240,8 +240,8 @@
       "away_team": "AUS",
       "date": "2026-06-19",
       "home_goals": 2,
-      "away_goals": 1,
-      "reasoning": "USA arrasou Paraguai 4x1 em grande exibição. Austrália venceu Turquia 2x0 de forma convincente. Ambas em ótima forma nesta Copa. Jogo será muito disputado. Palpite anterior 2-0 ignorava a qualidade australiana — ajuste para 2-1: EUA vence em casa (Seattle) mas com gol australiano refletindo o equilíbrio real."
+      "away_goals": 0,
+      "reasoning": "EUA vem de goleada 4×1 sobre o Paraguai na estreia desta Copa — forte sinal de forma no torneio. Austrália não possui desfalques mas enfrenta um adversário em alto nível, jogando em casa (Seattle). Mantenho 2-0 favorável aos EUA, anfitrião em alta."
     },
     {
       "match_number": 23,
@@ -261,9 +261,9 @@
       "home_team": "PAR",
       "away_team": "AUS",
       "date": "2026-06-25",
-      "home_goals": 0,
-      "away_goals": 2,
-      "reasoning": "Austrália venceu Turquia 2x0 de forma convincente na estreia. Paraguai foi destruído 1x4 pelos EUA, mostrando fragilidade defensiva severa. Palpite original era 1-1, mas os resultados desta Copa apontam claramente para vitória australiana. Inverto para 0-2 AUS com base na forma real do torneio — dado mais pesado."
+      "home_goals": 1,
+      "away_goals": 1,
+      "reasoning": "Clássico duelo de eliminação direta: quem ganhar tem chance de avançar como terceiro (improvável dado os resultados projetados), mas ambos brigam por honra e pontos. Paraguai com Almirón, Enciso e Sanabria tem qualidade atacante; Austrália com Leckie e jovens talentos pode surpreender. Sem a pressão de classificação, ambos os times jogarão de forma mais aberta. O Paraguai, em San Francisco, pode ter leve vantagem de apoio da diáspora sul-americana. Resultado justo: empate que não classifica nenhum dos dois. Placar: 1-1."
     },
     {
       "match_number": 25,
@@ -339,8 +339,8 @@
       "away_team": "JPN",
       "date": "2026-06-14",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "Japão entra desfalcado com Mitoma, Minamino e Endo fora por lesão/aposentadoria. Holanda com elenco completo. Altero de 2-1 para 2-0 refletindo desfalques japoneses."
+      "away_goals": 1,
+      "reasoning": "Holanda sem Timber (lesão) e Xavi Simons (ausência), além de dúvida de Memphis; amistosos fracos (derrota para Argélia, dificuldades vs Uzbequistão). Japão em forma espetacular: 6 vitórias seguidas, bateu Brasil e Inglaterra nos amistosos, mas perdeu Mitoma, Minamino e Endo por lesão. Holanda ainda favorita pela qualidade de Van Dijk/De Jong/Gakpo, mas jogo mais apertado que o previsto. Ajusto de 2-0 para 2-1."
     },
     {
       "match_number": 32,
@@ -350,8 +350,8 @@
       "away_team": "TUN",
       "date": "2026-06-14",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "Suécia (FIFA #25) enfrenta a Tunísia (FIFA #41) com enorme vantagem individual: Gyökeres (Arsenal) e Isak (Liverpool) formam dupla de ataque de elite da Premier League. A Tunísia tem solidez defensiva extraordinária — não sofreu gols na qualificação — mas ofensivamente depende muito de Skhiri e da organização de Lamouchi, um técnico que assumiu recentemente e ainda se adapta ao grupo. Suécia vence com conforto no calor de Monterrey, com Gyökeres marcando pelo menos um gol."
+      "away_goals": 1,
+      "reasoning": "Suécia com muitos problemas físicos: Kulusevski cortado (lesão na patela), Lindelöf, Gudmundsson, Elanga e Nygren como dúvidas. Porém Isak recuperado e confirmado ao lado de Gyökeres. Tunísia passou invicta e sem sofrer gols nas eliminatórias africanas, mas sofreu goleada de 5x0 para Bélgica e troca de treinador recente (Lamouchi com apenas 4 amistosos). Suécia favorita pela dupla de ataque, mas jogo mais travado. Ajusto de 2-0 para 2-1."
     },
     {
       "match_number": 33,
@@ -470,9 +470,9 @@
       "home_team": "ESP",
       "away_team": "CPV",
       "date": "2026-06-15",
-      "home_goals": 2,
+      "home_goals": 3,
       "away_goals": 0,
-      "reasoning": "Lamine Yamal confirmado fora e Nico Williams em dúvida — dupla que é a principal arma ofensiva da Espanha. Mesmo sem eles, Espanha é superior e vem de 30 jogos invicta (Euro 2024 + Nations League). Cabo Verde estreante. Baixo para 2-0: mantém vitória espanhola mas com menos gols dado desfalque ofensivo crucial."
+      "reasoning": "Lamine Yamal confirmado fora por lesão, perdendo o melhor jogador espanhol para a estreia. Nico Williams também em baixa forma. Espanha ainda fortíssima com Rodri, Pedri, Fabián Ruiz, Oyarzabal, Baena e Ferrán Torres — venceu Peru 3x1 no último amistoso. Cabo Verde estreante sem desfalques. Vitória espanhola ampla mas reduzida de 4-0 para 3-0 dada ausência de Yamal."
     },
     {
       "match_number": 44,
@@ -1835,5 +1835,5 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-14T13:07:18.346063"
+  "last_updated": "2026-06-14T07:25:16.413227"
 }
