@@ -173,9 +173,9 @@
       "home_team": "BRA",
       "away_team": "HAI",
       "date": "2026-06-19",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "Brasil empatou 1-1 com Marrocos na estreia — atuação abaixo, Ancelotti com 14 escalações diferentes em 14 jogos, desfalques de Rodrygo e Estêvão. Haiti perdeu 0-1 para a Escócia e é o time mais fraco do grupo. Brasil deve vencer, mas dado o padrão irregular na Copa, ajusto de 2-0 para 1-0: favoritismo mantido, mas placar mais conservador alinhado ao rendimento real."
+      "reasoning": "Brasil com desfalques sérios (Rodrygo, Militão, Estêvão) MAS Haiti é rank 84 e perdeu 0-1 para a Escócia na estreia. Abismo de qualidade sugere vitória confortável; palpite anterior 1-0 foi excessivamente conservador. Ajusto para 2-0, mantendo direção certa e melhorando o placar esperado."
     },
     {
       "match_number": 17,
@@ -482,8 +482,8 @@
       "away_team": "URU",
       "date": "2026-06-15",
       "home_goals": 1,
-      "away_goals": 2,
-      "reasoning": "Arábia Saudita chega sob enorme instabilidade: técnico Hervé Renard demitido em abril, substituído pelo grego Georgios Donis com apenas semanas de trabalho. Elenco quase 100% doméstico (Saudi Pro League), com Salem Al-Dawsari como único diferencial ofensivo de nível. Uruguai, apesar da ausência de Suárez e de De Arrascaeta lesionado, conta com Valverde em grande fase, Araújo e Giménez na zaga e Darwin Núñez como referência. Bielsa monta um bloco organizado e competente. A instabilidade saudita deve custar pontos; Uruguai vence em jogo disputado, com gol saudita de Al-Dawsari ou Al-Buraikan tornando o placar mais justo."
+      "away_goals": 1,
+      "reasoning": "Uruguai sem Ronald Araújo, Giménez E Arrascaeta (3 titulares confirmados fora), mais Valverde como dúvida — desfalques massivos na zaga e no meio. Arábia Saudita sem baixas relevantes e animada a repetir o feito de 2022. Com tamanha fragilidade defensiva do Uruguai, o favoritismo da Celeste cai muito: ajusto de 1-2 para empate 1-1."
     },
     {
       "match_number": 45,
@@ -548,8 +548,8 @@
       "away_team": "NOR",
       "date": "2026-06-16",
       "home_goals": 0,
-      "away_goals": 3,
-      "reasoning": "Iraque (Tier 5) estreia no Mundial após 40 anos de ausência. O elenco mescla talentos da Europa (Zidane Iqbal, Ali Al-Hamadi do Ipswich, Merchas Doski) com a espinha dorsal doméstica iraquiana. Apesar do surpreendente empate com a Espanha em amistoso pré-Copa, a diferença de nível para a Noruega é abismal. Haaland (16 gols nas eliminatórias) fará sua estreia histórica no Mundial ao lado de Ødegaard, Sørloth, Nusa e Strand Larsen. A Noruega venceu TODOS os 8 jogos da fase europeia, inclusive dois goleadas sobre a Itália. Derrota iraquiana por placar elástico esperada em Boston."
+      "away_goals": 2,
+      "reasoning": "Noruega com Haaland e Ødegaard confirmados na lista após recuperação, além de Sørloth e Nusa. Iraque (rank 68) é estreante na fase. Palpite anterior 0-3 foi generoso demais para estreia; 0-2 é mais calibrado e realista, mantendo vitória norueguesa."
     },
     {
       "match_number": 51,
@@ -1835,5 +1835,5 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-14T16:22:15.789842"
+  "last_updated": "2026-06-15T09:25:03.219168"
 }
