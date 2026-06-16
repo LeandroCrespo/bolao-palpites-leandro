@@ -745,9 +745,9 @@
       "home_team": "GHA",
       "away_team": "PAN",
       "date": "2026-06-17",
-      "home_goals": 1,
+      "home_goals": 0,
       "away_goals": 1,
-      "reasoning": "Confronto equilibrado entre Tier 4 e Tier 5, com ambas as seleções vendo este jogo como a melhor chance de pontos do grupo. Gana perde Djiku por lesão (substituído por Luckassen) mas mantém Semenyo, Partey, Kamaldeen Sulemana e Iñaki Williams. O Panamá tem dúvida séria sobre Carrasquilla (lesão na virilha), seu motor criativo. Com a ausência ou limitação do principal criador panamenho, e a defesa compacta que o Panamá costuma apresentar, esperamos um empate tenso com poucos gols."
+      "reasoning": "Gana perde Kudus (lesão) E Thomas Partey (visto negado), dois de seus melhores jogadores, e chega sem vitórias em 2026. Panamá tem 2 vitórias nos últimos 7 jogos e é mais consistente. Desfalques duplos de peso justificam virar a direção: ajusto para vitória do Panamá 1-0."
     },
     {
       "match_number": 69,
@@ -1835,5 +1835,5 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-15T09:25:03.219168"
+  "last_updated": "2026-06-16T08:48:26.367393"
 }
