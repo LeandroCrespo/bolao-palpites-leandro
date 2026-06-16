@@ -123,7 +123,8 @@ def _bulletin_cutoff(target_date: date) -> datetime:
 
 def get_ranking(conn, exclude_admin: bool = True) -> list[dict]:
     """
-    Retorna ranking geral de todos os participantes com pontuação total.
+    Retorna ranking calculado na hora a partir dos placares reais — idêntico
+    ao app Streamlit. Não usa points_awarded (campo que pode estar desatualizado).
     Somente leitura — não altera nenhum dado.
     """
     query = text("""
@@ -136,8 +137,41 @@ def get_ranking(conn, exclude_admin: bool = True) -> list[dict]:
             COALESCE(pp.pts, 0)  AS podium_pts
         FROM users u
         LEFT JOIN (
-            SELECT user_id, COALESCE(SUM(points_awarded), 0) AS pts
-            FROM predictions GROUP BY user_id
+            -- Calcula pontos de jogo na hora, a partir dos placares reais
+            SELECT p.user_id,
+                   COALESCE(SUM(
+                       CASE
+                           -- Placar exato (20 pts)
+                           WHEN p.pred_team1_score = m.team1_score
+                            AND p.pred_team2_score = m.team2_score
+                           THEN 20
+                           -- Resultado certo + gols de 1 time (15 pts)
+                           WHEN (
+                               (p.pred_team1_score > p.pred_team2_score AND m.team1_score > m.team2_score) OR
+                               (p.pred_team1_score < p.pred_team2_score AND m.team1_score < m.team2_score) OR
+                               (p.pred_team1_score = p.pred_team2_score AND m.team1_score = m.team2_score)
+                           ) AND (
+                               p.pred_team1_score = m.team1_score OR p.pred_team2_score = m.team2_score
+                           )
+                           THEN 15
+                           -- Só resultado (10 pts)
+                           WHEN (
+                               (p.pred_team1_score > p.pred_team2_score AND m.team1_score > m.team2_score) OR
+                               (p.pred_team1_score < p.pred_team2_score AND m.team1_score < m.team2_score) OR
+                               (p.pred_team1_score = p.pred_team2_score AND m.team1_score = m.team2_score)
+                           )
+                           THEN 10
+                           -- Só gols de 1 time (5 pts)
+                           WHEN p.pred_team1_score = m.team1_score OR p.pred_team2_score = m.team2_score
+                           THEN 5
+                           ELSE 0
+                       END
+                   ), 0) AS pts
+            FROM predictions p
+            JOIN matches m ON m.id = p.match_id
+                AND m.team1_score IS NOT NULL
+                AND m.team2_score IS NOT NULL
+            GROUP BY p.user_id
         ) mp ON mp.user_id = u.id
         LEFT JOIN (
             SELECT user_id, COALESCE(SUM(points_awarded), 0) AS pts
