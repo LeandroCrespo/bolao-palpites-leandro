@@ -8,7 +8,7 @@ import pytz
 from sqlalchemy import text
 
 BRASILIA = pytz.timezone("America/Sao_Paulo")
-BULLETIN_HOUR = 20  # 20h Brasília — jogos após esse horário vão para o boletim do dia seguinte
+BULLETIN_HOUR = 23  # 23h Brasília — cobre jogos das 21h (que terminam ~23h); o boletim roda após isso
 ADMIN_USER_ID = 1
 
 COPA_OPENING_DATE = date(2026, 6, 11)
@@ -18,97 +18,97 @@ COPA_OPENING_DATE = date(2026, 6, 11)
 HOST_CITY_INFO = {
     "Cidade do México": {
         "country": "México",
-        "vibe": "ruas lotadas de torcedores em frente ao icônico Estádio Azteca, mariachis tocando, bandeiras de dezenas de países, vendedores de tacos e elote nas calçadas",
+        "vibe": "praça do Zócalo, a maior da América Latina, com a Catedral Metropolitana iluminada ao fundo, Palácio Nacional à direita, vendedores de tacos e elote nas calçadas, multidão animada comemorando a Copa",
         "drink": "uma michelada ou um shot de tequila",
-        "curiosity": "o Estádio Azteca é o primeiro do mundo a sediar três Copas do Mundo",
+        "curiosity": "o Zócalo é uma das maiores praças do mundo e coração histórico e cultural do México",
     },
     "Guadalajara": {
         "country": "México",
-        "vibe": "pátio de um boteco próximo ao Estádio Akron, mariachis e bandeirolas coloridas (papel picado) penduradas",
+        "vibe": "calçadão do centro histórico de Guadalajara em frente à icônica Catedral com suas torres gêmeas douradas, mariachis tocando ao vivo, papel picado colorido ao vento, turistas e torcedores misturados",
         "drink": "uma tequila ou um copo de tejuino gelado",
         "curiosity": "Guadalajara é considerada o berço do mariachi e da tequila",
     },
     "Monterrey": {
         "country": "México",
-        "vibe": "terraço com vista para as montanhas da Sierra Madre, próximo ao Estádio BBVA, ambiente de churrascaria regiomontana",
+        "vibe": "Macroplaza de Monterrey, uma das maiores praças do mundo, com o Cerro de la Silla ao fundo, o Faro del Comercio laranja iluminado à direita e o Palácio de Gobierno ao fundo",
         "drink": "uma cerveja gelada com limão e sal",
         "curiosity": "Monterrey é famosa pelo cabrito assado e pelas montanhas que cercam a cidade",
     },
     "Nova York": {
         "country": "EUA",
-        "vibe": "bar esportivo perto do MetLife Stadium em Nova Jersey, telões por toda parte, taxis amarelos passando lá fora, bandeiras de vários países penduradas no teto",
+        "vibe": "Times Square iluminada com telões gigantes anunciando a Copa do Mundo, arranha-céus ao redor, taxis amarelos passando, bandeiras de dezenas de países misturadas com os anúncios luminosos",
         "drink": "um copo de cerveja artesanal ou um bagel com cream cheese",
         "curiosity": "o MetLife Stadium vai sediar a grande final da Copa do Mundo",
     },
     "Filadélfia": {
         "country": "EUA",
-        "vibe": "boteco próximo ao Lincoln Financial Field, decoração com sinos da liberdade em miniatura, torcedores comendo sanduíches na calçada",
+        "vibe": "escadaria icônica do Museu de Arte de Filadélfia — os famosos 'Rocky Steps' — com a vista panorâmica da Benjamin Franklin Parkway e o skyline da cidade ao fundo, torcedores subindo as degraus em festa",
         "drink": "um cheesesteak e uma cerveja gelada",
         "curiosity": "Filadélfia é famosa pelo Philly cheesesteak e pelo sino da liberdade",
     },
     "Miami": {
         "country": "EUA",
-        "vibe": "terraço de um bar à beira-mar perto do Hard Rock Stadium, luzes neon, palmeiras, muita gente falando português e espanhol misturados",
+        "vibe": "Ocean Drive em Miami Beach, palmeiras tropicais altas, fachadas art déco coloridas dos anos 1930, sol forte batendo na calçada, Oceano Atlântico azul visível ao fundo",
         "drink": "um mojito ou um suco de cana gelado",
         "curiosity": "Miami tem uma das maiores comunidades brasileiras dos Estados Unidos",
     },
     "Atlanta": {
         "country": "EUA",
-        "vibe": "bar moderno perto do Mercedes-Benz Stadium, telões gigantes, decoração inspirada em música country e hip-hop",
+        "vibe": "Centennial Olympic Park, com os anéis olímpicos nas fontes interativas e gramado verde, lembrança das Olimpíadas de 1996, arranha-céus do centro ao fundo, torcedores da Copa descansando nas fontes",
         "drink": "uma Coca-Cola gelada (a marca nasceu em Atlanta) ou um chá doce sulista",
-        "curiosity": "Atlanta é a cidade natal da Coca-Cola",
+        "curiosity": "Atlanta sediou os Jogos Olímpicos de 1996 e é cidade natal da Coca-Cola",
     },
     "Boston": {
         "country": "EUA",
-        "vibe": "pub estilo irlandês perto do Gillette Stadium, paredes de tijolo aparente, bandeirolas de times históricos",
+        "vibe": "Faneuil Hall Marketplace, o mercado público histórico mais antigo dos EUA, paredes de tijolo e pedra do século XVIII, bancas de comida ao ar livre, torcedores misturados com turistas no coração histórico de Boston",
         "drink": "uma clam chowder quentinha com uma cerveja",
         "curiosity": "Boston tem uma das comunidades mais antigas de imigrantes irlandeses dos EUA",
     },
     "Dallas": {
         "country": "EUA",
-        "vibe": "boteco estilo texano perto do AT&T Stadium, chapéus de cowboy pendurados, cheiro de churrasco no ar",
+        "vibe": "Reunion Tower, a torre com a cúpula esférica iluminada símbolo de Dallas, skyline texana ao entardecer ao fundo, West End Marketplace movimentado, chapéus de cowboy misturados com camisas de seleções",
         "drink": "um chá gelado bem doce ou uma cerveja artesanal texana",
-        "curiosity": "o AT&T Stadium tem um telão gigante que cobre quase todo o campo",
+        "curiosity": "Dallas abriga o maior museu sobre o assassinato de John F. Kennedy",
     },
     "Houston": {
         "country": "EUA",
-        "vibe": "bar próximo ao NRG Stadium, decoração com temas espaciais (NASA fica na cidade) e bandeiras do Texas",
+        "vibe": "Space Center Houston, o centro de controle da NASA, com réplicas de foguetes Saturn V ao fundo, torcedores tirando fotos ao lado de trajes espaciais e cápsulas Apollo originais",
         "drink": "um chá gelado Texas-style ou uma cerveja artesanal local",
         "curiosity": "Houston é a cidade que controla as missões espaciais da NASA",
     },
     "Kansas City": {
         "country": "EUA",
-        "vibe": "boteco de churrascaria perto do Arrowhead Stadium, fumaça de churrasqueira BBQ, paredes decoradas com placas de fontes de água potável (a cidade tem mais fontes que Roma)",
+        "vibe": "Country Club Plaza, o primeiro shopping center a céu aberto dos EUA, inspirado na arquitetura espanhola de Sevilha com fontes, azulejos e campanários, decorado com bandeiras da Copa",
         "drink": "uma costelinha de churrasco BBQ estilo Kansas City com um refrigerante gelado",
         "curiosity": "Kansas City tem mais fontes de água do que Roma",
     },
     "Los Angeles": {
         "country": "EUA",
-        "vibe": "rooftop bar com vista para o SoFi Stadium, palmeiras, letreiro de Hollywood ao fundo iluminado",
+        "vibe": "Calçada da Fama de Hollywood (Walk of Fame), estrelas dos famosos no chão, TCL Chinese Theatre ao fundo, palmeiras altíssimas, sol californiano forte, turistas e torcedores fotografando as estrelas",
         "drink": "um smoothie tropical ou uma cerveja artesanal californiana",
-        "curiosity": "o SoFi Stadium tem um dos telões mais caros já construídos no mundo",
+        "curiosity": "o Walk of Fame tem mais de 2.700 estrelas de celebridades no calçamento de Hollywood",
     },
     "San Francisco": {
         "country": "EUA",
-        "vibe": "bar com vista para a Golden Gate Bridge, próximo ao Levi's Stadium, neblina característica ao fundo",
+        "vibe": "mirador com vista direta para a Golden Gate Bridge, névoa característica envolvendo as torres laranja, baía de São Francisco brilhando ao fundo, torcedores fotografando uma das pontes mais famosas do mundo",
         "drink": "um clam chowder servido dentro de um pão (sourdough bread bowl)",
         "curiosity": "o pão sourdough é uma marca registrada de San Francisco",
     },
     "Seattle": {
         "country": "EUA",
-        "vibe": "cafeteria/boteco perto do Lumen Field, garoa fina característica, torcedores de verde e azul (cores do time local) misturados com a torcida brasileira",
+        "vibe": "Pike Place Market, o mercado público mais antigo dos EUA em funcionamento contínuo, peixeiros jogando salmões no ar, bancas de flores coloridas, vista da Puget Sound e das montanhas olímpicas ao fundo",
         "drink": "um café especial bem forte (Seattle é a capital mundial do café)",
         "curiosity": "Seattle é considerada a capital mundial do café — lá nasceu uma famosa rede de cafeterias",
     },
     "Toronto": {
         "country": "Canadá",
-        "vibe": "pub perto do BMO Field, torre CN iluminada ao fundo, bandeiras do Canadá e de vários países penduradas",
+        "vibe": "base da Torre CN com a estrutura imponente dominando o enquadramento, Lake Ontario e a skyline de Toronto ao fundo, turistas de todas as partes do mundo esperando para subir à torre mais famosa do Canadá",
         "drink": "uma poutine quentinha com uma cerveja gelada",
-        "curiosity": "a Torre CN já foi a estrutura mais alta do mundo",
+        "curiosity": "a Torre CN já foi a estrutura mais alta do mundo e ainda é o símbolo maior de Toronto",
     },
     "Vancouver": {
         "country": "Canadá",
-        "vibe": "bar com vista para as montanhas nevadas, perto do BC Place, ambiente descontraído à beira-mar",
+        "vibe": "Stanley Park com os totens indígenas tradicionais e a Burrard Inlet ao fundo, montanhas nevadas da Costa Range ao longe, natureza exuberante dentro da cidade que é marca registrada de Vancouver",
         "drink": "uma poutine ou um café gelado",
         "curiosity": "Vancouver é cercada de montanhas e mar ao mesmo tempo, um cenário único entre as sedes",
     },
