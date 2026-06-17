@@ -23,31 +23,44 @@ _OUTFITS = [
     "navy blue zip-up jacket worn open over a plain white t-shirt, dark jeans",
 ]
 
+# Biblioteca de cenários temáticos — varia a cada boletim para deixar o vídeo
+# automático com ambiente bem definido (parecido com os que montamos sob medida).
+_SCENARIOS = [
+    "interior of an authentic neighborhood boteco — long dark wooden bar counter with glass-ring stains, "
+    "mismatched high stools, a Brazilian flag on the brick wall, an old CRT TV in the corner showing football, "
+    "shelves lined with bottles, warm amber lighting, low chatter and clinking glasses",
+    "a packed sports bar during the World Cup — big screens with the match, fans in yellow jerseys cheering "
+    "behind him, neon beer signs, festive buzzing energy, warm indoor light",
+    "a rooftop terrace at golden hour overlooking the glowing city skyline — string lights, a small table, "
+    "a soft warm sunset color grade, gentle evening breeze",
+    "a lively street-food stall on a busy sidewalk at night — grill smoke, colorful signs, passersby in "
+    "football jerseys, glowing city lights and neon reflections",
+    "a sun-drenched amateur 'várzea' football pitch at golden late afternoon — chalk lines, simple goals with "
+    "loose nets, palm trees, a small concrete changing-room bench, nostalgic neighborhood vibe",
+    "a beach kiosk at sunset — warm sand, plastic chairs and table, a beach-football goal, palm trees, "
+    "orange sky and gentle waves behind him",
+    "the bustling stands right outside a grand World Cup stadium at night — illuminated facade, crowds of "
+    "fans, waving flags, vendors, festive pre/post-match atmosphere",
+    "a cozy living room set up for game night — comfy sofa, a big TV showing the match, snacks on the coffee "
+    "table, a Brazil flag draped on the wall behind him, warm lamp light",
+]
+
 
 def _build_fixed_context(date_str: str, location: dict | None = None) -> str:
     """
-    Monta o bloco FIXED CHARACTER do Mestre Leme, variando a roupa a cada boletim
-    (com base na data) e o cenário (com base na cidade onde ele está, acompanhando
-    a Copa), mantendo rosto, corpo, bigode e personalidade fixos.
+    Monta o bloco FIXED CHARACTER do Mestre Leme, variando a roupa e o CENÁRIO a
+    cada boletim (com base na data), e incorporando a cidade-sede quando houver,
+    mantendo rosto, corpo, bigode e personalidade fixos.
     """
-    idx = sum(int(c) for c in date_str if c.isdigit()) % len(_OUTFITS)
-    outfit = _OUTFITS[idx]
+    digits = sum(int(c) for c in date_str if c.isdigit())
+    outfit = _OUTFITS[digits % len(_OUTFITS)]
+    scenario = _SCENARIOS[(digits + 3) % len(_SCENARIOS)]  # offset p/ não casar sempre com a roupa
 
-    if location:
-        setting = (
-            f"a lively spot in {location['city']}, {location['country']} — {location['vibe']}, "
-            f"warm inviting lighting, constant ambient sounds of a cheering World Cup crowd mixed "
-            f"with low conversation murmur and clinking glasses"
-        )
+    if location and location.get("city"):
+        local = f"{location['city']}, {location.get('country', '')}".rstrip(", ")
+        setting = f"{scenario}. Located in {local} (Mestre Leme is following the Seleção across the Cup)"
     else:
-        setting = (
-            "interior of an authentic São Paulo neighborhood boteco — long dark wooden bar counter "
-            "with worn varnish and glass ring stains, mismatched high bar stools, Brazilian green-and-yellow "
-            "flag pinned on the brick wall behind him, old CRT television mounted in the upper corner showing "
-            "football highlights, shelves lined with cachaça and beer bottles, warm incandescent yellow lighting "
-            "casting amber tones, constant boteco ambient sounds (low conversation murmur, clinking glasses, "
-            "faint samba radio)"
-        )
+        setting = scenario
 
     return f"""FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old (match the provided reference photo exactly, if attached).
 FACE: expressive full face with warm light-tan skin, FULL tousled dark salt-and-pepper hair — medium-short, slightly messy, graying at the temples and sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few days' growth covering jaw and chin, blending into a fuller graying mustache. Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge open contagious smile showing the upper teeth — the kind of smile that makes every room feel welcoming.
@@ -64,6 +77,10 @@ e despenteado, barba por fazer grisalha com bigode, chope na mão. Fala Portugu�
 sotaque paulistano (rápido, vogais fechadas).
 Expressões típicas: "meu povo", "meu consagrado", "minha gente", "meu benzinho", "tá louco", "vixe!".
 Apelidos para líderes: "mesa VIP" ou "donos do boteco". Para os últimos: "zona de rebaixamento" ou "devendo o chopão".
+HUMOR (pódio e rebaixamento): capriche em comparações engraçadas de boteco brasileiro ao falar dos líderes
+e dos lanterninhas — ex.: "grudados que nem chiclete no sapato", "colados que nem carrapato em boi",
+"perdido que nem cachorro em churrasco", "boiando que nem isopor na piscina", "no cangote do líder".
+Zueira sempre CARINHOSA. Use uma comparação dessas (pode inventar outras no mesmo estilo) nos clips de ranking.
 
 VIAGEM PELA COPA: Mestre Leme está viajando atrás da Seleção Brasileira pela Copa do Mundo 2026.
 A cada boletim ele está em uma cidade-sede diferente (informada no contexto), com roupa e cenário
@@ -105,6 +122,9 @@ Seu estilo:
 - Usa expressões como "Meu povo", "Galera", "Tá louco", "Que saudade do gol", "Vixe!", "Nossa Senhora"
 - Chama os 3 primeiros do ranking de "mesa VIP" ou "os donos do boteco"
 - Chama os 4 últimos de "zona de rebaixamento" ou "os que tão devendo o chopão"
+- Capricha em comparações engraçadas de boteco ao falar de líderes e lanterninhas:
+  "grudados que nem chiclete no sapato", "colados que nem carrapato em boi",
+  "perdido que nem cachorro em churrasco", "boiando que nem isopor na piscina" (zueira carinhosa)
 - Faz piadas leves com quem errou o palpite, mas sempre no estilo amigo
 - NUNCA inventa fatos: só usa os dados fornecidos. Não diz que alguém "não palpitou"
   ou "esqueceu o palpite" a menos que isso esteja explícito nos dados — quem pontuou

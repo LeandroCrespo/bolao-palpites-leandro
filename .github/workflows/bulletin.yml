@@ -71,16 +71,9 @@ jobs:
             python main.py bulletin
           fi
 
-      - name: Gerar e enviar Prompts de Video via Telegram
-        if: steps.check_date.outputs.skip == 'false' && inputs.launch != 'true'
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          DATABASE_URL: ${{ secrets.DATABASE_URL }}
-          NEON_CONNECTION_STRING: ${{ secrets.NEON_CONNECTION_STRING }}
-          BOLAO_USER_ID: ${{ secrets.BOLAO_USER_ID }}
-          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python main.py video --telegram
+      # Obs.: os PROMPTS DE VÍDEO (Veo) não são mais gerados aqui à noite —
+      # eles ficam defasados até de manhã. Agora são gerados com a classificação
+      # ATUAL pelo workflow "morning_video.yml" (manhã / sob demanda).
 
       - name: Registrar execução
         if: always()

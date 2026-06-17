@@ -1,0 +1,52 @@
+name: Prompts de Vídeo do Boletim (manhã / sob demanda)
+
+on:
+  # Alvo: ~8h Brasília, com a classificação JÁ atualizada após os jogos da noite.
+  # (O cron do GitHub costuma atrasar ~1h; agendamos 10:30 UTC.)
+  schedule:
+    - cron: '30 10 * * *'
+  # Recomendado: disparar manualmente (Run workflow) quando for fazer os vídeos,
+  # garantindo os dados mais frescos possíveis.
+  workflow_dispatch:
+
+jobs:
+  prompts-video:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Verificar se a Copa está em andamento
+        id: check_date
+        run: |
+          HOJE=$(date -u +%Y-%m-%d)
+          if [[ "$HOJE" < "2026-06-11" || "$HOJE" > "2026-07-20" ]]; then
+            echo "Fora do período da Copa ($HOJE). Pulando."
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Gerar e enviar Prompts de Vídeo (dados atuais) via Telegram
+        if: steps.check_date.outputs.skip == 'false'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          NEON_CONNECTION_STRING: ${{ secrets.NEON_CONNECTION_STRING }}
+          BOLAO_USER_ID: ${{ secrets.BOLAO_USER_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python main.py video --telegram
+
+      - name: Registrar execução
+        if: always()
+        run: echo "Prompts de vídeo (manhã) em $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
