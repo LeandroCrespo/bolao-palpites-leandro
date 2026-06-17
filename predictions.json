@@ -681,7 +681,8 @@
       "date": "2026-06-17",
       "home_goals": 1,
       "away_goals": 2,
-      "reasoning": "Uzbequistão (FIFA #50) faz sua estreia histórica na Copa, treinado por Fabio Cannavaro, com destaques como Khusanov (Manchester City) e o capitão Shomurodov. A Colômbia (FIFA #13), vice-campeã da Copa América 2024, chega com Luis Díaz, James Rodríguez e Falcao como referências, apesar das baixas de Jhon Jáder Durán, Borja e Barrios. A Colômbia tem mais experiência e qualidade individual, mas o Uzbequistão terá motivação extra na estreia histórica e pode surpreender com um gol. A Colômbia vence, mas não sem alguma dificuldade. Placar de 1-2 favorável à Colômbia no México."
+      "reasoning": "Uzbequistão (FIFA #50) faz sua estreia histórica na Copa, treinado por Fabio Cannavaro, com destaques como Khusanov (Manchester City) e o capitão Shomurodov. A Colômbia (FIFA #13), vice-campeã da Copa América 2024, chega com Luis Díaz, James Rodríguez e Falcao como referências, apesar das baixas de Jhon Jáder Durán, Borja e Barrios. A Colômbia tem mais experiência e qualidade individual, mas o Uzbequistão terá motivação extra na estreia histórica e pode surpreender com um gol. A Colômbia vence, mas não sem alguma dificuldade. Placar de 1-2 favorável à Colômbia no México.",
+      "pregame_note": "-"
     },
     {
       "match_number": 63,
@@ -1838,6 +1839,7 @@
   ],
   "last_updated": "2026-06-17T08:30:43.196312",
   "pregame_checked": [
+    62,
     68
   ]
 }
