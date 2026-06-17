@@ -328,7 +328,6 @@ PROCESSO:
    - ÚLTIMOS jogos (os MAIS RECENTES primeiro): "[Time] ultimos jogos resultados recentes"
    - Amistosos e preparação: "[Time] amistosos preparacao Copa 2026"
    - Desempenho recente em campeonatos/eliminatórias: "[Time] eliminatorias desempenho recente"
-   - Ranking FIFA atual: "[Time] ranking FIFA atual" (ou use o rank vindo do get_tournament_status)
    - Confronto direto: "[Time A] x [Time B] historico confronto direto"
 3. Chame get_current_predictions para ver os palpites atuais
 4. Analise cruzando TODOS os fatores → o que mudou em relação ao palpite inicial?
@@ -345,12 +344,11 @@ PONDERAÇÃO (peso dos fatores, do maior para o menor):
    eliminatórias, continentais). PRIORIZE SEMPRE os jogos MAIS RECENTES — um bom
    começo de 2025 vale pouco se a seleção caiu de produção agora; o que importa é
    o MOMENTO ATUAL. Pegue de fato os últimos jogos realizados, não os de meses atrás.
-3) Ranking FIFA das duas seleções — tem PESO RELEVANTE (resume força e histórico
-   consolidado). Use os ranks que vêm no get_tournament_status (ou pesquise).
-4) Disponibilidade de elenco: desfalques de titulares (lesões/suspensões)
-5) Confronto direto / histórico recente — fator menor, para desempate
+3) Disponibilidade de elenco: desfalques de titulares (lesões/suspensões)
+4) Confronto direto / histórico recente — fator menor, para desempate
+(O ranking FIFA do get_tournament_status é só referência leve de força, como antes.)
 IMPORTANTE: priorize SEMPRE os jogos MAIS RECENTES; um desfalque isolado NÃO deve
-dominar a previsão — pondere contra forma recente, ranking FIFA e retrospecto.
+dominar a previsão — pondere contra a forma recente e o retrospecto.
 
 REGRAS:
 - Priorize jogos das próximas 48h
@@ -487,19 +485,18 @@ PREGAME_WINDOW_MIN = 40  # janela: jogos começando nos próximos ~30-40 min
 _PREGAME_SYSTEM = """Você é um agente especialista em previsões de futebol de seleções
 para o bolão da Copa 2026. Reavalie placares com base em: forma recente — os ~6-10
 jogos MAIS RECENTES de cada seleção (priorize SEMPRE os mais recentes; o momento
-atual vale mais que um bom começo de 2025); ranking FIFA das duas (peso relevante);
-desfalques/escalação confirmada da véspera; e retrospecto. Placares realistas,
-máximo 3 gols por time."""
+atual vale mais que um bom começo de 2025); desfalques/escalação confirmada da
+véspera; e retrospecto. Placares realistas, máximo 3 gols por time."""
 
 _PREGAME_PROMPT = """REAVALIAÇÃO PRÉ-JOGO — faltam ~30 minutos para começar.
 
 Jogo: {home} (mandante) x {away} (visitante) — {date}
 Palpite atual: {ph}-{pa}
 
-Pesquise: os ÚLTIMOS jogos (mais recentes) de cada seleção, o ranking FIFA das
-duas, lesões/suspensões/escalação confirmada e o retrospecto. Priorize SEMPRE os
-jogos mais recentes e dê peso ao ranking FIFA. Reavalie se este palpite ainda é
-o ideal. NÃO use o resultado real (o jogo ainda não começou).
+Pesquise: os ÚLTIMOS jogos (mais recentes) de cada seleção,
+lesões/suspensões/escalação confirmada e o retrospecto. Priorize SEMPRE os
+jogos mais recentes. Reavalie se este palpite ainda é o ideal. NÃO use o
+resultado real (o jogo ainda não começou).
 
 Responda na ÚLTIMA linha EXATAMENTE assim:
 - "MANTER" se o palpite atual continua o melhor; ou
