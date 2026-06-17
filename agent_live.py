@@ -580,7 +580,8 @@ def run_pregame(dry_run: bool = False):
     def tname(code):
         return TEAMS.get(code, {}).get("name", code)
 
-    updates = []
+    updates = []        # só os jogos com placar alterado (vão ao banco)
+    avaliacoes = []     # TODOS os jogos avaliados (mantidos + alterados) p/ Telegram
     processou = False
     for mn, c1, c2, dt in rows:
         if mn in checked:
@@ -596,18 +597,26 @@ def run_pregame(dry_run: bool = False):
         checked.add(mn)
         if res is None:
             print(f"  -> ERRO/sem resposta — mantém {ph}-{pa}")
+            avaliacoes.append({"match_number": mn, "home": home, "away": away,
+                               "mudou": False, "old": f"{ph}-{pa}", "new": f"{ph}-{pa}",
+                               "razao": "Não foi possível reavaliar — palpite mantido."})
             continue
         razao = res["razao"]
         # Guarda a justificativa da reavaliação (transparência), mesmo no MANTER
         cur["pregame_note"] = razao
         if not res["mudou"]:
             print(f"  -> MANTER {ph}-{pa} | {razao}")
+            avaliacoes.append({"match_number": mn, "home": home, "away": away,
+                               "mudou": False, "old": f"{ph}-{pa}", "new": f"{ph}-{pa}",
+                               "razao": razao})
             continue
         nh, na = res["nh"], res["na"]
         cur["home_goals"], cur["away_goals"] = nh, na
         cur["reasoning"] = razao
-        updates.append({"match_number": mn, "home": home, "away": away,
-                        "old": f"{ph}-{pa}", "new": f"{nh}-{na}", "razao": razao})
+        item = {"match_number": mn, "home": home, "away": away, "mudou": True,
+                "old": f"{ph}-{pa}", "new": f"{nh}-{na}", "razao": razao}
+        updates.append(item)
+        avaliacoes.append(item)
         print(f"  -> AJUSTAR {ph}-{pa} => {nh}-{na} | {razao}")
 
     if not processou:
@@ -616,37 +625,39 @@ def run_pregame(dry_run: bool = False):
 
     predictions["pregame_checked"] = sorted(checked)
     if dry_run:
-        print(f"[PRÉ-JOGO][DRY-RUN] {len(updates)} ajuste(s) — nada gravado.")
+        print(f"[PRÉ-JOGO][DRY-RUN] {len(avaliacoes)} avaliado(s), {len(updates)} ajuste(s) — nada gravado.")
         return
 
     with open(PREDICTIONS_FILE, "w", encoding="utf-8") as f:
         json.dump(predictions, f, ensure_ascii=False, indent=2)
 
-    if not updates:
-        print("[PRÉ-JOGO] Reavaliação concluída — nenhum ajuste necessário.")
-        return
-
     # Submete SÓ os jogos alterados — submit_match_prediction garante:
     # apenas o próprio usuário (BOLAO_USER_ID) e apenas jogos não iniciados.
-    from submitter import get_db_engine, submit_match_prediction
-    uid = _user_id()
-    eng = get_db_engine()
-    with eng.begin() as conn:
-        for u in updates:
-            nh, na = map(int, u["new"].split("-"))
-            print(submit_match_prediction(conn, uid, u["match_number"], nh, na, dry_run=False))
+    if updates:
+        from submitter import get_db_engine, submit_match_prediction
+        uid = _user_id()
+        eng = get_db_engine()
+        with eng.begin() as conn:
+            for u in updates:
+                nh, na = map(int, u["new"].split("-"))
+                print(submit_match_prediction(conn, uid, u["match_number"], nh, na, dry_run=False))
 
+    # Telegram: avisa SEMPRE (mantido ou alterado), para todos os jogos avaliados
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id = os.getenv("TELEGRAM_CHAT_ID")
-    if token and chat_id:
+    if avaliacoes and token and chat_id:
         linhas = ["⚽ VAR — Bolão Copa 2026", "Reavaliação pré-jogo (~30 min):", ""]
-        for u in updates:
-            linhas.append(f"Jogo #{u['match_number']}: {u['home']} x {u['away']}")
-            linhas.append(f"  {u['old']} -> {u['new']}")
-            if u["razao"]:
-                linhas.append(f"  {u['razao']}")
-        send_telegram(token, chat_id, "\n".join(linhas))
-        print(f"  Notificacao Telegram enviada ({len(updates)} ajuste(s) pré-jogo)")
+        for a in avaliacoes:
+            linhas.append(f"Jogo #{a['match_number']}: {a['home']} x {a['away']}")
+            if a["mudou"]:
+                linhas.append(f"  🔁 AJUSTADO: {a['old']} → {a['new']}")
+            else:
+                linhas.append(f"  ✅ MANTIDO: {a['new']}")
+            if a["razao"]:
+                linhas.append(f"  {a['razao']}")
+            linhas.append("")
+        send_telegram(token, chat_id, "\n".join(linhas).rstrip())
+        print(f"  Notificacao Telegram enviada ({len(avaliacoes)} jogo(s): {len(updates)} ajuste(s))")
 
 
 if __name__ == "__main__":
