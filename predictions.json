@@ -41,9 +41,9 @@
       "home_team": "MEX",
       "away_team": "KOR",
       "date": "2026-06-18",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Coreia venceu a Tchéquia 2-1 na R1 mostrando força ofensiva. México venceu 2-0 a RSA. Duelo agora parece mais equilibrado — ajusto para 1-1."
+      "reasoning": "México jogou bem na Copa (2-0 vs RSA), joga em casa (Guadalajara), histórico 100% de vitórias contra Coreia em Mundiais (1998 e 2018). Coreia é perigosa (virou sobre Tchéquia), mas o conjunto de fatores aponta para vitória mexicana. Troco empate 1-1 por 2-1 México."
     },
     {
       "match_number": 5,
@@ -96,9 +96,9 @@
       "home_team": "SUI",
       "away_team": "EUR_A",
       "date": "2026-06-18",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Suíça empatou 1-1 com Qatar na estreia — resultado decepcionante para uma seleção rankeada 17ª contra um Qatar de ranking 54. BIH também empatou 1-1 com o Canadá. Ambas mostraram limitações ofensivas. Suíça é tecnicamente superior, mas o desempenho real na Copa sugere dificuldades. Ajusto de 2-1 para 1-1, mantendo resultado incerto mas mais alinhado ao que ambas mostraram na rodada 1."
+      "reasoning": "Suíça é clara favorita (odd 1.56 na Betfair), sem desfalques, eliminou campanha invicta nas Eliminatórias. Bósnia empatou na estreia e pode perder Kolasinac (saiu mancando vs Canadá). Ambas precisam vencer, mas Suíça é tecnicamente superior. Troco o empate 1-1 por vitória da Suíça 2-1."
     },
     {
       "match_number": 10,
@@ -107,9 +107,9 @@
       "home_team": "CAN",
       "away_team": "QAT",
       "date": "2026-06-18",
-      "home_goals": 3,
+      "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Canadá joga em Vancouver — casa novamente — e Davies pode ter retornado parcialmente por este jogo (esperado para o grupo, segundo o staff). O Qatar é o adversário mais acessível do grupo (FIFA #54, elenco majoritariamente da Qatar Stars League). Almoez Ali é ameaça real e marcou 12 gols na qualificatória asiática, justificando o gol do Qatar. David buscará redenção após má fase e Larin novamente representa perigo. Vitória canadense mais ampla, capitalizada pelo fator casa e motivação de não sair do grupo pela primeira vez na história."
+      "reasoning": "Canadá empatou 1-1 com a Bósnia na estreia — resultado abaixo do esperado. Qatar surpreendeu ao empatar 1-1 com a Suíça, mostrando resiliência. Palpite 3-1 era otimista demais para um Canadá que não convenceu. Ajusto para 2-1 Canadá — mantém a direção sem superestimar a goleada."
     },
     {
       "match_number": 11,
@@ -668,9 +668,9 @@
       "home_team": "POR",
       "away_team": "INT_1",
       "date": "2026-06-17",
-      "home_goals": 3,
+      "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "Portugal (FIFA #5) enfrenta a RD Congo (estreante no Mundial após 52 anos de ausência) em Houston. O elenco português é um dos mais completos do torneio: Cristiano Ronaldo (41 anos, motivado pelo recorde de Eusébio), Bruno Fernandes, Bernardo Silva, Rafael Leão e Rúben Dias formam um time de altíssimo nível. A RD Congo tem jogadores de qualidade na Premier League (Wissa, Wan-Bissaka), mas a diferença técnica global é enorme. Desabre joga com estrutura defensiva e transições rápidas, o que pode segurar Portugal por um tempo, mas o poderio ofensivo luso deve prevalecer com folga. Placar de 3-0 reflete a superioridade de Tier 1 vs Tier 5."
+      "reasoning": "Portugal sem desfalques, bicampeão da Nations League, venceu Chile e Nigéria (2-1 cada) nos amistosos. Palpite 3-0 era ambicioso demais: RD Congo tem defesa sólida (sem sofrer em 8 dos 12 jogos classificatórios). Ajusto para 2-0 — Portugal vence, mas placar mais realista."
     },
     {
       "match_number": 62,
@@ -1835,5 +1835,5 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-16T08:48:26.367393"
+  "last_updated": "2026-06-17T08:30:43.196312"
 }
