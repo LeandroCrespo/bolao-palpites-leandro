@@ -498,14 +498,16 @@ lesões/suspensões/escalação confirmada e o retrospecto. Priorize SEMPRE os
 jogos mais recentes. Reavalie se este palpite ainda é o ideal. NÃO use o
 resultado real (o jogo ainda não começou).
 
-Responda na ÚLTIMA linha EXATAMENTE assim:
-- "MANTER" se o palpite atual continua o melhor; ou
-- "PALPITE: X-Y" com o novo placar (X = gols do mandante {home}).
-Depois, em outra linha: "RAZAO: <1-2 frases citando os fatores>"."""
+Responda SEMPRE com DUAS linhas no final, nesta ordem:
+1ª linha: "MANTER" (se o palpite atual continua o melhor) OU "PALPITE: X-Y"
+   (novo placar, X = gols do mandante {home}).
+2ª linha: "RAZAO: <1-2 frases citando os fatores>" — OBRIGATÓRIA NOS DOIS CASOS
+   (explique o porquê, inclusive quando MANTER)."""
 
 
 def _focused_pregame_eval(client, home, away, date_str, ph, pa):
-    """Reavalia um jogo. Retorna (novo_h, novo_a, razao) ou None se MANTER/erro."""
+    """Reavalia um jogo. Retorna dict {nh, na, razao, mudou} ou None em erro.
+    Captura a justificativa SEMPRE — tanto quando ajusta quanto quando mantém."""
     prompt = _PREGAME_PROMPT.format(home=home, away=away, date=date_str, ph=ph, pa=pa)
     try:
         resp = client.beta.messages.create(
@@ -520,13 +522,19 @@ def _focused_pregame_eval(client, home, away, date_str, ph, pa):
     except Exception as e:
         print(f"  [erro pregame {home} x {away}: {e}]")
         return None
+    rz = re.findall(r"RAZ[ÃA]O:\s*(.+)", texto, re.IGNORECASE)
+    if rz:
+        razao = rz[-1].strip()
+    else:
+        # fallback: última frase significativa (ignora linhas de comando)
+        linhas = [l.strip() for l in texto.splitlines() if l.strip()]
+        linhas = [l for l in linhas if not re.match(r"^(MANTER|PALPITE:)", l, re.IGNORECASE)]
+        razao = linhas[-1][:300] if linhas else "(sem justificativa)"
     m = re.findall(r"PALPITE:\s*(\d+)\s*[-x]\s*(\d+)", texto, re.IGNORECASE)
-    if not m:
-        return None  # MANTER (ou sem palpite explícito)
-    nh, na = int(m[-1][0]), int(m[-1][1])
-    rz = re.findall(r"RAZAO:\s*(.+)", texto, re.IGNORECASE)
-    razao = rz[-1].strip() if rz else "Reavaliação pré-jogo"
-    return nh, na, razao
+    if m:  # decidiu por um placar explícito
+        nh, na = int(m[-1][0]), int(m[-1][1])
+        return {"nh": nh, "na": na, "razao": razao, "mudou": (nh != ph or na != pa)}
+    return {"nh": ph, "na": pa, "razao": razao, "mudou": False}  # MANTER
 
 
 def run_pregame(dry_run: bool = False):
@@ -587,12 +595,15 @@ def run_pregame(dry_run: bool = False):
         res = _focused_pregame_eval(client, home, away, str(dt)[:16], ph, pa)
         checked.add(mn)
         if res is None:
-            print(f"  -> MANTER {ph}-{pa}")
+            print(f"  -> ERRO/sem resposta — mantém {ph}-{pa}")
             continue
-        nh, na, razao = res
-        if nh == ph and na == pa:
+        razao = res["razao"]
+        # Guarda a justificativa da reavaliação (transparência), mesmo no MANTER
+        cur["pregame_note"] = razao
+        if not res["mudou"]:
             print(f"  -> MANTER {ph}-{pa} | {razao}")
             continue
+        nh, na = res["nh"], res["na"]
         cur["home_goals"], cur["away_goals"] = nh, na
         cur["reasoning"] = razao
         updates.append({"match_number": mn, "home": home, "away": away,
