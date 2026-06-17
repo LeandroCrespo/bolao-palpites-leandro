@@ -527,9 +527,9 @@ def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30):
     except Exception as e:
         print(f"  [erro pregame {home} x {away}: {e}]")
         return None
-    rz = re.findall(r"RAZ[ÃA]O:\s*(.+)", texto, re.IGNORECASE)
+    rz = re.findall(r"RAZ[ÃA]O:\s*(.+)", texto, re.IGNORECASE | re.DOTALL)
     if rz:
-        razao = rz[-1].strip()
+        razao = " ".join(rz[-1].split())
     else:
         # fallback: última frase significativa (ignora linhas de comando)
         linhas = [l.strip() for l in texto.splitlines() if l.strip()]
@@ -653,7 +653,7 @@ def run_pregame(dry_run: bool = False):
     token = os.getenv("TELEGRAM_BOT_TOKEN")
     chat_id = os.getenv("TELEGRAM_CHAT_ID")
     if avaliacoes and token and chat_id:
-        linhas = ["⚽ VAR — Bolão Copa 2026", "Reavaliação pré-jogo (~30 min):", ""]
+        linhas = ["⚽ VAR — Bolão Copa 2026", "Reavaliação pré-jogo:", ""]
         for a in avaliacoes:
             linhas.append(f"Jogo #{a['match_number']}: {a['home']} x {a['away']}")
             if a["mudou"]:
