@@ -480,7 +480,12 @@ def run_agent(dry_run: bool = False):
 # Reavaliação pré-jogo (~30 min antes de cada jogo)
 # ---------------------------------------------------------------------------
 
-PREGAME_WINDOW_MIN = 40  # janela: jogos começando nos próximos ~30-40 min
+PREGAME_WINDOW_MIN = 180  # janela: jogos começando nas próximas ~3h
+# (era 40 min, mas o cron do GitHub Actions tem mostrado atrasos de várias
+# horas — às vezes nenhuma execução agendada dispara por 10h+ seguidas.
+# Com janela de 40 min, isso fazia o pré-jogo nunca cair no horário certo e
+# o jogo já começava sem nenhuma reavaliação/aviso. Janela maior + dedupe via
+# pregame_checked cobre o atraso, ao custo de reavaliar um pouco mais cedo.)
 
 _PREGAME_SYSTEM = """Você é um agente especialista em previsões de futebol de seleções
 para o bolão da Copa 2026. Reavalie placares com base em: forma recente — os ~6-10
@@ -488,7 +493,7 @@ jogos MAIS RECENTES de cada seleção (priorize SEMPRE os mais recentes; o momen
 atual vale mais que um bom começo de 2025); desfalques/escalação confirmada da
 véspera; e retrospecto. Placares realistas, máximo 3 gols por time."""
 
-_PREGAME_PROMPT = """REAVALIAÇÃO PRÉ-JOGO — faltam ~30 minutos para começar.
+_PREGAME_PROMPT = """REAVALIAÇÃO PRÉ-JOGO — faltam aproximadamente {mins_left} minutos para começar.
 
 Jogo: {home} (mandante) x {away} (visitante) — {date}
 Palpite atual: {ph}-{pa}
@@ -505,10 +510,10 @@ Responda SEMPRE com DUAS linhas no final, nesta ordem:
    (explique o porquê, inclusive quando MANTER)."""
 
 
-def _focused_pregame_eval(client, home, away, date_str, ph, pa):
+def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30):
     """Reavalia um jogo. Retorna dict {nh, na, razao, mudou} ou None em erro.
     Captura a justificativa SEMPRE — tanto quando ajusta quanto quando mantém."""
-    prompt = _PREGAME_PROMPT.format(home=home, away=away, date=date_str, ph=ph, pa=pa)
+    prompt = _PREGAME_PROMPT.format(home=home, away=away, date=date_str, ph=ph, pa=pa, mins_left=mins_left)
     try:
         resp = client.beta.messages.create(
             model=MODEL,
@@ -592,8 +597,10 @@ def run_pregame(dry_run: bool = False):
         processou = True
         home, away = tname(c1), tname(c2)
         ph, pa = cur.get("home_goals"), cur.get("away_goals")
-        print(f"[PRÉ-JOGO] Reavaliando #{mn}: {home} x {away} (atual {ph}-{pa})...", flush=True)
-        res = _focused_pregame_eval(client, home, away, str(dt)[:16], ph, pa)
+        kickoff = datetime.strptime(str(dt)[:19], "%Y-%m-%d %H:%M:%S")
+        mins_left = max(1, round((kickoff - now).total_seconds() / 60))
+        print(f"[PRÉ-JOGO] Reavaliando #{mn}: {home} x {away} (atual {ph}-{pa}, faltam {mins_left} min)...", flush=True)
+        res = _focused_pregame_eval(client, home, away, str(dt)[:16], ph, pa, mins_left=mins_left)
         checked.add(mn)
         if res is None:
             print(f"  -> ERRO/sem resposta — mantém {ph}-{pa}")
