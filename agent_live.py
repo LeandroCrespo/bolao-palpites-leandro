@@ -325,9 +325,10 @@ PROCESSO:
 2. Para cada jogo nas próximas 48h, use web_search para montar uma visão AMPLA
    de cada seleção (não se baseie em um único fator). Pesquise:
    - Desfalques: "[Time A] [Time B] Copa do Mundo 2026 lesoes suspensoes"
-   - Forma recente / últimos resultados: "[Time] ultimos resultados 2025 2026"
+   - ÚLTIMOS jogos (os MAIS RECENTES primeiro): "[Time] ultimos jogos resultados recentes"
    - Amistosos e preparação: "[Time] amistosos preparacao Copa 2026"
    - Desempenho recente em campeonatos/eliminatórias: "[Time] eliminatorias desempenho recente"
+   - Ranking FIFA atual: "[Time] ranking FIFA atual" (ou use o rank vindo do get_tournament_status)
    - Confronto direto: "[Time A] x [Time B] historico confronto direto"
 3. Chame get_current_predictions para ver os palpites atuais
 4. Analise cruzando TODOS os fatores → o que mudou em relação ao palpite inicial?
@@ -340,11 +341,16 @@ PROCESSO:
 
 PONDERAÇÃO (peso dos fatores, do maior para o menor):
 1) Resultados já ocorridos NESTA Copa 2026 — peso MAIOR (forma no próprio torneio)
-2) Forma recente geral: últimos ~6 a 10 jogos, incluindo amistosos e eliminatórias
-3) Disponibilidade de elenco: desfalques de titulares (lesões/suspensões)
-4) Confronto direto / histórico recente — fator menor, para desempate
-IMPORTANTE: um desfalque isolado NÃO deve dominar a previsão. Sempre pondere o
-desfalque contra a forma recente e o retrospecto antes de mexer no placar.
+2) Forma recente: os ~6 a 10 jogos MAIS RECENTES de cada seleção (amistosos,
+   eliminatórias, continentais). PRIORIZE SEMPRE os jogos MAIS RECENTES — um bom
+   começo de 2025 vale pouco se a seleção caiu de produção agora; o que importa é
+   o MOMENTO ATUAL. Pegue de fato os últimos jogos realizados, não os de meses atrás.
+3) Ranking FIFA das duas seleções — tem PESO RELEVANTE (resume força e histórico
+   consolidado). Use os ranks que vêm no get_tournament_status (ou pesquise).
+4) Disponibilidade de elenco: desfalques de titulares (lesões/suspensões)
+5) Confronto direto / histórico recente — fator menor, para desempate
+IMPORTANTE: priorize SEMPRE os jogos MAIS RECENTES; um desfalque isolado NÃO deve
+dominar a previsão — pondere contra forma recente, ranking FIFA e retrospecto.
 
 REGRAS:
 - Priorize jogos das próximas 48h
@@ -479,18 +485,21 @@ def run_agent(dry_run: bool = False):
 PREGAME_WINDOW_MIN = 40  # janela: jogos começando nos próximos ~30-40 min
 
 _PREGAME_SYSTEM = """Você é um agente especialista em previsões de futebol de seleções
-para o bolão da Copa 2026. Reavalie placares com base em: forma recente (últimos
-~6-10 jogos, incl. amistosos e eliminatórias), desfalques/escalação confirmada da
-véspera, e retrospecto. Placares realistas, máximo 3 gols por time."""
+para o bolão da Copa 2026. Reavalie placares com base em: forma recente — os ~6-10
+jogos MAIS RECENTES de cada seleção (priorize SEMPRE os mais recentes; o momento
+atual vale mais que um bom começo de 2025); ranking FIFA das duas (peso relevante);
+desfalques/escalação confirmada da véspera; e retrospecto. Placares realistas,
+máximo 3 gols por time."""
 
 _PREGAME_PROMPT = """REAVALIAÇÃO PRÉ-JOGO — faltam ~30 minutos para começar.
 
 Jogo: {home} (mandante) x {away} (visitante) — {date}
 Palpite atual: {ph}-{pa}
 
-Pesquise lesões/suspensões/escalação confirmada e o momento atual das duas
-seleções e reavalie se este palpite ainda é o ideal. NÃO use o resultado real
-(o jogo ainda não começou).
+Pesquise: os ÚLTIMOS jogos (mais recentes) de cada seleção, o ranking FIFA das
+duas, lesões/suspensões/escalação confirmada e o retrospecto. Priorize SEMPRE os
+jogos mais recentes e dê peso ao ranking FIFA. Reavalie se este palpite ainda é
+o ideal. NÃO use o resultado real (o jogo ainda não começou).
 
 Responda na ÚLTIMA linha EXATAMENTE assim:
 - "MANTER" se o palpite atual continua o melhor; ou
