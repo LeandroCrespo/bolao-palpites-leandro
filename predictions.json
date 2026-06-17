@@ -747,7 +747,8 @@
       "date": "2026-06-17",
       "home_goals": 0,
       "away_goals": 1,
-      "reasoning": "Gana perde Kudus (lesão) E Thomas Partey (visto negado), dois de seus melhores jogadores, e chega sem vitórias em 2026. Panamá tem 2 vitórias nos últimos 7 jogos e é mais consistente. Desfalques duplos de peso justificam virar a direção: ajusto para vitória do Panamá 1-0."
+      "reasoning": "Gana perde Kudus (lesão) E Thomas Partey (visto negado), dois de seus melhores jogadores, e chega sem vitórias em 2026. Panamá tem 2 vitórias nos últimos 7 jogos e é mais consistente. Desfalques duplos de peso justificam virar a direção: ajusto para vitória do Panamá 1-0.",
+      "pregame_note": "Porém, com **Kudus, Salisu e Partey** todos ausentes, Gana entra seriamente enfraquecida e sem consistência defens"
     },
     {
       "match_number": 69,
@@ -1835,5 +1836,8 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-17T08:30:43.196312"
+  "last_updated": "2026-06-17T08:30:43.196312",
+  "pregame_checked": [
+    68
+  ]
 }
