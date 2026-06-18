@@ -110,7 +110,8 @@
       "date": "2026-06-18",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Canadá empatou 1-1 com a Bósnia na estreia — resultado abaixo do esperado. Qatar surpreendeu ao empatar 1-1 com a Suíça, mostrando resiliência. Palpite 3-1 era otimista demais para um Canadá que não convenceu. Ajusto para 2-1 Canadá — mantém a direção sem superestimar a goleada."
+      "reasoning": "Canadá empatou 1-1 com a Bósnia na estreia — resultado abaixo do esperado. Qatar surpreendeu ao empatar 1-1 com a Suíça, mostrando resiliência. Palpite 3-1 era otimista demais para um Canadá que não convenceu. Ajusto para 2-1 Canadá — mantém a direção sem superestimar a goleada.",
+      "pregame_note": "O retorno de Davies e Bombito fortalece o Canadá no jogo decisivo em casa, mas o ataque canadense segue modesto (~0,7 gols/jogo recente) e o Qatar tem mostrado capacidade de balançar as redes mesmo em dificuldade — 2-1 é o placar mais consistente com as médias de ambas as equipes."
     },
     {
       "match_number": 11,
@@ -1841,6 +1842,7 @@
   "last_updated": "2026-06-18T08:10:35.984499",
   "pregame_checked": [
     9,
+    10,
     62,
     68
   ]
