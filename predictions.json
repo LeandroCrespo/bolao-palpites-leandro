@@ -98,7 +98,8 @@
       "date": "2026-06-18",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Suíça é clara favorita (odd 1.56 na Betfair), sem desfalques, eliminou campanha invicta nas Eliminatórias. Bósnia empatou na estreia e pode perder Kolasinac (saiu mancando vs Canadá). Ambas precisam vencer, mas Suíça é tecnicamente superior. Troco o empate 1-1 por vitória da Suíça 2-1."
+      "reasoning": "Suíça é clara favorita (odd 1.56 na Betfair), sem desfalques, eliminou campanha invicta nas Eliminatórias. Bósnia empatou na estreia e pode perder Kolasinac (saiu mancando vs Canadá). Ambas precisam vencer, mas Suíça é tecnicamente superior. Troco o empate 1-1 por vitória da Suíça 2-1.",
+      "pregame_note": "A Suíça é favorita clara com xG médio de 3,20 vs. 0,96 da Bósnia e volume ofensivo elevado, mas os bósnios mostraram capacidade de marcar primeiro nos dois últimos jogos e a Suíça tem histórico de ceder gols — 2-1 é o placar mais realista."
     },
     {
       "match_number": 10,
@@ -1839,6 +1840,7 @@
   ],
   "last_updated": "2026-06-18T08:10:35.984499",
   "pregame_checked": [
+    9,
     62,
     68
   ]
