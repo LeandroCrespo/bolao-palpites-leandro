@@ -1,0 +1,346 @@
+=== PROMPTS DE VIDEO — MESTRE LEME (VÉSPERA DE BRASIL x HAITI — BAR PERTO DO ESTÁDIO, FILADÉLFIA) ===
+7 clipes de exatamente 8 segundos cada — falas curtas para caber com folga.
+Nenhuma imagem é necessária (anexar a foto do Mestre Leme como referência única é opcional).
+
+CONTEXTO: amanhã (19/06) o Brasil enfrenta o Haiti em Filadélfia. Mestre Leme está
+num bar de torcedores bem perto do estádio, véspera de jogo, clima de expectativa
+e festa. Ele aproveita pra mostrar um cartão-postal turístico bem conhecido da
+cidade — a famosa escultura colorida das quatro letras formando a palavra "AMOR"
+em inglês (vermelha, azul e verde, com a letra O inclinada) que fica numa praça
+pública — e depois dá as notícias do bolão.
+
+DADOS REAIS (usar nas falas): no topo, EMPATE entre Marcia Monfardini e Marcos
+Leme, com 225 pontos cada; Renata Alves Leme Inocencio em 3º, com 220. Na zona
+de risco (últimas posições): Sandra Alves Leme com 170, Amanda Leme com 165,
+Mario com 160, e lanterna isolada Daiana Benedita Alves Leme com 150.
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive and warm, the happy buzz of eve-of-match energy (match the
+provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile showing the upper teeth.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow trucker cap pushed slightly back on his head.
+In his hand, a cold beer mug with condensation dripping down the glass.
+SETTING: a lively sports bar terrace just blocks from the stadium in
+Philadelphia, early evening — strings of warm bulb lights overhead, Brazilian
+and Haitian flags pinned along the bar counter, other fans in yellow jerseys
+laughing and chatting blurred in the background, and through a gap in the
+terrace railing, partially visible down the street, the colorful sculpture of
+four giant letters spelling out "AMOR" in English (red, blue and green blocks,
+the middle letter tilted), lit up as dusk falls.
+STYLE: photorealistic, cinematic, shallow depth of field with the bar crowd and
+the sculpture softly blurred behind him, warm golden bulb-light color grade.
+Duration: exactly 8 seconds.
+
+## CLIP 1 OF 7 — "TÔ AQUI NO BAR, PERTO DO ESTÁDIO!"
+
+**CAMERA:** Medium shot, slight handheld sway like a live broadcast. Mestre
+Leme raises his beer mug toward the camera, bar lights twinkling behind him.
+
+**DIALOGUE:**
+> *[animado, gritando pra ser ouvido no bar]*
+> "Meu POVO! Tô aqui no bar, a dois passos do estádio — amanhã tem BRASIL contra
+> o HAITI!"
+
+*Cue: "BRASIL" batendo a mão no peito da camisa; "HAITI" apontando o polegar
+sobre o ombro, em direção à rua; ergue a caneca em saudação*
+
+**AUDIO:** Burburinho animado de bar ao fundo; talheres e copos tilintando;
+um sambinha-funk leve por baixo
+
+**TRANSITION OUT:** Caneca erguida, sorriso largo — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive and warm, the happy buzz of eve-of-match energy (match the
+provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile showing the upper teeth.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow trucker cap pushed slightly back on his head.
+In his hand, a cold beer mug with condensation dripping down the glass.
+SETTING: a lively sports bar terrace just blocks from the stadium in
+Philadelphia, early evening — strings of warm bulb lights overhead, Brazilian
+and Haitian flags pinned along the bar counter, other fans in yellow jerseys
+laughing and chatting blurred in the background, and through a gap in the
+terrace railing, partially visible down the street, the colorful sculpture of
+four giant letters spelling out "AMOR" in English (red, blue and green blocks,
+the middle letter tilted), lit up as dusk falls.
+STYLE: photorealistic, cinematic, shallow depth of field with the bar crowd and
+the sculpture softly blurred behind him, warm golden bulb-light color grade.
+Duration: exactly 8 seconds.
+
+## CLIP 2 OF 7 — "OLHA QUE CARTÃO-POSTAL!"
+
+**CAMERA:** He turns and gestures toward the street, where the colorful
+four-letter sculpture is now clearly framed behind him, glowing in the dusk
+light. Camera pushes in slightly on the gesture.
+
+**DIALOGUE:**
+> *[orgulhoso, de guia turístico improvisado]*
+> "Olha que CARTÃO-POSTAL, meu consagrado! Bem na esquina do bar, aquelas
+> letrinhas coloridas — cartão postal da CIDADE!"
+
+*Cue: braço estendido apontando pra escultura, depois leva a mão ao peito como
+quem se emociona com a vista; um pequeno aceno pra escultura como se a
+saudasse*
+
+**AUDIO:** Burburinho de bar; um leve "uau" de fundo de outro torcedor; sambinha-
+funk continua
+
+**TRANSITION OUT:** Braço ainda estendido, olhar de orgulho — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive and warm, the happy buzz of eve-of-match energy (match the
+provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile showing the upper teeth.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow trucker cap pushed slightly back on his head.
+In his hand, a cold beer mug with condensation dripping down the glass.
+SETTING: a lively sports bar terrace just blocks from the stadium in
+Philadelphia, early evening — strings of warm bulb lights overhead, Brazilian
+and Haitian flags pinned along the bar counter, other fans in yellow jerseys
+laughing and chatting blurred in the background, and through a gap in the
+terrace railing, partially visible down the street, the colorful sculpture of
+four giant letters spelling out "AMOR" in English (red, blue and green blocks,
+the middle letter tilted), lit up as dusk falls.
+STYLE: photorealistic, cinematic, shallow depth of field with the bar crowd and
+the sculpture softly blurred behind him, warm golden bulb-light color grade.
+Duration: exactly 8 seconds.
+
+## CLIP 3 OF 7 — "MAS AGORA, AS NOTÍCIAS DO BOLÃO!"
+
+**CAMERA:** He sets the mug down on the bar counter, pulls a folded napkin
+from his pocket like an official note, and turns back to the camera with
+sudden seriousness.
+
+**DIALOGUE:**
+> *[muda de turista pra apresentador, sério de repente]*
+> "Mas agora, deixa o turismo de lado — vamos às NOTÍCIAS do bolão!"
+
+*Cue: guardanapo desdobrado como pergaminho; ajeita o boné como quem se prepara
+pro "estúdio"; pigarreia*
+
+**AUDIO:** Burburinho de bar diminui um pouco; um pequeno "ding" de transição;
+sambinha-funk continua mais baixo
+
+**TRANSITION OUT:** Guardanapo erguido, olhar fixo na câmera — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive and warm, the happy buzz of eve-of-match energy (match the
+provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile showing the upper teeth.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow trucker cap pushed slightly back on his head.
+In his hand, a cold beer mug with condensation dripping down the glass.
+SETTING: a lively sports bar terrace just blocks from the stadium in
+Philadelphia, early evening — strings of warm bulb lights overhead, Brazilian
+and Haitian flags pinned along the bar counter, other fans in yellow jerseys
+laughing and chatting blurred in the background, and through a gap in the
+terrace railing, partially visible down the street, the colorful sculpture of
+four giant letters spelling out "AMOR" in English (red, blue and green blocks,
+the middle letter tilted), lit up as dusk falls.
+STYLE: photorealistic, cinematic, shallow depth of field with the bar crowd and
+the sculpture softly blurred behind him, warm golden bulb-light color grade.
+Duration: exactly 8 seconds.
+
+## CLIP 4 OF 7 — "EMPATE NO TOPO!"
+
+**CAMERA:** Same framing, continuation. He reads the napkin, eyebrows shooting
+up, then announces with theatrical excitement, holding up two fingers.
+
+**DIALOGUE:**
+> *[empolgado, voz subindo]*
+> "EMPATE no topo! MARCIA Monfardini e MARCOS Leme, DUZENTOS E VINTE E CINCO
+> pontos cada!"
+
+*Cue: dois dedos erguidos em "EMPATE"; bate a mão na mesa de leve em "DUZENTOS E
+VINTE E CINCO"; assobio breve de admiração*
+
+**AUDIO:** Pequeno toque triunfal de metais; tilintar de copos ao fundo;
+sambinha-funk continua
+
+**TRANSITION OUT:** Dois dedos erguidos, sobrancelhas no alto — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive and warm, the happy buzz of eve-of-match energy (match the
+provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile showing the upper teeth.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow trucker cap pushed slightly back on his head.
+In his hand, a cold beer mug with condensation dripping down the glass.
+SETTING: a lively sports bar terrace just blocks from the stadium in
+Philadelphia, early evening — strings of warm bulb lights overhead, Brazilian
+and Haitian flags pinned along the bar counter, other fans in yellow jerseys
+laughing and chatting blurred in the background, and through a gap in the
+terrace railing, partially visible down the street, the colorful sculpture of
+four giant letters spelling out "AMOR" in English (red, blue and green blocks,
+the middle letter tilted), lit up as dusk falls.
+STYLE: photorealistic, cinematic, shallow depth of field with the bar crowd and
+the sculpture softly blurred behind him, warm golden bulb-light color grade.
+Duration: exactly 8 seconds.
+
+## CLIP 5 OF 7 — "RENATA NA COLA!"
+
+**CAMERA:** Same framing, continuation. He taps the napkin with one finger,
+nodding with respect.
+
+**DIALOGUE:**
+> *[reconhecendo o mérito]*
+> "E na COLA, em terceiro: RENATA Alves Leme Inocencio, com DUZENTOS E VINTE!
+> Tá quase lá, hein!"
+
+*Cue: dedo batendo no guardanapo em "RENATA"; mão quase encostando a outra em
+"quase lá", gesto de "tá chegando"*
+
+**AUDIO:** Aplauso curto e discreto de fundo; sambinha-funk continua
+
+**TRANSITION OUT:** Sorriso de aprovação, polegar erguido — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive and warm, the happy buzz of eve-of-match energy (match the
+provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile showing the upper teeth.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow trucker cap pushed slightly back on his head.
+In his hand, a cold beer mug with condensation dripping down the glass.
+SETTING: a lively sports bar terrace just blocks from the stadium in
+Philadelphia, early evening — strings of warm bulb lights overhead, Brazilian
+and Haitian flags pinned along the bar counter, other fans in yellow jerseys
+laughing and chatting blurred in the background, and through a gap in the
+terrace railing, partially visible down the street, the colorful sculpture of
+four giant letters spelling out "AMOR" in English (red, blue and green blocks,
+the middle letter tilted), lit up as dusk falls.
+STYLE: photorealistic, cinematic, shallow depth of field with the bar crowd and
+the sculpture softly blurred behind him, warm golden bulb-light color grade.
+Duration: exactly 8 seconds.
+
+## CLIP 6 OF 7 — "ZONA DE RISCO!"
+
+**CAMERA:** Same framing, continuation. His tone shifts to mock-grave, leaning
+in like delivering bad news, finger sliding down an imaginary list.
+
+**DIALOGUE:**
+> *[tom grave de boletim de última hora]*
+> "E na ZONA DE RISCO: Sandra, CENTO E SETENTA; Amanda, CENTO E SESSENTA E
+> CINCO; Mario, CENTO E SESSENTA — e lanterna isolada, a DAIANA, com CENTO E
+> CINQUENTA!"
+
+*Cue: dedo deslizando pra baixo numa lista imaginária; em "lanterna isolada" faz
+uma careta de pesar exagerado e bate a mão na testa*
+
+**AUDIO:** Trombone cômico "wah-wah" leve; sambinha-funk continua baixinho
+
+**TRANSITION OUT:** Mão na testa, careta de pesar cômico — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive and warm, the happy buzz of eve-of-match energy (match the
+provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile showing the upper teeth.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow trucker cap pushed slightly back on his head.
+In his hand, a cold beer mug with condensation dripping down the glass.
+SETTING: a lively sports bar terrace just blocks from the stadium in
+Philadelphia, early evening — strings of warm bulb lights overhead, Brazilian
+and Haitian flags pinned along the bar counter, other fans in yellow jerseys
+laughing and chatting blurred in the background, and through a gap in the
+terrace railing, partially visible down the street, the colorful sculpture of
+four giant letters spelling out "AMOR" in English (red, blue and green blocks,
+the middle letter tilted), lit up as dusk falls.
+STYLE: photorealistic, cinematic, shallow depth of field with the bar crowd and
+the sculpture softly blurred behind him, warm golden bulb-light color grade.
+Duration: exactly 8 seconds.
+
+## CLIP 7 OF 7 — "AMANHÃ TEM BRASIL!"
+
+**CAMERA:** Slightly wider finale shot, the bar lights and the sculpture both
+glowing softly behind him in the dusk. He raises the beer mug high, the
+condensation glinting in the bulb lights.
+
+**DIALOGUE:**
+> *[caloroso, crescendo até o grito final]*
+> "Levanta a caneca, meu povo — AMANHÃ tem BRASIL contra o HAITI! Saúde…
+> e VAI, BRASIIIL!"
+
+*Cue: "AMANHÃ tem BRASIL" batendo a mão no peito da camisa; caneca erguida bem
+alto na palavra final, espuma quase derramando; outros torcedores ao fundo
+erguem copos também*
+
+**AUDIO:** Som de canecas brindando; burburinho de bar sobe num coro de "Vai,
+Brasil!"; uma pequena batucada de fundo; fade de áudio em 1 segundo
+
+**TRANSITION OUT:** FREEZE FRAME — caneca erguida contra as luzes do bar e a
+escultura iluminada ao fundo, sorriso enorme — fade lento para preto
+
+---
+
+> 🎬 **DIREÇÃO TÉCNICA:** Render todos os 7 clips em sequência contínua, cada um
+> com EXATAMENTE 8 segundos. Cenário fixo: terraço de bar de torcedores a poucos
+> quarteirões do estádio em Filadélfia, início de noite, luzes de varal
+> amareladas, bandeiras do Brasil e do Haiti no balcão, outros torcedores de
+> amarelo desfocados ao fundo, e a escultura colorida das quatro letras formando
+> "AMOR" em inglês visível ao fundo pela grade do terraço. Mestre Leme veste a
+> MESMA camisa amarelo-canário do Brasil e o MESMO boné verde-amarelo em TODOS
+> os clips (sempre visíveis, nunca cobertos ou trocados) e segura a mesma caneca
+> de chopp gelado em todos os clips. Ele está alegre, caloroso e na expectativa
+> do jogo de amanhã — NÃO embriagado. Fundo do bar e da escultura levemente
+> desfocados (f/2.8 equivalent), Mestre Leme sempre nítido.

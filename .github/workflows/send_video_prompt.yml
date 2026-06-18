@@ -1,0 +1,44 @@
+name: Enviar Prompt de Vídeo Customizado (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: 'Caminho do arquivo .txt com os prompts (na raiz do repo)'
+        required: true
+        type: string
+      label:
+        description: 'Rótulo curto para o cabeçalho da mensagem'
+        required: false
+        default: ''
+        type: string
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Enviar prompts via Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PROMPT_FILE: ${{ inputs.file }}
+          PROMPT_LABEL: ${{ inputs.label }}
+        run: |
+          python -c "
+          import os
+          from bulletin_sender import send_video_prompts
+          with open(os.environ['PROMPT_FILE'], encoding='utf-8') as f:
+              texto = f.read()
+          send_video_prompts(texto, os.environ['TELEGRAM_BOT_TOKEN'], os.environ['TELEGRAM_CHAT_ID'], date_str=os.environ.get('PROMPT_LABEL', ''))
+          "
