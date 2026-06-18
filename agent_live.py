@@ -329,6 +329,10 @@ PROCESSO:
    - Amistosos e preparação: "[Time] amistosos preparacao Copa 2026"
    - Desempenho recente em campeonatos/eliminatórias: "[Time] eliminatorias desempenho recente"
    - Confronto direto: "[Time A] x [Time B] historico confronto direto"
+   Com os placares desses mesmos jogos recentes, estime a MÉDIA DE GOLS
+   MARCADOS e a MÉDIA DE GOLS SOFRIDOS por jogo de cada seleção (ver item 5
+   da PONDERAÇÃO) — não é uma busca extra, é extrair isso dos resultados que
+   você já encontrou.
 3. Chame get_current_predictions para ver os palpites atuais
 4. Analise cruzando TODOS os fatores → o que mudou em relação ao palpite inicial?
 5. OBRIGATÓRIO: chame a ferramenta update_predictions com TODAS as mudanças que
@@ -346,6 +350,12 @@ PONDERAÇÃO (peso dos fatores, do maior para o menor):
    o MOMENTO ATUAL. Pegue de fato os últimos jogos realizados, não os de meses atrás.
 3) Disponibilidade de elenco: desfalques de titulares (lesões/suspensões)
 4) Confronto direto / histórico recente — fator menor, para desempate
+5) Média de gols marcados/sofridos por jogo de cada seleção, calculada sobre
+   os MESMOS jogos recentes do item 2 — use para calibrar a MAGNITUDE do
+   placar (não a direção). Peso DENTRO desse cálculo: jogos DESTA Copa 2026
+   pesam mais; os demais jogos recentes (amistosos/eliminatórias/continentais)
+   pesam menos; jogos antigos (fora da janela de ~6-10 mais recentes) não
+   entram na média.
 (O ranking FIFA do get_tournament_status é só referência leve de força, como antes.)
 IMPORTANTE: priorize SEMPRE os jogos MAIS RECENTES; um desfalque isolado NÃO deve
 dominar a previsão — pondere contra a forma recente e o retrospecto.
@@ -362,10 +372,14 @@ REGRAS:
   como texto solto. Decidiu mudar → chame a ferramenta.
 
 PONTUACAO (calibre os placares):
-- Placar exato: 20 pts — use placares realistas (1-0, 2-0, 2-1, 1-1)
+- Placar exato: 20 pts — use placares realistas
 - Resultado certo (vencedor/empate), mesmo com gols errados: 10 pts
 - Errar a direção do resultado: 0 pts, independente dos gols
-- Maximo 2 gols por time
+- SEM teto fixo de gols por time — esta Copa está com média de ~3 gols por
+  jogo e vários resultados elásticos (3x0, 4x1, 7x1). Se a média de gols
+  marcados/sofridos (item 5 da PONDERAÇÃO) e o favoritismo claramente
+  sustentarem um placar elástico, pode prever — mas não infle o placar sem
+  essa evidência (placares "estourados" sem base seguem improváveis)
 - Ao reavaliar, se as evidencias forem mistas/incertas, priorize manter ou
   ajustar para a direcao de resultado mais sustentada pelos dados — nao troque
   o placar so para "acertar mais em cheio" se isso arriscar virar a direcao do
@@ -491,17 +505,29 @@ _PREGAME_SYSTEM = """Você é um agente especialista em previsões de futebol de
 para o bolão da Copa 2026. Reavalie placares com base em: forma recente — os ~6-10
 jogos MAIS RECENTES de cada seleção (priorize SEMPRE os mais recentes; o momento
 atual vale mais que um bom começo de 2025); desfalques/escalação confirmada da
-véspera; e retrospecto. Placares realistas, máximo 3 gols por time."""
+véspera; retrospecto; e a média de gols marcados/sofridos por jogo nesses mesmos
+jogos recentes (peso maior para jogos desta Copa 2026, peso menor para os demais).
+Placares realistas — SEM teto fixo de gols por time (esta Copa está com média de
+~3 gols por jogo e vários resultados elásticos); só preveja um placar elástico
+(3x0, 4x1 etc.) se a média de gols e o favoritismo sustentarem isso claramente.
+Não troque a direção do resultado (quem vence) sem evidência forte — só ajuste a
+magnitude com base na média de gols."""
 
 _PREGAME_PROMPT = """REAVALIAÇÃO PRÉ-JOGO — faltam aproximadamente {mins_left} minutos para começar.
 
 Jogo: {home} (mandante) x {away} (visitante) — {date}
 Palpite atual: {ph}-{pa}
 
-Pesquise: os ÚLTIMOS jogos (mais recentes) de cada seleção,
+Pesquise: os ÚLTIMOS jogos (mais recentes, com PLACAR) de cada seleção,
 lesões/suspensões/escalação confirmada e o retrospecto. Priorize SEMPRE os
-jogos mais recentes. Reavalie se este palpite ainda é o ideal. NÃO use o
-resultado real (o jogo ainda não começou).
+jogos mais recentes. Com os placares encontrados, estime a média de gols
+marcados/sofridos por jogo de cada seleção (peso maior para jogos desta Copa
+2026). Reavalie se este palpite ainda é o ideal. NÃO use o resultado real
+(o jogo ainda não começou).
+
+Seja DIRETO na análise — só os fatores relevantes em texto corrido, SEM
+títulos/seções markdown longos. O importante é sempre chegar nas duas linhas
+finais abaixo, custe o que custar:
 
 Responda SEMPRE com DUAS linhas no final, nesta ordem:
 1ª linha: "MANTER" (se o palpite atual continua o melhor) OU "PALPITE: X-Y"
@@ -517,7 +543,7 @@ def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30):
     try:
         resp = client.beta.messages.create(
             model=MODEL,
-            max_tokens=1200,
+            max_tokens=2000,
             system=_PREGAME_SYSTEM,
             tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
             betas=["web-search-2025-03-05"],
@@ -529,7 +555,7 @@ def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30):
         return None
     rz = re.findall(r"RAZ[ÃA]O:\s*(.+)", texto, re.IGNORECASE | re.DOTALL)
     if rz:
-        razao = " ".join(rz[-1].split())
+        razao = " ".join(rz[-1].split()).strip("*").strip()
     else:
         # fallback: última frase significativa (ignora linhas de comando)
         linhas = [l.strip() for l in texto.splitlines() if l.strip()]
