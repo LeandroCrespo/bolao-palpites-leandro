@@ -163,8 +163,8 @@
       "away_team": "MAR",
       "date": "2026-06-19",
       "home_goals": 0,
-      "away_goals": 2,
-      "reasoning": "Marrocos (FIFA #7, Tier 2) é superior à Escócia (FIFA #36, Tier 4) em qualidade técnica e experiência internacional recente. A defesa marroquina é organizada e Hakimi oferece constante perigo ofensivo pelos flancos. A Escócia tem dificuldade histórica para converter chances — falta atacante prolífico — e terá mais trabalho defensivo. Marrocos vence com 2 gols de diferença. En-Nesyri e Brahim Díaz são os grandes candidatos a marcar. A Escócia não consegue criar suficiente para ameaçar o goleiro Bounou."
+      "away_goals": 1,
+      "reasoning": "Marrocos é favorito claro (elenco completo, títulos recentes, 100% nas eliminatórias, empatou com o Brasil), mas vence por margens mínimas: 6 das últimas 7 vitórias com clean sheet mas por 1 gol. Escócia mostrou disciplina defensiva contra Haiti e lidera o grupo. Ajusto de 0-2 para 0-1, mantendo vitória marroquina mas placar mais realista."
     },
     {
       "match_number": 16,
@@ -240,8 +240,8 @@
       "away_team": "AUS",
       "date": "2026-06-19",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "EUA vem de goleada 4×1 sobre o Paraguai na estreia desta Copa — forte sinal de forma no torneio. Austrália não possui desfalques mas enfrenta um adversário em alto nível, jogando em casa (Seattle). Mantenho 2-0 favorável aos EUA, anfitrião em alta."
+      "away_goals": 1,
+      "reasoning": "EUA goleou Paraguai (4-1) e é favorito em casa, mas Austrália mostrou solidez defensiva real contra a Turquia (2-0). Pulisic é dúvida. Em 8 das últimas 9 partidas dos EUA ambos os times marcaram — Austrália tem qualidade para furar a defesa americana. Ajusto de 2-0 para 2-1."
     },
     {
       "match_number": 23,
@@ -1837,7 +1837,7 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-17T08:30:43.196312",
+  "last_updated": "2026-06-18T08:10:35.984499",
   "pregame_checked": [
     62,
     68
