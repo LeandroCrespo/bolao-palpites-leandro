@@ -43,7 +43,8 @@
       "date": "2026-06-18",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "México jogou bem na Copa (2-0 vs RSA), joga em casa (Guadalajara), histórico 100% de vitórias contra Coreia em Mundiais (1998 e 2018). Coreia é perigosa (virou sobre Tchéquia), mas o conjunto de fatores aponta para vitória mexicana. Troco empate 1-1 por 2-1 México."
+      "reasoning": "México jogou bem na Copa (2-0 vs RSA), joga em casa (Guadalajara), histórico 100% de vitórias contra Coreia em Mundiais (1998 e 2018). Coreia é perigosa (virou sobre Tchéquia), mas o conjunto de fatores aponta para vitória mexicana. Troco empate 1-1 por 2-1 México.",
+      "pregame_note": "México favorito em casa, com retrospecto 100% em Mundiais (3-1 em 1998, 2-1 em 2018), vencedor no único H2H desta Copa 2026 (2-0 na estreia ante África do Sul vs 2-1 da Coreia), e média de gols que sustenta o 2-1 — jogo competitivo mas controlado pelo México, sem evidência para elevar a magnitude."
     },
     {
       "match_number": 5,
@@ -1841,6 +1842,7 @@
   ],
   "last_updated": "2026-06-18T08:10:35.984499",
   "pregame_checked": [
+    4,
     9,
     10,
     62,
