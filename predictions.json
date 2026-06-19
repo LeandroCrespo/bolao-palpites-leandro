@@ -232,8 +232,9 @@
       "away_team": "PAR",
       "date": "2026-06-19",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "Paraguai foi destruído 4×1 pelos EUA na estreia desta Copa — péssima forma no torneio. Turquia marcou 8 gols e sofreu apenas 1 nos últimos 4 jogos pré-Copa, com Arda Güler e Kenan Yildiz em grande fase. Paraguai deve chegar abatido. Ajusto de 2-0 para 2-0 (mantém), mas com mais confiança no resultado pela desorganização paraguaia."
+      "away_goals": 1,
+      "reasoning": "A Turquia tem o elenco superior e a pressão para vencer, mas sua defesa sofreu 2 gols para a Austrália e o Paraguai — que marcou contra os EUA e vence com necessidade — deve converter ao menos uma chance; 2-1 reflete o favoritismo turco com uma resposta paraguaia plausível.",
+      "pregame_note": "A Turquia tem o elenco superior e a pressão para vencer, mas sua defesa sofreu 2 gols para a Austrália e o Paraguai — que marcou contra os EUA e vence com necessidade — deve converter ao menos uma chance; 2-1 reflete o favoritismo turco com uma resposta paraguaia plausível."
     },
     {
       "match_number": 22,
@@ -1845,6 +1846,7 @@
     4,
     9,
     10,
+    21,
     62,
     68
   ]
