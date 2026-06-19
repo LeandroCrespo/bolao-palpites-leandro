@@ -298,9 +298,9 @@
       "home_team": "GER",
       "away_team": "CIV",
       "date": "2026-06-20",
-      "home_goals": 2,
+      "home_goals": 3,
       "away_goals": 1,
-      "reasoning": "Confronto tenso entre Tier 2 e Tier 4 mas a Costa do Marfim não é adversário simples. Venceu a França em amistoso pré-Copa e tem Amad Diallo em grande forma, além de Ousmane Diomandé, Ndicka e Singo na defesa. A Alemanha, porém, jogando em Toronto com Wirtz, Musiala e Havertz, tem qualidade técnica superior e motivação (dependendo do resultado do outro jogo pode já estar classificada). A ausência de Haller facilita a vida da zaga alemã. Vitória alemã por 2-1 num jogo competitivo, com gol africano de consolação."
+      "reasoning": "Alemanha arrasou Curaçao 7-1 (melhor ataque da 1ª rodada) com Havertz e Musiala em grande fase, sem desfalques pós-estreia; Costa do Marfim perde Elye Wahi (titular na estreia) por problema de visto no Canadá, desfalque no ataque. Alemanha é franca favorita (odd 1.50). Desgaste logístico da viagem de 2.258km é fator menor. Elevo de 2-1 para 3-1 refletindo o potencial ofensivo alemão e o desfalque marfinense."
     },
     {
       "match_number": 28,
@@ -365,8 +365,8 @@
       "away_team": "EUR_B",
       "date": "2026-06-20",
       "home_goals": 2,
-      "away_goals": 1,
-      "reasoning": "Holanda enfrenta uma Suécia perigosa num duelo de times do Tier 2 vs Tier 3 com potencial para ser equilibrado. Gyökeres e Isak podem causar problemas à defesa holandesa liderada por Van Dijk. O meio-campo holandês, sem Simons e Schouten, pode sofrer com a intensidade sueca (estilo Graham Potter). Ainda assim, a Holanda tem mais profundidade de elenco com Frenkie de Jong, os irmãos Timber e Gakpo. Vitória holandesa por margem estreita em Houston."
+      "away_goals": 2,
+      "reasoning": "Suécia goleou Tunísia 5-1 na estreia com dupla Isak+Gyökeres dominante — melhor desempenho ofensivo do grupo; Holanda empatou 2-2 com Japão perdendo duas vantagens no placar, dúvidas defensivas. Holanda sem Memphis Depay (lesão pré-torneio); Suécia com possível desfalque de Gudmundsson na ala. Odds: Holanda ligeiramente favorita (1.70), mas Suécia vem muito superior na Copa. Jogo de alto voltagem com ambas precisando de pontos para liderar — ajusto de 2-1 Holanda para empate 2-2 que reflete a forma da Suécia e fragilidade defensiva holandesa."
     },
     {
       "match_number": 34,
@@ -496,9 +496,9 @@
       "home_team": "ESP",
       "away_team": "KSA",
       "date": "2026-06-21",
-      "home_goals": 3,
+      "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "Espanha no segundo jogo, já classificada ou muito próxima disso, enfrenta uma Arábia Saudita em crise de comando e elenco doméstico limitado. A equipe de Donis deve jogar em bloco baixo (4-4-2 defensivo confirmado pelo técnico), tentando repetir o espírito de 2022 contra a Argentina — mas a Espanha não é Argentina. Pedri, Yamal e Nico Williams têm velocidade para rasgar qualquer linha defensiva. Sem Renard e com pouco tempo de trabalho tático, os sauditas não terão o mesmo brilhantismo de Qatar 2022. Espanha vence com sobras e pode poupar titulares no segundo tempo."
+      "reasoning": "Espanha decepcionou ao empatar 0-0 com Cabo Verde na estreia, não convertendo chances e sem Yamal titular (lesão, escolha técnica). Para jogo vs Arábia Saudita, Yamal pode estrear como titular, mas ritmo de jogo limitado após longa ausência. Arábia Saudita surpreendeu ao empatar 1-1 com Uruguai. Espanha segue muito favorita, mas palpite inicial de 3-0 era irreal dado empate 0-0 na rodada 1. Ajusto para 2-0: vitória espanhola mais realista considerando dificuldades ofensivas demonstradas e Arábia Saudita competitiva."
     },
     {
       "match_number": 46,
@@ -1841,7 +1841,7 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-18T08:10:35.984499",
+  "last_updated": "2026-06-19T08:34:02.066287",
   "pregame_checked": [
     4,
     9,
