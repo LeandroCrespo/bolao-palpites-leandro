@@ -167,7 +167,8 @@
       "date": "2026-06-19",
       "home_goals": 0,
       "away_goals": 1,
-      "reasoning": "Marrocos é favorito claro (elenco completo, títulos recentes, 100% nas eliminatórias, empatou com o Brasil), mas vence por margens mínimas: 6 das últimas 7 vitórias com clean sheet mas por 1 gol. Escócia mostrou disciplina defensiva contra Haiti e lidera o grupo. Ajusto de 0-2 para 0-1, mantendo vitória marroquina mas placar mais realista."
+      "reasoning": "Marrocos é favorito claro (elenco completo, títulos recentes, 100% nas eliminatórias, empatou com o Brasil), mas vence por margens mínimas: 6 das últimas 7 vitórias com clean sheet mas por 1 gol. Escócia mostrou disciplina defensiva contra Haiti e lidera o grupo. Ajusto de 0-2 para 0-1, mantendo vitória marroquina mas placar mais realista.",
+      "pregame_note": "Marrocos é favorito claro (FIFA #8 vs #38) e venceu os últimos jogos com folga, mas as ausências de Hakimi e El Khannouss reduzem o poder ofensivo; a Escócia defensiva deve segurar o placar mínimo, tornando o 0-1 o resultado mais provável."
     },
     {
       "match_number": 16,
@@ -1847,6 +1848,7 @@
     4,
     9,
     10,
+    15,
     21,
     22,
     62,
