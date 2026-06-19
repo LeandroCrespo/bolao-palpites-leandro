@@ -245,7 +245,8 @@
       "date": "2026-06-19",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "EUA goleou Paraguai (4-1) e é favorito em casa, mas Austrália mostrou solidez defensiva real contra a Turquia (2-0). Pulisic é dúvida. Em 8 das últimas 9 partidas dos EUA ambos os times marcaram — Austrália tem qualidade para furar a defesa americana. Ajusto de 2-0 para 2-1."
+      "reasoning": "EUA goleou Paraguai (4-1) e é favorito em casa, mas Austrália mostrou solidez defensiva real contra a Turquia (2-0). Pulisic é dúvida. Em 8 das últimas 9 partidas dos EUA ambos os times marcaram — Austrália tem qualidade para furar a defesa americana. Ajusto de 2-0 para 2-1.",
+      "pregame_note": "EUA favoritos em casa com 4 gols na estreia, mas a ausência confirmada de Pulisic reduz o potencial ofensivo; a Austrália vem de 2–0 sobre a Turquia sem sofrer gols, tornando o 2–1 o placar mais realista — vitória americana por margem mínima."
     },
     {
       "match_number": 23,
@@ -1847,6 +1848,7 @@
     9,
     10,
     21,
+    22,
     62,
     68
   ]
