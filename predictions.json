@@ -177,9 +177,10 @@
       "home_team": "BRA",
       "away_team": "HAI",
       "date": "2026-06-19",
-      "home_goals": 2,
+      "home_goals": 3,
       "away_goals": 0,
-      "reasoning": "Brasil com desfalques sérios (Rodrygo, Militão, Estêvão) MAS Haiti é rank 84 e perdeu 0-1 para a Escócia na estreia. Abismo de qualidade sugere vitória confortável; palpite anterior 1-0 foi excessivamente conservador. Ajusto para 2-0, mantendo direção certa e melhorando o placar esperado."
+      "reasoning": "O Brasil é amplamente superior e motivado após empate contra o Marrocos, o Haiti perdeu para a Escócia e historicamente leva goleadas (7x1 em 2016, 4x0 em 1974), mas a produção ofensiva recente do Brasil ainda é travada (sem Neymar), tornando 3x0 mais realista que um placar mais elástico.",
+      "pregame_note": "O Brasil é amplamente superior e motivado após empate contra o Marrocos, o Haiti perdeu para a Escócia e historicamente leva goleadas (7x1 em 2016, 4x0 em 1974), mas a produção ofensiva recente do Brasil ainda é travada (sem Neymar), tornando 3x0 mais realista que um placar mais elástico."
     },
     {
       "match_number": 17,
@@ -1849,6 +1850,7 @@
     9,
     10,
     15,
+    16,
     21,
     22,
     62,
