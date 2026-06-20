@@ -315,7 +315,8 @@
       "date": "2026-06-20",
       "home_goals": 3,
       "away_goals": 0,
-      "reasoning": "Equador favorito claro (Tier 3 vs Tier 5) neste confronto em Kansas City. Com uma vitória sobre a Costa do Marfim na estreia, o Equador chegará já classificado ou em posição confortável. Curaçao, após sofrer goleada contra a Alemanha, entra fragilizado mental e fisicamente. Moisés Caicedo controlará o meio e Enner Valencia, capitão em sua provável última Copa, motivado para marcar. O baixo bloco de Advocaat não segurará o talento jovem equatoriano (Páez, Plata, Angulo). Goleada confortável."
+      "reasoning": "Equador favorito claro (Tier 3 vs Tier 5) neste confronto em Kansas City. Com uma vitória sobre a Costa do Marfim na estreia, o Equador chegará já classificado ou em posição confortável. Curaçao, após sofrer goleada contra a Alemanha, entra fragilizado mental e fisicamente. Moisés Caicedo controlará o meio e Enner Valencia, capitão em sua provável última Copa, motivado para marcar. O baixo bloco de Advocaat não segurará o talento jovem equatoriano (Páez, Plata, Angulo). Goleada confortável.",
+      "pregame_note": "Curaçao sofreu em média mais de 3 gols/jogo nos últimos jogos relevantes (incluindo 7–1 contra a Alemanha na Copa), mas o Equador tem ataque historicamente moderado (~0,75 gols/jogo nas eliminatórias), tornando o 3–0 o placar mais realista — vitória clara sem exagero ofensivo."
     },
     {
       "match_number": 29,
@@ -1855,6 +1856,7 @@
     21,
     22,
     27,
+    28,
     62,
     68
   ]
