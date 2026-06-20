@@ -367,9 +367,9 @@
       "home_team": "NED",
       "away_team": "EUR_B",
       "date": "2026-06-20",
-      "home_goals": 2,
+      "home_goals": 1,
       "away_goals": 2,
-      "reasoning": "Suécia goleou Tunísia 5-1 na estreia com dupla Isak+Gyökeres dominante — melhor desempenho ofensivo do grupo; Holanda empatou 2-2 com Japão perdendo duas vantagens no placar, dúvidas defensivas. Holanda sem Memphis Depay (lesão pré-torneio); Suécia com possível desfalque de Gudmundsson na ala. Odds: Holanda ligeiramente favorita (1.70), mas Suécia vem muito superior na Copa. Jogo de alto voltagem com ambas precisando de pontos para liderar — ajusto de 2-1 Holanda para empate 2-2 que reflete a forma da Suécia e fragilidade defensiva holandesa."
+      "reasoning": "Suécia goleou Tunísia 5x1 na estreia (Isak + Gyökeres letais) vs Holanda que empatou apenas 2x2 com Japão. Quinten Timber fora (concussão) e Jurrien Timber já cortado — meio-campo holandês enfraquecido. Suécia está em forma superior nesta Copa e merece vitória. Ajusto de 2-2 para 1-2."
     },
     {
       "match_number": 34,
@@ -499,9 +499,9 @@
       "home_team": "ESP",
       "away_team": "KSA",
       "date": "2026-06-21",
-      "home_goals": 2,
+      "home_goals": 1,
       "away_goals": 0,
-      "reasoning": "Espanha decepcionou ao empatar 0-0 com Cabo Verde na estreia, não convertendo chances e sem Yamal titular (lesão, escolha técnica). Para jogo vs Arábia Saudita, Yamal pode estrear como titular, mas ritmo de jogo limitado após longa ausência. Arábia Saudita surpreendeu ao empatar 1-1 com Uruguai. Espanha segue muito favorita, mas palpite inicial de 3-0 era irreal dado empate 0-0 na rodada 1. Ajusto para 2-0: vitória espanhola mais realista considerando dificuldades ofensivas demonstradas e Arábia Saudita competitiva."
+      "reasoning": "Espanha empatou 0x0 com Cabo Verde na estreia — falha ofensiva grave, sem converter posse em gols. Yamal deve jogar mas não por 90 min. Arábia Saudita segurou empate 1x1 com Uruguai e tem Al-Owais em destaque. Espanha vence, mas placar 2-0 otimista dado o desempenho ofensivo atual. Ajusto para 1-0."
     },
     {
       "match_number": 46,
@@ -511,8 +511,8 @@
       "away_team": "CPV",
       "date": "2026-06-21",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "Uruguai com praticamente a classificação encaminhada enfrenta os estreantes cabo-verdianos. Bielsa deve escalar força máxima para garantir o primeiro lugar do grupo. Darwin Núñez, Valverde e De La Cruz (ou De Arrascaeta se recuperado) têm qualidade muito superior. Cabo Verde tenta se defender com organização — como fez nas Eliminatórias Africanas — mas a pressão física e tática do esquema de Bielsa deve ser demasiada. Vitória uruguaia confortável, com um possível gol de honra difícil de sair dado o estilo defensivo esperado de Cabo Verde."
+      "away_goals": 1,
+      "reasoning": "Cabo Verde surpreendeu ao empatar 0x0 com Espanha na estreia (Vozinha em destaque) — nível claramente acima do esperado. Uruguai empatou 1x1 com KSA e não impressionou. Cabo Verde vai marcar ao menos 1 gol. Ajusto de 2-0 para 2-1."
     },
     {
       "match_number": 47,
@@ -1844,7 +1844,7 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-19T08:34:02.066287",
+  "last_updated": "2026-06-20T07:03:09.295716",
   "pregame_checked": [
     4,
     9,
