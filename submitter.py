@@ -6,10 +6,18 @@ Usa SQLAlchemy Core com raw SQL (sem copiar os models do bolão).
 import os
 from datetime import datetime, timezone
 
+import pytz
 from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 
 from fixtures import TEAMS
+
+_BR_TZ = pytz.timezone("America/Sao_Paulo")
+
+
+def _now_br() -> datetime:
+    """Agora em horário de Brasília, naive (consistente com matches.datetime no banco)."""
+    return datetime.now(_BR_TZ).replace(tzinfo=None)
 
 # Traduz códigos internos (fixtures.py) para os códigos reais no banco
 CODE_MAP = {
@@ -65,9 +73,11 @@ def can_predict_match(conn, match_id: int) -> bool:
     if row[1] != "scheduled":
         return False
     match_dt = row[0]
-    # Compara naive (banco em horário de Brasília sem timezone)
-    now = datetime.now()
-    return now < match_dt
+    # Compara naive (banco em horário de Brasília sem timezone) — usar
+    # datetime.now() puro aqui comparava UTC (relógio do runner do GitHub
+    # Actions) contra um horário em BRT, fechando o prazo 3h antes da hora
+    # real e rejeitando silenciosamente ajustes legítimos do pré-jogo.
+    return _now_br() < match_dt
 
 
 def submit_match_prediction(
@@ -87,7 +97,7 @@ def submit_match_prediction(
         {"u": user_id, "m": match_id},
     ).fetchone()
 
-    now_str = datetime.now()
+    now_str = _now_br()
 
     if existing:
         if existing[1] is not None:
@@ -138,7 +148,7 @@ def submit_group_prediction(
         {"u": user_id, "g": group_name},
     ).fetchone()
 
-    now_str = datetime.now()
+    now_str = _now_br()
 
     def _name(original, db_code):
         return (TEAMS.get(original) or TEAMS.get(db_code) or {}).get("name", db_code)
@@ -202,7 +212,7 @@ def submit_podium_prediction(
     champion_name = TEAMS.get(champion_code, {}).get("name", champion_code)
     runner_up_name = TEAMS.get(runner_up_code, {}).get("name", runner_up_code)
     third_name = TEAMS.get(third_code, {}).get("name", third_code)
-    now_str = datetime.now()
+    now_str = _now_br()
 
     if existing:
         if existing[1]:  # locked = True
