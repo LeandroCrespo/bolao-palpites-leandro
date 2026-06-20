@@ -2,10 +2,13 @@
 3 clipes de exatamente 8 segundos cada — o mínimo possível para caber todo o
 conteúdo. Nenhuma imagem é necessária (anexar foto de referência é opcional).
 
-CONTEXTO: o Mestre está de novo no bar, alguns chopes a mais que o
-recomendado, dando o boletim do pódio e da zona de rebaixamento. O Brasil
-acabou de vencer o Haiti por 3 a 0, e ele faz questão de dizer que NUNCA
-criticou o Brasil, mas que até o Corinthians ganharia do Haiti.
+CONTEXTO: o Mestre está bem em frente ao estádio em Filadélfia onde o Brasil
+acabou de jogar, alguns chopes a mais que o recomendado, dando o boletim do
+pódio e da zona de rebaixamento. O Brasil venceu o Haiti por 3 a 0, e ele faz
+questão de dizer que NUNCA criticou o Brasil, mas que até o Corinthians
+ganharia do Haiti. A fala dele é PASTOSA o tempo todo — palavras arrastadas,
+embolando umas nas outras, boca meio mole, como quem bebeu mais um pouco
+demais.
 
 DADOS REAIS (usar nas falas): pódio do bolão — Marcos Leme líder com 310
 pontos, Renata Alves Leme Inocencio em 2º com 295, Leandro Leme Crespo em 3º
@@ -14,8 +17,10 @@ com 285. Zona de rebaixamento — Karina Thiemi Izuno Leme com 250, Mario com
 
 FIXED CHARACTER: Mestre — a stocky, heavy-set Brazilian man, approximately 55
 years old, visibly tipsy AGAIN — glassy half-lidded eyes, swaying slightly,
-words occasionally slurring, but still endearing and good-humored (match the
-provided reference photo exactly, if attached).
+mouth slightly slack, speech THICK and SLURRED the whole time (words dragging
+and running into each other, "pastoso", like he has one beer too many), but
+still endearing and good-humored (match the provided reference photo exactly,
+if attached).
 FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut
 very close to the head with gray dominating at the temples, thick prominent
 all-gray mustache in the classic Brazilian gaúcho style — dense and
@@ -28,32 +33,33 @@ OUTFIT: open unbuttoned orange-and-brown plaid flannel shirt over a plain
 white undershirt, dark jeans. Holds a thick glass of chope (Brazilian draft
 beer) with generous white foam at the rim, tilted dangerously close to
 spilling.
-SETTING: a lively sports bar, telões ao fundo mostrando reprises do jogo do
-Brasil, bandeiras de vários países penduradas no teto, warm inviting
-lighting, ambient sounds of a cheering World Cup crowd mixed with low
-conversation murmur and clinking glasses.
+SETTING: right outside the stadium in Filadélfia where Brazil just played,
+evening after the match — stadium facade and floodlight towers glowing
+behind him, fans in yellow jerseys streaming out past him still celebrating,
+flags waving, vendors closing up, warm post-match lighting, ambient sounds of
+a dispersing World Cup crowd still singing mixed with distant car horns.
 STYLE: photorealistic, cinematic, shallow depth of field with background
 softly blurred, warm saturated amber color grade. Duration: exactly 8
 seconds.
 
 ## CLIP 1 OF 3 — "O PÓDIO, MEU CONSAGRADO!"
 
-**CAMERA:** Medium shot at the bar counter, he sways slightly, raising the
-chope glass with both hands, some foam spilling over the rim, big crooked
-smile.
+**CAMERA:** Medium shot right outside the stadium, he sways slightly, raising
+the chope glass with both hands, some foam spilling over the rim, big crooked
+smile, floodlights glowing behind him.
 
 **DIALOGUE:**
-> *[fala enrolada, mas animadíssimo]*
-> "Meeeu povo... *(hic)*... o PÓDIO do bolão: MARCOS Leme na frente, TREZENTOS
-> E DEZ! RENATA na cola, DUZENTOS E NOVENTA E CINCO! E o LEANDRO, dono da
-> casa, fechando com DUZENTOS E OITENTA E CINCO!"
+> *[fala PASTOSA, palavras arrastadas, mas animadíssimo]*
+> "Meeeu povo... *(hic)*... o PÓDIO do boulão... MARCOS Leme na frenteee,
+> TREZENTOS E DEZ! RENATA na cola, DUZENTOS E NOVENTA E CINCO! E o LEANDRO,
+> dono da casa, fechando com DUZENTOS E OITENTA E CINCO!"
 
 *Cue: soluço cômico no meio da frase; ergue três dedos tortos contando o
 pódio; aponta pra própria câmera/celular em "dono da casa", como se brindasse
 ao Leandro; um pouco de chope derrama na mão sem ele notar*
 
-**AUDIO:** Trombeta curta de fanfarra desafinada; murmúrio de bar; tilintar
-de copos
+**AUDIO:** Trombeta curta de fanfarra desafinada; murmúrio de torcida saindo
+do estádio; tilintar de copos
 
 **TRANSITION OUT:** Três dedos tortos erguidos, chope inclinado, sorriso
 bambo — congela
@@ -62,8 +68,10 @@ bambo — congela
 
 FIXED CHARACTER: Mestre — a stocky, heavy-set Brazilian man, approximately 55
 years old, visibly tipsy AGAIN — glassy half-lidded eyes, swaying slightly,
-words occasionally slurring, but still endearing and good-humored (match the
-provided reference photo exactly, if attached).
+mouth slightly slack, speech THICK and SLURRED the whole time (words dragging
+and running into each other, "pastoso", like he has one beer too many), but
+still endearing and good-humored (match the provided reference photo exactly,
+if attached).
 FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut
 very close to the head with gray dominating at the temples, thick prominent
 all-gray mustache in the classic Brazilian gaúcho style — dense and
@@ -76,30 +84,31 @@ OUTFIT: open unbuttoned orange-and-brown plaid flannel shirt over a plain
 white undershirt, dark jeans. Holds a thick glass of chope (Brazilian draft
 beer) with generous white foam at the rim, tilted dangerously close to
 spilling.
-SETTING: a lively sports bar, telões ao fundo mostrando reprises do jogo do
-Brasil, bandeiras de vários países penduradas no teto, warm inviting
-lighting, ambient sounds of a cheering World Cup crowd mixed with low
-conversation murmur and clinking glasses.
+SETTING: right outside the stadium in Filadélfia where Brazil just played,
+evening after the match — stadium facade and floodlight towers glowing
+behind him, fans in yellow jerseys streaming out past him still celebrating,
+flags waving, vendors closing up, warm post-match lighting, ambient sounds of
+a dispersing World Cup crowd still singing mixed with distant car horns.
 STYLE: photorealistic, cinematic, shallow depth of field with background
 softly blurred, warm saturated amber color grade. Duration: exactly 8
 seconds.
 
 ## CLIP 2 OF 3 — "E A ZONA DE REBAIXAMENTO!"
 
-**CAMERA:** Same counter, he leans in unsteadily, free hand counting on
-wobbly fingers, mock-serious "bad news" face.
+**CAMERA:** Same spot outside the stadium, he leans in unsteadily, free hand
+counting on wobbly fingers, mock-serious "bad news" face, floodlights behind.
 
 **DIALOGUE:**
-> *[tentando parecer sério, mas escorregando nas palavras]*
-> "Agora... a parte triste... ZONA de rebaixamento: KARINA, duzentos e
+> *[fala bem PASTOSA, tentando parecer sério, mas escorregando nas palavras]*
+> "Agoraaa... a parte triste... ZONA de rebaixamentooo: KARINA, duzentos e
 > CINQUENTA. MARIO, duzentos e quarenta e CINCO. SANDRA, duzentos e TRINTA e
 > cinco. E lanterninha... a AMANDA... duzentos e QUINZE, coitada!"
 
 *Cue: conta nos dedos tortos, perde a conta e ri de si mesmo; em "coitada"
 leva a mão ao peito, emocionado de mentirinha, quase derrubando o chope*
 
-**AUDIO:** Trombone "wah-wah" cômico e desafinado; risada de fundo de outros
-clientes do bar; tilintar de copos continua
+**AUDIO:** Trombone "wah-wah" cômico e desafinado; risada de fundo de
+torcedores passando; tilintar de copos continua
 
 **TRANSITION OUT:** Mão no peito, chope perigosamente inclinado, careta de
 pesar bêbado — congela
@@ -108,8 +117,10 @@ pesar bêbado — congela
 
 FIXED CHARACTER: Mestre — a stocky, heavy-set Brazilian man, approximately 55
 years old, visibly tipsy AGAIN — glassy half-lidded eyes, swaying slightly,
-words occasionally slurring, but still endearing and good-humored (match the
-provided reference photo exactly, if attached).
+mouth slightly slack, speech THICK and SLURRED the whole time (words dragging
+and running into each other, "pastoso", like he has one beer too many), but
+still endearing and good-humored (match the provided reference photo exactly,
+if attached).
 FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut
 very close to the head with gray dominating at the temples, thick prominent
 all-gray mustache in the classic Brazilian gaúcho style — dense and
@@ -122,27 +133,29 @@ OUTFIT: open unbuttoned orange-and-brown plaid flannel shirt over a plain
 white undershirt, dark jeans. Holds a thick glass of chope (Brazilian draft
 beer) with generous white foam at the rim, tilted dangerously close to
 spilling.
-SETTING: a lively sports bar, telões ao fundo mostrando reprises do jogo do
-Brasil, bandeiras de vários países penduradas no teto, warm inviting
-lighting, ambient sounds of a cheering World Cup crowd mixed with low
-conversation murmur and clinking glasses.
+SETTING: right outside the stadium in Filadélfia where Brazil just played,
+evening after the match — stadium facade and floodlight towers glowing
+behind him, fans in yellow jerseys streaming out past him still celebrating,
+flags waving, vendors closing up, warm post-match lighting, ambient sounds of
+a dispersing World Cup crowd still singing mixed with distant car horns.
 STYLE: photorealistic, cinematic, shallow depth of field with background
 softly blurred, warm saturated amber color grade. Duration: exactly 8
 seconds.
 
 ## CLIP 3 OF 3 — "ATÉ O CORINTHIANS GANHAVA DO HAITI!"
 
-**CAMERA:** Wider shot, the stadium replay of Brazil's win glowing on the TV
-behind him. He turns to point at the screen, swaying, voice rising in
-defensive protest as if someone off-camera had accused him of something.
+**CAMERA:** Wider shot, the stadium floodlights glowing tall behind him, last
+fans trickling out. He turns to point back at the stadium itself, swaying,
+voice rising in defensive protest as if someone off-camera had accused him
+of something.
 
 **DIALOGUE:**
-> *[bêbado, defensivo, crescendo até o grito final]*
+> *[bêbado, fala pastosa, defensivo, crescendo até o grito final]*
 > "EU nunca... NUNCA critiquei o Brasil, minha gente! Mas convenhamos... três
 > a zero no HAITI? Até o CORINTHIANS ganhava esse jogo! Mas é Brasil, e eu
 > AMO, saúde!!"
 
-*Cue: aponta pro telão atrás em "três a zero"; bate a mão no próprio peito em
+*Cue: aponta pro estádio atrás em "três a zero"; bate a mão no próprio peito em
 "EU AMO"; ergue o chope bem alto na palavra final, derramando espuma sem se
 importar*
 
@@ -156,10 +169,12 @@ preto
 ---
 
 > 🎬 **DIREÇÃO TÉCNICA:** Render os 3 clips em sequência contínua, cada um com
-> EXATAMENTE 8 segundos. Cenário fixo: bar esportivo, telões com reprises do
-> Brasil 3x0 Haiti, bandeiras no teto, luz quente e convidativa. O Mestre
-> veste a MESMA camisa flanela aberta e segura o MESMO chope (com espuma
-> derramando um pouco mais a cada clipe) em TODOS os clipes. Ele está visivelmente
-> alterado pela bebida o tempo todo — fala enrolada, balanço leve, olhos meio
-> vidrados — mas sempre afetuoso e bem-humorado, nunca agressivo. Fundo do bar
-> levemente desfocado (f/2.8 equivalent), Mestre sempre nítido.
+> EXATAMENTE 8 segundos. Cenário fixo: em frente ao estádio em Filadélfia onde
+> o Brasil acabou de jogar, torres de iluminação acesas, torcedores de amarelo
+> saindo ao fundo, luz quente de pós-jogo. O Mestre veste a MESMA camisa
+> flanela aberta e segura o MESMO chope (com espuma derramando um pouco mais a
+> cada clipe) em TODOS os clipes. Ele está visivelmente alterado pela bebida o
+> tempo todo — fala PASTOSA (palavras arrastadas, boca meio mole), balanço
+> leve, olhos meio vidrados — mas sempre afetuoso e bem-humorado, nunca
+> agressivo. Fundo do estádio e da torcida levemente desfocado (f/2.8
+> equivalent), Mestre sempre nítido.
