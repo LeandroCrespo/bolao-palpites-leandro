@@ -372,9 +372,13 @@ REGRAS:
 - Só atualize palpites com base em evidências reais (resultados ou notícias encontradas)
 - Se o palpite inicial ainda faz sentido depois de cruzar os fatores, mantenha-o
 - Para mata-mata: sempre inclua "winner" com o código da seleção vencedora
-- Reasoning COMPLETO citando os principais fatores, não apenas um. Ex.:
-  "Marrocos com 2 desfalques na defesa, MAS vem de 4 vitorias e foi bem nos
-  amistosos; Brasil em alta na Copa — mantenho favoritismo do Brasil, ajusto 2-1"
+- Reasoning COMPLETO citando os principais fatores, não apenas um, e SEMPRE
+  com a média de gols feitos/sofridos por jogo dos DOIS times em números
+  (ex.: "Marrocos tem média de 1,8 gols feitos e 0,6 sofridos, Brasil tem 2,2
+  feitos e 1,0 sofridos"). Ex. completo:
+  "Marrocos com 2 desfalques na defesa, mas vem de 4 vitorias (1,8 gols feitos
+  e 0,6 sofridos por jogo); Brasil em alta (2,2 feitos e 1,0 sofridos) — mantenho
+  favoritismo do Brasil, ajusto 2-1"
 - O reasoning vai DENTRO da chamada update_predictions (campo reasoning), não
   como texto solto. Decidiu mudar → chame a ferramenta.
 
@@ -554,7 +558,12 @@ Responda SEMPRE com DUAS linhas no final, nesta ordem:
 1ª linha: "MANTER" (se o palpite atual continua o melhor) OU "PALPITE: X-Y"
    (novo placar, X = gols do mandante {home}).
 2ª linha: "RAZAO: <1-2 frases citando os fatores>" — OBRIGATÓRIA NOS DOIS CASOS
-   (explique o porquê, inclusive quando MANTER)."""
+   (explique o porquê, inclusive quando MANTER). Cite explicitamente a média
+   de gols feitos/sofridos por jogo dos DOIS times, em números, no formato
+   "{home} tem média de X gols feitos e Y sofridos, enquanto {away} tem média
+   de Z gols feitos e W sofridos" (ou equivalente) — não basta dizer que um
+   ataque é "perigoso" ou a defesa é "frágil" sem os números de ambos os
+   lados."""
 
 
 def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30):

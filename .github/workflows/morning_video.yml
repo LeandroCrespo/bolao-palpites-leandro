@@ -1,12 +1,9 @@
 name: Prompts de Vídeo do Boletim (manhã / sob demanda)
 
 on:
-  # Alvo: ~8h Brasília, com a classificação JÁ atualizada após os jogos da noite.
-  # (O cron do GitHub costuma atrasar ~1h; agendamos 10:30 UTC.)
-  schedule:
-    - cron: '30 10 * * *'
-  # Recomendado: disparar manualmente (Run workflow) quando for fazer os vídeos,
-  # garantindo os dados mais frescos possíveis.
+  # Envio automatico diario DESATIVADO a pedido do usuario -- agora so roda
+  # quando disparado manualmente (Run workflow), garantindo os dados mais
+  # frescos possiveis e controle de quando o prompt e enviado.
   workflow_dispatch:
 
 jobs:
