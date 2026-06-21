@@ -512,9 +512,9 @@
       "home_team": "URU",
       "away_team": "CPV",
       "date": "2026-06-21",
-      "home_goals": 2,
-      "away_goals": 1,
-      "reasoning": "Cabo Verde surpreendeu ao empatar 0x0 com Espanha na estreia (Vozinha em destaque) — nível claramente acima do esperado. Uruguai empatou 1x1 com KSA e não impressionou. Cabo Verde vai marcar ao menos 1 gol. Ajusto de 2-0 para 2-1."
+      "home_goals": 1,
+      "away_goals": 0,
+      "reasoning": "Uruguai com desfalques confirmados de Arrascaeta (criatividade no meio) e Ronald Araújo (zaga), além de só 1 vitória nos últimos jogos pré-Copa e empate vs Arábia. Cabo Verde montou ferrolho impressionante vs Espanha (0x0) com Vozinha, sofre apenas 0,8 gol/jogo nas eliminatórias. Vitória uruguaia esperada com Darwin+Valverde, mas placar magro reflete o déficit criativo e a solidez defensiva de Cabo Verde — ajusto de 2-1 para 1-0."
     },
     {
       "match_number": 47,
@@ -1846,7 +1846,7 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-20T07:03:09.295716",
+  "last_updated": "2026-06-21T08:02:26.579302",
   "pregame_checked": [
     4,
     9,
