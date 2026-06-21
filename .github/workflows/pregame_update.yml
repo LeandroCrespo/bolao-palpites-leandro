@@ -1,12 +1,21 @@
 name: Copa 2026 - Reavaliação Pré-Jogo (30 min antes)
 
+# O cron interno do GitHub Actions ("schedule") e' best-effort e pode
+# atrasar por horas (ja' visto atraso de 8h46min num unico dia) -- isso
+# faz a janela de pre-jogo de um jogo inteiro passar sem nenhuma execucao.
+# Por isso cada disparo roda em loop interno por ~5h45min, verificando a
+# cada 5 min, em vez de depender de um disparo pontual e exato do cron pra
+# cada checagem. Repositorio e' publico, entao minutos do Actions sao
+# ilimitados (sem custo). concurrency com cancel-in-progress garante que
+# so' a execucao mais recente (com o codigo mais atual) fica rodando.
 on:
-  # A cada 10 min nas faixas de horário dos jogos (BRT = UTC-3):
-  # jogos ~13h-23h BRT -> ~16h-02h UTC (madrugada cobre o jogo de 23h BRT e o 01h BRT)
   schedule:
-    - cron: '*/10 16-23 * * *'
-    - cron: '*/10 0-5 * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch:
+
+concurrency:
+  group: pregame-update
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -14,6 +23,7 @@ permissions:
 jobs:
   reavaliar-pre-jogo:
     runs-on: ubuntu-latest
+    timeout-minutes: 350
 
     steps:
       - name: Checkout do código
@@ -38,7 +48,7 @@ jobs:
             echo "skip=false" >> $GITHUB_OUTPUT
           fi
 
-      - name: Reavaliar palpites dos jogos prestes a começar
+      - name: Reavaliar palpites em loop (~5h45min, a cada 5 min)
         if: steps.check_date.outputs.skip == 'false'
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -46,18 +56,18 @@ jobs:
           BOLAO_USER_ID: ${{ secrets.BOLAO_USER_ID }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python main.py pregame
-
-      - name: Salvar predictions.json (se mudou)
-        if: steps.check_date.outputs.skip == 'false'
         run: |
-          if ! git diff --quiet -- predictions.json; then
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add predictions.json
-            git commit -m "Reavaliação pré-jogo (agente)"
-            git pull --rebase --autostash || true
-            git push
-          else
-            echo "predictions.json sem alteracoes"
-          fi
+          for i in $(seq 1 69); do
+            python main.py pregame
+
+            if ! git diff --quiet -- predictions.json; then
+              git config user.name "github-actions[bot]"
+              git config user.email "github-actions[bot]@users.noreply.github.com"
+              git add predictions.json
+              git commit -m "Reavaliação pré-jogo (agente)"
+              git pull --rebase --autostash || true
+              git push || true
+            fi
+
+            sleep 300
+          done
