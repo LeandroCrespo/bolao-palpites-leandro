@@ -325,14 +325,16 @@ PROCESSO:
 2. Para cada jogo nas próximas 48h, use web_search para montar uma visão AMPLA
    de cada seleção (não se baseie em um único fator). Pesquise:
    - Desfalques: "[Time A] [Time B] Copa do Mundo 2026 lesoes suspensoes"
-   - ÚLTIMOS jogos (os MAIS RECENTES primeiro): "[Time] ultimos jogos resultados recentes"
+   - ÚLTIMOS jogos (os MAIS RECENTES primeiro, de TODAS as competições, não só
+     a Copa): "[Time] ultimos jogos resultados recentes"
    - Amistosos e preparação: "[Time] amistosos preparacao Copa 2026"
    - Desempenho recente em campeonatos/eliminatórias: "[Time] eliminatorias desempenho recente"
+   - Estatísticas ofensivas/defensivas: "[Time] xG gols esperados estatisticas recentes"
    - Confronto direto: "[Time A] x [Time B] historico confronto direto"
-   Com os placares desses mesmos jogos recentes, estime a MÉDIA DE GOLS
-   MARCADOS e a MÉDIA DE GOLS SOFRIDOS por jogo de cada seleção (ver item 5
-   da PONDERAÇÃO) — não é uma busca extra, é extrair isso dos resultados que
-   você já encontrou.
+   Com os placares e dados desses mesmos jogos recentes, estime a MÉDIA DE
+   GOLS MARCADOS, a MÉDIA DE GOLS SOFRIDOS e o xG (gols esperados) por jogo
+   de cada seleção, quando disponível (ver item 4 da PONDERAÇÃO) — não é uma
+   busca extra, é extrair isso dos resultados que você já encontrou.
 3. Chame get_current_predictions para ver os palpites atuais
 4. Analise cruzando TODOS os fatores → o que mudou em relação ao palpite inicial?
 5. OBRIGATÓRIO: chame a ferramenta update_predictions com TODAS as mudanças que
@@ -343,22 +345,27 @@ PROCESSO:
    chamar a ferramenta, dizendo explicitamente "nenhum ajuste necessário".
 
 PONDERAÇÃO (peso dos fatores, do maior para o menor):
-1) Resultados já ocorridos NESTA Copa 2026 — peso MAIOR (forma no próprio torneio)
-2) Forma recente: os ~6 a 10 jogos MAIS RECENTES de cada seleção (amistosos,
-   eliminatórias, continentais). PRIORIZE SEMPRE os jogos MAIS RECENTES — um bom
-   começo de 2025 vale pouco se a seleção caiu de produção agora; o que importa é
-   o MOMENTO ATUAL. Pegue de fato os últimos jogos realizados, não os de meses atrás.
-3) Disponibilidade de elenco: desfalques de titulares (lesões/suspensões)
-4) Confronto direto / histórico recente — fator menor, para desempate
-5) Média de gols marcados/sofridos por jogo de cada seleção, calculada sobre
-   os MESMOS jogos recentes do item 2 — use para calibrar a MAGNITUDE do
-   placar (não a direção). Peso DENTRO desse cálculo: jogos DESTA Copa 2026
-   pesam mais; os demais jogos recentes (amistosos/eliminatórias/continentais)
-   pesam menos; jogos antigos (fora da janela de ~6-10 mais recentes) não
+1) Forma recente e MOMENTUM: os ~6 a 10 jogos MAIS RECENTES de cada seleção,
+   somando TODAS as competições — Copa 2026, eliminatórias, amistosos,
+   continentais — TODAS com o MESMO peso entre si. Os jogos desta Copa 2026
+   NÃO recebem peso especial só por serem da Copa; entram na análise como
+   qualquer outro jogo recente. O que determina o peso de cada jogo é
+   exclusivamente quão RECENTE ele é, nunca a competição. PRIORIZE SEMPRE os
+   jogos MAIS RECENTES — um bom começo de 2025 vale pouco se a seleção caiu de
+   produção agora; o que importa é o MOMENTO ATUAL, olhando o conjunto
+   completo de jogos recentes.
+2) Disponibilidade de elenco: desfalques de titulares (lesões/suspensões)
+3) Confronto direto / histórico recente — fator menor, para desempate
+4) Métricas ofensivas/defensivas dos MESMOS jogos recentes do item 1: média de
+   gols marcados, média de gols sofridos, e xG (gols esperados) quando
+   disponível — use para calibrar a MAGNITUDE do placar (não a direção). Esse
+   cálculo usa os mesmos jogos recentes do item 1, sem peso especial pra
+   jogos da Copa; jogos antigos (fora da janela de ~6-10 mais recentes) não
    entram na média.
 (O ranking FIFA do get_tournament_status é só referência leve de força, como antes.)
-IMPORTANTE: priorize SEMPRE os jogos MAIS RECENTES; um desfalque isolado NÃO deve
-dominar a previsão — pondere contra a forma recente e o retrospecto.
+IMPORTANTE: priorize SEMPRE os jogos MAIS RECENTES, de QUALQUER competição, sem dar
+peso extra à Copa; um desfalque isolado ou 1-2 jogos recentes NÃO devem dominar a
+previsão — pondere contra o momentum recente completo e o retrospecto.
 
 REGRAS:
 - Priorize jogos das próximas 48h
@@ -377,7 +384,7 @@ PONTUACAO (calibre os placares):
 - Errar a direção do resultado: 0 pts, independente dos gols
 - SEM teto fixo de gols por time — esta Copa está com média de ~3 gols por
   jogo e vários resultados elásticos (3x0, 4x1, 7x1). Se a média de gols
-  marcados/sofridos (item 5 da PONDERAÇÃO) e o favoritismo claramente
+  marcados/sofridos e o xG (item 4 da PONDERAÇÃO) e o favoritismo claramente
   sustentarem um placar elástico, pode prever — mas não infle o placar sem
   essa evidência (placares "estourados" sem base seguem improváveis)
 - Ao reavaliar, se as evidencias forem mistas/incertas, priorize manter ou
@@ -494,36 +501,50 @@ def run_agent(dry_run: bool = False):
 # Reavaliação pré-jogo (~30 min antes de cada jogo)
 # ---------------------------------------------------------------------------
 
-PREGAME_WINDOW_MIN = 180  # janela: jogos começando nas próximas ~3h
-# (era 40 min, mas o cron do GitHub Actions tem mostrado atrasos de várias
-# horas — às vezes nenhuma execução agendada dispara por 10h+ seguidas.
-# Com janela de 40 min, isso fazia o pré-jogo nunca cair no horário certo e
-# o jogo já começava sem nenhuma reavaliação/aviso. Janela maior + dedupe via
-# pregame_checked cobre o atraso, ao custo de reavaliar um pouco mais cedo.)
+PREGAME_WINDOW_MIN = 40  # janela: jogos começando nos próximos ~30-40 min
+# Voltou de 180 para 40 min: a ideia do pré-jogo é avaliar perto da hora real
+# do jogo, quando a escalação confirmada já costuma estar disponível (uma
+# reavaliação feita 2-3h antes não tem essa informação). A confiabilidade do
+# disparo agora é garantida pelo workflow rodar em loop contínuo a cada 5 min
+# (pregame_update.yml), não pela largura desta janela.
 
 _PREGAME_SYSTEM = """Você é um agente especialista em previsões de futebol de seleções
-para o bolão da Copa 2026. Reavalie placares com base em: forma recente — os ~6-10
-jogos MAIS RECENTES de cada seleção (priorize SEMPRE os mais recentes; o momento
-atual vale mais que um bom começo de 2025); desfalques/escalação confirmada da
-véspera; retrospecto; e a média de gols marcados/sofridos por jogo nesses mesmos
-jogos recentes (peso maior para jogos desta Copa 2026, peso menor para os demais).
-Placares realistas — SEM teto fixo de gols por time (esta Copa está com média de
-~3 gols por jogo e vários resultados elásticos); só preveja um placar elástico
-(3x0, 4x1 etc.) se a média de gols e o favoritismo sustentarem isso claramente.
-Não troque a direção do resultado (quem vence) sem evidência forte — só ajuste a
-magnitude com base na média de gols."""
+para o bolão da Copa 2026. Reavalie placares com base em: forma recente e MOMENTUM —
+os ~6-10 jogos MAIS RECENTES de cada seleção, somando TODAS as competições (Copa
+2026, eliminatórias, amistosos, continentais) com o MESMO peso entre si. Os jogos
+desta Copa NÃO recebem peso especial só por serem da Copa — o que importa é
+exclusivamente quão recente é o jogo, nunca a competição. Priorize SEMPRE os jogos
+mais recentes, de qualquer competição. Considere também: desfalques/escalação
+confirmada da véspera; retrospecto; e a média de gols marcados/sofridos por jogo e
+o xG (gols esperados, quando disponível) nesses mesmos jogos recentes. Placares
+realistas — SEM teto fixo de gols por time (esta Copa está com média de ~3 gols
+por jogo e vários resultados elásticos); só preveja um placar elástico (3x0, 4x1
+etc.) se a média de gols/xG e o favoritismo sustentarem isso claramente. Não
+troque a direção do resultado (quem vence) sem evidência forte — só ajuste a
+magnitude com base na média de gols e no xG."""
 
 _PREGAME_PROMPT = """REAVALIAÇÃO PRÉ-JOGO — faltam aproximadamente {mins_left} minutos para começar.
 
 Jogo: {home} (mandante) x {away} (visitante) — {date}
 Palpite atual: {ph}-{pa}
 
-Pesquise: os ÚLTIMOS jogos (mais recentes, com PLACAR) de cada seleção,
-lesões/suspensões/escalação confirmada e o retrospecto. Priorize SEMPRE os
-jogos mais recentes. Com os placares encontrados, estime a média de gols
-marcados/sofridos por jogo de cada seleção (peso maior para jogos desta Copa
-2026). Reavalie se este palpite ainda é o ideal. NÃO use o resultado real
-(o jogo ainda não começou).
+Pesquise: os ÚLTIMOS jogos (mais recentes, com PLACAR, de TODAS as
+competições — não só a Copa) de cada seleção, e o retrospecto. Priorize
+SEMPRE os jogos mais recentes, independente da competição — jogos da Copa
+NÃO têm peso especial, contam como qualquer outro jogo recente. Com os
+placares encontrados, estime a média de gols marcados/sofridos por jogo de
+cada seleção e o xG (gols esperados), quando disponível.
+
+ESCALAÇÃO: busque ATIVAMENTE a escalação confirmada ou provável de cada
+seleção pra este jogo — pesquise "[Time A] escalação confirmada hoje" e
+"[Time B] escalação confirmada hoje" (e suspensões/lesões de última hora).
+Como faltam poucos minutos pro jogo, a escalação titular já deve estar
+divulgada ou bem adiantada — isso é mais confiável que uma notícia de
+desfalque de dias atrás. Se um titular importante estiver fora (ou de volta)
+na escalação confirmada, isso pesa na reavaliação.
+
+Reavalie se este palpite ainda é o ideal. NÃO use o resultado real (o jogo
+ainda não começou).
 
 Seja DIRETO na análise — só os fatores relevantes em texto corrido, SEM
 títulos/seções markdown longos. O importante é sempre chegar nas duas linhas
@@ -545,7 +566,7 @@ def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30):
             model=MODEL,
             max_tokens=2000,
             system=_PREGAME_SYSTEM,
-            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 4}],
+            tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 8}],
             betas=["web-search-2025-03-05"],
             messages=[{"role": "user", "content": prompt}],
         )
