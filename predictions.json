@@ -436,8 +436,9 @@
       "away_team": "IRN",
       "date": "2026-06-21",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "Bélgica (Tier 2) enfrenta o Irã (Tier 3) com clara vantagem de elenco e ranking. De Bruyne, Doku, De Ketelaere e Trossard formam ataque variado e criativo. O Irã, organizado defensivamente com Khalilzadeh e Kanaanizadegan, pode resistir por um tempo, mas o nível técnico belga é superior. Sem Azmoun e com Ezatolahi ainda em ritmo de retorno, o Irã terá dificuldade ofensiva. Com dois jogos já disputados (Bélgica venceu e Irã venceu), a dinâmica de classificação favorece uma Bélgica já classificada buscando confirmar liderança: 2-0."
+      "away_goals": 1,
+      "reasoning": "Lukaku titular eleva o poder ofensivo belga e a Bélgica precisa vencer, mas o Irã demonstrou capacidade de marcar (2×2 vs. NZL, 2×0 vs. Mali) e tem Taremi como ameaça real, tornando o placar limpo improvável frente à fragilidade defensiva que ambas as equipes exibiram na estreia.",
+      "pregame_note": "Lukaku titular eleva o poder ofensivo belga e a Bélgica precisa vencer, mas o Irã demonstrou capacidade de marcar (2×2 vs. NZL, 2×0 vs. Mali) e tem Taremi como ameaça real, tornando o placar limpo improvável frente à fragilidade defensiva que ambas as equipes exibiram na estreia."
     },
     {
       "match_number": 40,
@@ -1857,6 +1858,7 @@
     22,
     27,
     28,
+    39,
     62,
     68
   ]
