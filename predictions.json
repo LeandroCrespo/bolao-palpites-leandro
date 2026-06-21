@@ -515,7 +515,8 @@
       "date": "2026-06-21",
       "home_goals": 1,
       "away_goals": 0,
-      "reasoning": "Uruguai com desfalques confirmados de Arrascaeta (criatividade no meio) e Ronald Araújo (zaga), além de só 1 vitória nos últimos jogos pré-Copa e empate vs Arábia. Cabo Verde montou ferrolho impressionante vs Espanha (0x0) com Vozinha, sofre apenas 0,8 gol/jogo nas eliminatórias. Vitória uruguaia esperada com Darwin+Valverde, mas placar magro reflete o déficit criativo e a solidez defensiva de Cabo Verde — ajusto de 2-1 para 1-0."
+      "reasoning": "Uruguai com desfalques confirmados de Arrascaeta (criatividade no meio) e Ronald Araújo (zaga), além de só 1 vitória nos últimos jogos pré-Copa e empate vs Arábia. Cabo Verde montou ferrolho impressionante vs Espanha (0x0) com Vozinha, sofre apenas 0,8 gol/jogo nas eliminatórias. Vitória uruguaia esperada com Darwin+Valverde, mas placar magro reflete o déficit criativo e a solidez defensiva de Cabo Verde — ajusto de 2-1 para 1-0.",
+      "pregame_note": "Uruguai favorito mas com ataque limitado (sem Arrascaeta e R. Araújo, só 3 gols nos últimos 5 jogos), e Cabo Verde vem de 3 jogos sem sofrer gols — o 1x0 traduz fielmente o favoritismo apertado com a barreira defensiva cabo-verdiana."
     },
     {
       "match_number": 47,
@@ -1859,6 +1860,7 @@
     27,
     28,
     39,
+    46,
     62,
     68
   ]
