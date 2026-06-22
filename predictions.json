@@ -584,7 +584,8 @@
       "date": "2026-06-22",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Confronto equilibrado e muito disputado entre Noruega (Tier 4) e Senegal (Tier 3). Embora o ranking coloque o Senegal acima, a Noruega chega ao Mundial como força emergente com Haaland, Ødegaard, Sørloth e Nusa. O Senegal tem defesa sólida e ataque perigoso com Mané/Jackson/Sarr. A Noruega precisará dos pontos para garantir classificação; Haaland deve marcar pelo menos um. Senegal reagirá, mas o poder ofensivo norueguês — 8 vitórias em 8 nas eliminatórias — será decisivo. Resultado apertado: 2-1 para a Noruega em Nova York."
+      "reasoning": "Confronto equilibrado e muito disputado entre Noruega (Tier 4) e Senegal (Tier 3). Embora o ranking coloque o Senegal acima, a Noruega chega ao Mundial como força emergente com Haaland, Ødegaard, Sørloth e Nusa. O Senegal tem defesa sólida e ataque perigoso com Mané/Jackson/Sarr. A Noruega precisará dos pontos para garantir classificação; Haaland deve marcar pelo menos um. Senegal reagirá, mas o poder ofensivo norueguês — 8 vitórias em 8 nas eliminatórias — será decisivo. Resultado apertado: 2-1 para a Noruega em Nova York.",
+      "pregame_note": "Noruega tem média de 2,2 gols feitos e 1,0 sofridos, enquanto Senegal tem média de 1,7 gols feitos e 1,7 sofridos — Noruega claramente favorita com Haaland em alta e escalação plena, mas a defesa senegalesa (Koulibaly + bloqueio médio organizado) tende a dificultar um placar elástico, e o Senegal tem ataque capaz de marcar ao menos uma vez mesmo sob pressão."
     },
     {
       "match_number": 53,
@@ -1866,6 +1867,7 @@
     40,
     46,
     51,
+    52,
     57,
     62,
     68
