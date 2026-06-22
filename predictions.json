@@ -570,9 +570,10 @@
       "home_team": "FRA",
       "away_team": "INT_2",
       "date": "2026-06-22",
-      "home_goals": 4,
+      "home_goals": 3,
       "away_goals": 0,
-      "reasoning": "França (Tier 1) vs Iraque (Tier 5) — maior desequilíbrio técnico do grupo. Com a qualificação praticamente garantida, Deschamps pode rotacionar, mas ainda assim o elenco francês — Mbappé, Dembélé, Thuram, Barcola, Olise — tem qualidade muito superior. O Iraque defensivamente foi organizado nas eliminatórias asiáticas, mas a distância de nível é enorme. Goleada esperada em Filadélfia. O Iraque tentará ao menos defender com compacidade, mas a capacidade criativa francesa é imbatível neste nível. Placar conservador: 4-0."
+      "reasoning": "França tem média de 2,6 gols feitos e 1,0 sofrido por jogo nos últimos 10, enquanto Iraque tem média de 1,0 gols feitos e 1,4 sofridos — o 4-0 estaria ~50% acima da média ofensiva francesa; o Iraque tende ao bloqueio defensivo e, mesmo tomando 4 da Noruega, chegou a balançar a rede, tornando o placar sem gols iraquianos plausível mas não garantido; 3-0 equilibra o favoritismo amplo da França com as médias reais.",
+      "pregame_note": "França tem média de 2,6 gols feitos e 1,0 sofrido por jogo nos últimos 10, enquanto Iraque tem média de 1,0 gols feitos e 1,4 sofridos — o 4-0 estaria ~50% acima da média ofensiva francesa; o Iraque tende ao bloqueio defensivo e, mesmo tomando 4 da Noruega, chegou a balançar a rede, tornando o placar sem gols iraquianos plausível mas não garantido; 3-0 equilibra o favoritismo amplo da França com as médias reais."
     },
     {
       "match_number": 52,
@@ -1864,6 +1865,7 @@
     39,
     40,
     46,
+    51,
     57,
     62,
     68
