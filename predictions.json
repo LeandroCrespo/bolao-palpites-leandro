@@ -638,7 +638,8 @@
       "date": "2026-06-22",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Confronto de alto nível: Argentina (Tier 1) vs Áustria (Tier 3). A Áustria de Rangnick irá pressionar alto e tentar explorar a profundidade, e sem Baumgartner o meio fica menos criativo. Messi, já com mais ritmo de jogo na 2ª rodada, deve ser mais influente. Mac Allister e Enzo Fernández controlam o jogo. A Áustria tem potencial para marcar num contra-ataque — Arnautovic ou Sabitzer podem surpreender. Vitória argentina, mas com resistência austríaca."
+      "reasoning": "Confronto de alto nível: Argentina (Tier 1) vs Áustria (Tier 3). A Áustria de Rangnick irá pressionar alto e tentar explorar a profundidade, e sem Baumgartner o meio fica menos criativo. Messi, já com mais ritmo de jogo na 2ª rodada, deve ser mais influente. Mac Allister e Enzo Fernández controlam o jogo. A Áustria tem potencial para marcar num contra-ataque — Arnautovic ou Sabitzer podem surpreender. Vitória argentina, mas com resistência austríaca.",
+      "pregame_note": "Argentina tem média de ~2,9 gols feitos e ~0,0 sofridos nos 2 jogos mais recentes, enquanto Áustria tem média de ~2,4 gols feitos e ~0,8 sofridos nos últimos 5 jogos — o favoritismo argentino com força máxima (Messi, Lautaro confirmados) sustenta a vitória por 2–1, e o poder ofensivo austríaco (3–1 vs. Jordânia, 5–1 vs. Gana) torna plausível o gol da Áustria, sem justificar elevar a margem para 3–0 ou 3–1."
     },
     {
       "match_number": 58,
@@ -1863,6 +1864,7 @@
     39,
     40,
     46,
+    57,
     62,
     68
   ]
