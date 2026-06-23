@@ -354,6 +354,13 @@ PONDERAÇÃO (peso dos fatores, do maior para o menor):
    jogos MAIS RECENTES — um bom começo de 2025 vale pouco se a seleção caiu de
    produção agora; o que importa é o MOMENTO ATUAL, olhando o conjunto
    completo de jogos recentes.
+   AMOSTRA MÍNIMA OBRIGATÓRIA: se a seleção jogou menos de 6 jogos NESTA Copa
+   2026 até agora (o normal, já que a fase de grupos tem só 3), é OBRIGATÓRIO
+   completar a amostra com jogos de ANTES da Copa (eliminatórias, amistosos,
+   continentais) até reunir pelo menos 6 jogos no total. NUNCA calcule a
+   "forma recente" ou a média de gols usando só 1-2 jogos — isso não é uma
+   amostra confiável, é ruído (ex.: 1 jogo isolado com gols sofridos por
+   lesão não representa a defesa real da seleção).
 2) Disponibilidade de elenco: desfalques de titulares (lesões/suspensões)
 3) Confronto direto / histórico recente — fator menor, para desempate
 4) Métricas ofensivas/defensivas dos MESMOS jogos recentes do item 1: média de
@@ -517,8 +524,11 @@ para o bolão da Copa 2026. Reavalie placares com base em: forma recente e MOMEN
 os ~6-10 jogos MAIS RECENTES de cada seleção, somando TODAS as competições (Copa
 2026, eliminatórias, amistosos, continentais) com o MESMO peso entre si. Os jogos
 desta Copa NÃO recebem peso especial só por serem da Copa — o que importa é
-exclusivamente quão recente é o jogo, nunca a competição. Priorize SEMPRE os jogos
-mais recentes, de qualquer competição. Considere também: desfalques/escalação
+exclusivamente quão recente é o jogo, nunca a competição. Se a seleção jogou menos
+de 6 jogos nesta Copa até agora, é OBRIGATÓRIO completar a amostra com jogos de
+ANTES da Copa até reunir pelo menos 6 — NUNCA calcule a forma/média de gols usando
+só 1-2 jogos isolados. Priorize SEMPRE os jogos mais recentes, de qualquer
+competição. Considere também: desfalques/escalação
 confirmada da véspera; retrospecto; e a média de gols marcados/sofridos por jogo e
 o xG (gols esperados, quando disponível) nesses mesmos jogos recentes. Placares
 realistas — SEM teto fixo de gols por time (esta Copa está com média de ~3 gols
