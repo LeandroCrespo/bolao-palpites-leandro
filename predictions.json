@@ -787,9 +787,10 @@
       "home_team": "PAN",
       "away_team": "CRO",
       "date": "2026-06-23",
-      "home_goals": 0,
+      "home_goals": 1,
       "away_goals": 2,
-      "reasoning": "A Croácia, mesmo em declínio geracional, mantém enorme superioridade sobre o Panamá. Com Modrić, Kovačić, Kramarić e Perisić ainda em campo, os croatas têm qualidade técnica muito acima dos centro-americanos. O Panamá joga defensivo e compacto (4-2-3-1 de Christiansen), mas com Carrasquilla possivelmente ainda limitado pela lesão na virilha, a criatividade ofensiva será comprometida. A Croácia deve controlar a posse e encontrar os espaços. Vitória croata confortável para manter vivas as chances de classificação."
+      "reasoning": "Panamá tem média de 1,67 gols feitos e 2,00 sofridos, enquanto Croácia tem média de 1,67 gols feitos e 2,17 sofridos — defesas porosas dos dois lados sustentam ao menos um gol panamenho; a Croácia tem qualidade técnica para vencer, mas a vulnerabilidade defensiva exposta contra a Inglaterra (4 gols sofridos) e a capacidade do Panamá de marcar em transições tornam o placar limpo (0–2) improvável, favorecendo um resultado mais estreito como 1–2.",
+      "pregame_note": "Panamá tem média de 1,67 gols feitos e 2,00 sofridos, enquanto Croácia tem média de 1,67 gols feitos e 2,17 sofridos — defesas porosas dos dois lados sustentam ao menos um gol panamenho; a Croácia tem qualidade técnica para vencer, mas a vulnerabilidade defensiva exposta contra a Inglaterra (4 gols sofridos) e a capacidade do Panamá de marcar em transições tornam o placar limpo (0–2) improvável, favorecendo um resultado mais estreito como 1–2."
     },
     {
       "match_number": 71,
@@ -1876,6 +1877,7 @@
     62,
     63,
     68,
-    69
+    69,
+    70
   ]
 }
