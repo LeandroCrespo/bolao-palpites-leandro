@@ -777,7 +777,8 @@
       "date": "2026-06-23",
       "home_goals": 3,
       "away_goals": 0,
-      "reasoning": "A Inglaterra (Tier 1) tem enorme vantagem sobre Gana (Tier 5) em qualidade de elenco, profundidade e organização tática. Com a classificação praticamente assegurada após o jogo contra a Croácia (ou pressionada caso tenha empatado), Tuchel deve colocar força máxima em Boston. Kane como centroavante, Bellingham como meia-atacante e Salah pela ala devem ser determinantes. Gana tem jogadores com qualidade técnica individual (Semenyo é do Manchester City), mas coletivamente não há como suprir a diferença de nível. Esperamos uma vitória sólida inglesa, possivelmente ainda na primeira etapa."
+      "reasoning": "A Inglaterra (Tier 1) tem enorme vantagem sobre Gana (Tier 5) em qualidade de elenco, profundidade e organização tática. Com a classificação praticamente assegurada após o jogo contra a Croácia (ou pressionada caso tenha empatado), Tuchel deve colocar força máxima em Boston. Kane como centroavante, Bellingham como meia-atacante e Salah pela ala devem ser determinantes. Gana tem jogadores com qualidade técnica individual (Semenyo é do Manchester City), mas coletivamente não há como suprir a diferença de nível. Esperamos uma vitória sólida inglesa, possivelmente ainda na primeira etapa.",
+      "pregame_note": "Inglaterra tem média de 1,8 gols feitos e 0,8 sofridos, enquanto Gana tem média de 0,8 gols feitos e 2,2 sofridos por jogo — desequilíbrio claro sustenta o 3×0, reforçado pela troca forçada no gol ganês (Ati-Zigi lesionado → Asare), ausência de Kudus e ataque inglês pleno com Kane, Bellingham e Gordon confirmados."
     },
     {
       "match_number": 70,
@@ -1874,6 +1875,7 @@
     58,
     62,
     63,
-    68
+    68,
+    69
   ]
 }
