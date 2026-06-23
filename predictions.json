@@ -201,8 +201,8 @@
       "away_team": "HAI",
       "date": "2026-06-24",
       "home_goals": 3,
-      "away_goals": 1,
-      "reasoning": "Marrocos, possivelmente já classificado, enfrenta o Haiti na última rodada. Mesmo rotacionando, o elenco marroquino é amplamente superior. Marrocos vence com tranquilidade, mas o Haiti tende a balançar as redes ao menos uma vez — como mostrou ao marcar 4 contra Nova Zelândia e contar com Duckens Nazon como referência ofensiva. Placar 3-1 — Marrocos fecha o grupo em alta e Haiti sai com honra de ter marcado na Copa após 52 anos de ausência."
+      "away_goals": 0,
+      "reasoning": "MAR invicto há 7 jogos: 5 vitórias e 2 empates, marcou 14 gols e sofreu 2 nos últimos 5 (média 2,8 feitos e 0,4 sofridos). Na Copa: 1,5 feito e 0,5 sofrido/jogo. HAI eliminado, 0 pontos, 0 gols marcados nos 2 jogos da Copa (sofrendo 4 no total). O Haiti não converteu finalizações contra SCO e levou 3 do Brasil. MAR defensivamente sólida não vai sofrer gol. Ajusto de 3-1 para 3-0 — sem evidência de gol haitiano nesta Copa."
     },
     {
       "match_number": 19,
@@ -707,9 +707,9 @@
       "home_team": "POR",
       "away_team": "UZB",
       "date": "2026-06-23",
-      "home_goals": 2,
+      "home_goals": 3,
       "away_goals": 0,
-      "reasoning": "Portugal enfrenta o Uzbequistão já classificado ou quase. A seleção portuguesa tem qualidade técnica muito superior: Bruno Fernandes organizando o jogo, Rafael Leão e Ronaldo ameaçando, além de Vitinha e João Neves no meio-campo. O Uzbequistão, após a derrota para a Colômbia, jogará sob pressão por pontos. Cannavaro tende a usar um bloco baixo, mas Portugal tem paciência e qualidade para abrir espaços. Khusanov será o principal desafio para o ataque português, mas a diferença de nível (Tier 1 vs Tier 4) deve resultar em vitória confortável por 2-0."
+      "reasoning": "POR urge por gols (empatou 1-1 com COD; saldo precisa crescer para chave com COL). UZB perdeu 1-3 com COL, sem toques na área no 1T, agravada por lesão do zagueiro titular Ashurmatov. POR sem desfalques graves. POR média: 1,0 feito e 1,0 sofrido/jogo na Copa; UZB: 1,0 feito e 3,0 sofridos. Urgência ofensiva + fragilidade uzbeque + desfalque defensivo sustentam placar elástico. Ajusto de 2-0 para 3-0."
     },
     {
       "match_number": 64,
@@ -1853,7 +1853,7 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-21T08:02:26.579302",
+  "last_updated": "2026-06-23T06:53:26.862682",
   "pregame_checked": [
     4,
     9,
