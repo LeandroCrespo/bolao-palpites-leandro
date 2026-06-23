@@ -651,8 +651,9 @@
       "away_team": "ALG",
       "date": "2026-06-23",
       "home_goals": 0,
-      "away_goals": 2,
-      "reasoning": "Jogo decisivo para o segundo lugar do grupo. A Argélia tem Mahrez liderando um ataque experiente e chegou com moral após bater a Holanda no amistoso. A Jordânia, estreante na Copa, sem Al-Naimat e com elenco composto majoritariamente de jogadores de ligas árabes e asiáticas, deve sofrer contra a velocidade argelina. O esquema defensivo 3-4-2-1 da Jordânia pode segurar por um tempo, mas a Argélia deve resolver na segunda etapa."
+      "away_goals": 1,
+      "reasoning": "Jordânia tem média de ~1,33 gols feitos e ~2,67 sofridos por jogo, enquanto Argélia tem média de ~2,0 gols feitos e ~0,5 sofridos (excluindo a anomalia de Messi); mas o xG da Argélia foi de apenas 0.32 contra a Argentina e o ataque argelino foi anulado, com 7 chutes sem nenhum no alvo — a Argélia deve vencer, porém numa vitória curta, com Jordan defensivamente organizada e perigosa no contra-ataque por Olwan e Al-Tamari.",
+      "pregame_note": "Jordânia tem média de ~1,33 gols feitos e ~2,67 sofridos por jogo, enquanto Argélia tem média de ~2,0 gols feitos e ~0,5 sofridos (excluindo a anomalia de Messi); mas o xG da Argélia foi de apenas 0.32 contra a Argentina e o ataque argelino foi anulado, com 7 chutes sem nenhum no alvo — a Argélia deve vencer, porém numa vitória curta, com Jordan defensivamente organizada e perigosa no contra-ataque por Olwan e Al-Tamari."
     },
     {
       "match_number": 59,
@@ -1869,6 +1870,7 @@
     51,
     52,
     57,
+    58,
     62,
     68
   ]
