@@ -707,9 +707,10 @@
       "home_team": "POR",
       "away_team": "UZB",
       "date": "2026-06-23",
-      "home_goals": 3,
+      "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "POR urge por gols (empatou 1-1 com COD; saldo precisa crescer para chave com COL). UZB perdeu 1-3 com COL, sem toques na área no 1T, agravada por lesão do zagueiro titular Ashurmatov. POR sem desfalques graves. POR média: 1,0 feito e 1,0 sofrido/jogo na Copa; UZB: 1,0 feito e 3,0 sofridos. Urgência ofensiva + fragilidade uzbeque + desfalque defensivo sustentam placar elástico. Ajusto de 2-0 para 3-0."
+      "reasoning": "Portugal tem média de ~1,2 gols feitos e ~0,4 sofridos por jogo nos últimos 5 jogos, enquanto Uzbequistão tem média de ~1,0 gol feito e ~1,6 sofridos — o favoritismo português é claro e o retorno de Rúben Dias libera a equipe para pressionar, mas a média ofensiva recente não sustenta 3 gols contra uma retranca que vai se fechar ainda mais hoje.",
+      "pregame_note": "Portugal tem média de ~1,2 gols feitos e ~0,4 sofridos por jogo nos últimos 5 jogos, enquanto Uzbequistão tem média de ~1,0 gol feito e ~1,6 sofridos — o favoritismo português é claro e o retorno de Rúben Dias libera a equipe para pressionar, mas a média ofensiva recente não sustenta 3 gols contra uma retranca que vai se fechar ainda mais hoje."
     },
     {
       "match_number": 64,
@@ -1872,6 +1873,7 @@
     57,
     58,
     62,
+    63,
     68
   ]
 }
