@@ -337,12 +337,17 @@ PROCESSO:
    busca extra, é extrair isso dos resultados que você já encontrou.
 3. Chame get_current_predictions para ver os palpites atuais
 4. Analise cruzando TODOS os fatores → o que mudou em relação ao palpite inicial?
-5. OBRIGATÓRIO: chame a ferramenta update_predictions com TODAS as mudanças que
-   você decidiu. Escrever a análise em texto NÃO altera nada — só a chamada da
-   ferramenta aplica. Se decidiu ajustar qualquer placar, sua ÚLTIMA ação antes
-   de encerrar TEM que ser a chamada update_predictions (não termine só com texto).
-   Se, após analisar, nenhum palpite precisa mudar, aí sim pode encerrar sem
-   chamar a ferramenta, dizendo explicitamente "nenhum ajuste necessário".
+5. OBRIGATÓRIO: chame update_predictions A CADA GRUPO analisado (ou a cada
+   2-3 jogos), em vez de acumular tudo pra uma única chamada gigante no
+   final. Ex.: termine a análise do Grupo A → chame update_predictions já
+   com as mudanças do Grupo A → siga pro Grupo B → chame de novo. Isso evita
+   perder TODAS as decisões do dia se a resposta for cortada por limite de
+   tokens no meio da análise de um grupo mais tarde (já aconteceu: a análise
+   ficou ótima, mas nada foi salvo porque a chamada da ferramenta só viria
+   no final, que nunca chegou). Escrever a análise em texto NÃO altera
+   nada — só a chamada da ferramenta aplica. Se, após analisar TUDO, nenhum
+   palpite precisa mudar, aí sim pode encerrar sem chamar a ferramenta,
+   dizendo explicitamente "nenhum ajuste necessário".
 
 PONDERAÇÃO (peso dos fatores, do maior para o menor):
 1) Forma recente e MOMENTUM: os ~6 a 10 jogos MAIS RECENTES de cada seleção,
@@ -433,11 +438,12 @@ def run_agent(dry_run: bool = False):
     ]
 
     all_updates = []  # coleta todas as atualizações para o Telegram
+    truncado = False  # True se a resposta foi cortada antes de terminar a análise
 
     for iteration in range(15):  # limite de segurança
         response = client.beta.messages.create(
             model=MODEL,
-            max_tokens=4000,
+            max_tokens=8000,
             system=SYSTEM_PROMPT,
             tools=TOOLS_SCHEMA,
             messages=messages,
@@ -488,23 +494,38 @@ def run_agent(dry_run: bool = False):
             messages.append({"role": "user", "content": tool_results})
         else:
             print(f"Stop reason inesperado: {response.stop_reason}")
+            truncado = True
             break
 
     print(f"\nAgente concluido: {datetime.now().strftime('%H:%M:%S')}")
 
-    # Notificacao Telegram (somente se houve atualizacoes e nao for dry-run)
-    if all_updates and not dry_run:
+    # Notificacao Telegram (nao for dry-run)
+    if not dry_run:
         token = os.getenv("TELEGRAM_BOT_TOKEN")
         chat_id = os.getenv("TELEGRAM_CHAT_ID")
-        if token and chat_id:
-            hoje = datetime.now().strftime("%d/%m/%Y")
+        hoje = datetime.now().strftime("%d/%m/%Y")
+        if token and chat_id and all_updates:
             linhas = [f"Copa 2026 - Palpites atualizados em {hoje}\n"]
             for u in all_updates:
                 linhas.append(f"Jogo #{u['match_number']}: {u['old']} -> {u['new']}")
                 if u.get("reasoning"):
                     linhas.append(f"  {u['reasoning']}")
             linhas.append(f"\nTotal: {len(all_updates)} palpite(s) alterado(s)")
+            if truncado:
+                linhas.append(
+                    "\n⚠️ A análise foi interrompida antes de terminar (limite de "
+                    "tokens) — pode haver jogos que ainda não foram reavaliados hoje."
+                )
             send_telegram(token, chat_id, "\n".join(linhas))
+        elif token and chat_id and truncado:
+            # Nada foi salvo a tempo, mas o usuario precisa saber que a
+            # analise de hoje nao terminou (em vez de silencio total).
+            send_telegram(
+                token, chat_id,
+                f"Copa 2026 - {hoje}\n\n⚠️ A análise diária foi interrompida antes "
+                "de aplicar qualquer atualização (limite de tokens no meio da "
+                "análise). Nenhum palpite foi alterado hoje por essa execução."
+            )
             print(f"  Notificacao Telegram enviada ({len(all_updates)} atualizacoes)")
 
 
