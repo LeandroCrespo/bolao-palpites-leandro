@@ -123,7 +123,8 @@
       "date": "2026-06-24",
       "home_goals": 1,
       "away_goals": 1,
-      "reasoning": "Ambas classificadas com 4 pts; Canadá lidera e empate basta para ficar em 1º. SUI: 2,5 feitos e 1,0 sofrido/jogo; CAN: 3,5 feitos e 0,5 sofrido/jogo. Canadá sem Davies (distensão) e Koné (fratura). Contexto favorece jogo administrado com empate. Mantém 1-1."
+      "reasoning": "Ambas classificadas com 4 pts; Canadá lidera e empate basta para ficar em 1º. SUI: 2,5 feitos e 1,0 sofrido/jogo; CAN: 3,5 feitos e 0,5 sofrido/jogo. Canadá sem Davies (distensão) e Koné (fratura). Contexto favorece jogo administrado com empate. Mantém 1-1.",
+      "pregame_note": "Suíça tem média de ~2,25 gols feitos e ~1,25 sofridos, enquanto Canadá tem média de ~1,88 gols feitos e ~0,50 sofridos — defesa canadense muito sólida recentemente, o empate favorece o Canadá (que precisa só de um ponto para ser 1º) e a ausência de Koné no meio enfraquece a transição canadense sem mudar o quadro geral de um jogo equilibrado e de poucos gols de cada lado."
     },
     {
       "match_number": 12,
@@ -134,7 +135,8 @@
       "date": "2026-06-24",
       "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "Ambas eliminadas. BIH: 1,0 gol feito e 2,5 sofridos/jogo; QAT: 0,5 feito e 3,5 sofridos/jogo (pior defesa do grupo, goleada 6-0 para o Canadá). Bósnia ligeiramente superior em qualidade individual. Mantém 2-0."
+      "reasoning": "Ambas eliminadas. BIH: 1,0 gol feito e 2,5 sofridos/jogo; QAT: 0,5 feito e 3,5 sofridos/jogo (pior defesa do grupo, goleada 6-0 para o Canadá). Bósnia ligeiramente superior em qualidade individual. Mantém 2-0.",
+      "pregame_note": "Bósnia tem média de ~0,83 gols feitos e ~1,33 sofridos por jogo, enquanto Qatar tem média de ~0,50 gols feitos e ~1,70 sofridos — favoritismo bósnio claro com defesa qatari em colapso (7 gols sofridos nos 2 jogos da Copa), dois suspensos no Qatar e a Bósnia desesperada por saldo de gols sustentam uma vitória por 2-0 como o placar mais realista."
     },
     {
       "match_number": 13,
@@ -1862,6 +1864,8 @@
     4,
     9,
     10,
+    11,
+    12,
     15,
     16,
     21,
