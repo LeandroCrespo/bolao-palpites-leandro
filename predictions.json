@@ -193,7 +193,8 @@
       "date": "2026-06-24",
       "home_goals": 0,
       "away_goals": 2,
-      "reasoning": "Brasil favorito mesmo sem Raphinha (lesão confirmada); Vini Jr em alta (2 gols+1 assist no Mundial). BRA: ~2,4 feitos e 0,8 sofridos/jogo (Copa+amistosos recentes). ESC atua em bloco baixo e não tem ofensividade real (0,5 feito/jogo na Copa). Neymar pode aparecer como impacto vindo do banco. Mantém 0-2."
+      "reasoning": "Brasil favorito mesmo sem Raphinha (lesão confirmada); Vini Jr em alta (2 gols+1 assist no Mundial). BRA: ~2,4 feitos e 0,8 sofridos/jogo (Copa+amistosos recentes). ESC atua em bloco baixo e não tem ofensividade real (0,5 feito/jogo na Copa). Neymar pode aparecer como impacto vindo do banco. Mantém 0-2.",
+      "pregame_note": "A Escócia tem média de ~0,5 gols feitos e ~0,8 sofridos por jogo nesta Copa (xG 0,78/1,02), enquanto o Brasil tem média de ~2,0–2,67 gols feitos e ~0,5 sofridos (xG 1,51/0,80) — o favoritismo brasileiro é claro em números, o Brasil precisa apenas de empate e pode se expor menos, e o histórico de 8–0–2 (jamais perdeu para a Escócia) reforça o 0–2 como placar mais provável."
     },
     {
       "match_number": 18,
@@ -204,7 +205,8 @@
       "date": "2026-06-24",
       "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "Marrocos precisa da vitória para brigar pela liderança. Haiti eliminado, 0 gols marcados em 2 jogos (0,0 feito/jogo), 2,0 sofridos/jogo. MAR: 1,0 feito e 0,5 sofrido/jogo na Copa. O 3-0 era otimista dado o padrão ofensivo marroc. Reduzo para 2-0 mais consistente com as médias."
+      "reasoning": "Marrocos precisa da vitória para brigar pela liderança. Haiti eliminado, 0 gols marcados em 2 jogos (0,0 feito/jogo), 2,0 sofridos/jogo. MAR: 1,0 feito e 0,5 sofrido/jogo na Copa. O 3-0 era otimista dado o padrão ofensivo marroc. Reduzo para 2-0 mais consistente com as médias.",
+      "pregame_note": "Marrocos tem média de 2,1 gols feitos e 0,6 sofridos nos últimos 7 jogos, enquanto Haiti tem média de 1,2 gols feitos e 1,4 sofridos (e zero gols em 2 jogos nesta Copa); a vitória marroquina por 2-0 é plenamente sustentada pela superioridade técnica, pelo incentivo de saldo de gols para a liderança e pelo padrão de controle sem excessos demonstrado pelos Leões do Atlas nesta Copa."
     },
     {
       "match_number": 19,
@@ -1868,6 +1870,8 @@
     12,
     15,
     16,
+    17,
+    18,
     21,
     22,
     27,
