@@ -320,21 +320,34 @@ SYSTEM_PROMPT = """Você é um agente especialista em previsões de futebol para
 
 Seu objetivo: rever os palpites dos jogos ainda não iniciados com base nos resultados reais e em informações atuais.
 
+⚠️ REGRA MAIS IMPORTANTE DESTE PROMPT — AMOSTRA NUNCA SÓ DA COPA: como a fase
+de grupos da Copa 2026 só tem 3 jogos (e agora pouco depois do início, só 2),
+usar SÓ os jogos da Copa de cada seleção é SEMPRE uma amostra pequena demais
+e SEMPRE proibido. Em TODA seleção que você analisar, é OBRIGATÓRIO buscar
+também os jogos de ANTES da Copa (eliminatórias, amistosos, continentais —
+use web_search "[Time] amistosos eliminatorias resultados antes da copa
+2026") até reunir pelo menos 6 jogos no total. Se na sua resposta a média de
+gols de algum time vier de "2 jogos" ou "3 jogos", isso é um ERRO de
+processo — pare, busque mais jogos daquele time, e só then calcule a média.
+
 PROCESSO:
 1. Chame get_tournament_status para ver resultados reais e jogos futuros
 2. Para cada jogo nas próximas 48h, use web_search para montar uma visão AMPLA
-   de cada seleção (não se baseie em um único fator). Pesquise:
+   de cada seleção (não se baseie em um único fator). Pesquise SEMPRE estas
+   buscas, nesta ordem, pras DUAS seleções do confronto:
    - Desfalques: "[Time A] [Time B] Copa do Mundo 2026 lesoes suspensoes"
-   - ÚLTIMOS jogos (os MAIS RECENTES primeiro, de TODAS as competições, não só
-     a Copa): "[Time] ultimos jogos resultados recentes"
-   - Amistosos e preparação: "[Time] amistosos preparacao Copa 2026"
-   - Desempenho recente em campeonatos/eliminatórias: "[Time] eliminatorias desempenho recente"
+   - Jogos DESTA Copa: "[Time] Copa do Mundo 2026 resultados"
+   - OBRIGATÓRIO — jogos de ANTES da Copa (não pule esta busca mesmo se já
+     tiver os jogos da Copa): "[Time] amistosos eliminatorias resultados
+     antes da copa 2026"
    - Estatísticas ofensivas/defensivas: "[Time] xG gols esperados estatisticas recentes"
    - Confronto direto: "[Time A] x [Time B] historico confronto direto"
-   Com os placares e dados desses mesmos jogos recentes, estime a MÉDIA DE
-   GOLS MARCADOS, a MÉDIA DE GOLS SOFRIDOS e o xG (gols esperados) por jogo
-   de cada seleção, quando disponível (ver item 4 da PONDERAÇÃO) — não é uma
-   busca extra, é extrair isso dos resultados que você já encontrou.
+   Junte os jogos da Copa COM os jogos de antes (até reunir pelo menos 6 no
+   total, mais recentes primeiro) e estime a MÉDIA DE GOLS MARCADOS, a MÉDIA
+   DE GOLS SOFRIDOS e o xG (gols esperados) por jogo de cada seleção sobre
+   essa amostra combinada (ver item 4 da PONDERAÇÃO) — calculada a partir
+   dos resultados das buscas acima, sem precisar de uma busca adicional só
+   pra isso.
 3. Chame get_current_predictions para ver os palpites atuais
 4. Analise cruzando TODOS os fatores → o que mudou em relação ao palpite inicial?
 5. OBRIGATÓRIO: chame update_predictions A CADA GRUPO analisado (ou a cada
@@ -566,9 +579,13 @@ Palpite atual: {ph}-{pa}
 Pesquise: os ÚLTIMOS jogos (mais recentes, com PLACAR, de TODAS as
 competições — não só a Copa) de cada seleção, e o retrospecto. Priorize
 SEMPRE os jogos mais recentes, independente da competição — jogos da Copa
-NÃO têm peso especial, contam como qualquer outro jogo recente. Com os
-placares encontrados, estime a média de gols marcados/sofridos por jogo de
-cada seleção e o xG (gols esperados), quando disponível.
+NÃO têm peso especial, contam como qualquer outro jogo recente.
+OBRIGATÓRIO: como cada seleção só tem 2-3 jogos nesta Copa até agora, NUNCA
+calcule a média usando só os jogos da Copa — busque também "[Time]
+amistosos eliminatorias resultados antes da copa 2026" pra completar pelo
+menos 6 jogos no total por seleção. Com os placares combinados (Copa + antes
+da Copa), estime a média de gols marcados/sofridos por jogo de cada seleção
+e o xG (gols esperados), quando disponível.
 
 ESCALAÇÃO: busque ATIVAMENTE a escalação confirmada ou provável de cada
 seleção pra este jogo — pesquise "[Time A] escalação confirmada hoje" e
