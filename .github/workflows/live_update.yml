@@ -1,12 +1,12 @@
 name: Copa 2026 - Atualização Automática de Palpites
 
 on:
-  schedule:
-    # Roda todos os dias às 03:00 UTC = 00:00 Brasília
-    # Após cada rodada de jogos, captura os resultados e atualiza palpites
-    - cron: '0 3 * * *'
-
-  # Permite rodar manualmente pelo painel do GitHub (Actions > Run workflow)
+  # Disparo automático diário DESATIVADO a pedido do usuário, pra cortar
+  # custo de API (era o maior consumidor de tokens do projeto). O agente
+  # pré-jogo (pregame_update.yml) já faz uma análise completa por conta
+  # própria perto de cada jogo, com a vantagem extra da escalação
+  # confirmada — ele continua sendo a "palavra final" de qualquer forma.
+  # Continua disponível via Run workflow manual se precisar.
   workflow_dispatch:
 
 permissions:
