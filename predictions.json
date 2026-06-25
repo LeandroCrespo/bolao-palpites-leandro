@@ -55,7 +55,8 @@
       "date": "2026-06-24",
       "home_goals": 1,
       "away_goals": 2,
-      "reasoning": "México líder com 6 pts e classificado, pode rodar peças mas ainda favorito. Tchéquia (1 pt) joga pela vida mas tem pouca criatividade ofensiva (Koubek pragmático). México: 1,5 gols feitos e 0,0 sofridos/jogo na Copa; Tchéquia: 1,0 feito e 1,5 sofridos. Retorno de César Montes na zaga mexicana. Palpite 1-2 mantido."
+      "reasoning": "México líder com 6 pts e classificado, pode rodar peças mas ainda favorito. Tchéquia (1 pt) joga pela vida mas tem pouca criatividade ofensiva (Koubek pragmático). México: 1,5 gols feitos e 0,0 sofridos/jogo na Copa; Tchéquia: 1,0 feito e 1,5 sofridos. Retorno de César Montes na zaga mexicana. Palpite 1-2 mantido.",
+      "pregame_note": "O histórico entre as duas seleções é curioso e breve — os dois países se encontraram apenas uma vez no cenário internacional. Na final do Lunar New Year Cup de 2000, a Tchéquia venceu o México por 2-1. O México nunca venceu a Tchéquia no histórico de confrontos"
     },
     {
       "match_number": 6,
@@ -66,7 +67,8 @@
       "date": "2026-06-24",
       "home_goals": 0,
       "away_goals": 2,
-      "reasoning": "África do Sul perde Mokoena e Zwane (seus dois maiores criadores) por suspensão. Crise ofensiva: apenas 1 gol em 2 jogos, de pênalti. RSA: 0,5 feito e 1,5 sofridos/jogo. Coreia completa (sem desfalques), xG 1,92 na estreia, KOR: 1,0 feito e 1,0 sofrido. Favoritismo coreano claro. Mantém 0-2."
+      "reasoning": "África do Sul perde Mokoena e Zwane (seus dois maiores criadores) por suspensão. Crise ofensiva: apenas 1 gol em 2 jogos, de pênalti. RSA: 0,5 feito e 1,5 sofridos/jogo. Coreia completa (sem desfalques), xG 1,92 na estreia, KOR: 1,0 feito e 1,0 sofrido. Favoritismo coreano claro. Mantém 0-2.",
+      "pregame_note": "O 0–2 favorece demais uma África do Sul absolutamente estéril (apenas 1 gol nos 2 jogos da Copa). Com a equipe obrigada a avançar, ao menos 1"
     },
     {
       "match_number": 7,
@@ -1864,6 +1866,8 @@
   "last_updated": "2026-06-24T11:51:56.833621",
   "pregame_checked": [
     4,
+    5,
+    6,
     9,
     10,
     11,
