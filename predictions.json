@@ -331,9 +331,10 @@
       "home_team": "ECU",
       "away_team": "GER",
       "date": "2026-06-25",
-      "home_goals": 0,
-      "away_goals": 2,
-      "reasoning": "Equador sem gols em 2 jogos na Copa (0,0 feitos/jogo), pressionação máxima para vencer. Alemanha dominante: 4,5 feitos e 1,0 sofrido/jogo, 7 vitórias seguidas. Perda de Schlotterbeck na zaga alemã, mas elenco profundo. ECU vai se expor abrindo espaços. Defesa equilibrada do ECU nas eliminatórias (13 jogos sem sofrer), mas na Copa completamente bloqueada ofensivamente. Ajusto para 0-2 mais realista dado o 0,0 gols feitos do ECU."
+      "home_goals": 1,
+      "away_goals": 3,
+      "reasoning": "Equador tem média de ~0,88 gols feitos e ~0,50 sofridos nos últimos 8 jogos (xG de 1,93 na Copa, ainda não convertido, mas com pressão máxima hoje), enquanto Alemanha tem média de ~3,13 gols feitos e ~0,63 sofridos no mesmo período, com escalação de força total e cinco vitórias consecutivas; a pressão equatoriana por classificação abre espaço para um gol de La Tri, mas o poder ofensivo alemão e o retrospecto histórico (0-2 em confrontos) sustentam uma vitória confortável por 3 gols.",
+      "pregame_note": "Equador tem média de ~0,88 gols feitos e ~0,50 sofridos nos últimos 8 jogos (xG de 1,93 na Copa, ainda não convertido, mas com pressão máxima hoje), enquanto Alemanha tem média de ~3,13 gols feitos e ~0,63 sofridos no mesmo período, com escalação de força total e cinco vitórias consecutivas; a pressão equatoriana por classificação abre espaço para um gol de La Tri, mas o poder ofensivo alemão e o retrospecto histórico (0-2 em confrontos) sustentam uma vitória confortável por 3 gols."
     },
     {
       "match_number": 30,
@@ -1881,6 +1882,7 @@
     22,
     27,
     28,
+    29,
     30,
     39,
     40,
