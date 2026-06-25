@@ -401,7 +401,8 @@
       "date": "2026-06-25",
       "home_goals": 0,
       "away_goals": 3,
-      "reasoning": "Tunísia eliminada e em colapso: 0,5 feito e 4,5 sofridos/jogo, trocou treinador. Holanda dominante: 3,5 feitos e 1,5 sofridos/jogo, invicta em tempo regulamentar desde 2010 na Copa. Mantém 0-3."
+      "reasoning": "Tunísia eliminada e em colapso: 0,5 feito e 4,5 sofridos/jogo, trocou treinador. Holanda dominante: 3,5 feitos e 1,5 sofridos/jogo, invicta em tempo regulamentar desde 2010 na Copa. Mantém 0-3.",
+      "pregame_note": "A Tunísia tem média de ~0,5 gols feitos e ~2,8 sofridos por jogo nos últimos 6 jogos (incluindo 5-0 Bélgica, 1-5 Suécia e 0-4 Japão), enquanto a Holanda tem média de ~3,5 gols feitos e ~1,0 sofridos; vitória holandesa por 3 gols de diferença é o cenário mais sustentável, sem exagero que só se justificaria se a Holanda escalasse força máxima sem rotações."
     },
     {
       "match_number": 36,
@@ -410,9 +411,10 @@
       "home_team": "JPN",
       "away_team": "EUR_B",
       "date": "2026-06-25",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Japão (4 pts) precisa apenas do empate, tende a jogar defensivo (Moriyasu). Suécia (3 pts) precisa atacar. JPN: 3,0 feitos e 1,0 sofrido/jogo; SWE: 3,0 feitos mas 3,0 sofridos/jogo (fez 5 contra TUN mas levou 5 da NED). Kubo ausente pelo JPN. Contexto f avorece equilíbrio. Mantém 1-1."
+      "reasoning": "Japão tem média de ~2,2 gols feitos e ~0,5 sofridos nos jogos recentes (com defesa dominante em amistosos e vitória 4×0 na Copa), enquanto Suécia tem média de ~2,2 gols feitos mas ~2,6 sofridos — a Suécia precisa vencer e jogará aberta, dando espaços para o contra-ataque japonês que destruiu Alemanha e Inglaterra, mas Gyökeres/Isak garantem pelo menos um gol sueco; 2×1 é mais fiel que o empate 1×1.",
+      "pregame_note": "Japão tem média de ~2,2 gols feitos e ~0,5 sofridos nos jogos recentes (com defesa dominante em amistosos e vitória 4×0 na Copa), enquanto Suécia tem média de ~2,2 gols feitos mas ~2,6 sofridos — a Suécia precisa vencer e jogará aberta, dando espaços para o contra-ataque japonês que destruiu Alemanha e Inglaterra, mas Gyökeres/Isak garantem pelo menos um gol sueco; 2×1 é mais fiel que o empate 1×1."
     },
     {
       "match_number": 37,
@@ -1884,6 +1886,8 @@
     28,
     29,
     30,
+    35,
+    36,
     39,
     40,
     46,
