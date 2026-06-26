@@ -265,7 +265,8 @@
       "date": "2026-06-25",
       "home_goals": 1,
       "away_goals": 2,
-      "reasoning": "Turquia sem nenhum gol em 2 jogos (0,0 feitos/jogo), sem classificação possível. EUA em alta: 3,0 feitos e 0,5 sofridos/jogo, classificados com 6 pts. O 1-1 não reflete a diferença real de momentum. EUA podem poupar titulares mas são muito superiores. Ajusto para 1-2 (Turquia marca para a honra). Vitória EUA."
+      "reasoning": "Turquia sem nenhum gol em 2 jogos (0,0 feitos/jogo), sem classificação possível. EUA em alta: 3,0 feitos e 0,5 sofridos/jogo, classificados com 6 pts. O 1-1 não reflete a diferença real de momentum. EUA podem poupar titulares mas são muito superiores. Ajusto para 1-2 (Turquia marca para a honra). Vitória EUA.",
+      "pregame_note": "Turquia tem média de 1,5 gols feitos e 0,83 sofridos nos últimos 6 jogos (mas 0 em 2 na Copa), enquanto os EUA têm média de ~2,0 gols feitos e ~1,2 sofridos — com ambos os times rodando escalação alternativa (EUA sem Pulisic/Balogun/Adams, Turquia sem Çalhanoğ"
     },
     {
       "match_number": 24,
@@ -276,7 +277,8 @@
       "date": "2026-06-25",
       "home_goals": 1,
       "away_goals": 1,
-      "reasoning": "Paraguai (3 pts, 1-4 EUA, 1-0 TUR) e Austrália (3 pts, 2-0 TUR, 0-2 EUA) ambas precisam da vitória. PAR: 1,0 feito e 2,5 sofridos/jogo; AUS: 1,0 feito e 1,0 sofrido/jogo. Jogo muito equilibrado, a pressão mútua sugere disputa aberta. Mantém 1-1 (empate possível num jogo de alto estáke)."
+      "reasoning": "Paraguai (3 pts, 1-4 EUA, 1-0 TUR) e Austrália (3 pts, 2-0 TUR, 0-2 EUA) ambas precisam da vitória. PAR: 1,0 feito e 2,5 sofridos/jogo; AUS: 1,0 feito e 1,0 sofrido/jogo. Jogo muito equilibrado, a pressão mútua sugere disputa aberta. Mantém 1-1 (empate possível num jogo de alto estáke).",
+      "pregame_note": "O equilíbrio total do grupo (ambas com 3 pontos, Austrália jogando pelo empate, Paraguai pressionado a vencer mas sem Almirón) favorece um placar fechado; Paraguai tem média de ~1,4 gols feitos e ~1,2 sofridos, enquanto Austrália tem média de ~1,5 gols feitos e ~0,8 sofridos — defesas competitivas dos dois lados apontam para um jogo travado onde um gol de cada lado é o resultado mais verossímil."
     },
     {
       "match_number": 25,
@@ -1882,6 +1884,8 @@
     18,
     21,
     22,
+    23,
+    24,
     27,
     28,
     29,
