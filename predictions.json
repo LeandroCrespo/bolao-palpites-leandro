@@ -530,7 +530,8 @@
       "date": "2026-06-26",
       "home_goals": 1,
       "away_goals": 2,
-      "reasoning": "Espanha em alta: 2,0 feitos e 0,0 sofridos/jogo, 4-0 sobre a Arábia Saudita. Uruguai irregular: 1,5 feito e 1,5 sofrido/jogo, empate com Cabo Verde constrangedor. ESP defensivamente sólida. Mantém 1-2 Espanha."
+      "reasoning": "Espanha em alta: 2,0 feitos e 0,0 sofridos/jogo, 4-0 sobre a Arábia Saudita. Uruguai irregular: 1,5 feito e 1,5 sofrido/jogo, empate com Cabo Verde constrangedor. ESP defensivamente sólida. Mantém 1-2 Espanha.",
+      "pregame_note": "**SÍNTESE:** O Uruguai tem média de **~1,25 gols feitos e ~1,13 sofridos** nos últimos 8 jogos, sem vencer há 6. A Espanha tem média de **~2,38 gols feitos e ~1,0 sofridos** — o melhor ataque/defesa combinados da amostra. A Espanha chega com Yamal, Nico Williams e Oyarzabal em plena forma, escalação"
     },
     {
       "match_number": 48,
@@ -541,7 +542,8 @@
       "date": "2026-06-26",
       "home_goals": 1,
       "away_goals": 1,
-      "reasoning": "Ambas eliminadas. CPV: 1,0 feito e 1,0 sofrido/jogo; KSA: 0,5 feito e 2,5 sofridos/jogo. Cabo Verde levemente superior mas KSA pode buscar dignidade. Mantém 1-1."
+      "reasoning": "Ambas eliminadas. CPV: 1,0 feito e 1,0 sofrido/jogo; KSA: 0,5 feito e 2,5 sofridos/jogo. Cabo Verde levemente superior mas KSA pode buscar dignidade. Mantém 1-1.",
+      "pregame_note": "Cabo Verde tem média de 2,13 gols feitos e 1,25 sofridos por jogo (últimos 8), enquanto a Arábia Saudita tem média de ~0,45 gols feitos e ~1,7 sofridos — a Saudita precisa vencer e se abrirá, mas seu ataque é anêmico; o 1-1 equilibra a realidade de Cabo Verde jogando no contra-ataque (o empate já os classifica) com a necessidade saudita de marcar, tornando um gol de cada lado o cenário mais provável."
     },
     {
       "match_number": 49,
@@ -1877,6 +1879,8 @@
     39,
     40,
     46,
+    47,
+    48,
     51,
     52,
     53,
