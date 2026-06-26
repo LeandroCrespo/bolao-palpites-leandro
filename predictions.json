@@ -597,8 +597,9 @@
       "away_team": "FRA",
       "date": "2026-06-26",
       "home_goals": 1,
-      "away_goals": 2,
-      "reasoning": "França dominante: 3,0 feitos e 0,5 sofrido/jogo (6 gols em 2 jogos, 0 sofridos na última). Noruega ofensiva: 3,5 feitos e 1,5 sofridos/jogo, mas defensivamente exposta. França favorita clara. Mantém 1-2."
+      "away_goals": 3,
+      "reasoning": "A Noruega confirmou time 100% reserva (sem Haaland, Ødegaard e goleiro titular), enquanto a França mantém Mbappé, Dembélé e Olise no ataque — desequilíbrio de qualidade extremo. Noruega tem média de 3,5 gols feitos e 1,5 sofridos nos 2 jogos da Copa (com time titular), enquanto França tem média de 3,0 gols feitos e 0,5 sofridos; com reservas norueguesas, a França deve ampliar sua vantagem ofensiva e o placar tende a ser mais elástico que 1-2.",
+      "pregame_note": "A Noruega confirmou time 100% reserva (sem Haaland, Ødegaard e goleiro titular), enquanto a França mantém Mbappé, Dembélé e Olise no ataque — desequilíbrio de qualidade extremo. Noruega tem média de 3,5 gols feitos e 1,5 sofridos nos 2 jogos da Copa (com time titular), enquanto França tem média de 3,0 gols feitos e 0,5 sofridos; com reservas norueguesas, a França deve ampliar sua vantagem ofensiva e o placar tende a ser mais elástico que 1-2."
     },
     {
       "match_number": 54,
@@ -608,8 +609,9 @@
       "away_team": "INT_2",
       "date": "2026-06-26",
       "home_goals": 2,
-      "away_goals": 0,
-      "reasoning": "Senegal com media ofensiva real de 1,5 feito/jogo na Copa (1-3 FRA, 2-3 NOR). Iraque completamente destruído: 0,5 feito e 3,5 sofridos/jogo. O 3-0 era otimista para o SEN. Ajusto para 2-0 mais consistente com o padrão ofensivo senegalês."
+      "away_goals": 1,
+      "reasoning": "Senegal tem média de ~1,5 gols feitos e ~1,4 sofridos por jogo na temporada, enquanto Iraque tem ~1,2 gols feitos e ~1,6 sofridos — Senegal é favorito claro com trio ofensivo completo confirmado (Mané, Sarr, Jackson), mas o Iraque marcou",
+      "pregame_note": "Senegal tem média de ~1,5 gols feitos e ~1,4 sofridos por jogo na temporada, enquanto Iraque tem ~1,2 gols feitos e ~1,6 sofridos — Senegal é favorito claro com trio ofensivo completo confirmado (Mané, Sarr, Jackson), mas o Iraque marcou"
     },
     {
       "match_number": 55,
@@ -1877,6 +1879,8 @@
     46,
     51,
     52,
+    53,
+    54,
     57,
     58,
     62,
