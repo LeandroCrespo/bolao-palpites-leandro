@@ -4,7 +4,7 @@ Usa SQLAlchemy Core com raw SQL (sem copiar os models do bolão).
 """
 
 import os
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 import pytz
 from sqlalchemy import create_engine, text
@@ -64,20 +64,19 @@ def get_match_id(conn, match_number: int) -> int | None:
 
 
 def can_predict_match(conn, match_id: int) -> bool:
-    """Verifica se o palpite do jogo ainda está aberto (horário não passou)."""
+    """Verifica se o palpite do jogo ainda está aberto."""
     row = conn.execute(
         text("SELECT datetime, status FROM matches WHERE id = :id"), {"id": match_id}
     ).fetchone()
     if not row:
         return False
+    # Trava primária: status do jogo (live/finished = travado)
     if row[1] != "scheduled":
         return False
     match_dt = row[0]
-    # Compara naive (banco em horário de Brasília sem timezone) — usar
-    # datetime.now() puro aqui comparava UTC (relógio do runner do GitHub
-    # Actions) contra um horário em BRT, fechando o prazo 3h antes da hora
-    # real e rejeitando silenciosamente ajustes legítimos do pré-jogo.
-    return _now_br() < match_dt
+    # Fallback: se o update ao vivo falhar e status ficar preso em 'scheduled',
+    # bloqueia 2h após o horário previsto (tempo suficiente para a partida terminar).
+    return _now_br() < match_dt + timedelta(hours=2)
 
 
 def submit_match_prediction(

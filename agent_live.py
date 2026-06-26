@@ -587,13 +587,19 @@ menos 6 jogos no total por seleção. Com os placares combinados (Copa + antes
 da Copa), estime a média de gols marcados/sofridos por jogo de cada seleção
 e o xG (gols esperados), quando disponível.
 
-ESCALAÇÃO: busque ATIVAMENTE a escalação confirmada ou provável de cada
-seleção pra este jogo — pesquise "[Time A] escalação confirmada hoje" e
-"[Time B] escalação confirmada hoje" (e suspensões/lesões de última hora).
+ESCALAÇÃO: busque ATIVAMENTE a escalação confirmada de cada seleção pra
+este jogo — pesquise "[Time A] escalação confirmada hoje" e "[Time B]
+escalação confirmada hoje" (e suspensões/lesões de última hora).
 Como faltam poucos minutos pro jogo, a escalação titular já deve estar
 divulgada ou bem adiantada — isso é mais confiável que uma notícia de
-desfalque de dias atrás. Se um titular importante estiver fora (ou de volta)
-na escalação confirmada, isso pesa na reavaliação.
+desfalque de dias atrás.
+REGRA CRÍTICA: só pese a escalação na reavaliação se houver CONFIRMAÇÃO
+OFICIAL (a lista/escalação foi divulgada pela seleção ou federação, ou um
+titular confirmado está FORA por lesão/suspensão oficial). Especulação de
+rotação, "pode poupar", "deve descansar" ou qualquer hipótese não confirmada
+deve ser COMPLETAMENTE IGNORADA — assuma que ambos os times jogam com o
+MELHOR ELENCO DISPONÍVEL até prova em contrário. Não reduza nem aumente o
+favoritismo baseado em especulação de escalação.
 
 Reavalie se este palpite ainda é o ideal. NÃO use o resultado real (o jogo
 ainda não começou).
