@@ -741,7 +741,8 @@
       "date": "2026-06-27",
       "home_goals": 1,
       "away_goals": 2,
-      "reasoning": "Portugal em alta: 3,0 feitos e 0,5 sofrido/jogo, incluindo 5-0 sobre UZB. Colômbia sólida: 2,0 feitos e 0,5 sofrido/jogo. Confronto direto pela liderança. Portugal favorito leve. Mantém 1-2."
+      "reasoning": "Portugal em alta: 3,0 feitos e 0,5 sofrido/jogo, incluindo 5-0 sobre UZB. Colômbia sólida: 2,0 feitos e 0,5 sofrido/jogo. Confronto direto pela liderança. Portugal favorito leve. Mantém 1-2.",
+      "pregame_note": "O palpite 1–2 é sustentado pela combinação de Portugal precisar da vitória (o que força intensidade ofensiva) com a média de gols feitos/sofridos dos dois times — Portugal tem média de ~3,5 gols feitos e ~1,0 sofrido por jogo, enquanto a Colômbia tem ~2,7 feitos e ~1,1 sofrido —, mas a defesa colombiana sólida (1 gol sofrido em 2 jogos de Copa, xG de 0,65 de Portugal vs RD Congo com bloco similar) justifica margem mínima; escalações completas confirmadas, sem desfalques relevantes dos dois lados."
     },
     {
       "match_number": 66,
@@ -750,9 +751,10 @@
       "home_team": "INT_1",
       "away_team": "UZB",
       "date": "2026-06-27",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 0,
-      "reasoning": "Uzbequistão completamente dominado: 0-3 COL, 0-5 POR → 0,5 feito e 4,0 sofridos/jogo. RD Congo: 1-1 POR, 0-1 COL → 0,5 feito e 1,0 sofrido/jogo. COD claramente superior, ajusto de 1-1 para 1-0 COD."
+      "reasoning": "RD Congo tem média de ~1,0 gol feito e ~0,67 sofrido por jogo nos últimos 6 — com xG defensivo excepcional até contra Portugal e Colômbia —, enquanto Uzbequistão tem média de ~0,88 gol feito e ~1,88 sofrido nos últimos 8 jogos (2,4 sofridos/jogo nos últimos 5), sem vencer nenhum deles; a RD Congo vai atacar mais (mudança para 4-3-3 esperada) contra a defesa mais vazada do torneio, tornando o 2-0 mais realista que o 1-0.",
+      "pregame_note": "RD Congo tem média de ~1,0 gol feito e ~0,67 sofrido por jogo nos últimos 6 — com xG defensivo excepcional até contra Portugal e Colômbia —, enquanto Uzbequistão tem média de ~0,88 gol feito e ~1,88 sofrido nos últimos 8 jogos (2,4 sofridos/jogo nos últimos 5), sem vencer nenhum deles; a RD Congo vai atacar mais (mudança para 4-3-3 esperada) contra a defesa mais vazada do torneio, tornando o 2-0 mais realista que o 1-0."
     },
     {
       "match_number": 67,
@@ -1896,6 +1898,8 @@
     62,
     63,
     64,
+    65,
+    66,
     68,
     69,
     70,
