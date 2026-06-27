@@ -809,8 +809,9 @@
       "away_team": "ENG",
       "date": "2026-06-27",
       "home_goals": 0,
-      "away_goals": 3,
-      "reasoning": "Panamá sem gols em 2 jogos (0,0 feito/jogo). Inglaterra: 2,0 feitos e 1,0 sofrido/jogo. Panamá eliminado, Inglaterra precisa vencer para garantir liderança. Mantém 0-3."
+      "away_goals": 2,
+      "reasoning": "Panamá tem média de ~0 gols feitos e ~0,7 sofridos por jogo (0 gols em 3 jogos recentes, defesa compacta que nunca tomou mais de 1 gol nesta Copa), enquanto Inglaterra tem média de ~1,75 gols feitos e ~0,75 sofridos — dominante contra times abertos (4×2 vs. Croácia), mas estéril contra blocos fechados (0×0 vs. Gana); o Panamá deve se fechar e o XI inglês confirmado tem rotação parcial, o que reduz a margem esperada de 3 para 2 gols.",
+      "pregame_note": "Panamá tem média de ~0 gols feitos e ~0,7 sofridos por jogo (0 gols em 3 jogos recentes, defesa compacta que nunca tomou mais de 1 gol nesta Copa), enquanto Inglaterra tem média de ~1,75 gols feitos e ~0,75 sofridos — dominante contra times abertos (4×2 vs. Croácia), mas estéril contra blocos fechados (0×0 vs. Gana); o Panamá deve se fechar e o XI inglês confirmado tem rotação parcial, o que reduz a margem esperada de 3 para 2 gols."
     },
     {
       "match_number": 72,
@@ -821,7 +822,8 @@
       "date": "2026-06-27",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Croácia: 1,5 feito e 2,0 sofridos/jogo mas vence por fatores técnicos. Gana: 0,5 feito e 2,0 sofridos/jogo. Croácia precisa vencer para manter chances. Mantém 2-1."
+      "reasoning": "Croácia: 1,5 feito e 2,0 sofridos/jogo mas vence por fatores técnicos. Gana: 0,5 feito e 2,0 sofridos/jogo. Croácia precisa vencer para manter chances. Mantém 2-1.",
+      "pregame_note": "A Croácia é a equipe que precisa vencer e vai pressionar — mas a defesa croata apresentou fragilidades sérias nos jogos mais recentes (4 gols sofridos para a Inglaterra, 2 para o Brasil nos amistosos). O ataque croata, apesar do histórico de eliminatórias robusto, produziu apenas 1 gol nos 2 jogos d"
     },
     {
       "match_number": 73,
@@ -1896,6 +1898,8 @@
     64,
     68,
     69,
-    70
+    70,
+    71,
+    72
   ]
 }
