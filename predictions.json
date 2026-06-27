@@ -463,7 +463,8 @@
       "date": "2026-06-27",
       "home_goals": 2,
       "away_goals": 1,
-      "reasoning": "Egito em melhor forma: 2,0 feitos e 1,0 sofrido/jogo (hat-trick contra NZL). Irã: 1,0 feito e 1,0 sofrido, bloqueado ofensivamente contra a Bélgica (0-0). Ambas com 2 pts lutando pela classificação. Egito tem mais qualidade ofensiva demonstrada. Ajusto de 1-1 para 2-1 Egito."
+      "reasoning": "Egito em melhor forma: 2,0 feitos e 1,0 sofrido/jogo (hat-trick contra NZL). Irã: 1,0 feito e 1,0 sofrido, bloqueado ofensivamente contra a Bélgica (0-0). Ambas com 2 pts lutando pela classificação. Egito tem mais qualidade ofensiva demonstrada. Ajusto de 1-1 para 2-1 Egito.",
+      "pregame_note": "Egito tem média de ~1,5 gols feitos e ~0,67 sofridos nos últimos 6 jogos, enquanto Irã tem média de ~2,17 gols feitos e ~0,83 sofridos — mas os iranianos marcaram apenas 2 gols em 2 jogos da Copa, com Taremi ainda em branco; o Egito, líder com 4 pontos, gestiona o resultado e aproveita os espaços do adversário que precisa vencer, tornando o 2-1 o placar mais realista."
     },
     {
       "match_number": 42,
@@ -473,8 +474,9 @@
       "away_team": "BEL",
       "date": "2026-06-27",
       "home_goals": 0,
-      "away_goals": 1,
-      "reasoning": "Bélgica bloqueada ofensivamente: 0,5 feito/jogo na Copa (1 gol em 2 jogos). NZL marcou em ambos os jogos (1,5 feito/jogo). O 0-3 era excessivo para um time que não marcou gol em 2 jogos. Bélgica ainda vence (mais qualidade), mas placar enxuto 0-1 é mais condizente."
+      "away_goals": 2,
+      "reasoning": "Nova Zelândia tem média de ~1,17 gols feitos e ~2,17 sofridos por jogo nos últimos 6, enquanto Bélgica tem ~2,33 feitos e ~0,67 sofridos; a Bélgica entra com Doku de volta, Lukaku no comando e pressão máxima de eliminação, o que deve destravar o ataque para além do 0-1 inicial, mas o emperramento ofensivo belga nesta Copa (apenas 1 gol em 2 jogos) impede projetar placar elástico.",
+      "pregame_note": "Nova Zelândia tem média de ~1,17 gols feitos e ~2,17 sofridos por jogo nos últimos 6, enquanto Bélgica tem ~2,33 feitos e ~0,67 sofridos; a Bélgica entra com Doku de volta, Lukaku no comando e pressão máxima de eliminação, o que deve destravar o ataque para além do 0-1 inicial, mas o emperramento ofensivo belga nesta Copa (apenas 1 gol em 2 jogos) impede projetar placar elástico."
     },
     {
       "match_number": 43,
@@ -1878,6 +1880,8 @@
     30,
     39,
     40,
+    41,
+    42,
     46,
     47,
     48,
