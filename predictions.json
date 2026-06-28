@@ -670,9 +670,10 @@
       "home_team": "JOR",
       "away_team": "ARG",
       "date": "2026-06-27",
-      "home_goals": 0,
-      "away_goals": 3,
-      "reasoning": "Argentina dominante: 2,5 feitos e 0,0 sofridos/jogo. Jordânia: 1,0 feito e 2,5 sofridos/jogo. Argentina sem gols sofridos na Copa. Mantém 0-3."
+      "home_goals": 1,
+      "away_goals": 2,
+      "reasoning": "Com Messi confirmado no banco e rotação oficial, o ataque argentino perde seu principal criador de chances para pelo menos 45 minutos, reduzindo de 3 para 2 gols prováveis; a Jordânia tem média de 1,25 gols feitos e 2,25 sofridos nos últimos 8 jogos, enquanto a Argentina tem média de 2,5 gols feitos e 0,25 sofridos — a vitória argentina é líquida, mas o histórico jordaniano de marcar em ambos os jogos da Copa (Áustria e Argélia) torna 1 gol para a Jordânia mais plausível que um clean sheet.",
+      "pregame_note": "Com Messi confirmado no banco e rotação oficial, o ataque argentino perde seu principal criador de chances para pelo menos 45 minutos, reduzindo de 3 para 2 gols prováveis; a Jordânia tem média de 1,25 gols feitos e 2,25 sofridos nos últimos 8 jogos, enquanto a Argentina tem média de 2,5 gols feitos e 0,25 sofridos — a vitória argentina é líquida, mas o histórico jordaniano de marcar em ambos os jogos da Copa (Áustria e Argélia) torna 1 gol para a Jordânia mais plausível que um clean sheet."
     },
     {
       "match_number": 60,
@@ -683,7 +684,8 @@
       "date": "2026-06-27",
       "home_goals": 1,
       "away_goals": 1,
-      "reasoning": "Argélia: 0-3 ARG, 2-1 JOR → 1,0 feito e 2,0 sofridos/jogo; Áustria: 3-1 JOR, 0-2 ARG → 1,5 feito e 1,5 sofrido/jogo. Disputa direta pelo 2º lugar. Equilíbrio real. Mantém 1-1."
+      "reasoning": "Argélia: 0-3 ARG, 2-1 JOR → 1,0 feito e 2,0 sofridos/jogo; Áustria: 3-1 JOR, 0-2 ARG → 1,5 feito e 1,5 sofrido/jogo. Disputa direta pelo 2º lugar. Equilíbrio real. Mantém 1-1.",
+      "pregame_note": "Argélia (forçada a vencer) tem média de ~2,1 gols feitos e ~1,0 sofridos; Áustria (joga pelo empate) tem média de ~1,6 feitos e ~0,9 sofridos — médias próximas, defesas sólidas, pressão argelina equilibrada pela postura defensiva austríaca que favorece exatamente um 1–1."
     },
     {
       "match_number": 61,
@@ -1895,6 +1897,8 @@
     54,
     57,
     58,
+    59,
+    60,
     62,
     63,
     64,
