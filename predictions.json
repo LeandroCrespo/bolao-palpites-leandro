@@ -834,11 +834,12 @@
       "phase": "R32",
       "home_team": "MEX",
       "away_team": "EUR_B",
-      "home_goals": 2,
-      "away_goals": 1,
+      "home_goals": 1,
+      "away_goals": 2,
       "winner": "MEX",
       "went_to_penalties": false,
-      "reasoning": "México joga em casa (Los Angeles, com enorme torcida mexicana) contra a Suécia (FIFA #25). A vantagem de jogar praticamente em casa é enorme para o México. A Suécia é competitiva, mas o ambiente e a diferença de ranking favorecem o MEX. Vitória mexicana por 2-1."
+      "reasoning": "África do Sul tem média de ~0,83 gols feitos e ~0,83 sofridos por jogo nos últimos 6 jogos (apenas 2 gols em 3 partidas na Copa), enquanto o Canadá tem média de ~1,9 gols feitos e ~1,0 sofridos nos últimos 8 jogos — com Davies no banco (escalação confirmada), o poder de fogo canadense segue superior via David/Buchanan/Oluwaseyi, tornando a vitória do Canadá por placar magro mais aderente aos números do que uma virada sul-africana por 2-1.",
+      "pregame_note": "África do Sul tem média de ~0,83 gols feitos e ~0,83 sofridos por jogo nos últimos 6 jogos (apenas 2 gols em 3 partidas na Copa), enquanto o Canadá tem média de ~1,9 gols feitos e ~1,0 sofridos nos últimos 8 jogos — com Davies no banco (escalação confirmada), o poder de fogo canadense segue superior via David/Buchanan/Oluwaseyi, tornando a vitória do Canadá por placar magro mais aderente aos números do que uma virada sul-africana por 2-1."
     },
     {
       "match_number": 74,
@@ -1908,6 +1909,7 @@
     69,
     70,
     71,
-    72
+    72,
+    73
   ]
 }
