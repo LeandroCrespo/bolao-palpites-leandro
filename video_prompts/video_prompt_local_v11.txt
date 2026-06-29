@@ -1,0 +1,288 @@
+=== PROMPTS DE VIDEO — MESTRE LEME (EM FRENTE AO ESTÁDIO, DIA DO JOGO BRASIL x HAITI) ===
+6 clipes de exatamente 8 segundos cada — falas curtas para caber com folga.
+Nenhuma imagem é necessária (anexar a foto do Mestre Leme como referência única é opcional).
+
+CONTEXTO: é hoje (19/06) o jogo do Brasil contra o Haiti, em Filadélfia.
+Mestre Leme está bem na frente do estádio, horas antes da bola rolar, no meio
+da multidão de torcedores chegando. Ele dá as notícias do bolão com muito
+humor, mas por baixo da animação ele está visivelmente ansioso com o jogo —
+inclusive confessando que vai torcer, mas não está nada confiante com o time.
+
+DADOS REAIS (usar nas falas): liderança do bolão — Marcos Leme com 270 pontos,
+Marcia Monfardini com 255, Marco Antonio Alves Leme com 245. Zona de risco:
+Mario é o lanterna isolado com 195 pontos, e Bruno Monfardini Leme e Amanda
+Leme empatados em 200.
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive but visibly nervous underneath, the energy of a devoted
+fan who is thrilled to be at the stadium yet quietly terrified about the
+result (match the provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile that occasionally cracks into a nervous grimace.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow face paint stripe on one cheek; a rolled-up
+matchday ticket held in one hand.
+SETTING: right outside the stadium in Filadélfia, hours before kickoff —
+massive crowds of fans in yellow and green jerseys streaming past, stadium
+facade and floodlight towers visible behind him, flags waving, vendors
+selling scarves, golden late-afternoon light.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd and
+stadium softly blurred behind him, warm golden-hour color grade, slight
+handheld camera, matchday-broadcast energy. Duration: exactly 8 seconds.
+
+## CLIP 1 OF 6 — "OLHA ONDE EU ESTOU!"
+
+**CAMERA:** Medium shot, he turns from the stadium facade to face the camera,
+arms wide, crowd streaming past behind him, floodlight towers looming.
+
+**DIALOGUE:**
+> *[eufórico, gritando pra ser ouvido na multidão]*
+> "Meu POVO! Olha onde eu estou — bem na PORTA do estádio, daqui a pouco rola
+> a bola, BRASIL contra o HAITI!"
+
+*Cue: braços abertos abrangendo o estádio atrás; ergue o ingresso enrolado
+como um trofeu; aponta pras torres de iluminação*
+
+**AUDIO:** Vuvuzelas e cantos de torcida ao fundo; sino de vendedor de
+bandeira; trilha de matchday animada (tambores leves)
+
+**TRANSITION OUT:** Ingresso erguido, sorriso enorme — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive but visibly nervous underneath, the energy of a devoted
+fan who is thrilled to be at the stadium yet quietly terrified about the
+result (match the provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile that occasionally cracks into a nervous grimace.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow face paint stripe on one cheek; a rolled-up
+matchday ticket held in one hand.
+SETTING: right outside the stadium in Filadélfia, hours before kickoff —
+massive crowds of fans in yellow and green jerseys streaming past, stadium
+facade and floodlight towers visible behind him, flags waving, vendors
+selling scarves, golden late-afternoon light.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd and
+stadium softly blurred behind him, warm golden-hour color grade, slight
+handheld camera, matchday-broadcast energy. Duration: exactly 8 seconds.
+
+## CLIP 2 OF 6 — "A LIDERANÇA DO BOLÃO!"
+
+**CAMERA:** He unrolls the ticket like a tiny scroll, reading it with mock
+official seriousness, the crowd noise swelling behind him.
+
+**DIALOGUE:**
+> *[animado, voz de locutor de estádio]*
+> "Mas antes, as notícias do bolão! MARCOS LEME na liderança, DUZENTOS E
+> SETENTA pontos! MARCIA Monfardini logo atrás, DUZENTOS E CINQUENTA E CINCO!
+> E MARCO ANTONIO fechando o pódio, com DUZENTOS E QUARENTA E CINCO!"
+
+*Cue: levanta três dedos contando o pódio; bate palma na palavra "LIDERANÇA";
+assobio de estádio em "DUZENTOS E SETENTA"*
+
+**AUDIO:** Sino de gol/torcida; vuvuzela curta no nome de cada líder; trilha
+de matchday continua
+
+**TRANSITION OUT:** Três dedos erguidos, sorriso orgulhoso — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive but visibly nervous underneath, the energy of a devoted
+fan who is thrilled to be at the stadium yet quietly terrified about the
+result (match the provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile that occasionally cracks into a nervous grimace.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow face paint stripe on one cheek; a rolled-up
+matchday ticket held in one hand.
+SETTING: right outside the stadium in Filadélfia, hours before kickoff —
+massive crowds of fans in yellow and green jerseys streaming past, stadium
+facade and floodlight towers visible behind him, flags waving, vendors
+selling scarves, golden late-afternoon light.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd and
+stadium softly blurred behind him, warm golden-hour color grade, slight
+handheld camera, matchday-broadcast energy. Duration: exactly 8 seconds.
+
+## CLIP 3 OF 6 — "A ZONA DE RISCO!"
+
+**CAMERA:** Same framing, continuation. His tone shifts to mock-grave, leaning
+toward the camera like delivering sad news, free hand over his heart.
+
+**DIALOGUE:**
+> *[tom grave, mas debochado]*
+> "E na ZONA DE RISCO: BRUNO Monfardini Leme e AMANDA, empatados em DUZENTOS!
+> E lanterninha ISOLADO... o MARIO, com CENTO E NOVENTA E CINCO! Força, Mario!"
+
+*Cue: mão no peito em "lanterninha"; faz careta de pesar exagerado; manda um
+beijo de consolo pra câmera em "Força, Mario!"*
+
+**AUDIO:** Trombone cômico "wah-wah" leve; torcida ao fundo continua; trilha
+de matchday baixa um pouco
+
+**TRANSITION OUT:** Mão no peito, careta de pesar cômico — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive but visibly nervous underneath, the energy of a devoted
+fan who is thrilled to be at the stadium yet quietly terrified about the
+result (match the provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile that occasionally cracks into a nervous grimace.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow face paint stripe on one cheek; a rolled-up
+matchday ticket held in one hand.
+SETTING: right outside the stadium in Filadélfia, hours before kickoff —
+massive crowds of fans in yellow and green jerseys streaming past, stadium
+facade and floodlight towers visible behind him, flags waving, vendors
+selling scarves, golden late-afternoon light.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd and
+stadium softly blurred behind him, warm golden-hour color grade, slight
+handheld camera, matchday-broadcast energy. Duration: exactly 8 seconds.
+
+## CLIP 4 OF 6 — "ANCELOTTI É O DORIVAL ITALIANO!"
+
+**CAMERA:** He pockets the ticket and rubs his chin like a pundit about to
+share a hot take, leaning in close to the camera, eyebrows raised.
+
+**DIALOGUE:**
+> *[tom de analista de bar, convicto]*
+> "E pra mim, o ANCELOTTI é o DORIVAL italiano, minha gente! Trocou o
+> sotaque, mas o jeito de montar o time é igualzinho!"
+
+*Cue: gesto de "trocar" com as duas mãos em "trocou o sotaque"; aperta os
+olhos analisando, como um técnico de time de várzea; dá de ombros convicto*
+
+**AUDIO:** Risada de fundo de outros torcedores concordando; torcida continua;
+trilha de matchday com toque cômico
+
+**TRANSITION OUT:** Sobrancelha erguida, dedo no queixo — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive but visibly nervous underneath, the energy of a devoted
+fan who is thrilled to be at the stadium yet quietly terrified about the
+result (match the provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile that occasionally cracks into a nervous grimace.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow face paint stripe on one cheek; a rolled-up
+matchday ticket held in one hand.
+SETTING: right outside the stadium in Filadélfia, hours before kickoff —
+massive crowds of fans in yellow and green jerseys streaming past, stadium
+facade and floodlight towers visible behind him, flags waving, vendors
+selling scarves, golden late-afternoon light.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd and
+stadium softly blurred behind him, warm golden-hour color grade, slight
+handheld camera, matchday-broadcast energy. Duration: exactly 8 seconds.
+
+## CLIP 5 OF 6 — "CONFESSO QUE TÔ NERVOSO"
+
+**CAMERA:** The playful energy suddenly drains. He glances toward the stadium
+entrance, swallows hard, starts wringing the ticket nervously between his
+hands.
+
+**DIALOGUE:**
+> *[a confiança desmoronando, sincero e nervoso]*
+> "Mas vou ser sincero com vocês... o coração tá disparado. Vou torcer com
+> tudo, mas, sinceramente? Não tô confiante com esse Brasil não, gente."
+
+*Cue: torce o ingresso nas mãos, nervoso; olha de canto pra entrada do
+estádio; respira fundo, tentando se acalmar e falhando*
+
+**AUDIO:** A trilha de matchday some quase totalmente; batimento cardíaco
+exagerado e cômico; torcida ao fundo continua, indiferente ao seu drama
+
+**TRANSITION OUT:** Olhos arregalados de nervosismo, ingresso todo torcido nas
+mãos — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately
+55 years old, festive but visibly nervous underneath, the energy of a devoted
+fan who is thrilled to be at the stadium yet quietly terrified about the
+result (match the provided reference photo exactly, if attached).
+FACE: expressive full face with warm light-tan skin, FULL tousled dark
+salt-and-pepper hair — medium-short, slightly messy, graying at the temples and
+sides (NOT shaved, NOT cut close). Short scruffy salt-and-pepper beard of a few
+days' growth covering jaw and chin, blending into a fuller graying mustache.
+Thick dark eyebrows, warm brown eyes with deep laugh lines, strong nose, a huge
+open contagious smile that occasionally cracks into a nervous grimace.
+BODY: stocky, heavy-set build with a proud round belly, broad shoulders,
+expressive Brazilian hand gestures.
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey,
+fully visible; a green-and-yellow face paint stripe on one cheek; a rolled-up
+matchday ticket held in one hand.
+SETTING: right outside the stadium in Filadélfia, hours before kickoff —
+massive crowds of fans in yellow and green jerseys streaming past, stadium
+facade and floodlight towers visible behind him, flags waving, vendors
+selling scarves, golden late-afternoon light.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd and
+stadium softly blurred behind him, warm golden-hour color grade, slight
+handheld camera, matchday-broadcast energy. Duration: exactly 8 seconds.
+
+## CLIP 6 OF 6 — "VAI, BRASIL, DE QUALQUER JEITO!"
+
+**CAMERA:** Wider finale shot, the stadium floodlights glowing brighter as
+dusk falls, crowd noise swelling. He shakes off the nerves, smooths out the
+crumpled ticket, and raises it high toward the lens.
+
+**DIALOGUE:**
+> *[forçando a confiança, contagiando-se com a torcida ao redor]*
+> "Mas seja o que Deus quiser — VAI, BRASIL, contra o Haiti, com medo e tudo!
+> Bate na madeira aqui, meu povo, e vamo que vamo!"
+
+*Cue: bate o ingresso amassado em um poste de madeira por superstição; ergue
+o punho em comemoração antecipada; abraça um torcedor desconhecido ao lado*
+
+**AUDIO:** Torcida explode em coro "Vai, Brasil!"; vuvuzelas sobem em volume;
+trilha de matchday retorna triunfal; fade de áudio em 1 segundo
+
+**TRANSITION OUT:** FREEZE FRAME — punho erguido, sorriso nervoso mas
+determinado, luzes do estádio brilhando atrás — fade lento para preto
+
+---
+
+> 🎬 **DIREÇÃO TÉCNICA:** Render todos os 6 clips em sequência contínua, cada
+> um com EXATAMENTE 8 segundos. Cenário fixo: em frente ao estádio em
+> Filadélfia, horas antes do jogo, multidão de torcedores de amarelo e verde
+> passando, fachada do estádio e torres de iluminação ao fundo, bandeiras e
+> vendedores ambulantes desfocados. Mestre Leme veste a MESMA camisa
+> amarelo-canário do Brasil com a pintura verde-amarela no rosto e o ingresso
+> enrolado na mão em TODOS os clips (sempre visíveis, nunca cobertos ou
+> trocados). Ele alterna entre humor contagiante e ansiedade visível o tempo
+> todo — NUNCA embriagado, só nervoso com o jogo. Fundo da multidão e do
+> estádio levemente desfocado (f/2.8 equivalent), Mestre Leme sempre nítido.

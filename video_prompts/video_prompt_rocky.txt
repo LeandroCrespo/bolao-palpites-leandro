@@ -1,0 +1,143 @@
+=== PROMPTS DE VIDEO — MESTRE LEME (SUBIDA DA ESCADARIA "ROCKY" + ATUALIZAÇÕES DO BOLÃO, OFEGANTE) ===
+6 clipes de EXATAMENTE 8 segundos cada. Falas curtas (cabem com folga, pois ele
+fala ARFANDO, entre golfadas de ar). Anexar a foto do Mestre Leme é opcional.
+
+CONTEXTO: ele sobe a icônica escadaria do museu igual ao "Rocky", faz a pose de
+braços erguidos no topo e depois DESABA aos pés da estátua do boxeador, EXAUSTO,
+SUADO e OFEGANTE, e dá as atualizações do bolão entre arfadas — muito humor.
+
+OBS. DE FILTRO (Gemini): NÃO citar "Rocky"/nomes — descrever como "a icônica
+escadaria de pedra de um grande museu" e "uma estátua de bronze de um boxeador
+com os braços erguidos em vitória". Ele NÃO está bêbado — está exausto de correr.
+
+DADOS REAIS (usar nas falas): empate QUÁDRUPLO na liderança — Leandro, Marcia,
+Marcos e Renata, com 125 pontos cada. Lá embaixo (devendo o chopão): Daiana,
+Sandra, José Eduardo, Danilo.
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, EXTREMELY out of breath, exhausted and drenched in sweat from sprinting up a long stairway (flushed red face, panting hard, chest and round belly heaving, NOT drunk — just wiped out). FULL tousled dark salt-and-pepper hair, sweaty and plastered to the forehead; short scruffy salt-and-pepper beard blending into a fuller graying mustache; thick eyebrows, warm brown eyes, broad contagious smile. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey, SWEAT-SOAKED and clinging; gray training sweatpants; a gray towel around his neck; a sweatband on his forehead.
+SETTING: the bottom and the long iconic stone stairway of a grand art museum (golden early morning, a city skyline behind), and at the base a famous bronze statue of a boxer with both arms raised in victory; a few joggers and onlookers in the blurred background.
+STYLE: photorealistic, cinematic, sports training-montage energy, warm golden-hour grade, slight handheld camera. Duration: exactly 8 seconds.
+
+## CLIP 1 OF 6 — "ESSA ESCADA NÃO ACABA MAIS!"
+
+**CAMERA:** Low-angle tracking shot from in front, he charges UP the long stone stairway in classic boxer-training style, pumping his fists, struggling but determined, yellow jersey already soaked. Golden morning light, skyline behind.
+
+**DIALOGUE:**
+> *[arfando muito, voz cortada pelo cansaço]*
+> "Vambora, meu POVO... *(puff)*... essa escada... não acaba MAIS!"
+
+*Cue: punhos cerrados socando o ar como num treino; pernas pesadas; suor pingando; ele olha pra cima pra ver quanto falta e geme*
+
+**AUDIO:** Trompetes triunfais de montanha-russa esportiva (estilo treino); respiração ofegante alta; passos ecoando na pedra; cidade acordando ao fundo
+
+**TRANSITION OUT:** Ele tropeça num degrau, se segura e continua — congela no meio do passo, cara de esforço
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, EXTREMELY out of breath, exhausted and drenched in sweat from sprinting up a long stairway (flushed red face, panting hard, chest and round belly heaving, NOT drunk — just wiped out). FULL tousled dark salt-and-pepper hair, sweaty and plastered to the forehead; short scruffy salt-and-pepper beard blending into a fuller graying mustache; thick eyebrows, warm brown eyes, broad contagious smile. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey, SWEAT-SOAKED and clinging; gray training sweatpants; a gray towel around his neck; a sweatband on his forehead.
+SETTING: the bottom and the long iconic stone stairway of a grand art museum (golden early morning, a city skyline behind), and at the base a famous bronze statue of a boxer with both arms raised in victory; a few joggers and onlookers in the blurred background.
+STYLE: photorealistic, cinematic, sports training-montage energy, warm golden-hour grade, slight handheld camera. Duration: exactly 8 seconds.
+
+## CLIP 2 OF 6 — "CONSEGUI!... AI, MINHA MÃE"
+
+**CAMERA:** He reaches the TOP of the stairway. Wide low-angle hero shot: he throws both arms up in the classic victory pose, skyline glowing behind him — holds the pose one triumphant beat — then immediately doubles over, hands on knees, wheezing.
+
+**DIALOGUE:**
+> *[grito de vitória que vira arfada]*
+> "CONSEGUI!! ...*(arquejando)*... ai... minha MÃE..."
+
+*Cue: braços pro alto, pose de campeão, rosto radiante; na palavra "MÃE" ele se dobra, mãos nos joelhos, peito arfando, perna tremendo*
+
+**AUDIO:** Clímax dos trompetes triunfais; respiração explodindo; alguns aplausos esparsos de quem passa
+
+**TRANSITION OUT:** Dobrado, mãos nos joelhos, uma gota de suor pingando do nariz — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, EXTREMELY out of breath, exhausted and drenched in sweat from sprinting up a long stairway (flushed red face, panting hard, chest and round belly heaving, NOT drunk — just wiped out). FULL tousled dark salt-and-pepper hair, sweaty and plastered to the forehead; short scruffy salt-and-pepper beard blending into a fuller graying mustache; thick eyebrows, warm brown eyes, broad contagious smile. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey, SWEAT-SOAKED and clinging; gray training sweatpants; a gray towel around his neck; a sweatband on his forehead.
+SETTING: the bottom and the long iconic stone stairway of a grand art museum (golden early morning, a city skyline behind), and at the base a famous bronze statue of a boxer with both arms raised in victory; a few joggers and onlookers in the blurred background.
+STYLE: photorealistic, cinematic, sports training-montage energy, warm golden-hour grade, slight handheld camera. Duration: exactly 8 seconds.
+
+## CLIP 3 OF 6 — "DEIXA EU RESPIRAR..."
+
+**CAMERA:** He shuffles over to the bronze boxer statue and plops down at its feet, slumping against the pedestal, drenched. He fishes a soaked, crumpled note from his waistband and squints at it, panting.
+
+**DIALOGUE:**
+> *[ofegante, mal conseguindo falar]*
+> "Deixa eu... *(puff)*... dar as ATUALIZAÇÕES do bolão... pera... deixa eu RESPIRAR..."
+
+*Cue: senta esparramado aos pés da estátua; abana-se com a toalha; desamassa o papel encharcado; aponta pra ele com o dedo trêmulo*
+
+**AUDIO:** Respiração pesada em primeiro plano; trompetes baixando pra um fundo suave; vento da cidade
+
+**TRANSITION OUT:** Ele ergue um dedo pra câmera ("só um minuto") ainda ofegante — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, EXTREMELY out of breath, exhausted and drenched in sweat from sprinting up a long stairway (flushed red face, panting hard, chest and round belly heaving, NOT drunk — just wiped out). FULL tousled dark salt-and-pepper hair, sweaty and plastered to the forehead; short scruffy salt-and-pepper beard blending into a fuller graying mustache; thick eyebrows, warm brown eyes, broad contagious smile. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey, SWEAT-SOAKED and clinging; gray training sweatpants; a gray towel around his neck; a sweatband on his forehead.
+SETTING: the bottom and the long iconic stone stairway of a grand art museum (golden early morning, a city skyline behind), and at the base a famous bronze statue of a boxer with both arms raised in victory; a few joggers and onlookers in the blurred background.
+STYLE: photorealistic, cinematic, sports training-montage energy, warm golden-hour grade, slight handheld camera. Duration: exactly 8 seconds.
+
+## CLIP 4 OF 6 — "EMPATE QUÁDRUPLO NA LIDERANÇA!"
+
+**CAMERA:** Same spot, at the statue's feet. He reads the note, eyes going wide, then announces with whatever breath he has left, gesturing dramatically.
+
+**DIALOGUE:**
+> *[arfando, mas empolgado, voz subindo]*
+> "Olha isso... EMPATE QUÁDRUPLO na liderança! Leandro, Marcia, Marcos e Renata — CENTO E VINTE E CINCO cada!"
+
+*Cue: levanta 4 dedos trêmulos em "QUÁDRUPLO"; cada nome dito com fôlego curto; em "125" abre os olhos e estufa a bochecha, impressionado*
+
+**AUDIO:** Pequeno toque triunfal de metais em "QUÁDRUPLO"; respiração ainda pesada; cidade ao fundo
+
+**TRANSITION OUT:** Quatro dedos pra cima, sobrancelhas erguidas — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, EXTREMELY out of breath, exhausted and drenched in sweat from sprinting up a long stairway (flushed red face, panting hard, chest and round belly heaving, NOT drunk — just wiped out). FULL tousled dark salt-and-pepper hair, sweaty and plastered to the forehead; short scruffy salt-and-pepper beard blending into a fuller graying mustache; thick eyebrows, warm brown eyes, broad contagious smile. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey, SWEAT-SOAKED and clinging; gray training sweatpants; a gray towel around his neck; a sweatband on his forehead.
+SETTING: the bottom and the long iconic stone stairway of a grand art museum (golden early morning, a city skyline behind), and at the base a famous bronze statue of a boxer with both arms raised in victory; a few joggers and onlookers in the blurred background.
+STYLE: photorealistic, cinematic, sports training-montage energy, warm golden-hour grade, slight handheld camera. Duration: exactly 8 seconds.
+
+## CLIP 5 OF 6 — "AINDA DEVENDO O CHOPÃO!"
+
+**CAMERA:** Same spot. He wipes his face with the gray towel, catches a ragged breath, then leans toward the camera with a mischievous grin to deliver the teasing.
+
+**DIALOGUE:**
+> *[ofegante, mas debochado e carinhoso]*
+> "E lá embaixo... Daiana, Sandra... *(puff)*... ainda DEVENDO o chopão, viu, minha gente!"
+
+*Cue: enxuga a testa com a toalha; gesto de "tsc tsc" com o dedo; risadinha que vira tosse de cansaço*
+
+**AUDIO:** Trombone cômico "wah-wah" leve; respiração; alguém ao fundo rindo
+
+**TRANSITION OUT:** Dedo em riste fazendo "tsc tsc", sorriso cansado — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, EXTREMELY out of breath, exhausted and drenched in sweat from sprinting up a long stairway (flushed red face, panting hard, chest and round belly heaving, NOT drunk — just wiped out). FULL tousled dark salt-and-pepper hair, sweaty and plastered to the forehead; short scruffy salt-and-pepper beard blending into a fuller graying mustache; thick eyebrows, warm brown eyes, broad contagious smile. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey, SWEAT-SOAKED and clinging; gray training sweatpants; a gray towel around his neck; a sweatband on his forehead.
+SETTING: the bottom and the long iconic stone stairway of a grand art museum (golden early morning, a city skyline behind), and at the base a famous bronze statue of a boxer with both arms raised in victory; a few joggers and onlookers in the blurred background.
+STYLE: photorealistic, cinematic, sports training-montage energy, warm golden-hour grade, slight handheld camera. Duration: exactly 8 seconds.
+
+## CLIP 6 OF 6 — "ALGUÉM ME AJUDA A DESCER?!"
+
+**CAMERA:** Slightly wider finale. He leans back against the statue's pedestal, gives an exhausted thumbs up to the camera, sweat dripping, the golden skyline behind. He tries to get up, fails comically, and flops back down.
+
+**DIALOGUE:**
+> *[arfando, rindo de si mesmo]*
+> "Amanhã tem MAIS, meu povo... agora... *(puff)*... alguém me ajuda a DESCER?! VAI, BRASIL!"
+
+*Cue: joinha tremido pra câmera; tenta levantar e cai sentado de novo; dá uma risada cansada e aponta pra escada lá embaixo com cara de pavor cômico*
+
+**AUDIO:** Acorde triunfal final dos metais; sua respiração; risada; um "pernas bambas" cômico de xilofone
+
+**TRANSITION OUT:** FREEZE FRAME — ele caído aos pés da estátua, joinha pra cima, sorriso exausto, skyline dourado atrás — fade lento
+
+---
+
+> 🎬 **DIREÇÃO TÉCNICA:** Render os 6 clips em sequência contínua, cada um com EXATAMENTE 8 segundos. CONTINUIDADE: Mestre Leme veste a MESMA camisa amarelo-canário do Brasil (encharcada de suor) em TODOS os clips, com calça de moletom cinza, toalha no pescoço e faixa na testa. Ele está EXAUSTO/SUADO/OFEGANTE o tempo todo (peito e barriga arfando, rosto vermelho, suor pingando) — NÃO bêbado, só acabado de correr. Clima de montanha-russa esportiva (training montage), luz dourada de manhã, leve câmera na mão. NÃO citar nomes de marca/filme: descrever só "a icônica escadaria de pedra do museu" e "uma estátua de bronze de um boxeador com os braços erguidos". Fundo levemente desfocado (f/2.8 equivalent), Mestre Leme sempre nítido.

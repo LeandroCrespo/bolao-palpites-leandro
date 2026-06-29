@@ -1,0 +1,142 @@
+=== PROMPTS DE VIDEO — MESTRE LEME (EM FRENTE AO ESTÁDIO DO BRASIL — NERVOSO E ESCONDENDO QUE BEBE) ===
+6 clipes de EXATAMENTE 8 segundos cada. Falas curtas (cabem com folga em 8s).
+Anexar a foto do Mestre Leme como referência é opcional (ajuda na consistência).
+
+ARCO CÔMICO: ele está NERVOSO/ansioso com o jogo do Brasil; bebe escondido e
+tenta de tudo pra disfarçar (esconde o copo, até tenta tampar a câmera); chega a
+COMENTAR que "tem gente que fala que ele vive bebendo" e jura que não — mas no
+fim, sem querer, SE ENTREGA, de um jeito engraçado.
+RECADO aos usuários (espalhado nos clipes): hoje só tem 4 jogos; mais tarde
+manda o boletim com a classificação; está torcendo muito e deseja boa sorte ao
+Brasil.
+
+OBS. DE FILTRO (Gemini): ele NÃO está bêbado — está lúcido, só nervoso e
+"escondendo o copo" com golinhos furtivos. O humor é o disfarce + o vacilo final.
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, lucid (NOT drunk) but visibly NERVOUS/anxious about tonight's match — fidgety, biting a nail, dabbing sweat, glancing anxiously at the stadium. FULL tousled dark salt-and-pepper hair (medium-short, slightly messy, graying at the temples), short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim on the collar and sleeves. In one hand, held LOW and partly hidden, a tall glass of chope (amber drink with white foam) that he keeps trying to conceal.
+SETTING: EVENING, on the sidewalk right in front of the brightly lit MetLife Stadium (New York / New Jersey), where Brazil plays tonight — crowds of Brazil fans in yellow, flags waving, street vendors, festive pre-match buzz, warm stadium glow.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd softly blurred behind him, warm evening color grade. Duration: exactly 8 seconds.
+
+## CLIP 1 OF 6 — "TÔ NA FRENTE DO ESTÁDIO... E NERVOSO!"
+
+**CAMERA:** Medium shot, lit stadium behind him. He greets the camera but keeps glancing anxiously at the stadium and shifting his weight; as the camera settles, he quickly drops the glass behind his back.
+
+**DIALOGUE:**
+> *[sorrindo, mas com olhar ansioso, voz um pouco trêmula]*
+> "Meu POVO! Tô na frente do estádio... confesso: tô NERVOSO com esse jogo do Brasil!"
+
+*Cue: sorriso no rosto mas olhar nervoso para o estádio; mão livre no peito; a outra esconde o copo atrás das costas*
+
+**AUDIO:** Torcida festiva, tambores; um batimento cardíaco sutil ao fundo
+
+**TRANSITION OUT:** Ele morde o lábio olhando pro estádio, copo escondido nas costas — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, lucid (NOT drunk) but visibly NERVOUS/anxious about tonight's match — fidgety, biting a nail, dabbing sweat, glancing anxiously at the stadium. FULL tousled dark salt-and-pepper hair (medium-short, slightly messy, graying at the temples), short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim on the collar and sleeves. In one hand, held LOW and partly hidden, a tall glass of chope (amber drink with white foam) that he keeps trying to conceal.
+SETTING: EVENING, on the sidewalk right in front of the brightly lit MetLife Stadium (New York / New Jersey), where Brazil plays tonight — crowds of Brazil fans in yellow, flags waving, street vendors, festive pre-match buzz, warm stadium glow.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd softly blurred behind him, warm evening color grade. Duration: exactly 8 seconds.
+
+## CLIP 2 OF 6 — "SÓ QUATRO JOGOS HOJE"
+
+**CAMERA:** Same framing, continuation. He nervously bites a nail, glances side to side, then sneaks a quick sip when he thinks no one is watching, lowering the glass fast.
+
+**DIALOGUE:**
+> *[falando rápido, nervoso]*
+> "Hoje tem só QUATRO jogos, minha gente... e eu já tô ROENDO as unhas!"
+
+*Cue: em "QUATRO" levanta 4 dedos; no meio da frase um gole furtivo; esconde o copo e limpa a espuma do bigode disfarçando*
+
+**AUDIO:** Torcida; um "gulp" sutil; sopro cômico de madeira (woodwind)
+
+**TRANSITION OUT:** Espuma no bigode, ele congela no meio do gesto de limpar, olhos arregalados ("será que viram?")
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, lucid (NOT drunk) but visibly NERVOUS/anxious about tonight's match — fidgety, biting a nail, dabbing sweat, glancing anxiously at the stadium. FULL tousled dark salt-and-pepper hair (medium-short, slightly messy, graying at the temples), short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim on the collar and sleeves. In one hand, held LOW and partly hidden, a tall glass of chope (amber drink with white foam) that he keeps trying to conceal.
+SETTING: EVENING, on the sidewalk right in front of the brightly lit MetLife Stadium (New York / New Jersey), where Brazil plays tonight — crowds of Brazil fans in yellow, flags waving, street vendors, festive pre-match buzz, warm stadium glow.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd softly blurred behind him, warm evening color grade. Duration: exactly 8 seconds.
+
+## CLIP 3 OF 6 — "DEIXA EU AJEITAR A CÂMERA..." (tentando tampar a câmera)
+
+**CAMERA:** Same framing. He reaches a big hand toward the lens to "adjust the camera", partly COVERING it — and uses the moment, escondido atrás da própria mão, para dar um gole rápido.
+
+**DIALOGUE:**
+> *[disfarçado, voz de quem não está aprontando nada]*
+> "Peraí... deixa eu ajeitar a câmera aqui... *(gole)* ...prontinho, meu povo!"
+
+*Cue: a mão tampa parcialmente a lente; atrás da mão ele dá um gole; tira a mão fingindo que nada aconteceu — mas com espuma fresca no bigode*
+
+**AUDIO:** Roçar abafado na lente (thump); "gulp"; risinho nervoso
+
+**TRANSITION OUT:** Tira a mão da câmera, sorriso amarelo, espuma no bigode entregando — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, lucid (NOT drunk) but visibly NERVOUS/anxious about tonight's match — fidgety, biting a nail, dabbing sweat, glancing anxiously at the stadium. FULL tousled dark salt-and-pepper hair (medium-short, slightly messy, graying at the temples), short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim on the collar and sleeves. In one hand, held LOW and partly hidden, a tall glass of chope (amber drink with white foam) that he keeps trying to conceal.
+SETTING: EVENING, on the sidewalk right in front of the brightly lit MetLife Stadium (New York / New Jersey), where Brazil plays tonight — crowds of Brazil fans in yellow, flags waving, street vendors, festive pre-match buzz, warm stadium glow.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd softly blurred behind him, warm evening color grade. Duration: exactly 8 seconds.
+
+## CLIP 4 OF 6 — "MAIS TARDE TEM BOLETIM"
+
+**CAMERA:** Same framing. He promises the bulletin, still anxious (foot tapping, dabbing sweat), the glass hidden behind a big Brazilian flag at his side.
+
+**DIALOGUE:**
+> *[tom de promessa, mas nervoso]*
+> "Mais tarde eu mando o BOLETIM com a classificação, viu? ...se o coração aguentar!"
+
+*Cue: aponta prometendo pra câmera; pé batendo de nervoso; a bandeira balança e quase revela o copo atrás dela*
+
+**AUDIO:** Torcida; bandeira tremulando ao vento
+
+**TRANSITION OUT:** Enxuga o suor da testa; o copo espia atrás da bandeira por um instante — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, lucid (NOT drunk) but visibly NERVOUS/anxious about tonight's match — fidgety, biting a nail, dabbing sweat, glancing anxiously at the stadium. FULL tousled dark salt-and-pepper hair (medium-short, slightly messy, graying at the temples), short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim on the collar and sleeves. In one hand, held LOW and partly hidden, a tall glass of chope (amber drink with white foam) that he keeps trying to conceal.
+SETTING: EVENING, on the sidewalk right in front of the brightly lit MetLife Stadium (New York / New Jersey), where Brazil plays tonight — crowds of Brazil fans in yellow, flags waving, street vendors, festive pre-match buzz, warm stadium glow.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd softly blurred behind him, warm evening color grade. Duration: exactly 8 seconds.
+
+## CLIP 5 OF 6 — "TEM GENTE QUE FALA QUE EU SÓ BEBO..."
+
+**CAMERA:** Same framing. He leans toward the camera, mock-offended, free hand on chest, addressing the rumor — the glass tucked behind his back. A hiccup/slip betrays him.
+
+**DIALOGUE:**
+> *[fingindo indignação, jurando inocência]*
+> "E tem gente que fala que eu VIVO bebendo... que MENTIRA! Eu nem... *hic!*"
+
+*Cue: cara de ofendido fingido, gesto de auréola; no fim escapa um soluço; espuma no bigode; ele tampa a boca, sem-graça, olhando pros lados*
+
+**AUDIO:** Torcida; um "hic" cômico bem audível; "ploink"
+
+**TRANSITION OUT:** Mão na boca depois do soluço, olhos arregalados ("me entreguei?") — congela
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, lucid (NOT drunk) but visibly NERVOUS/anxious about tonight's match — fidgety, biting a nail, dabbing sweat, glancing anxiously at the stadium. FULL tousled dark salt-and-pepper hair (medium-short, slightly messy, graying at the temples), short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim on the collar and sleeves. In one hand, held LOW and partly hidden, a tall glass of chope (amber drink with white foam) that he keeps trying to conceal.
+SETTING: EVENING, on the sidewalk right in front of the brightly lit MetLife Stadium (New York / New Jersey), where Brazil plays tonight — crowds of Brazil fans in yellow, flags waving, street vendors, festive pre-match buzz, warm stadium glow.
+STYLE: photorealistic, cinematic, shallow depth of field with the crowd softly blurred behind him, warm evening color grade. Duration: exactly 8 seconds.
+
+## CLIP 6 OF 6 — "VAAAI, BRASIL!" (o vacilo final / revelação)
+
+**CAMERA:** Slightly wider, grand finale. His nervous energy explodes into a cheer — he throws BOTH arms up, completely forgetting the hidden glass, lifting it HIGH into frame, foam flying, fully exposing he's been holding a chope the whole time. Caught red-handed, he freezes a beat, then bursts into a warm laugh and just toasts the camera.
+
+**DIALOGUE:**
+> *[explode de empolgação, depois rindo de si mesmo, sem-graça]*
+> "VAAAI, BRASIL!! ...ai, NÃO consegui esconder, meu povo! SAÚDE e BOA SORTE!"
+
+*Cue: os dois braços sobem, o copo aparece revelado, espuma respinga; batida de "fui pego" na cara dele; depois uma risada gostosa e um brinde pra câmera, gritando "tô torcendo DEMAIS!"*
+
+**AUDIO:** Rugido enorme da torcida; efeito cômico "ta-dá" no momento da revelação; a risada dele; tilintar do copo
+
+**TRANSITION OUT:** FREEZE FRAME — o copo erguido bem alto contra o estádio iluminado, sorriso sem-graça, os dois braços pro alto — fade lento
+
+---
+
+> 🎬 **DIREÇÃO TÉCNICA:** Render todos os 6 clips em sequência contínua, cada um com EXATAMENTE 8 segundos. Cenário fixo: noite, calçada em frente ao MetLife Stadium iluminado (Nova York/Nova Jersey), torcida do Brasil de amarelo, bandeiras, vendedores. Mestre Leme veste a MESMA camisa amarelo-canário do Brasil em TODOS os clips e está NERVOSO/ansioso com o jogo o tempo todo (roendo unha, suando, olhando pro estádio) — mas LÚCIDO, não bêbado. O COPO DE CHOPE existe em todos os clips, mas fica ESCONDIDO (atrás das costas, atrás da bandeira, atrás da mão que tampa a câmera) do Clip 1 ao 5 — só é REVELADO no Clip 6, quando ele ergue os braços sem querer. O humor vem do disfarce, do comentário "eu nem bebo" e do vacilo final. Fundo levemente desfocado (f/2.8 equivalent), Mestre Leme sempre nítido.

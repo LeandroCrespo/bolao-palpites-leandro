@@ -1,0 +1,143 @@
+=== PROMPTS DE VIDEO — BOLETIM DO MESTRE LEME (IMITANDO O HAT-TRICK DO MESSI NO CAMPINHO) ===
+6 clipes de EXATAMENTE 8 segundos cada. Falas curtas (cabem com folga em 8s).
+Anexar a foto do Mestre Leme é opcional (ajuda na consistência).
+
+CONTEXTO: Mestre Leme está num campo de várzea (e vestiário), todo suado como se
+tivesse acabado de jogar. Ele reencena a comemoração do hat-trick do Messi
+(3 dedos pro alto), fingindo, de brincadeira, que o hat-trick foi DELE — depois
+"confessa" que foi o Messi e emenda no boletim do bolão. Muito humor.
+
+OBS. DE FILTRO (Gemini): pode citar "Messi" na FALA (não é pra gerar a imagem
+dele — quem aparece é só o Mestre Leme imitando). Sem álcool/embriaguez.
+
+DADOS REAIS (usar nas falas): hat-trick do Messi = Argentina 3 x 0 Argélia.
+Liderança EMPATADA: Marcia e Marcos, 180 pts. Logo atrás: Leandro e Mauricio
+(175). Lanterna / devendo o chopão: Sandra (120) e Daiana (125).
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, sweaty and a little out of breath as if he just played a pickup match (flushed, happy). FULL tousled dark salt-and-pepper hair, short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim, a little grass-stained and sweaty; dark shorts; he looks like he just came off the pitch.
+SETTING: a humble Brazilian "várzea" amateur football field at golden late afternoon — chalk lines, simple goals with loose nets, a few palm trees and a small concrete changing room; later clips by the changing-room bench. Warm, nostalgic neighborhood vibe.
+STYLE: photorealistic, cinematic, shallow depth of field with the field softly blurred behind him, warm golden-hour color grade. Duration: exactly 8 seconds.
+
+## CLIP 1 OF 6 — "HAT-TRICK, MEU POVO!"
+
+**CAMERA:** Medium shot on the field. Mestre Leme comes jogging into frame, sweaty, and strikes the iconic three-fingers-up celebration toward the camera, beaming, pretending the hat-trick was his.
+
+**DIALOGUE:**
+> *[empolgado, ofegante, peito estufado]*
+> "HAT-TRICK, meu POVO! TRÊS gols!... *(puff)*... bem que eu queria, né!"
+
+*Cue: corre e faz a pose dos 3 dedos pro alto como o Messi; estufa o peito; na última frase já dá uma risadinha entregando a brincadeira*
+
+**AUDIO:** Torcida de várzea, apito distante, bola batendo; trilha alegre e nostálgica
+
+**TRANSITION OUT:** Pose dos 3 dedos congelada, sorriso maroto — freeze
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, sweaty and a little out of breath as if he just played a pickup match (flushed, happy). FULL tousled dark salt-and-pepper hair, short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim, a little grass-stained and sweaty; dark shorts; he looks like he just came off the pitch.
+SETTING: a humble Brazilian "várzea" amateur football field at golden late afternoon — chalk lines, simple goals with loose nets, a few palm trees and a small concrete changing room; later clips by the changing-room bench. Warm, nostalgic neighborhood vibe.
+STYLE: photorealistic, cinematic, shallow depth of field with the field softly blurred behind him, warm golden-hour color grade. Duration: exactly 8 seconds.
+
+## CLIP 2 OF 6 — "QUEM FEZ FOI O MESSI!"
+
+**CAMERA:** Same field, continuation. He waves his hands "ok, ok, confesso", wipes the sweat with the jersey hem, then points to the sky in admiration.
+
+**DIALOGUE:**
+> *[rindo, admirado]*
+> "Tá, tá... quem fez foi o MESSI! Argentina TRÊS a ZERO na Argélia — que craque, minha gente!"
+
+*Cue: gesto de "calma, confesso"; em "TRÊS a ZERO" mostra 3 dedos e depois o zero com a mão; beija a ponta dos dedos (chef's kiss) elogiando o Messi*
+
+**AUDIO:** Assovio de admiração; torcida ao fundo; trilha alegre continua
+
+**TRANSITION OUT:** Mão apontando pro céu, cara de admiração — freeze
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, sweaty and a little out of breath as if he just played a pickup match (flushed, happy). FULL tousled dark salt-and-pepper hair, short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim, a little grass-stained and sweaty; dark shorts; he looks like he just came off the pitch.
+SETTING: a humble Brazilian "várzea" amateur football field at golden late afternoon — chalk lines, simple goals with loose nets, a few palm trees and a small concrete changing room; later clips by the changing-room bench. Warm, nostalgic neighborhood vibe.
+STYLE: photorealistic, cinematic, shallow depth of field with the field softly blurred behind him, warm golden-hour color grade. Duration: exactly 8 seconds.
+
+## CLIP 3 OF 6 — "EMPATE NA LIDERANÇA!"
+
+**CAMERA:** He sits on the concrete changing-room bench, towel over the shoulder, leans toward camera to give the bolão news with mock-importance.
+
+**DIALOGUE:**
+> *[tom de plantão esportivo, debochado]*
+> "MARCIA e MARCOS GRUDADOS na liderança, 180 cada — nem reza braba separa esses dois!"
+
+*Cue: em "GRUDADOS" junta as duas mãos coladas; em "180" abre os olhos impressionado; risadinha no fim*
+
+**AUDIO:** Pequeno toque triunfal de metais em "GRUDADOS"; ambiente de fim de jogo
+
+**TRANSITION OUT:** Mãos coladas ("grudados"), sobrancelhas erguidas — freeze
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, sweaty and a little out of breath as if he just played a pickup match (flushed, happy). FULL tousled dark salt-and-pepper hair, short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim, a little grass-stained and sweaty; dark shorts; he looks like he just came off the pitch.
+SETTING: a humble Brazilian "várzea" amateur football field at golden late afternoon — chalk lines, simple goals with loose nets, a few palm trees and a small concrete changing room; later clips by the changing-room bench. Warm, nostalgic neighborhood vibe.
+STYLE: photorealistic, cinematic, shallow depth of field with the field softly blurred behind him, warm golden-hour color grade. Duration: exactly 8 seconds.
+
+## CLIP 4 OF 6 — "A PERSEGUIÇÃO TÁ PEGANDO FOGO!"
+
+**CAMERA:** Same bench, continuation. He gestures like a sprinter chasing, looking back over his shoulder, building tension.
+
+**DIALOGUE:**
+> *[narrando como perseguição emocionante, rindo]*
+> "No CANGOTE deles: Leandro e Mauricio, 175 — colados que nem carrapato em boi!"
+
+*Cue: aponta pra trás do próprio pescoço em "CANGOTE"; em "carrapato" belisca o ar e ri; cara de "tá osso pros líderes"*
+
+**AUDIO:** Batida de tambor crescente (tensão); torcida; metais leves
+
+**TRANSITION OUT:** Beliscando o ar ("carrapato"), rindo — freeze
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, sweaty and a little out of breath as if he just played a pickup match (flushed, happy). FULL tousled dark salt-and-pepper hair, short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim, a little grass-stained and sweaty; dark shorts; he looks like he just came off the pitch.
+SETTING: a humble Brazilian "várzea" amateur football field at golden late afternoon — chalk lines, simple goals with loose nets, a few palm trees and a small concrete changing room; later clips by the changing-room bench. Warm, nostalgic neighborhood vibe.
+STYLE: photorealistic, cinematic, shallow depth of field with the field softly blurred behind him, warm golden-hour color grade. Duration: exactly 8 seconds.
+
+## CLIP 5 OF 6 — "DEVENDO O CHOPÃO!"
+
+**CAMERA:** Same bench. He leans in with a mischievous grin to deliver the teasing, wiping his face with the towel.
+
+**DIALOGUE:**
+> *[debochado, mas carinhoso, gargalhando]*
+> "E lá no fundão... SANDRA e DAIANA, ó... perdidas que nem CACHORRO em churrasco — devendo o chopão!"
+
+*Cue: em "cachorro em churrasco" gira a cabeça pros lados igual cão confuso; gargalha; pisca pra câmera no "chopão"*
+
+**AUDIO:** Trombone cômico "wah-wah"; risos ao fundo
+
+**TRANSITION OUT:** Cabeça de cão confuso, piscadela — freeze
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old, sweaty and a little out of breath as if he just played a pickup match (flushed, happy). FULL tousled dark salt-and-pepper hair, short scruffy salt-and-pepper beard blending into a fuller graying mustache, thick eyebrows, warm brown eyes with deep laugh lines, broad contagious smile, proud round belly. (Match the provided reference photo exactly, if attached.)
+OUTFIT (IDENTICAL in every clip): bright canary-yellow Brazil football jersey with green trim, a little grass-stained and sweaty; dark shorts; he looks like he just came off the pitch.
+SETTING: a humble Brazilian "várzea" amateur football field at golden late afternoon — chalk lines, simple goals with loose nets, a few palm trees and a small concrete changing room; later clips by the changing-room bench. Warm, nostalgic neighborhood vibe.
+STYLE: photorealistic, cinematic, shallow depth of field with the field softly blurred behind him, warm golden-hour color grade. Duration: exactly 8 seconds.
+
+## CLIP 6 OF 6 — "AMANHÃ TEM MAIS, VAI BRASIL!"
+
+**CAMERA:** Slightly wider, golden field behind him. He stands up from the bench, throws both arms up and does the three-fingers Messi pose one more time as a triumphant sign-off.
+
+**DIALOGUE:**
+> *[encerramento caloroso, vibrante]*
+> "Amanhã tem MAIS, meu povo! Bora subir nessa tabela... e VAI, BRASIL!"
+
+*Cue: levanta os dois braços; repete a pose dos 3 dedos; aponta pra câmera no "VAI, BRASIL"*
+
+**AUDIO:** Batucada/samba crescendo; torcida comemorando; acorde final alegre; fade do áudio em 1 segundo
+
+**TRANSITION OUT:** FREEZE FRAME — Mestre Leme com os 3 dedos erguidos, sol dourado atrás, sorrisão — fade lento
+
+---
+
+> 🎬 **DIREÇÃO TÉCNICA:** Render os 6 clips em sequência contínua, cada um com EXATAMENTE 8 segundos. CONTINUIDADE: Mestre Leme veste a MESMA camisa amarelo-canário do Brasil (suada, com grama) em TODOS os clips; cenário é um campo de várzea ao entardecer dourado (dos clips 3 ao 5, sentado no banco do vestiário). Ele está suado e levemente ofegante, alegre (acabou de jogar uma pelada), NÃO bêbado. A pose dos 3 dedos (estilo Messi) abre (Clip 1) e fecha (Clip 6) o vídeo. Falas em português, ritmo de boteco/plantão esportivo. Pode citar "Messi" na fala, mas NÃO mostrar o Messi — quem aparece é só o Mestre Leme. Fundo levemente desfocado (f/2.8 equivalent), Mestre Leme sempre nítido.

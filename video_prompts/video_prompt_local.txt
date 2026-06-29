@@ -1,0 +1,160 @@
+
+=== PROMPTS DE VIDEO — MESTRE LEME ===
+Data: 11/06/2026
+Jogos hoje: 1
+Sem podio: 0 | Grupos incompletos: 0
+
+Gerando 6 prompts com Claude...
+
+======================================================================
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old.
+FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut very close to the head with gray dominating at the temples, thick prominent all-gray mustache in the classic Brazilian gaúcho style — dense and well-kept, covering the upper lip. Expressive heavy eyebrows, deep warm brown eyes with laugh lines at the corners, wide flat nose, a broad full smile showing upper and lower teeth — the kind of smile that makes every room feel welcoming.
+BODY: stocky build, broad shoulders, expressive Brazilian hand gestures while speaking.
+OUTFIT: yellow polo shirt with a small embroidered boteco logo on the chest, dark jeans. Holds a thick glass of chope (Brazilian draft beer) with generous white foam at the rim.
+SETTING: a lively spot in Cidade do México, México — ruas lotadas de torcedores em frente ao icônico Estádio Azteca, mariachis tocando, bandeiras de dezenas de países, vendedores de tacos e elote nas calçadas, warm inviting lighting, constant ambient sounds of a cheering World Cup crowd mixed with low conversation murmur and clinking glasses.
+STYLE: photorealistic, cinematic, shallow depth of field with background softly blurred, warm saturated amber color grade. Duration: exactly 8 seconds.
+
+## CLIP 1 OF 6 — "CHEGAMOS NO AZTECA, MEU POVO!"
+
+**CAMERA:** Medium shot, slight low angle looking up at Mestre Leme. He stands outside the iconic Estadio Azteca at night, stadium lights blazing behind him, confetti still floating in the air from the opening ceremony. He wears a yellow Brazil jersey over a white long-sleeve shirt, a colorful Mexican sombrero tilted sideways on his head, and holds a tall glass michelada (beer with lime, chili, tomato juice, salt rim). Crowd noise fading behind him. Warm orange stadium glow on his face. He looks straight into the camera with wide, emotional eyes.
+
+**DIALOGUE:**
+> *[excited, voice cracking with emotion, hands spreading wide]*
+> "Meu POVO — estou aqui no AZTECA! TRÊS Copas do Mundo nesse estádio, minha gente — onze de junho, COPA aberta!"
+
+*Cue: "AZTECA" said with reverence, slow; "TRÊS Copas" with raised index finger; "COPA aberta" voice breaks into a shout — he starts lifting the michelada glass toward camera*
+
+**AUDIO:** Distant stadium crowd cheering and fireworks echoing; cheerful upbeat samba-funk loop underneath; glass clinking softly as he lifts it
+
+**TRANSITION OUT:** Freeze on michelada glass rising into frame at chin level — hand still moving upward
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old.
+FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut very close to the head with gray dominating at the temples, thick prominent all-gray mustache in the classic Brazilian gaúcho style — dense and well-kept, covering the upper lip. Expressive heavy eyebrows, deep warm brown eyes with laugh lines at the corners, wide flat nose, a broad full smile showing upper and lower teeth — the kind of smile that makes every room feel welcoming.
+BODY: stocky build, broad shoulders, expressive Brazilian hand gestures while speaking.
+OUTFIT: yellow polo shirt with a small embroidered boteco logo on the chest, dark jeans. Holds a thick glass of chope (Brazilian draft beer) with generous white foam at the rim.
+SETTING: a lively spot in Cidade do México, México — ruas lotadas de torcedores em frente ao icônico Estádio Azteca, mariachis tocando, bandeiras de dezenas de países, vendedores de tacos e elote nas calçadas, warm inviting lighting, constant ambient sounds of a cheering World Cup crowd mixed with low conversation murmur and clinking glasses.
+STYLE: photorealistic, cinematic, shallow depth of field with background softly blurred, warm saturated amber color grade. Duration: exactly 8 seconds.
+
+## CLIP 2 OF 6 — "O JOGO DA ABERTURA, MEU CONSAGRADO!"
+
+**CAMERA:** Same medium shot, same position, same stadium backdrop. Clip opens with michelada glass still raised at chin level (continuation of Clip 1). He lowers it slightly, pulls out a small crumpled notepad from his jersey pocket with his free hand, squints at it theatrically.
+
+**DIALOGUE:**
+> *[announcing like a sports broadcaster, punchy and fast]*
+> "MÉXICO dois, África do Sul ZERO — os donos da casa estrearam com ESTILO, meu benzinho! Vixe!"
+
+*Cue: "MÉXICO" bellowed loud; "dois" and "ZERO" punched hard with pauses between; "ESTILO" with chef's kiss free hand; "Vixe!" light and surprised — he stuffs notepad back in pocket and taps temple*
+
+**AUDIO:** Quick goal-horn sound effect on "ZERO"; crowd roar sample underneath; samba-funk loop continues steady
+
+**TRANSITION OUT:** He taps his temple twice with one finger, smirking — finger still pressed to temple as clip ends
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old.
+FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut very close to the head with gray dominating at the temples, thick prominent all-gray mustache in the classic Brazilian gaúcho style — dense and well-kept, covering the upper lip. Expressive heavy eyebrows, deep warm brown eyes with laugh lines at the corners, wide flat nose, a broad full smile showing upper and lower teeth — the kind of smile that makes every room feel welcoming.
+BODY: stocky build, broad shoulders, expressive Brazilian hand gestures while speaking.
+OUTFIT: yellow polo shirt with a small embroidered boteco logo on the chest, dark jeans. Holds a thick glass of chope (Brazilian draft beer) with generous white foam at the rim.
+SETTING: a lively spot in Cidade do México, México — ruas lotadas de torcedores em frente ao icônico Estádio Azteca, mariachis tocando, bandeiras de dezenas de países, vendedores de tacos e elote nas calçadas, warm inviting lighting, constant ambient sounds of a cheering World Cup crowd mixed with low conversation murmur and clinking glasses.
+STYLE: photorealistic, cinematic, shallow depth of field with background softly blurred, warm saturated amber color grade. Duration: exactly 8 seconds.
+
+## CLIP 3 OF 6 — "QUEM MANDOU BEM HOJE!"
+
+**CAMERA:** Same framing. Opens with finger still pressed to temple (continuation). He drops the hand, leans slightly toward camera conspiratorially, michelada glass back at hip level.
+
+**DIALOGUE:**
+> *[proud, warm, nodding slowly]*
+> "BRENO, João Paulo, KARINA, Leandro, Mauricio — VINTE pontos cada um! Craque TOTAL, meu consagrado!"
+
+*Cue: each name said with affectionate emphasis, finger counting in the air (1-2-3-4-5); "VINTE" stretched out proudly; "CRAQUE TOTAL" with fist pump — fist stays raised at end*
+
+**AUDIO:** Short triumphant brass sting on "VINTE pontos"; crowd applause sample; samba-funk loop continues
+
+**TRANSITION OUT:** Fist raised in the air, frozen mid-pump — arm still extended upward as clip cuts
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old.
+FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut very close to the head with gray dominating at the temples, thick prominent all-gray mustache in the classic Brazilian gaúcho style — dense and well-kept, covering the upper lip. Expressive heavy eyebrows, deep warm brown eyes with laugh lines at the corners, wide flat nose, a broad full smile showing upper and lower teeth — the kind of smile that makes every room feel welcoming.
+BODY: stocky build, broad shoulders, expressive Brazilian hand gestures while speaking.
+OUTFIT: yellow polo shirt with a small embroidered boteco logo on the chest, dark jeans. Holds a thick glass of chope (Brazilian draft beer) with generous white foam at the rim.
+SETTING: a lively spot in Cidade do México, México — ruas lotadas de torcedores em frente ao icônico Estádio Azteca, mariachis tocando, bandeiras de dezenas de países, vendedores de tacos e elote nas calçadas, warm inviting lighting, constant ambient sounds of a cheering World Cup crowd mixed with low conversation murmur and clinking glasses.
+STYLE: photorealistic, cinematic, shallow depth of field with background softly blurred, warm saturated amber color grade. Duration: exactly 8 seconds.
+
+## CLIP 4 OF 6 — "MESA VIP E ZONA DE REBAIXAMENTO!"
+
+**CAMERA:** Same framing. Opens with fist still raised (continuation). He slowly lowers the fist and holds up three fingers toward camera, grinning wide under the gray mustache.
+
+**DIALOGUE:**
+> *[playful, bouncing between proud and teasing tone]*
+> "Mesa VIP: BRENO, João Paulo, KARINA — empatados no topo! Mario, Amanda, Danilo, Sandra — DEVENDO o chopão, tá louco!"
+
+*Cue: "Mesa VIP" in a fancy mock-snobbish voice; top names said fast and proudly; "DEVENDO o chopão" in exaggerated shock, free hand slapping cheek — slap lands, cheek still squished as clip ends*
+
+**AUDIO:** Royal fanfare sting for "Mesa VIP"; sad trombone "wah-wah" on "DEVENDO o chopão"; samba-funk loop underneath
+
+**TRANSITION OUT:** Free hand still pressing squished cheek in comedic disbelief — frozen expression
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old.
+FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut very close to the head with gray dominating at the temples, thick prominent all-gray mustache in the classic Brazilian gaúcho style — dense and well-kept, covering the upper lip. Expressive heavy eyebrows, deep warm brown eyes with laugh lines at the corners, wide flat nose, a broad full smile showing upper and lower teeth — the kind of smile that makes every room feel welcoming.
+BODY: stocky build, broad shoulders, expressive Brazilian hand gestures while speaking.
+OUTFIT: yellow polo shirt with a small embroidered boteco logo on the chest, dark jeans. Holds a thick glass of chope (Brazilian draft beer) with generous white foam at the rim.
+SETTING: a lively spot in Cidade do México, México — ruas lotadas de torcedores em frente ao icônico Estádio Azteca, mariachis tocando, bandeiras de dezenas de países, vendedores de tacos e elote nas calçadas, warm inviting lighting, constant ambient sounds of a cheering World Cup crowd mixed with low conversation murmur and clinking glasses.
+STYLE: photorealistic, cinematic, shallow depth of field with background softly blurred, warm saturated amber color grade. Duration: exactly 8 seconds.
+
+## CLIP 5 OF 6 — "VAR DO BOLÃO — ZUEIRA CARINHOSA!"
+
+**CAMERA:** Same framing. Opens with hand still on squished cheek (continuation). He releases cheek, straightens up, holds up michelada glass and wags his finger at camera slowly, professor-style.
+
+**DIALOGUE:**
+> *[conspiratorial whisper building to cheerful shout]*
+> "Amanda, Danilo e Sandra — ZERO pontos no dia da ABERTURA, minha gente — nem o VAR salva vocês! Tá LOUCO!"
+
+*Cue: "ZERO" drawn out painfully slow; "ABERTURA" emphasized like it's unthinkable; "VAR salva" with referee whistle hand gesture; "Tá LOUCO!" loud laugh — he throws head back laughing, michelada tilting dangerously*
+
+**AUDIO:** Referee whistle sound effect on "VAR"; comedic tuba-slide sound; laughter building; samba-funk loop continues; michelada ice tinkling
+
+**TRANSITION OUT:** Head thrown back mid-laugh, michelada glass tilting forward dangerously toward camera — both arms spreading wide
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old.
+FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut very close to the head with gray dominating at the temples, thick prominent all-gray mustache in the classic Brazilian gaúcho style — dense and well-kept, covering the upper lip. Expressive heavy eyebrows, deep warm brown eyes with laugh lines at the corners, wide flat nose, a broad full smile showing upper and lower teeth — the kind of smile that makes every room feel welcoming.
+BODY: stocky build, broad shoulders, expressive Brazilian hand gestures while speaking.
+OUTFIT: yellow polo shirt with a small embroidered boteco logo on the chest, dark jeans. Holds a thick glass of chope (Brazilian draft beer) with generous white foam at the rim.
+SETTING: a lively spot in Cidade do México, México — ruas lotadas de torcedores em frente ao icônico Estádio Azteca, mariachis tocando, bandeiras de dezenas de países, vendedores de tacos e elote nas calçadas, warm inviting lighting, constant ambient sounds of a cheering World Cup crowd mixed with low conversation murmur and clinking glasses.
+STYLE: photorealistic, cinematic, shallow depth of field with background softly blurred, warm saturated amber color grade. Duration: exactly 8 seconds.
+
+## CLIP 6 OF 6 — "SAÚDE DO AZTECA, MEU POVO!"
+
+**CAMERA:** Same framing but camera pulls back 20% wider to show more of the glowing Azteca stadium behind him — grand finale feel. Opens with arms still spread wide from Clip 5 laugh. He snaps head back forward, beaming. He raises the michelada glass high with both hands, stadium lights forming a halo behind the glass.
+
+**DIALOGUE:**
+> *[full volume, emotional, voice booming with joy]*
+> "SAÚDE do AZTECA — primeiro boletim da Copa, meu POVO! Amanhã tem mais — VAI, BRASIL!"
+
+*Cue: "SAÚDE" bellowed like a toast at a packed bar; "AZTECA" reverently; "VAI, BRASIL!" screamed at full volume with the glass thrust toward camera — freeze on glass thrust forward, foam spilling slightly over rim*
+
+**AUDIO:** Full crowd roar rises; fireworks crack and boom behind him; triumphant samba-drum batucada crescendo; glass clink sound effect on freeze frame; fade audio out over 1 second
+
+**TRANSITION OUT:** FREEZE FRAME — michelada glass filling the frame, stadium lights sparkling behind it, Mestre Leme's wide grin visible beneath — slow fade to black with subtle vignette
+
+---
+
+FIXED CHARACTER: Mestre Leme — a stocky, heavy-set Brazilian man, approximately 55 years old.
+FACE: round full face, warm caramel-brown skin, short salt-and-pepper hair cut very close to the head with gray dominating at the temples, thick prominent all-gray mustache in the classic Brazilian gaúcho style — dense and well-kept, covering the upper lip. Expressive heavy eyebrows, deep warm brown eyes with laugh lines at the corners, wide flat nose, a broad full smile showing upper and lower teeth — the kind of smile that makes every room feel welcoming.
+BODY: stocky build, broad shoulders, expressive Brazilian hand gestures while speaking.
+OUTFIT: yellow polo shirt with a small embroidered boteco logo on the chest, dark jeans. Holds a thick glass of chope (Brazilian draft beer) with generous white foam at the rim.
+SETTING: a lively spot in Cidade do México, México — ruas lotadas de torcedores em frente ao icônico Estádio Azteca, mariachis tocando, bandeiras de dezenas de países, vendedores de tacos e elote nas calçadas, warm inviting lighting, constant ambient sounds of a cheering World Cup crowd mixed with low conversation murmur and clinking glasses.
+STYLE: photorealistic, cinematic, shallow depth of field with background softly blurred, warm saturated amber color grade. Duration: exactly 8 seconds.
+
+> 🎬 **DIREÇÃO TÉCNICA:** Render todos os 6 clips em sequência contínua. A luz do Azteca à noite (warm sodium orange + cool LED white) é dominante em todos os clips. O sombrero mexicano deve permanecer levemente torto do Clip 1 ao 6 — nunca reto, sempre com aquela inclinação cômica de turista feliz. A michelada deve ter espuma fresca visível do Clip 1 ao 6. Fundo levemente desfocado (f/2.8 equivalent), Mestre Leme sempre nítido.
+
+======================================================================
+
+Copie cada bloco (separado por ---) e cole no Gemini Pro na ordem 1 a 6.
