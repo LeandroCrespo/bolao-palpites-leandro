@@ -868,11 +868,12 @@
       "phase": "R32",
       "home_team": "KOR",
       "away_team": "SUI",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1,
       "winner": "SUI",
       "went_to_penalties": true,
-      "reasoning": "Suíça (FIFA #17) vs Coreia do Sul (FIFA #22) é confronto muito equilibrado. A Suíça tem experiência em mata-mata e solidez defensiva. Empate em 1-1, Suíça avança nos pênaltis com sua tradição de equilíbrio emocional."
+      "reasoning": "Brasil tem média de 3,0 gols feitos e 0,8 sofridos por jogo (últimos 5), com xG de 2,92 na Copa, num crescente de desempenho (três 3×0 e amistosos elásticos); Japão tem média de 1,6 gols feitos e 0,8 sofridos, chega com Kubo fora e Itakura duvidoso, mas mostrou capacidade de marcar contra seleções de ponta — o que torna o empate improvável e sustenta uma vitória brasileira com gol japonês.",
+      "pregame_note": "Brasil tem média de 3,0 gols feitos e 0,8 sofridos por jogo (últimos 5), com xG de 2,92 na Copa, num crescente de desempenho (três 3×0 e amistosos elásticos); Japão tem média de 1,6 gols feitos e 0,8 sofridos, chega com Kubo fora e Itakura duvidoso, mas mostrou capacidade de marcar contra seleções de ponta — o que torna o empate improvável e sustenta uma vitória brasileira com gol japonês."
     },
     {
       "match_number": 77,
@@ -1910,6 +1911,7 @@
     70,
     71,
     72,
-    73
+    73,
+    76
   ]
 }
