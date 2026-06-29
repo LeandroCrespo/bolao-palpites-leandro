@@ -846,11 +846,12 @@
       "phase": "R32",
       "home_team": "MAR",
       "away_team": "EUR_C",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 0,
       "winner": "MAR",
       "went_to_penalties": false,
-      "reasoning": "Marrocos (FIFA #7) é superior à Turquia (FIFA #28) no ranking e mostrou força defensiva e qualidade técnica crescente. A Turquia é perigosa, mas Marrocos tem estrutura sólida e vence por 1-0 num jogo fechado."
+      "reasoning": "Alemanha tem média de ~3,75 gols feitos e ~1,1 sofridos por jogo; Paraguai tem média de ~1,5 gols feitos e ~1,0 sofrido — o 1-0 subestima o ataque alemão (10 gols em 3 jogos na Copa, Undav artilheiro), enquanto o Paraguai chega sem Diego Gómez (suspenso) e Alderete (lesionado), com dificuldades ofensivas, tornando o 2-0 o placar mais fundamentado.",
+      "pregame_note": "Alemanha tem média de ~3,75 gols feitos e ~1,1 sofridos por jogo; Paraguai tem média de ~1,5 gols feitos e ~1,0 sofrido — o 1-0 subestima o ataque alemão (10 gols em 3 jogos na Copa, Undav artilheiro), enquanto o Paraguai chega sem Diego Gómez (suspenso) e Alderete (lesionado), com dificuldades ofensivas, tornando o 2-0 o placar mais fundamentado."
     },
     {
       "match_number": 75,
@@ -1912,6 +1913,7 @@
     71,
     72,
     73,
+    74,
     76
   ]
 }
