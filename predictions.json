@@ -893,11 +893,12 @@
       "phase": "R32",
       "home_team": "BRA",
       "away_team": "EUR_D",
-      "home_goals": 3,
-      "away_goals": 0,
+      "home_goals": 1,
+      "away_goals": 2,
       "winner": "BRA",
       "went_to_penalties": false,
-      "reasoning": "Brasil (FIFA #6) contra Tchéquia (FIFA #40) é o confronto com maior diferença de qualidade da fase. A Tchéquia tem limitações claras para enfrentar o poderio ofensivo brasileiro. Vitória tranquila do Brasil por 3-0."
+      "reasoning": "Costa do Marfim tem média de ~2,0 gols feitos e ~0,75 sofridos por jogo, enquanto a Noruega tem média de ~2,75 gols feitos e ~1,4 sofridos — a Noruega retorna com força máxima (Haaland, Ødegaard e Sørloth confirmados, descansados após poupar na última rodada), tornando um 3x0 insustentável; a defesa norueguesa porosa (7 gols sofridos na Copa) deixa espaço para a Costa do Marfim marcar, mas o poder ofensivo nórdico com os titulares em campo favorece a Noruega em um jogo equilibrado e com gols nos dois lados.",
+      "pregame_note": "Costa do Marfim tem média de ~2,0 gols feitos e ~0,75 sofridos por jogo, enquanto a Noruega tem média de ~2,75 gols feitos e ~1,4 sofridos — a Noruega retorna com força máxima (Haaland, Ødegaard e Sørloth confirmados, descansados após poupar na última rodada), tornando um 3x0 insustentável; a defesa norueguesa porosa (7 gols sofridos na Copa) deixa espaço para a Costa do Marfim marcar, mas o poder ofensivo nórdico com os titulares em campo favorece a Noruega em um jogo equilibrado e com gols nos dois lados."
     },
     {
       "match_number": 79,
@@ -1916,6 +1917,7 @@
     73,
     74,
     75,
-    76
+    76,
+    78
   ]
 }
