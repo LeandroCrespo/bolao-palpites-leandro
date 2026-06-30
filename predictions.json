@@ -858,11 +858,12 @@
       "phase": "R32",
       "home_team": "CAN",
       "away_team": "EUR_B",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1,
       "winner": "CAN",
       "went_to_penalties": true,
-      "reasoning": "Canadá joga em Monterrey com boa torcida local e é anfitrião do torneio. A Suécia é resiliente, mas o Canadá em 2026 tem geração de ouro (Davies, David). Empate em 1-1 nos 90 min, Canadá vence nos pênaltis."
+      "reasoning": "Holanda tem média de ~2,5 gols feitos e ~1,67 sofridos por jogo, enquanto Marrocos tem média de ~2,0 gols feitos e ~0,5 sofridos — mas essa defesa foi testada por adversários bem mais fracos nos amistosos; contra o Brasil (referência mais qualificada), levaram 1 gol, e a Holanda, com o melhor ataque da Copa (10 gols em 3 jogos) e força máxima em campo, sustenta favoritismo claro para vencer por margem mínima, com Marrocos respondendo pelo menos uma vez conforme seu padrão ofensivo recente.",
+      "pregame_note": "Holanda tem média de ~2,5 gols feitos e ~1,67 sofridos por jogo, enquanto Marrocos tem média de ~2,0 gols feitos e ~0,5 sofridos — mas essa defesa foi testada por adversários bem mais fracos nos amistosos; contra o Brasil (referência mais qualificada), levaram 1 gol, e a Holanda, com o melhor ataque da Copa (10 gols em 3 jogos) e força máxima em campo, sustenta favoritismo claro para vencer por margem mínima, com Marrocos respondendo pelo menos uma vez conforme seu padrão ofensivo recente."
     },
     {
       "match_number": 76,
@@ -1914,6 +1915,7 @@
     72,
     73,
     74,
+    75,
     76
   ]
 }
