@@ -882,11 +882,12 @@
       "phase": "R32",
       "home_team": "USA",
       "away_team": "EUR_B",
-      "home_goals": 2,
-      "away_goals": 0,
+      "home_goals": 3,
+      "away_goals": 1,
       "winner": "USA",
       "went_to_penalties": false,
-      "reasoning": "EUA jogam em Nova York num ambiente de Copa em casa. A Suécia já jogou dois jogos anteriores (73 e 75) neste torneio e pode estar desgastada. Os EUA têm elenco qualificado e o fator casa é decisivo. Vitória americana confortável por 2-0."
+      "reasoning": "França tem média de ~3,0 gols feitos e ~0,75 sofridos por jogo nos últimos 8, com 10 gols em 3 jogos na Copa, Mbappé e Dembélé em chama e escalação ofensiva confirmada; Suécia tem média de ~2,2 gols feitos e ~2,0 sofridos por jogo nos últimos 6 — a fragilidade defensiva sueca (7 gols sofridos na fase de grupos) valida elevar a projeção de gols franceses de 2 para 3, enquanto o trio Gyökeres/Isak/Elanga justifica ao menos 1 gol para os suecos.",
+      "pregame_note": "França tem média de ~3,0 gols feitos e ~0,75 sofridos por jogo nos últimos 8, com 10 gols em 3 jogos na Copa, Mbappé e Dembélé em chama e escalação ofensiva confirmada; Suécia tem média de ~2,2 gols feitos e ~2,0 sofridos por jogo nos últimos 6 — a fragilidade defensiva sueca (7 gols sofridos na fase de grupos) valida elevar a projeção de gols franceses de 2 para 3, enquanto o trio Gyökeres/Isak/Elanga justifica ao menos 1 gol para os suecos."
     },
     {
       "match_number": 78,
@@ -1918,6 +1919,7 @@
     74,
     75,
     76,
+    77,
     78
   ]
 }
