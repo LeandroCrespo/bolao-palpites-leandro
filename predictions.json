@@ -906,11 +906,12 @@
       "phase": "R32",
       "home_team": "ECU",
       "away_team": "JPN",
-      "home_goals": 1,
-      "away_goals": 2,
+      "home_goals": 2,
+      "away_goals": 0,
       "winner": "JPN",
       "went_to_penalties": false,
-      "reasoning": "Japão (FIFA #18) é levemente superior ao Equador (FIFA #23) e tem mostrado crescimento constante no futebol mundial. Equador é perigoso com Enner Valencia, mas o Japão tem mais organização tática. Japão vence por 2-1 numa virada."
+      "reasoning": "O palpite 1×2 coloca o Equador como vencedor, o que contraria o momentum dominante do México (média de 2,3 gols feitos e apenas 0,3 sofridos nos últimos 7 jogos), o mando de campo no Azteca e o retrospecto histórico favorável; enquanto Equador tem média de apenas 1,0 gol feito e 0,57 sofridos por jogo, não sustentando nem 2 gols marcados nem uma vitória sobre esta defesa mexicana em sua melhor fase.",
+      "pregame_note": "O palpite 1×2 coloca o Equador como vencedor, o que contraria o momentum dominante do México (média de 2,3 gols feitos e apenas 0,3 sofridos nos últimos 7 jogos), o mando de campo no Azteca e o retrospecto histórico favorável; enquanto Equador tem média de apenas 1,0 gol feito e 0,57 sofridos por jogo, não sustentando nem 2 gols marcados nem uma vitória sobre esta defesa mexicana em sua melhor fase."
     },
     {
       "match_number": 80,
@@ -1920,6 +1921,7 @@
     75,
     76,
     77,
-    78
+    78,
+    79
   ]
 }
