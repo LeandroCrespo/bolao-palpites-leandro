@@ -930,11 +930,12 @@
       "phase": "R32",
       "home_team": "GER",
       "away_team": "EUR_B",
-      "home_goals": 3,
+      "home_goals": 2,
       "away_goals": 1,
       "winner": "GER",
       "went_to_penalties": false,
-      "reasoning": "Alemanha (FIFA #10) enfrenta a Suécia que já disputou três jogos anteriores nesta fase. O desgaste sueco é fator decisivo. A Alemanha, renovada e com qualidade, vence com autoridade por 3-1."
+      "reasoning": "Estados Unidos tem média de 2,0 gols feitos e 1,86 sofridos por jogo (últimos 7), enquanto Bósnia e Herzegovina tem média de 1,14 gols feitos e 1,29 sofridos — a Bósnia marcou nos 3 jogos desta Copa e tem Dzeko/Demirovic confirmados, tornando o 3-1 improvável; o 2-1 reflete melhor o favoritismo americano com a defesa bósnia vazada, mas sem ignorar o poder ofensivo do visitante.",
+      "pregame_note": "Estados Unidos tem média de 2,0 gols feitos e 1,86 sofridos por jogo (últimos 7), enquanto Bósnia e Herzegovina tem média de 1,14 gols feitos e 1,29 sofridos — a Bósnia marcou nos 3 jogos desta Copa e tem Dzeko/Demirovic confirmados, tornando o 3-1 improvável; o 2-1 reflete melhor o favoritismo americano com a defesa bósnia vazada, mas sem ignorar o poder ofensivo do visitante."
     },
     {
       "match_number": 82,
@@ -1926,6 +1927,7 @@
     78,
     79,
     80,
+    81,
     82
   ]
 }
