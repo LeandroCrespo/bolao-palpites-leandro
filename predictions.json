@@ -941,11 +941,12 @@
       "phase": "R32",
       "home_team": "EGY",
       "away_team": "URU",
-      "home_goals": 1,
-      "away_goals": 2,
+      "home_goals": 2,
+      "away_goals": 1,
       "winner": "URU",
       "went_to_penalties": false,
-      "reasoning": "Uruguai (FIFA #16) é superior ao Egito (FIFA #35) em qualidade e experiência de mata-mata. Com Núñez e Valverde, o Uruguai tem poder de fogo suficiente. Egito pode marcar mas não segura. Uruguai vence por 2-1."
+      "reasoning": "Bélgica tem média de 3,25 gols feitos e 0,63 sofridos, enquanto Senegal tem média de 1,88 gols feitos e 1,25 sofridos nos últimos 8 jogos — os belgas são claramente o time mais produtivo e defensivamente mais sólido; a ausência de Lukaku no 11 inicial e a capacidade ofensiva real do Senegal (Sarr, Mané, Ndiaye) justificam manter 1 gol senegalês, mas a direção da vitória belga é sólida demais para manter o palpite invertido de 1×2.",
+      "pregame_note": "Bélgica tem média de 3,25 gols feitos e 0,63 sofridos, enquanto Senegal tem média de 1,88 gols feitos e 1,25 sofridos nos últimos 8 jogos — os belgas são claramente o time mais produtivo e defensivamente mais sólido; a ausência de Lukaku no 11 inicial e a capacidade ofensiva real do Senegal (Sarr, Mané, Ndiaye) justificam manter 1 gol senegalês, mas a direção da vitória belga é sólida demais para manter o palpite invertido de 1×2."
     },
     {
       "match_number": 83,
@@ -1924,6 +1925,7 @@
     77,
     78,
     79,
-    80
+    80,
+    82
   ]
 }
