@@ -919,10 +919,11 @@
       "home_team": "NED",
       "away_team": "EUR_D",
       "home_goals": 2,
-      "away_goals": 0,
+      "away_goals": 1,
       "winner": "NED",
       "went_to_penalties": false,
-      "reasoning": "Holanda (FIFA #8) tem qualidade muito superior à Tchéquia (FIFA #40). Com jogadores como Van Dijk, Dumfries e geração jovem talentosa, a Holanda controla o jogo e vence com facilidade por 2-0."
+      "reasoning": "Inglaterra tem média de 1,67 gols feitos e 0,50 sofridos nos últimos 6 jogos e joga com a lateral direita improvisada (Spence no lugar dos lesionados Reece James e Quansah), enquanto RD Congo tem média de ~1,38 gols feitos e ~0,88 sofridos, com Wissa em grande fase (3 gols em 3 jogos, 1 gol a cada 90 min), tornando o placar limpo 2-0 menos provável — um gol congolês no contra-ataque é cenário real e bem fundamentado pelos números.",
+      "pregame_note": "Inglaterra tem média de 1,67 gols feitos e 0,50 sofridos nos últimos 6 jogos e joga com a lateral direita improvisada (Spence no lugar dos lesionados Reece James e Quansah), enquanto RD Congo tem média de ~1,38 gols feitos e ~0,88 sofridos, com Wissa em grande fase (3 gols em 3 jogos, 1 gol a cada 90 min), tornando o placar limpo 2-0 menos provável — um gol congolês no contra-ataque é cenário real e bem fundamentado pelos números."
     },
     {
       "match_number": 81,
@@ -1922,6 +1923,7 @@
     76,
     77,
     78,
-    79
+    79,
+    80
   ]
 }
