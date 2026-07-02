@@ -45,15 +45,12 @@ handheld camera movement. Duration: exactly 8 seconds.
 câmera na sua altura, olhando diretamente para a câmera com expressão sincera
 e calorosa. As telas da Times Square pulsam suavemente atrás.
 
-**DIALOGUE:**
-> *[voz masculina, ligeiramente mais fina — calma, sincera, sem pressa]*
-> "Oi, família do Bolão dos Lemes.
-> Sou o Tiquinho — o novo parceiro do Mestre Leme.
+**DIALOGUE:** *(máx. ~20 palavras — ritmo de 8 segundos)*
+> *[voz masculina, ligeiramente mais fina — calma, sincera]*
+> "Oi! Sou o Tiquinho.
 > *(coloca a mão no peito)*
-> Marcia Monfardini —
-> um abraço enorme pra você.
-> Tô torcendo por você do fundo do coração.
-> Vai fundo, Marcia!"
+> Marcia Monfardini — um abraço enorme.
+> Tô torcendo por você. Vai fundo!"
 
 *Cue: ao se apresentar ele olha direto para a câmera com calma — sem pressa,
 sem performance; ao dizer "Marcia Monfardini" para completamente e coloca a

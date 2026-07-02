@@ -65,13 +65,11 @@ camera with slight movement. Duration: exactly 8 seconds.
 **CAMERA:** Medium shot. Mestre Leme de frente para a câmera, braços abertos
 abraçando a Times Square ao fundo, garrafa de cerveja na mão direita.
 
-**DIALOGUE:**
-> *[voz entusiasmada, sotaque paulistano, energia de quem chegou a Manhattan no avião certo]*
-> "Meu povo! Saí da roda de samba de Houston
-> e vim direto pra Times Square, Nova York!
-> Aqui do lado — no MetLife Stadium —
-> o Brasil vai jogar as oitavas de final!
-> E antes de qualquer coisa... o boletim do bolão!"
+**DIALOGUE:** *(máx. ~20 palavras — ritmo de 8 segundos)*
+> *[voz entusiasmada, sotaque paulistano]*
+> "Meu povo! Da roda de samba de Houston
+> vim direto pra Times Square!
+> Boletim do Bolão dos Lemes — começa agora!"
 
 *Cue: abre os braços para a Times Square com orgulho de anfitrião do mundo; ao
 "MetLife Stadium" aponta para o lado com convicção como se o estádio ficasse ali
@@ -94,15 +92,12 @@ STYLE: photorealistic, cinematic, neon-lit, shallow depth of field. Duration: 8s
 **CAMERA:** Medium close-up. Mestre Leme em modo narrador — postura de locutor
 esportivo preciso, olha para a câmera com foco total.
 
-**DIALOGUE:**
-> *[voz de narrador esportivo, paulistano, focado e ritmado]*
-> "O boletim de hoje:
-> Inglaterra despachou o Congo — 2 a 1.
-> Bélgica empatou com o Senegal, foi pra pênalti — Bélgica levou.
-> E os Estados Unidos fecharam a rodada —
-> 2 a 0 na Bósnia!
-> *(bate palma única, fechando o placar)*
-> Fase de grupos encerrada. Mata-mata começou pra valer!"
+**DIALOGUE:** *(máx. ~20 palavras — ritmo de 8 segundos)*
+> *[narrador esportivo, paulistano, ritmado]*
+> "Inglaterra: 2 a 1 no Congo.
+> Bélgica nos pênaltis. Estados Unidos: 2 a 0 na Bósnia.
+> *(bate palma única)*
+> Fase de grupos encerrada. Mata-mata!"
 
 *Cue: cada resultado narrado com batida precisa do dedo no ar como marcando placar
 imaginário; ao "Bélgica levou" faz gesto de cobrança de pênalti — braço esticado;
@@ -125,15 +120,13 @@ STYLE: photorealistic, cinematic, neon-lit, shallow depth of field. Duration: 8s
 **CAMERA:** Medium shot. Mestre Leme em posição de apresentador de gala — garrafa
 erguida como troféu imaginário enquanto anuncia.
 
-**DIALOGUE:**
-> *[voz de apresentador de prêmio, paulistano no auge]*
-> "No ranking do Bolão dos Lemes —
-> na liderança, com 995 pontos: MAURICIO LEME!
+**DIALOGUE:** *(máx. ~20 palavras — ritmo de 8 segundos)*
+> *[apresentador de prêmio, paulistano no auge]*
+> "Liderança: Mauricio, 995!
 > *(pausa dramática)*
-> Logo atrás, Leandro com 980.
-> E empatados em terceiro com 970:
-> Danilo e Renata.
-> Quatro na cola — é mata-mata no ranking também!"
+> Leandro em segundo, 980.
+> Danilo e Renata empatados em terceiro — 970.
+> É mata-mata no ranking também!"
 
 *Cue: ao "MAURICIO LEME!" ergue a garrafa como troféu de cerimônia de prêmio;
 ao "Leandro com 965" aponta para o lado com respeito; ao "Danilo e Renata"
@@ -156,15 +149,12 @@ STYLE: photorealistic, cinematic, neon-lit, shallow depth of field. Duration: 8s
 **CAMERA:** Medium close-up. Mestre Leme com expressão de conselheiro preocupado
 mas carinhoso — tom de pastor dando recado urgente.
 
-**DIALOGUE:**
-> *[voz de pastor evangélico dando recado de urgência, paulistano legítimo]*
-> "E no fundão do ranking —
-> Sandra, 700 pontos. Amanda, 765.
-> Minha gente, os outdoors da Times Square
-> têm mais luz do que as perspectivas de vocês
-> se não acordarem!
-> *(aponta para os painéis gigantes ao redor)*
-> Os jogos não param. O ranking não espera!"
+**DIALOGUE:** *(máx. ~20 palavras — ritmo de 8 segundos)*
+> *[pastor urgente, paulistano legítimo]*
+> "No fundão: Sandra, 700. Amanda, 765.
+> Gente, esses outdoors têm mais luz que vocês!
+> *(aponta para os painéis)*
+> O ranking não espera!"
 
 *Cue: ao citar Sandra e Amanda aponta para baixo com carinho mas com seriedade
 total; ao "outdoors da Times Square" vira e aponta para os painéis gigantes ao
@@ -188,15 +178,12 @@ STYLE: photorealistic, cinematic, neon-lit, shallow depth of field. Duration: 8s
 **CAMERA:** Medium shot. Mestre Leme em modo de hype total — postura de guerreiro,
 garrafa erguida, os outdoors pulsando atrás.
 
-**DIALOGUE:**
-> *[voz de guerreiro, paulistano máximo, energia de final de campeonato]*
-> "Dia 5 de julho — Brasil x Noruega!
-> MetLife Stadium, aqui do lado!
-> Os noruegueses chegaram em Nova York de longsnekr —
-> barco viking, minha gente, como os ancestrais —
-> *(pausa maliciosa, sorriso largo)*
-> e vão voltar de avião de carreira,
-> na janelinha, sem passagem de volta!"
+**DIALOGUE:** *(máx. ~20 palavras — ritmo de 8 segundos)*
+> *[guerreiro, paulistano máximo]*
+> "Dia 5 — Brasil x Noruega no MetLife!
+> Os vikings vieram de longsnekr...
+> *(pausa maliciosa)*
+> e vão voltar na janelinha!"
 
 *Cue: ao "longsnekr" faz gesto lento de barco com a mão livre — majestoso e
 cômico ao mesmo tempo; ao "janelinha" aperta os dedos mostrando janela minúscula
@@ -220,13 +207,11 @@ STYLE: photorealistic, cinematic, neon-lit, shallow depth of field. Duration: 8s
 **CAMERA:** Medium close-up. Mestre Leme olha para a câmera com expressão de quem
 guarda um segredo e está prestes a revelar. Voz mais suave, conspirativa.
 
-**DIALOGUE:**
-> *[voz confidencial, paulistano, como quem vai revelar algo especial]*
-> "E família... antes do brinde —
-> tem um amigo novo nessa aventura comigo.
-> Chama Tiquinho. Anão. Brasileiro. Festeiro.
+**DIALOGUE:** *(máx. ~20 palavras — ritmo de 8 segundos)*
+> *[confidencial, paulistano]*
+> "Tem um amigo novo nessa aventura: o Tiquinho!
 > *(pisca para a câmera)*
-> Ele tem um recado especial pra Marcia Monfardini.
+> Recado especial pra Marcia Monfardini.
 > Fica ligado no próximo vídeo!"
 
 *Cue: ao revelar o nome "Tiquinho" faz gesto discreto para o lado como quem
@@ -251,14 +236,12 @@ STYLE: photorealistic, cinematic, neon-lit, shallow depth of field. Duration: 8s
 **CAMERA:** Medium shot levemente mais aberto — Mestre Leme inteiro no frame,
 a Times Square em seu máximo atrás. Momento solene e festivo ao mesmo tempo.
 
-**DIALOGUE:**
-> *[solene e caloroso, sotaque paulistano no melhor momento]*
-> "Então família do Bolão dos Lemes —
-> faz o palpite com carinho, acredita no Brasil,
-> e no dia 5 a gente vai junto pro MetLife.
-> *(ergue a garrafa lentamente)*
-> Da Times Square de Nova York...
-> Saúde! E VAI, BRASIL!"
+**DIALOGUE:** *(máx. ~20 palavras — ritmo de 8 segundos)*
+> *[solene e caloroso, paulistano]*
+> "Faz o palpite, acredita no Brasil!
+> No dia 5 a gente vai junto pro MetLife.
+> *(ergue a garrafa)*
+> Saúde! VAI, BRASIL!"
 
 *Cue: o brinde é solene e real — garrafa erguida com braço estendido para cima;
 a luz dos outdoors da Times Square ilumina a garrafa dourada como se fosse uma
