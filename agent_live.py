@@ -656,38 +656,47 @@ def run_pregame(dry_run: bool = False):
     """Reavalia, ~30 min antes do início, os palpites dos jogos prestes a começar.
     Se o placar mudar, atualiza (apenas o jogo, apenas o próprio usuário, apenas
     jogos ainda não iniciados) e avisa no Telegram. Idempotente: cada jogo é
-    reavaliado uma única vez (marca em predictions.json -> pregame_checked)."""
+    reavaliado uma única vez (marca em predictions.json -> pregame_checked).
+    O palpite atual (ph/pa) é lido do banco — não do predictions.json — para
+    garantir que o valor real seja avaliado mesmo quando o chaveamento mudou."""
     load_dotenv()
     for _var in ("ANTHROPIC_API_KEY", "DATABASE_URL", "BOLAO_USER_ID", "TELEGRAM_BOT_TOKEN", "TELEGRAM_CHAT_ID"):
         _val = os.environ.get(_var, "")
         if _val:
             os.environ[_var] = _val.encode().decode("utf-8-sig").strip().strip("'\"")
 
+    uid = _user_id()
     tz = pytz.timezone("America/Sao_Paulo")
     now = datetime.now(tz).replace(tzinfo=None)
     limite = now + timedelta(minutes=PREGAME_WINDOW_MIN)
 
     engine = _engine()
     with engine.connect() as conn:
+        # Lê os jogos prestes a começar E o palpite atual do banco (não do predictions.json),
+        # pois o chaveamento real pode diferir do que foi previsto antes da Copa.
         rows = conn.execute(text("""
-            SELECT match_number, team1_code, team2_code, CAST(datetime AS VARCHAR)
-            FROM matches
-            WHERE status = 'scheduled'
-              AND team1_id IS NOT NULL AND team2_id IS NOT NULL
-              AND datetime > :agora AND datetime <= :lim
-            ORDER BY datetime
-        """), {"agora": now, "lim": limite}).fetchall()
+            SELECT m.match_number, m.team1_code, m.team2_code,
+                   CAST(m.datetime AS VARCHAR),
+                   COALESCE(p.pred_team1_score, 0) AS ph,
+                   COALESCE(p.pred_team2_score, 0) AS pa
+            FROM matches m
+            LEFT JOIN predictions p ON p.match_id = m.id AND p.user_id = :uid
+            WHERE m.status = 'scheduled'
+              AND m.team1_id IS NOT NULL AND m.team2_id IS NOT NULL
+              AND m.datetime > :agora AND m.datetime <= :lim
+            ORDER BY m.datetime
+        """), {"agora": now, "lim": limite, "uid": uid}).fetchall()
 
     if not rows:
         print(f"[PRÉ-JOGO] Nenhum jogo começando nos próximos {PREGAME_WINDOW_MIN} min — nada a fazer.")
         return
 
+    # predictions.json só é usado para rastrear quais jogos já foram avaliados (pregame_checked)
     if not os.path.exists(PREDICTIONS_FILE):
         print("predictions.json não encontrado — abortando.")
         return
     with open(PREDICTIONS_FILE, encoding="utf-8") as f:
         predictions = json.load(f)
-    pred_map = {m["match_number"]: m for m in predictions["matches"]}
     checked = set(predictions.get("pregame_checked", []))
 
     client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
@@ -698,15 +707,11 @@ def run_pregame(dry_run: bool = False):
     updates = []        # só os jogos com placar alterado (vão ao banco)
     avaliacoes = []     # TODOS os jogos avaliados (mantidos + alterados) p/ Telegram
     processou = False
-    for mn, c1, c2, dt in rows:
+    for mn, c1, c2, dt, ph, pa in rows:
         if mn in checked:
-            continue
-        cur = pred_map.get(mn)
-        if not cur:
             continue
         processou = True
         home, away = tname(c1), tname(c2)
-        ph, pa = cur.get("home_goals"), cur.get("away_goals")
         kickoff = datetime.strptime(str(dt)[:19], "%Y-%m-%d %H:%M:%S")
         mins_left = max(1, round((kickoff - now).total_seconds() / 60))
         print(f"[PRÉ-JOGO] Reavaliando #{mn}: {home} x {away} (atual {ph}-{pa}, faltam {mins_left} min)...", flush=True)
@@ -716,22 +721,19 @@ def run_pregame(dry_run: bool = False):
             print(f"  -> ERRO/sem resposta — mantém {ph}-{pa}")
             avaliacoes.append({"match_number": mn, "home": home, "away": away,
                                "mudou": False, "old": f"{ph}-{pa}", "new": f"{ph}-{pa}",
-                               "razao": "Não foi possível reavaliar — palpite mantido."})
+                               "razao": "Não foi possível reavaliar — palpite mantido.",
+                               "salvo": True})
             continue
         razao = res["razao"]
-        # Guarda a justificativa da reavaliação (transparência), mesmo no MANTER
-        cur["pregame_note"] = razao
         if not res["mudou"]:
             print(f"  -> MANTER {ph}-{pa} | {razao}")
             avaliacoes.append({"match_number": mn, "home": home, "away": away,
                                "mudou": False, "old": f"{ph}-{pa}", "new": f"{ph}-{pa}",
-                               "razao": razao})
+                               "razao": razao, "salvo": True})
             continue
         nh, na = res["nh"], res["na"]
-        cur["home_goals"], cur["away_goals"] = nh, na
-        cur["reasoning"] = razao
         item = {"match_number": mn, "home": home, "away": away, "mudou": True,
-                "old": f"{ph}-{pa}", "new": f"{nh}-{na}", "razao": razao}
+                "old": f"{ph}-{pa}", "new": f"{nh}-{na}", "razao": razao, "salvo": False}
         updates.append(item)
         avaliacoes.append(item)
         print(f"  -> AJUSTAR {ph}-{pa} => {nh}-{na} | {razao}")
@@ -752,12 +754,15 @@ def run_pregame(dry_run: bool = False):
     # apenas o próprio usuário (BOLAO_USER_ID) e apenas jogos não iniciados.
     if updates:
         from submitter import get_db_engine, submit_match_prediction
-        uid = _user_id()
         eng = get_db_engine()
         with eng.begin() as conn:
             for u in updates:
                 nh, na = map(int, u["new"].split("-"))
-                print(submit_match_prediction(conn, uid, u["match_number"], nh, na, dry_run=False))
+                resultado = submit_match_prediction(conn, uid, u["match_number"], nh, na, dry_run=False)
+                print(resultado)
+                u["salvo"] = " OK" in resultado
+                if not u["salvo"]:
+                    u["fail_reason"] = resultado.strip()
 
     # Telegram: avisa SEMPRE (mantido ou alterado), para todos os jogos avaliados
     token = os.getenv("TELEGRAM_BOT_TOKEN")
@@ -766,8 +771,10 @@ def run_pregame(dry_run: bool = False):
         linhas = ["⚽ VAR — Bolão Copa 2026", "Reavaliação pré-jogo:", ""]
         for a in avaliacoes:
             linhas.append(f"Jogo #{a['match_number']}: {a['home']} x {a['away']}")
-            if a["mudou"]:
+            if a["mudou"] and a.get("salvo"):
                 linhas.append(f"  🔁 AJUSTADO: {a['old']} → {a['new']}")
+            elif a["mudou"] and not a.get("salvo"):
+                linhas.append(f"  ⚠️ SUGERIDO {a['new']} — NÃO SALVO ({a.get('fail_reason', 'prazo encerrado')})")
             else:
                 linhas.append(f"  ✅ MANTIDO: {a['new']}")
             if a["razao"]:
