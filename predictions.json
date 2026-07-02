@@ -969,7 +969,8 @@
       "away_goals": 1,
       "winner": "BEL",
       "went_to_penalties": false,
-      "reasoning": "Bélgica (FIFA #9) tem qualidade individual superior ao Senegal (FIFA #19), mas o Senegal com Mané e Sarr é sempre perigoso. Jogo equilibrado, mas a Bélgica tem mais profundidade no elenco e vence por 2-1."
+      "reasoning": "Bélgica (FIFA #9) tem qualidade individual superior ao Senegal (FIFA #19), mas o Senegal com Mané e Sarr é sempre perigoso. Jogo equilibrado, mas a Bélgica tem mais profundidade no elenco e vence por 2-1.",
+      "pregame_note": "Espanha tem média de 1,75 gols feitos e 0,50 sofridos, enquanto Áustria tem média de 2,0 gols feitos e 1,0 sofrido — o 2×1 reflete bem o domínio espanhol com defesa sólida, mas reconhece que a Áustria marca com frequência real (3×3 com a Argélia, artilheiro Arnautovic em boa fase), e a ausência confirmada de Nico Williams limita um aumento de magnitude no placar espanhol."
     },
     {
       "match_number": 85,
@@ -1928,6 +1929,7 @@
     79,
     80,
     81,
-    82
+    82,
+    84
   ]
 }
