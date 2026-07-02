@@ -120,10 +120,10 @@ STYLE: photorealistic, cinematic, neon-lit, shallow depth of field. Duration: 8s
 **CAMERA:** Medium shot. Mestre Leme em posição de apresentador de gala — garrafa
 erguida como troféu imaginário enquanto anuncia.
 
-**DIALOGUE:** *(máx. ~20 palavras — ritmo de 8 segundos)*
-> *[apresentador de prêmio, paulistano no auge]*
+**DIALOGUE:** *(fala RÁPIDA — locutor esportivo em ritmo acelerado, sem pausas entre os números)*
+> *[apresentador de prêmio, paulistano no auge, velocidade de locutor de resultado]*
 > "Liderança: Mauricio, novecentos e noventa e cinco!
-> *(pausa dramática)*
+> *(pausa dramática de meio segundo apenas)*
 > Leandro em segundo, novecentos e oitenta.
 > Danilo e Renata empatados — novecentos e setenta.
 > Mata-mata no ranking também!"
