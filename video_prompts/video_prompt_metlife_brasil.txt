@@ -1,12 +1,14 @@
 === PROMPTS DE VÍDEO — MESTRE LEME (BRASIL x NORUEGA — METLIFE STADIUM, 05/07/2026) ===
-6 clipes de EXATAMENTE 8 segundos cada.
-BLOCO 1 (clipes 1–3): gerar na primeira sessão.
-BLOCO 2 (clipes 4–6): gerar na segunda sessão — FIXED CHARACTER e SETTING IDÊNTICOS ao Bloco 1.
+7 clipes de EXATAMENTE 8 segundos cada.
+BLOCO 1 (clipes 1–4): gerar na primeira sessão.
+BLOCO 2 (clipes 5–7): gerar na segunda sessão — FIXED CHARACTER e SETTING IDÊNTICOS ao Bloco 1.
 Anexar a foto do Mestre Leme é recomendado para consistência facial.
 
 CONTEXTO: Mestre Leme está em frente ao MetLife Stadium, East Rutherford, Nova Jersey —
 Copa do Mundo 2026. Após os testes na NASA, o médico lhe receitou a caneta de
-emagrecimento e proibiu a cerveja. Ele criou uma solução alternativa chamada "OzemBIC".
+emagrecimento e proibiu a cerveja. Ele ligou para o Maurício (líder do bolão) buscando
+uma segunda opinião — e recebeu uma prescrição muito mais conveniente. Usou a solução
+alternativa chamada "OzemBIC".
 Manda recados para os Noruegueses com piada de remada. Comenta que os Argentinos
 "Los Hermanos" quase deram adeus à Copa. Entrega o boletim do bolão. Torce pelo Brasil.
 
@@ -49,7 +51,7 @@ STYLE: photorealistic, cinematic, natural stadium daylight, shallow depth of fie
 slight handheld camera. Duration: exactly 8 seconds.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-BLOCO 1 — CLIPES 1, 2 e 3
+BLOCO 1 — CLIPES 1, 2, 3 e 4
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## CLIP 1 DE 6 — "O DIAGNÓSTICO"
@@ -90,7 +92,57 @@ da garrafa ao ser erguida; murmúrio de torcedores ao fundo
 
 ---
 
-## CLIP 2 DE 6 — "O OZEMOBIC"
+## CLIP 2 DE 7 — "A SEGUNDA OPINIÃO"
+
+FIXED CHARACTER: Mestre Leme — stocky, heavy-set Brazilian man, ~55, FULL tousled
+salt-and-pepper hair (NOT shaved), scruffy beard, round belly. Brazil jersey, dark
+pants, white sneakers, Copa 2026 lanyard. Long neck beer in left hand the entire
+time — the phone is held to his ear with his right hand. He does NOT put the beer
+down to use the phone.
+SETTING: Exterior MetLife Stadium plaza — Copa 2026 banners on facade, fans in
+background, afternoon light. Same location as clip 1 — he has barely moved.
+STYLE: photorealistic, cinematic, natural daylight, shallow depth of field,
+slight handheld camera. Duration: exactly 8 seconds.
+
+**CAMERA:** Medium close-up. Mestre Leme com o celular na orelha direita, long neck
+na mão esquerda. A câmera enquadra rosto e torso — expressão evolui visivelmente
+do neutro/esperançoso → interessado → sorriso crescendo → aprovação entusiasmada.
+O rosto conta a história da conversa ao longo dos 8 segundos.
+
+**PHONE SCREEN DETAIL (optional insert, 0.5s):** Se possível, um corte rápido de
+0,5 segundo mostrando a tela do celular com o nome do contato: "Maurício 🥇" —
+depois volta para o rosto.
+
+**DIALOGUE:**
+> *[voz de quem está no telefone — tom discreto de consulta urgente, sotaque
+> paulistano, falando para o lado como quem não quer que os outros ouçam]*
+> "Alô, Maurício? Sou eu.
+> O médico receitou emagrecer — e proibiu a cerveja.
+> *(pausa — ouve, sorriso começa a aparecer)*
+> ...Sem restrição nenhuma?
+> *(sorriso largo, acena com a cabeça vigorosamente)*
+> ...Pode tomar junto?
+> *(olhos brilhando, aponta a garrafa para si mesmo em aprovação)*
+> Prescrição aceita, doutor."
+
+*Cue: a evolução da expressão é o centro do clipe — começa sério (consultando
+um especialista), abre um meio-sorriso ao "sem restrição nenhuma", acena com a
+cabeça como quem recebe uma notícia muito boa ao "pode tomar junto", e ao
+"prescrição aceita, doutor" ergue a garrafa sutilmente como confirmação — tudo
+isso sem nunca tirar o telefone da orelha; a long neck permanece na outra mão
+imóvel e perfeitamente vertical durante a ligação inteira; ao final dá uma
+piscada de olho discreta para a câmera*
+
+**AUDIO:** Tom de conversa ao telefone (apenas o lado de Mestre Leme é ouvido);
+pausa real de 1,5 segundo durante a "escuta" — o silêncio é cômico; tinido
+muito suave da garrafa ao ser erguida no final
+
+**TRANSITION OUT:** Celular saindo da orelha, sorriso de diagnóstico confirmado,
+garrafa já pronta para o próximo passo — congela
+
+---
+
+## CLIP 3 DE 7 — "O OZEMOBIC"
 
 FIXED CHARACTER: Mestre Leme — stocky, heavy-set Brazilian man, ~55, FULL tousled
 salt-and-pepper hair (NOT shaved), scruffy beard, round belly. Brazil jersey lifted
@@ -144,7 +196,7 @@ de inventor satisfeito — congela
 
 ---
 
-## CLIP 3 DE 6 — "RECADO PARA A NORUEGA"
+## CLIP 4 DE 7 — "RECADO PARA A NORUEGA"
 
 FIXED CHARACTER: Mestre Leme — stocky, heavy-set Brazilian man, ~55, FULL tousled
 salt-and-pepper hair (NOT shaved, slightly more animated than clip 1), scruffy beard,
@@ -182,11 +234,11 @@ a garrafa; vento do estádio ao fundo
 ---
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-BLOCO 2 — CLIPES 4, 5 e 6
+BLOCO 2 — CLIPES 5, 6 e 7
 (Gerar após renovação de cota — FIXED CHARACTER e SETTING IDÊNTICOS ao Bloco 1)
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-## CLIP 4 DE 6 — "LOS HERMANOS"
+## CLIP 5 DE 7 — "LOS HERMANOS"
 
 FIXED CHARACTER: Mestre Leme — stocky, heavy-set Brazilian man, ~55, FULL tousled
 salt-and-pepper hair (NOT shaved), scruffy beard, round belly. Brazil jersey (Copa
@@ -223,7 +275,7 @@ murmúrio de torcedores ao fundo
 
 ---
 
-## CLIP 5 DE 6 — "BOLETIM DO BOLÃO"
+## CLIP 6 DE 7 — "BOLETIM DO BOLÃO"
 
 FIXED CHARACTER: Mestre Leme — stocky, heavy-set Brazilian man, ~55, FULL tousled
 salt-and-pepper hair (NOT shaved, mais animado agora), scruffy beard, round belly.
@@ -260,7 +312,7 @@ noise suave ao fundo
 
 ---
 
-## CLIP 6 DE 6 — "VAI BRASIL!"
+## CLIP 7 DE 7 — "VAI BRASIL!"
 
 FIXED CHARACTER: Mestre Leme — stocky, heavy-set Brazilian man, ~55, FULL tousled
 salt-and-pepper hair (NOT shaved), now at maximum celebratory dishevelment — cabelo
@@ -304,19 +356,21 @@ seleção — fade lento para preto
 ---
 
 > 🎬 **DIREÇÃO TÉCNICA — AMBOS OS BLOCOS:**
-> Render os 6 clips em sequência contínua, cada um com EXATAMENTE 8 segundos.
+> Render os 7 clips em sequência contínua, cada um com EXATAMENTE 8 segundos.
 > CONTINUIDADE ABSOLUTA: Mestre Leme usa a MESMA camisa canarinho, o MESMO visual
-> em TODOS os 6 clips. A BARRIGA ARREDONDADA estufa a camisa e é sempre visível.
+> em TODOS os 7 clips. A BARRIGA ARREDONDADA estufa a camisa e é sempre visível.
 > PROGRESSÃO DO CABELO: clip 1 (ligeiramente bagunçado — residual da NASA) →
-> clips 3–4 (mais animado — recados entregues) → clip 6 (máximo despenteado
+> clips 4–5 (mais animado — recados entregues) → clip 7 (máximo despenteado
 > celebratório — o cabelo conta o dia inteiro). Esta progressão é o fio visual
-> cômico que amarra os 6 clips.
-> CLIP 2: o único clip SEM a long neck na mão — garrafa repousa em superfície
-> ao lado, PERFEITAMENTE VERTICAL. Ambas as mãos livres para o momento OzemBIC.
-> CLIP 2 requer MOVIMENTO DE CÂMERA PRECISO: dolly/track lento para frente (0–5s),
+> cômico que amarra os 7 clips.
+> CLIP 2 (Segunda Opinião): celular na orelha direita, long neck na mão esquerda
+> o tempo todo — ele não larga a garrafa nem para telefonar.
+> CLIP 3 (OzemBIC): o único clip SEM a long neck na mão — garrafa repousa em
+> superfície ao lado, PERFEITAMENTE VERTICAL. Ambas as mãos livres.
+> CLIP 3 requer MOVIMENTO DE CÂMERA PRECISO: dolly/track lento para frente (0–5s),
 > arco suave contornando a mão bloqueadora (5–7s), revelação da caneta comum (7s),
 > olhar direto para câmera (7–8s). O humor depende desta coreografia — não cortar.
-> CLIPS 5 tem fala LIGEIRAMENTE ACELERADA (narrador esportivo) — garantir que todos
+> CLIP 6 tem fala LIGEIRAMENTE ACELERADA (narrador esportivo) — garantir que todos
 > os números por extenso sejam pronunciados por completo sem corte.
 > NÃO repetir piadas anteriores: sem referência à cadeira giratória da NASA,
 > sem Houston we have a problem, sem metáfora de foguete.
