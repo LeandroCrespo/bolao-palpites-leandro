@@ -106,7 +106,8 @@ def submit_match_prediction(
             conn.execute(
                 text("""
                     UPDATE predictions
-                    SET pred_team1_score=:s1, pred_team2_score=:s2, updated_at=:now
+                    SET pred_team1_score=:s1, pred_team2_score=:s2,
+                        manually_confirmed=TRUE, updated_at=:now
                     WHERE id=:id
                 """),
                 {"s1": home_goals, "s2": away_goals, "now": now_str, "id": existing[0]},
@@ -117,8 +118,8 @@ def submit_match_prediction(
             conn.execute(
                 text("""
                     INSERT INTO predictions
-                    (user_id, match_id, pred_team1_score, pred_team2_score, created_at, updated_at)
-                    VALUES (:u, :m, :s1, :s2, :now, :now)
+                    (user_id, match_id, pred_team1_score, pred_team2_score, manually_confirmed, created_at, updated_at)
+                    VALUES (:u, :m, :s1, :s2, TRUE, :now, :now)
                 """),
                 {"u": user_id, "m": match_id, "s1": home_goals, "s2": away_goals, "now": now_str},
             )
