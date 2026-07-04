@@ -275,83 +275,93 @@ murmúrio de torcedores ao fundo
 
 ---
 
-## CLIP 6 DE 7 — "BOLETIM DO BOLÃO"
+## CLIP 6 DE 7 — "O EFEITO"
 
 FIXED CHARACTER: Mestre Leme — stocky, heavy-set Brazilian man, ~55, FULL tousled
-salt-and-pepper hair (NOT shaved, mais animado agora), scruffy beard, round belly.
-Brazil jersey, Copa 2026 lanyard, long neck beer raised like a microphone.
-SETTING: Exterior MetLife Stadium plaza. Copa 2026 banners on facade background.
+salt-and-pepper hair (NOT shaved, mais animado), scruffy beard, round belly. Brazil
+jersey, Copa 2026 lanyard. Long neck beer in one hand throughout.
+SETTING: Exterior MetLife Stadium plaza — Copa 2026 banners on facade, fans in
+background. Same location. Afternoon light.
 STYLE: photorealistic, cinematic, natural daylight, shallow depth of field,
 slight handheld camera. Duration: exactly 8 seconds.
 
-⚡ INSTRUÇÃO DE RITMO: números por extenso em 8 segundos — locutor em ritmo
-LIGEIRAMENTE ACELERADO, como narrador esportivo no momento decisivo. Todas as
-palavras pronunciadas por completo, sem cortes — apenas mais rápido.
-
-**CAMERA:** Medium close-up. Mestre Leme olha direto para a câmera com energia de
-âncora de telejornal esportivo, garrafa erguida como microfone.
+**CAMERA:** Medium shot, enquadrando corpo inteiro para capturar o movimento
+atlético. Câmera ligeiramente baixa para valorizar o esforço épico do agachamento.
 
 **DIALOGUE:**
-> *[ritmo acelerado de narrador esportivo, sotaque paulistano no modo locutor]*
-> "Boletim do bolão — direto do MetLife!
-> Mauricio — mil e oitenta pontos!
-> Leandro — mil e cinquenta!
-> Renata — mil e quarenta e cinco!
-> *(pausa de um segundo, tom de comentário)*
-> Três na frente — e o Brasil vai fazer mais pontos pra todo mundo hoje!"
+> *[voz de cientista fazendo controle experimental, sotaque paulistano, total
+> seriedade clínica]*
+> "Vou testar o efeito do OzemBIC antes de entrar.
+> *(coloca a mão livre na barriga, concentrado)*
+> Teste: um agachamento.
+> *(desce vagarosamente em agachamento com imenso esforço, long neck perfeitamente
+> firme, rosto vermelho de concentração — sobe de volta com suspiro heroico)*
+> *(olha para a barriga com aprovação científica)*
+> Tá funcionando. Barriga pronta. Brasil também."
 
-*Cue: ergue um dedo ao anunciar cada nome como se marcasse pontos no ar; ao "Brasil
-vai fazer mais pontos" aponta para o estádio atrás de si com a mão da garrafa —
-garrafa inclinada na direção do estádio mas não derramando; expressão de locutor
-que tem o resultado antecipado*
+*Cue: o agachamento é executado com a seriedade de um atleta olímpico e a velocidade
+de uma tartaruga — desce devagar demais, sobe ainda mais devagar, a barriga roça
+levemente nos joelhos no ponto mais baixo; a long neck permanece absolutamente
+vertical durante todo o movimento, desafiando a gravidade; ao "tá funcionando" olha
+para a barriga e acena com a cabeça com convicção científica absoluta, como se os
+dados confirmassem a hipótese; a equipe médica ao fundo (torcedores passando) nem
+percebe o que está acontecendo*
 
-**AUDIO:** Ritmo acelerado e animado; pausa mínima entre nomes; Copa 2026 crowd
-noise suave ao fundo
+**AUDIO:** Suspiro de esforço real no ponto mais baixo do agachamento; pausa
+dramática antes de "tá funcionando"; tinido da garrafa intacta ao final
 
-**TRANSITION OUT:** Garrafa apontada para o estádio, sorriso de certeza — congela
+**TRANSITION OUT:** De pé novamente, mão na barriga, sorriso de pesquisador
+satisfeito com o ensaio clínico — congela
 
 ---
 
-## CLIP 7 DE 7 — "VAI BRASIL!"
+## CLIP 7 DE 7 — "O NORUEGUÊS SIMPÁTICO" — ENCERRAMENTO
 
 FIXED CHARACTER: Mestre Leme — stocky, heavy-set Brazilian man, ~55, FULL tousled
-salt-and-pepper hair (NOT shaved), now at maximum celebratory dishevelment — cabelo
-conta a história do dia inteiro. Scruffy beard, round belly. Brazil jersey (Copa 2026
-lanyard, agora completamente torto mas ainda presente). Long neck beer raised high.
-SETTING: Exterior MetLife Stadium plaza — Copa do Mundo 2026 banners clearly visible
-on the massive facade; a handful of excited Brazil fans visible in background waving
-green-and-yellow flags; late afternoon light casting a warm glow on the stadium.
-STYLE: photorealistic, cinematic, warm late-afternoon daylight, shallow depth of field,
-festive triumphant energy. Duration: exactly 8 seconds.
+salt-and-pepper hair (NOT shaved), at maximum celebratory dishevelment — cabelo
+conta o dia inteiro. Scruffy beard, round belly. Brazil jersey (Copa 2026 lanyard
+completamente torto mas presente). Long neck beer in hand.
+NORWEGIAN FAN: a tall, blond, friendly-looking man in full Norway red-and-blue
+jersey and scarf, visibly enthusiastic, slightly taller than Mestre Leme — good-
+humored expression throughout, genuinely trying to engage.
+SETTING: Exterior MetLife Stadium plaza — Copa 2026 banners on massive facade; warm
+late-afternoon light; other fans passing in background in mixed national jerseys.
+STYLE: photorealistic, cinematic, warm late-afternoon daylight, shallow depth of
+field, festive energy. Duration: exactly 8 seconds.
 
-**CAMERA:** Medium shot, ligeiramente mais aberto para mostrar o MetLife Stadium ao
-fundo. Mestre Leme está de pé, cabelo no máximo do despenteado do dia, expressão
-de homem que cumpriu todas as suas obrigações: tomou o OzemBIC, avisou os Noruegueses,
-prestou solidariedade aos Hermanos. A long neck erguida com solenidade merecida.
+**CAMERA:** Medium shot enquadrando os dois — Mestre Leme e o torcedor norueguês
+lado a lado, câmera frontal. O norueguês tenta pronunciar português com enorme
+boa vontade e resultado catastrófico. Mestre Leme reage com paciência afetiva de
+professor que sabe que o aluno não tem jeito.
 
 **DIALOGUE:**
-> *[voz grave e calorosa, sotaque paulistano puro, sorriso de quem está exatamente
-> onde deveria estar]*
-> "Médico avisado. Noruegueses avisados.
-> Hermanos — solidariedade.
-> *(ergue a garrafa com solenidade)*
-> OzemBIC aplicado — barriga pronta pra celebrar.
-> Aqui no MetLife, em Nova York —
-> *(bate no peito)*
-> Vai Brasil. Tô aqui por vocês."
+> *[Mestre Leme — voz calorosa de quem acaba de fazer um novo amigo improvável,
+> sotaque paulistano, gestos de professor particular]*
+> "Fala, meu nobre! Aprende aqui:
+> *(aponta para o norueguês, expectante)*
+> Vai — Bra — sil!"
+> *(norueguês tenta, sai algo como "Vay Bra-zeel?" com sotaque escandinavo pesado)*
+> *(Mestre Leme balança a cabeça com compaixão genuína)*
+> "Quase. Muito esforço. Parabéns.
+> *(bate no ombro do norueguês com afeto)*
+> Bom retorno de barco, meu amigo."
 
-*Cue: ao "Hermanos — solidariedade" faz o gesto de mão no coração; ao "OzemBIC
-aplicado" aponta para a barriga com orgulho genuíno; ao "vai Brasil" ergue a long
-neck em direção ao estádio como o brinde mais solene da Copa — fãs ao fundo levantam
-as bandeiras; ele sorri com a satisfação de quem cumpriu a missão diplomática e
-esportiva do dia*
+*Cue: ao pedir para o norueguês repetir, Mestre Leme levanta a mão livre como
+maestro regendo uma orquestra; ao ouvir o "Vay Bra-zeel" fecha os olhos por meio
+segundo com a expressão de quem ouviu algo irreparável; o "parabéns" é dito com
+a seriedade de quem está premiando um esforço genuíno que produziu resultado zero;
+o tapinha no ombro é caloroso e fraterno — não há malícia; o norueguês ri junto
+sem entender exatamente o que foi dito; ao "bom retorno de barco" ergue a long
+neck em direção ao norueguês como brinde de despedida; ambos erguem seus copos —
+o norueguês tem uma caneca de cerveja — e brindam*
 
-**AUDIO:** Pausa solene antes de "vai Brasil"; crowd noise suave crescendo ao fundo;
-tinido da garrafa ao ser erguida; vento de tarde em New Jersey
+**AUDIO:** Sotaque escandinavo exagerado e simpático do norueguês; pausa cômica
+de Mestre Leme ao "avaliar" a pronúncia; crowd noise festivo ao fundo; tinido
+do brinde final das garrafas
 
-**TRANSITION OUT:** FREEZE FRAME — long neck erguida, MetLife Stadium ao fundo,
-cabelo máximo-despenteado de dia de Copa, sorriso de embaixador do bolão e da
-seleção — fade lento para preto
+**TRANSITION OUT:** FREEZE FRAME — os dois com copos erguidos, sorrindo lado a
+lado em frente ao MetLife Stadium, cabelo de Mestre Leme no máximo do despenteado,
+norueguês com o braço no ombro dele — fade lento para preto
 
 ---
 
@@ -370,8 +380,11 @@ seleção — fade lento para preto
 > CLIP 3 requer MOVIMENTO DE CÂMERA PRECISO: dolly/track lento para frente (0–5s),
 > arco suave contornando a mão bloqueadora (5–7s), revelação da caneta comum (7s),
 > olhar direto para câmera (7–8s). O humor depende desta coreografia — não cortar.
-> CLIP 6 tem fala LIGEIRAMENTE ACELERADA (narrador esportivo) — garantir que todos
-> os números por extenso sejam pronunciados por completo sem corte.
+> CLIP 6 (O Efeito): câmera baixa valoriza o agachamento épico — a long neck
+> permanece vertical durante todo o movimento; agachamento lento e heroico é o humor.
+> CLIP 7 (Encerramento): dois personagens em cena — Mestre Leme + torcedor norueguês.
+> O norueguês é alto, loiro, simpático, com sotaque escandinavo pesado ao tentar
+> português. O brinde final é o último frame antes do freeze.
 > NÃO repetir piadas anteriores: sem referência à cadeira giratória da NASA,
 > sem Houston we have a problem, sem metáfora de foguete.
 > O "OzemBIC" é pronunciado como "o-zem-BIC" — pausa breve entre "ozem" e "BIC"
