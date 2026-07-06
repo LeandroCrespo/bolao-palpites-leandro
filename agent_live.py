@@ -605,19 +605,21 @@ Reavalie se este palpite ainda é o ideal. NÃO use o resultado real (o jogo
 ainda não começou).
 
 Seja DIRETO na análise — só os fatores relevantes em texto corrido, SEM
-títulos/seções markdown longos. O importante é sempre chegar nas duas linhas
+títulos/seções markdown longos. O importante é sempre chegar nas linhas
 finais abaixo, custe o que custar:
 
-Responda SEMPRE com DUAS linhas no final, nesta ordem:
+Responda SEMPRE com este bloco no final, nesta ordem:
 1ª linha: "MANTER" (se o palpite atual continua o melhor) OU "PALPITE: X-Y"
    (novo placar, X = gols do mandante {home}).
-2ª linha: "RAZAO: <1-2 frases citando os fatores>" — OBRIGATÓRIA NOS DOIS CASOS
-   (explique o porquê, inclusive quando MANTER). Cite explicitamente a média
-   de gols feitos/sofridos por jogo dos DOIS times, em números, no formato
-   "{home} tem média de X gols feitos e Y sofridos, enquanto {away} tem média
-   de Z gols feitos e W sofridos" (ou equivalente) — não basta dizer que um
-   ataque é "perigoso" ou a defesa é "frágil" sem os números de ambos os
-   lados."""
+2ª em diante: "RAZAO: <parágrafo de 4-6 frases>" — OBRIGATÓRIA NOS DOIS CASOS.
+   Inclua OBRIGATORIAMENTE:
+   - Média de gols feitos/sofridos por jogo dos DOIS times, em números: "{home}
+     tem média de X gols feitos e Y sofridos, enquanto {away} tem média de Z
+     gols feitos e W sofridos."
+   - Retrospecto recente relevante (últimos 3-5 jogos).
+   - Desfalques confirmados ou escalação titular relevante, se houver.
+   - Por que o palpite foi mantido ou alterado (argumento central).
+   Escreva em texto corrido, sem bullets. Pode ocupar várias linhas."""
 
 
 def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30):
@@ -627,7 +629,7 @@ def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30):
     try:
         resp = client.beta.messages.create(
             model=MODEL,
-            max_tokens=2000,
+            max_tokens=5000,
             system=_PREGAME_SYSTEM,
             tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 8}],
             betas=["web-search-2025-03-05"],
@@ -639,7 +641,9 @@ def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30):
         return None
     rz = re.findall(r"RAZ[ÃA]O:\s*(.+)", texto, re.IGNORECASE | re.DOTALL)
     if rz:
-        razao = " ".join(rz[-1].split()).strip("*").strip()
+        # Preserva parágrafos mas limpa espaços extras dentro de cada linha
+        linhas_rz = [" ".join(l.split()) for l in rz[-1].splitlines()]
+        razao = "\n".join(l for l in linhas_rz if l).strip("*").strip()
     else:
         # fallback: última frase significativa (ignora linhas de comando)
         linhas = [l.strip() for l in texto.splitlines() if l.strip()]
