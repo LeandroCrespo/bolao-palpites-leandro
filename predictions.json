@@ -1110,65 +1110,65 @@
       "home_team": "MAR",
       "away_team": "SUI",
       "home_goals": 1,
-      "away_goals": 0,
-      "winner": "MAR",
+      "away_goals": 2,
+      "winner": "FRA",
       "went_to_penalties": false,
-      "reasoning": "Marrocos (#7) é superior no ranking e demonstrou grande solidez defensiva nas edições recentes da Copa. A Suíça (#17) é organizada e disciplinada, mas carece de talento ofensivo para superar a muralha defensiva marroquina. Em Boston, com apoio expressivo da diáspora árabe e africana, Marrocos vence por 1-0 com um gol em jogada de bola parada, típico do estilo do time."
+      "reasoning": "França invicta com 5 vitórias em 5 jogos na Copa, média 2,6 gols feitos e 1,0 sofridos; Tchouaméni é dúvida (lesão muscular), mas ataque com Mbappé/Olise/Barcola é devastador. Marrocos competitivo (2,0 feitos / 0,8 sofridos), mas Saibari também é dúvida. Histórico: França nunca perdeu para Marrocos (4V 2E), incluindo 2-0 na semi de 2022. França favorita clara, mas Marrocos tem capacidade de marcar. Ajusto para 2-1 França."
     },
     {
       "match_number": 98,
       "phase": "QF",
       "home_team": "BRA",
       "away_team": "NED",
-      "home_goals": 2,
-      "away_goals": 1,
-      "winner": "BRA",
+      "home_goals": 1,
+      "away_goals": 2,
+      "winner": "ENG",
       "went_to_penalties": false,
-      "reasoning": "Brasil (#6) e Holanda (#8) são um confronto clássico e equilibrado, mas o Brasil possui maior qualidade técnica individual e criatividade no meio-campo e ataque. Em Los Angeles, com enorme torcida brasileira, o Brasil sai na frente, sofre o empate holandês na segunda etapa, mas garante a classificação com um gol nos acréscimos. A Holanda é perigosa em transições, mas a qualidade do ataque brasileiro é determinante."
+      "reasoning": "Revisão: match 98 = Noruega (home) x Inglaterra (away) na realidade. Após reflexão adicional: Inglaterra perde Quansah (suspenso) mas tem mais solidez defensiva (1,0 gols sofridos/jogo vs 1,8 da Noruega). Retrospecto geral: 7V 3E 2D para Inglaterra. Noruega em alta com Haaland, mas confronto equilibrado. Mantenho palpite de jogo aberto mas ajusto para Inglaterra 2-1, dado o retrospecto e solidez defensiva."
     },
     {
       "match_number": 99,
       "phase": "QF",
       "home_team": "GER",
       "away_team": "ESP",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1,
       "winner": "ESP",
       "went_to_penalties": true,
-      "reasoning": "Clássico europeu de altíssimo nível. Espanha (#2) tem o melhor futebol coletivo do mundo no momento, com domínio de posse e pressão alta. A Alemanha (#10) joga em casa continental (América do Norte, mas com forte presença germânica) e é extremamente competitiva no mata-mata histórico. O jogo é travado, termina 1-1 após 90 minutos e vai para prorrogação sem gols adicionais. Nos pênaltis, a Espanha vence com maior frieza e regularidade dos seus cobradores."
+      "reasoning": "Espanha defensivamente impenetrável: 0 gols sofridos em 5 jogos da Copa (média 1,8 feitos / 0,0 sofridos). Campeã europeia vigente. Bélgica chegou ao melhor momento do torneio: 4-1 nos EUA (média 2,4 feitos / 1,0 sofridos). De Ketelaere, Trossard e Lukaku em grande forma. Confronto ofensivo vs. defesa espanhola. Espanha favorita pela solidez e experiência, mas Bélgica pode marcar. Palpito 2-1 Espanha."
     },
     {
       "match_number": 100,
       "phase": "QF",
       "home_team": "ARG",
       "away_team": "FRA",
-      "home_goals": 1,
-      "away_goals": 1,
+      "home_goals": 2,
+      "away_goals": 0,
       "winner": "ARG",
       "went_to_penalties": true,
-      "reasoning": "Revanche direta da final de 2022. França (#1) e Argentina (#3) é o confronto mais aguardado do torneio. A França possui enorme poder de fogo com Mbappé e companhia; a Argentina tem a experiência do título e o coletivo mais rodado. Em Kansas City, o jogo é intenso, equilibrado, com um gol para cada lado nos 90 minutos. A prorrogação não decide. Nos pênaltis, Argentina repete o feito de 2022 e se classifica, com Dibu Martínez brilhando sob as traves."
+      "reasoning": "Argentina campeã vigente em ótima forma: virou 2-0 para o Egito nos acréscimos, média 2,4 gols feitos e 0,8 sofridos. Messi artilheiro com 7 gols. Suíça chegou nos pênaltis (0-0 vs. Colômbia), defensivamente forte (1,8 feitos / 0,6 sofridos) mas ofensiva limitada contra rivais de alto nível. Argentina favorita clara, Messi decide: 2-0."
     },
     {
       "match_number": 101,
       "phase": "SF",
       "home_team": "MAR",
       "away_team": "BRA",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1,
-      "winner": "BRA",
+      "winner": "FRA",
       "went_to_penalties": true,
-      "reasoning": "Confronto extremamente equilibrado entre duas seleções de alto nível técnico. Marrocos, jogar em Dallas com forte apoio de sua torcida diaspórica nos EUA, tende a ser compacto defensivamente e perigoso em transições — exatamente o estilo que incomoda o Brasil. O Brasil possui superioridade técnica individual e maior profundidade de elenco, mas sofre para furar blocos baixos organizados. Nos 90 minutos, o equilíbrio prevalece: Marrocos abre o placar em contra-ataque e o Brasil empata com bola parada (escanteio ou falta). A prorrogação não produz gols. Nos pênaltis, a maior experiência acumulada do Brasil em decisões e a qualidade dos seus batedores (Rodrygo, Vinicius Jr., Raphinha) fazem a diferença. Brasil avança para a final."
+      "reasoning": "Semifinal projetada: França (W97) vs Noruega (W98). França já venceu a Noruega 4-1 na fase de grupos. Invicta, poderosa ofensivamente (média 2,6 feitos / 1,0 sofridos). Noruega perigosa com Haaland (2,4 feitos / 1,8 sofridos). França favorita, mas Noruega pode marcar. Palpito 2-1."
     },
     {
       "match_number": 102,
       "phase": "SF",
       "home_team": "ESP",
       "away_team": "ARG",
-      "home_goals": 1,
+      "home_goals": 0,
       "away_goals": 2,
       "winner": "ARG",
       "went_to_penalties": false,
-      "reasoning": "Clássico do futebol mundial entre o atual campeão europeu e o atual campeão mundial. A Espanha domina a posse de bola e o ritmo do jogo com seu estilo posicional, enquanto a Argentina é letal nas transições e em momentos de inspiração individual — especialmente com Messi em um possível último grande torneio. A Argentina sofre no primeiro tempo com a pressão espanhola, mas abre o placar em um contra-ataque clínico. A Espanha empata ainda na etapa inicial com uma jogada de tabela no corredor central. No segundo tempo, a Argentina demonstra maturidade defensiva e capitaliza uma falha posicional da defesa espanhola para fazer 2-1. A Espanha não consegue o empate apesar de pressionar nos minutos finais. Argentina confirma a vitória por 2-1 e vai à final."
+      "reasoning": "SF2: Espanha (W99) vs Argentina (W100). Revisando: Espanha tem defesa impenetrável (0 sofridos em 5 jogos da Copa), mas Argentina com Messi 7 gols é a campeã vigente. Jogo decidido por Messi. Argentina 2-0 Espanha."
     },
     {
       "match_number": 103,
@@ -1176,21 +1176,21 @@
       "home_team": "MAR",
       "away_team": "ESP",
       "home_goals": 1,
-      "away_goals": 1,
+      "away_goals": 2,
       "winner": "ESP",
       "went_to_penalties": true,
-      "reasoning": "Disputa de 3º lugar entre duas seleções de alto nível técnico. Espanha (#2 FIFA) é favorita pelo seu estilo de jogo dominante baseado em posse e pressão, com jogadores de elite em todas as linhas. Marrocos (#7 FIFA) mostrou na Copa 2022 que é capaz de surpreender grandes seleções, especialmente defensivamente, e joga bem em blocos baixos e transições rápidas. Em Miami, o calor e umidade podem favorecer um jogo mais lento, beneficiando ligeiramente Marrocos. Espera-se um jogo equilibrado: Marrocos tende a ser sólido defensivamente e aproveitar contra-ataques, enquanto a Espanha busca controlar a posse. Um empate nos 90 minutos é o cenário mais provável, com a Espanha levando a melhor nos pênaltis graças à maior experiência e qualidade técnica individual em cobranças."
+      "reasoning": "Disputa de 3º lugar projetada: Noruega (L101) vs Espanha (L102). Espanha mais qualificada mesmo na derrota da semi. Espanha vence o 3º lugar 2-1."
     },
     {
       "match_number": 104,
       "phase": "FINAL",
       "home_team": "BRA",
       "away_team": "ARG",
-      "home_goals": 1,
+      "home_goals": 2,
       "away_goals": 1,
-      "winner": "BRA",
+      "winner": "FRA",
       "went_to_penalties": true,
-      "reasoning": "Final histórica entre os dois maiores rivais do futebol sul-americano. A Argentina chega como atual bicampeã mundial (2022 e campeã da Copa América 2024), com Messi possivelmente em sua última Copa, enquanto o Brasil busca encerrar um jejum de 24 anos sem título. O jogo tende a ser extremamente disputado e taticamente fechado, típico de finais de Copa. A Argentina possui organização defensiva sólida e experiência de mata-mata recente, enquanto o Brasil tem elenco jovem e talentoso com alto potencial técnico. Nos 90 minutos, um empate em 1x1 é o cenário mais provável — com o Brasil abrindo o placar no primeiro tempo e a Argentina empatando no segundo. A prorrogação não resolve, e nos pênaltis o Brasil leva a melhor, encerrando o jejum desde 2002, em uma final disputada em solo norte-americano diante de uma multidão dividida entre as torcidas."
+      "reasoning": "Final projetada: França (W101) vs Argentina (W102). França invicta, Mbappé artilheiro, defesa sólida (1,0 sofridos/jogo) e maior consistência (5V5). Argentina com Messi miticó, mas França tem profundidade e já dominou no torneio. França bicã champ: 2-1."
     }
   ],
   "groups": {
@@ -1882,7 +1882,7 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-06-24T11:51:56.833621",
+  "last_updated": "2026-07-07T20:14:10.192065",
   "pregame_checked": [
     4,
     9,

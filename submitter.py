@@ -265,7 +265,7 @@ def submit_all(predictions: dict, dry_run: bool = False):
 
     with engine.begin() as conn:
 
-        # Jogos
+        # Jogos — fase de grupos
         group_matches = [m for m in predictions["matches"] if m.get("phase") in ("Groups", "Grupos")]
         print(f"\n--- Palpites dos Jogos ({len(group_matches)} jogos da fase de grupos) ---")
         ok = skip = 0
@@ -281,6 +281,29 @@ def submit_all(predictions: dict, dry_run: bool = False):
             else:
                 skip += 1
         print(f"  > {ok} submetidos, {skip} pulados")
+
+        # Jogos — mata-mata (R16, QF, SF, 3RD, FINAL)
+        ko_matches = [m for m in predictions["matches"] if m.get("phase") not in ("Groups", "Grupos")]
+        if ko_matches:
+            print(f"\n--- Palpites do Mata-Mata ({len(ko_matches)} jogos) ---")
+            ok = skip = 0
+            for mp in ko_matches:
+                hg = mp.get("home_goals")
+                ag = mp.get("away_goals")
+                if hg is None or ag is None:
+                    skip += 1
+                    continue
+                status = submit_match_prediction(
+                    conn, user_id,
+                    mp["match_number"], int(hg), int(ag),
+                    dry_run=dry_run,
+                )
+                print(status)
+                if " OK" in status:
+                    ok += 1
+                else:
+                    skip += 1
+            print(f"  > {ok} submetidos, {skip} pulados")
 
         # Classificatórios dos grupos
         print(f"\n--- Palpites de Classificados (12 grupos) ---")
