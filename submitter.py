@@ -74,9 +74,8 @@ def can_predict_match(conn, match_id: int) -> bool:
     if row[1] != "scheduled":
         return False
     match_dt = row[0]
-    # Fallback: se o update ao vivo falhar e status ficar preso em 'scheduled',
-    # bloqueia 2h após o horário previsto (tempo suficiente para a partida terminar).
-    return _now_br() < match_dt + timedelta(hours=2)
+    # Fallback: bloqueia no horário de início do jogo caso o status ao vivo falhe
+    return _now_br() < match_dt
 
 
 def submit_match_prediction(
