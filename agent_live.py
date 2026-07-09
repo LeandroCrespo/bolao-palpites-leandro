@@ -62,6 +62,66 @@ def _user_id() -> int:
     return uid
 
 
+def _model_recommendations():
+    """Recomendações do modelo estatístico calibrado (model_palpites.py) para
+    os jogos ainda não iniciados com ambos os times definidos.
+
+    O modelo (Poisson/Dixon-Coles com calibração de escala) foi validado em
+    backtest walk-forward nos 97 jogos já disputados desta Copa: 1015 pts
+    contra 975 do melhor participante humano.
+
+    Retorna (texto_geral, por_jogo) onde por_jogo mapeia match_number -> bloco
+    de texto. Em qualquer erro retorna ("", {}) e o agente segue sem âncora.
+    """
+    try:
+        import numpy as _np
+        from model_palpites import (
+            load_data, build_model, predict, ev_palpites, CODE_TO_NAME, ALIASES,
+        )
+        engine = _engine()
+        rows = load_data(engine)
+        model = build_model(rows, protect=set(CODE_TO_NAME.values()))
+
+        with engine.connect() as conn:
+            pend = conn.execute(text("""
+                SELECT m.match_number, m.team1_code, m.team2_code
+                FROM matches m
+                WHERE m.status = 'scheduled'
+                  AND m.team1_id IS NOT NULL AND m.team2_id IS NOT NULL
+                ORDER BY m.match_number
+            """)).fetchall()
+
+        def _resolve(code):
+            cands = ([CODE_TO_NAME[code]] if code in CODE_TO_NAME else []) + ALIASES.get(code, [])
+            for cand in cands:
+                if cand in model["idx"]:
+                    return cand
+            return None
+
+        por_jogo, linhas = {}, []
+        for mn, c1, c2 in pend:
+            n1, n2 = _resolve(c1), _resolve(c2)
+            if not n1 or not n2:
+                continue
+            P, _l1, _l2 = predict(model, n1, n2)
+            pv1 = float(_np.tril(P, -1).sum())
+            pe = float(_np.trace(P))
+            pv2 = float(_np.triu(P, 1).sum())
+            top = ev_palpites(P, top=5)
+            (ba, bb), _ = top[0]
+            picks = " | ".join(f"{a}x{b} (EV {ev:.1f})" for (a, b), ev in top)
+            bloco = (
+                f"#{mn} {c1} x {c2}: P({c1})={pv1:.0%} empate={pe:.0%} P({c2})={pv2:.0%}. "
+                f"PLACAR ÂNCORA: {ba}x{bb}. Top-5 por EV: {picks}"
+            )
+            por_jogo[mn] = bloco
+            linhas.append("  " + bloco)
+        return ("\n".join(linhas), por_jogo)
+    except Exception as e:
+        print(f"[modelo] indisponível ({e}) — seguindo sem âncora estatística")
+        return ("", {})
+
+
 # ---------------------------------------------------------------------------
 # Ferramentas do agente
 # ---------------------------------------------------------------------------
@@ -419,7 +479,22 @@ PONTUACAO (calibre os placares):
 - Ao reavaliar, se as evidencias forem mistas/incertas, priorize manter ou
   ajustar para a direcao de resultado mais sustentada pelos dados — nao troque
   o placar so para "acertar mais em cheio" se isso arriscar virar a direcao do
-  resultado sem evidencia forte"""
+  resultado sem evidencia forte
+
+MODELO ESTATÍSTICO (ÂNCORA DE PLACAR — REGRA PRIORITÁRIA):
+Quando a mensagem do usuário contiver um bloco "MODELO ESTATÍSTICO VALIDADO",
+ele traz, para cada jogo, as probabilidades e o PLACAR ÂNCORA calculados por um
+modelo Poisson/Dixon-Coles calibrado que, em backtest honesto nos 97 jogos já
+disputados desta Copa, superou TODOS os participantes do bolão (1015 pts contra
+975 do líder). Nesse caso:
+1. O PLACAR ÂNCORA do modelo é o palpite padrão de cada jogo — adote-o.
+2. Sua pesquisa web serve para VALIDAR a direção e detectar fatos que o modelo
+   não vê: desfalque confirmado de titular-chave, suspensão, crise interna.
+3. Só desvie do placar âncora com evidência FORTE e CONFIRMADA — e mesmo
+   assim escolha outro placar DENTRO do Top-5 por EV listado para o jogo.
+4. NUNCA dê palpite fora do Top-5 por EV do modelo.
+5. No reasoning, cite que o placar segue o modelo estatístico e acrescente os
+   fatores qualitativos encontrados na pesquisa."""
 
 
 def run_agent(dry_run: bool = False):
@@ -440,15 +515,20 @@ def run_agent(dry_run: bool = False):
     print(f"\n=== AGENTE LIVE — {mode} ===")
     print(f"Inicio: {datetime.now().strftime('%d/%m/%Y %H:%M')}\n")
 
-    messages = [
-        {
-            "role": "user",
-            "content": (
-                "Analise o torneio e atualize os palpites necessários. "
-                "Siga o processo: status → palpites atuais → analisar → atualizar."
-            ),
-        }
-    ]
+    # Recomendações do modelo estatístico (âncora de placar)
+    print("Calculando recomendações do modelo estatístico...", flush=True)
+    modelo_txt, _ = _model_recommendations()
+    conteudo = (
+        "Analise o torneio e atualize os palpites necessários. "
+        "Siga o processo: status → palpites atuais → analisar → atualizar."
+    )
+    if modelo_txt:
+        conteudo += (
+            "\n\nMODELO ESTATÍSTICO VALIDADO — probabilidades e placares âncora "
+            "por jogo (siga a REGRA PRIORITÁRIA do sistema):\n" + modelo_txt
+        )
+
+    messages = [{"role": "user", "content": conteudo}]
 
     all_updates = []  # coleta todas as atualizações para o Telegram
     truncado = False  # True se a resposta foi cortada antes de terminar a análise
@@ -601,7 +681,7 @@ deve ser COMPLETAMENTE IGNORADA — assuma que ambos os times jogam com o
 MELHOR ELENCO DISPONÍVEL até prova em contrário. Não reduza nem aumente o
 favoritismo baseado em especulação de escalação.
 
-Reavalie se este palpite ainda é o ideal. NÃO use o resultado real (o jogo
+{model_hint}Reavalie se este palpite ainda é o ideal. NÃO use o resultado real (o jogo
 ainda não começou).
 
 Seja DIRETO na análise — só os fatores relevantes em texto corrido, SEM
@@ -622,10 +702,24 @@ Responda SEMPRE com este bloco no final, nesta ordem:
    Escreva em texto corrido, sem bullets. Pode ocupar várias linhas."""
 
 
-def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30):
+def _focused_pregame_eval(client, home, away, date_str, ph, pa, mins_left=30, model_hint=""):
     """Reavalia um jogo. Retorna dict {nh, na, razao, mudou} ou None em erro.
-    Captura a justificativa SEMPRE — tanto quando ajusta quanto quando mantém."""
-    prompt = _PREGAME_PROMPT.format(home=home, away=away, date=date_str, ph=ph, pa=pa, mins_left=mins_left)
+    Captura a justificativa SEMPRE — tanto quando ajusta quanto quando mantém.
+    model_hint: bloco do modelo estatístico (âncora de placar), se disponível."""
+    hint = ""
+    if model_hint:
+        hint = (
+            "MODELO ESTATÍSTICO VALIDADO (âncora de placar — em backtest nos 97 "
+            "jogos já disputados desta Copa superou todos os participantes do "
+            "bolão):\n" + model_hint + "\n"
+            "REGRA PRIORITÁRIA: o PLACAR ÂNCORA acima é o palpite padrão. Use a "
+            "pesquisa apenas para validar a direção e checar desfalques/escalação "
+            "confirmada. Só desvie do placar âncora com evidência FORTE e "
+            "confirmada — e escolha outro placar DENTRO do Top-5 por EV. NUNCA "
+            "responda um placar fora do Top-5 por EV do modelo.\n\n"
+        )
+    prompt = _PREGAME_PROMPT.format(home=home, away=away, date=date_str, ph=ph,
+                                    pa=pa, mins_left=mins_left, model_hint=hint)
     try:
         resp = client.beta.messages.create(
             model=MODEL,
@@ -705,6 +799,10 @@ def run_pregame(dry_run: bool = False):
 
     client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
+    # Âncoras do modelo estatístico (uma única construção para todos os jogos)
+    print("[PRÉ-JOGO] Calculando âncoras do modelo estatístico...", flush=True)
+    _, model_hints = _model_recommendations()
+
     def tname(code):
         return TEAMS.get(code, {}).get("name", code)
 
@@ -719,7 +817,9 @@ def run_pregame(dry_run: bool = False):
         kickoff = datetime.strptime(str(dt)[:19], "%Y-%m-%d %H:%M:%S")
         mins_left = max(1, round((kickoff - now).total_seconds() / 60))
         print(f"[PRÉ-JOGO] Reavaliando #{mn}: {home} x {away} (atual {ph}-{pa}, faltam {mins_left} min)...", flush=True)
-        res = _focused_pregame_eval(client, home, away, str(dt)[:16], ph, pa, mins_left=mins_left)
+        res = _focused_pregame_eval(client, home, away, str(dt)[:16], ph, pa,
+                                    mins_left=mins_left,
+                                    model_hint=model_hints.get(mn, ""))
         checked.add(mn)
         if res is None:
             print(f"  -> ERRO/sem resposta — mantém {ph}-{pa}")
