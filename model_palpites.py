@@ -450,9 +450,9 @@ def podium_points(pred, real):
 def monte_carlo(model, n_sims, rng):
     idx, att, dfs = model["idx"], model["att"], model["dfs"]
     """Simula QF restantes + SF + 3o lugar + final.
-    Estrutura atual do chaveamento:
+    Estrutura atual do chaveamento (corrigida):
       #98 NOR x ENG, #99 ESP x BEL, #100 ARG x SUI (QF)
-      #101 FRA x W98 | #102 W99 x W100 (SF)
+      #101 FRA (W97) x W99 | #102 W100 x W98 (SF)
       #103 L101 x L102 | #104 W101 x W102
     """
     matrices = {}
@@ -486,8 +486,8 @@ def monte_carlo(model, n_sims, rng):
         w99, _l99 = play("ESP", "BEL")
         w100, _l100 = play("ARG", "SUI")
 
-        w101, l101 = play("FRA", w98)
-        w102, l102 = play(w99, w100)
+        w101, l101 = play("FRA", w99)
+        w102, l102 = play(w100, w98)
 
         w103, _ = play(l101, l102)          # 3o lugar
         w104, l104 = play(w101, w102)       # final
@@ -560,9 +560,9 @@ def main():
     # SF possiveis (condicionais)
     print("\n=== SEMIFINAIS POSSIVEIS (EV condicional, para planejamento) ===")
     sf_possiveis = [
-        ("101", "FRA", "NOR"), ("101", "FRA", "ENG"),
-        ("102", "ESP", "ARG"), ("102", "ESP", "SUI"),
-        ("102", "BEL", "ARG"), ("102", "BEL", "SUI"),
+        ("101", "FRA", "ESP"), ("101", "FRA", "BEL"),
+        ("102", "ARG", "NOR"), ("102", "ARG", "ENG"),
+        ("102", "SUI", "NOR"), ("102", "SUI", "ENG"),
     ]
     for num, c1, c2 in sf_possiveis:
         t1, t2 = CODE_TO_NAME[c1], CODE_TO_NAME[c2]
