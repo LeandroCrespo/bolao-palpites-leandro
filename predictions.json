@@ -1176,21 +1176,21 @@
       "home_team": "MAR",
       "away_team": "ESP",
       "home_goals": 1,
-      "away_goals": 2,
-      "winner": "ESP",
-      "went_to_penalties": true,
-      "reasoning": "Disputa de 3º lugar projetada: Noruega (L101) vs Espanha (L102). Espanha mais qualificada mesmo na derrota da semi. Espanha vence o 3º lugar 2-1."
+      "away_goals": 0,
+      "winner": "FRA",
+      "went_to_penalties": false,
+      "reasoning": "MODELO ESTATÍSTICO: placar âncora 1x0 França (EV 7.6, P(FRA)=42% vs P(ENG)=28%). França em 7 jogos desta Copa: média 2,29 gols feitos e 0,57 sofridos por jogo — a segunda melhor defesa do torneio (apenas Espanha supera). Inglaterra em 7 jogos: média 2,0 gols feitos e 1,14 sofridos. Mbappé artilheiro com 8 gols no torneio e motivação extra após ficar em branco na semifinal contra a Espanha. Inglaterra perde 12 dos 13 gols da campanha com Kane e Bellingham concentrando o ataque, tornando-o previsível. Cartões zerados após quartas, sem suspensões relevantes. França vem de sequência de 6 vitórias em 7 jogos (única derrota = 0-2 Espanha na SF), com melhor equilíbrio ofensivo-defensivo do par; adoto âncora 1x0."
     },
     {
       "match_number": 104,
       "phase": "FINAL",
       "home_team": "BRA",
       "away_team": "ARG",
-      "home_goals": 2,
-      "away_goals": 1,
-      "winner": "FRA",
-      "went_to_penalties": true,
-      "reasoning": "Final projetada: França (W101) vs Argentina (W102). França invicta, Mbappé artilheiro, defesa sólida (1,0 sofridos/jogo) e maior consistência (5V5). Argentina com Messi miticó, mas França tem profundidade e já dominou no torneio. França bicã champ: 2-1."
+      "home_goals": 1,
+      "away_goals": 0,
+      "winner": "ESP",
+      "went_to_penalties": false,
+      "reasoning": "MODELO ESTATÍSTICO: placar âncora 1x0 Espanha (EV 9.0, P(ESP)=48% vs P(ARG)=20%). Espanha em 7 jogos desta Copa: média 1,86 gols feitos e apenas 0,14 sofridos (1 gol concedido em 7 jogos — a melhor defesa do torneio). Argentina em 7 jogos: média 2,14 gols feitos e 0,86 sofridos, mas com forte desgaste físico: duas prorrogações no mata-mata acumularam 240 minutos extras. Messi com 8 gols no torneio e artilharia compartilhada, mas Argentina terá enorme dificuldade contra a muralha defensiva espanhola (Laporte + Cubarsí + Rodri). Yamal ainda abaixo do nível da Eurocopa 2024, porém Espanha tem elenco coletivo profundo. Espanha é favorita clara (48%) com retrospecto impecável nesta Copa — 7V 0E 0D, único gol sofrido em quartas. Adoto âncora 1x0 Espanha, placar mais conservador e de maior EV para a final."
     }
   ],
   "groups": {
@@ -1882,7 +1882,7 @@
       "gf": 2
     }
   ],
-  "last_updated": "2026-07-07T20:14:10.192065",
+  "last_updated": "2026-07-15T18:48:45.667402",
   "pregame_checked": [
     4,
     9,

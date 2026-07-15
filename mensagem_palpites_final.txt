@@ -1,0 +1,10 @@
+⚽ Agente de Palpites — Bolão Copa 2026
+Palpites da reta final definidos:
+
+Jogo #103: França x Inglaterra (3º lugar — 18/07)
+  🔁 AJUSTADO: 0-0 → 1-0
+  MODELO ESTATÍSTICO: placar âncora 1x0 França (EV 7.6, P(FRA)=42% vs P(ENG)=28%). França em 7 jogos desta Copa: média 2,29 gols feitos e 0,57 sofridos por jogo — a segunda melhor defesa do torneio (apenas Espanha supera). Inglaterra em 7 jogos: média 2,0 gols feitos e 1,14 sofridos. Mbappé artilheiro com 8 gols no torneio e motivação extra após ficar em branco na semifinal contra a Espanha. Inglaterra perde 12 dos 13 gols da campanha com Kane e Bellingham concentrando o ataque, tornando-o previsível. Cartões zerados após quartas, sem suspensões relevantes. França vem de sequência de 6 vitórias em 7 jogos (única derrota = 0-2 Espanha na SF), com melhor equilíbrio ofensivo-defensivo do par; adoto âncora 1x0.
+
+Jogo #104: Espanha x Argentina (FINAL — 19/07)
+  🔁 AJUSTADO: 0-0 → 1-0
+  MODELO ESTATÍSTICO: placar âncora 1x0 Espanha (EV 9.0, P(ESP)=48% vs P(ARG)=20%). Espanha em 7 jogos desta Copa: média 1,86 gols feitos e apenas 0,14 sofridos (1 gol concedido em 7 jogos — a melhor defesa do torneio). Argentina em 7 jogos: média 2,14 gols feitos e 0,86 sofridos, mas com forte desgaste físico: duas prorrogações no mata-mata acumularam 240 minutos extras. Messi com 8 gols no torneio e artilharia compartilhada, mas Argentina terá enorme dificuldade contra a muralha defensiva espanhola (Laporte + Cubarsí + Rodri). Yamal ainda abaixo do nível da Eurocopa 2024, porém Espanha tem elenco coletivo profundo. Espanha é favorita clara (48%) com retrospecto impecável nesta Copa — 7V 0E 0D, único gol sofrido em quartas. Adoto âncora 1x0 Espanha, placar mais conservador e de maior EV para a final.

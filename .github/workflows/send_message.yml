@@ -1,0 +1,39 @@
+name: Enviar Mensagem Telegram (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: 'Caminho do arquivo .txt com a mensagem (na raiz do repo)'
+        required: true
+        type: string
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+
+      - name: Enviar mensagem via Telegram
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          MESSAGE_FILE: ${{ inputs.file }}
+        run: |
+          python -c "
+          import os
+          from agent_live import send_telegram
+          with open(os.environ['MESSAGE_FILE'], encoding='utf-8') as f:
+              texto = f.read()
+          send_telegram(os.environ['TELEGRAM_BOT_TOKEN'], os.environ['TELEGRAM_CHAT_ID'], texto)
+          print('Mensagem enviada.')
+          "

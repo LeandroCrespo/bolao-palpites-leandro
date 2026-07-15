@@ -364,7 +364,12 @@ TOOLS_SCHEMA = [
                             "phase":     {"type": "string"},
                             "reasoning": {
                                 "type": "string",
-                                "description": "Razão da mudança em 1 linha",
+                                "description": (
+                                    "Justificativa COMPLETA do palpite (3-5 frases): média de "
+                                    "gols feitos/sofridos dos DOIS times em números, retrospecto "
+                                    "recente, desfalques confirmados se houver, o placar âncora "
+                                    "do modelo estatístico e o argumento central da decisão"
+                                ),
                             },
                         },
                         "required": ["match_number", "home_goals", "away_goals", "reasoning"],
@@ -598,12 +603,30 @@ def run_agent(dry_run: bool = False):
         chat_id = os.getenv("TELEGRAM_CHAT_ID")
         hoje = datetime.now().strftime("%d/%m/%Y")
         if token and chat_id and all_updates:
-            linhas = [f"Copa 2026 - Palpites atualizados em {hoje}\n"]
+            # Mesmo formato da reavaliação pré-jogo: jogo, ajuste e RAZÃO completa
+            nomes = {}
+            try:
+                with _engine().connect() as _conn:
+                    _rs = _conn.execute(text(
+                        "SELECT match_number, team1_code, team2_code FROM matches"
+                    )).fetchall()
+                for _mn, _c1, _c2 in _rs:
+                    nomes[_mn] = (
+                        TEAMS.get(_c1, {}).get("name", _c1),
+                        TEAMS.get(_c2, {}).get("name", _c2),
+                    )
+            except Exception:
+                pass
+            linhas = ["⚽ Agente de Palpites — Bolão Copa 2026", f"Análise de {hoje}:", ""]
             for u in all_updates:
-                linhas.append(f"Jogo #{u['match_number']}: {u['old']} -> {u['new']}")
+                mn = u["match_number"]
+                t1, t2 = nomes.get(mn, ("", ""))
+                linhas.append(f"Jogo #{mn}" + (f": {t1} x {t2}" if t1 else ""))
+                linhas.append(f"  🔁 AJUSTADO: {u['old']} → {u['new']}")
                 if u.get("reasoning"):
                     linhas.append(f"  {u['reasoning']}")
-            linhas.append(f"\nTotal: {len(all_updates)} palpite(s) alterado(s)")
+                linhas.append("")
+            linhas.append(f"Total: {len(all_updates)} palpite(s) alterado(s)")
             if truncado:
                 linhas.append(
                     "\n⚠️ A análise foi interrompida antes de terminar (limite de "
